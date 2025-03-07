@@ -88,6 +88,7 @@ if not "--pyfepdf" in sys.argv:
         ("observaciones", 1000, A),  # observaciones (opcional)
         ("tipo_cbte", 3, N),
         ("punto_vta", 5, N),
+        ("actividad_id",6, N) 
     ]
 
     DETALLE = [
@@ -212,12 +213,18 @@ def autorizar(ws, entrada, salida, informar_caea=False):
         if "/testing" in sys.argv:
             encabezado["cae"] = "21353598240916"
             encabezado["fch_venc_cae"] = "2011-09-15"
+            encabezado["actividad_id"] = "120010"
         encabezado["caea"] = encabezado["cae"]
 
     if "imp_subtotal" not in encabezado:
         encabezado["imp_subtotal"] = encabezado["imp_neto"] + encabezado["imp_tot_conc"]
 
     ws.CrearFactura(**encabezado)
+    if encabezado["actividad_id"] in encabezado:
+        wsmtx.AgregarActividad(encabezado["actividad_id"])
+    else:
+        print("No hay actividad")
+
     for detalle in detalles:
         ws.AgregarItem(**detalle)
     for tributo in tributos:
