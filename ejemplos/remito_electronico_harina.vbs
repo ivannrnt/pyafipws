@@ -1,15 +1,15 @@
-'
+' 
 ' Ejemplo de Uso de Interfaz PyAfipWs para Windows Script Host
 ' (Visual Basic / Visual Fox y lenguages con soporte ActiveX simil OCX)
 ' con Web Service Autenticación / Remito Electrónico Harina AFIP
 ' 2018(C) Mariano Reingart <reingart@gmail.com>
 ' Licencia: GPLv3
 '  Requerimientos: scripts wsaa.py y wsfev1.py registrados (ver instaladores)
-' Documentacion:
+' Documentacion: 
 '  http://www.sistemasagiles.com.ar/trac/wiki/RemitoElectronicoHarina
 '  http://www.sistemasagiles.com.ar/trac/wiki/PyAfipWs
 '  http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs
-
+ 
 ' Crear el objeto WSAA (Web Service de Autenticación y Autorización) AFIP
 Set WSAA = Wscript.CreateObject("WSAA")
 Wscript.Echo "InstallDir", WSAA.InstallDir, WSAA.Version
@@ -72,10 +72,10 @@ nro_remito = nro_remito + 1
 
 ' Establezco los valores del remito a autorizar:
 tipo_movimiento = "ENV"  ' ENV: envio, RET: retiro, CAN: canje, RED: redestino
-cuit_titular = "20267565393"
+cuit_titular = "20287531894"
 es_entrega_mostrador = "N"
 es_mercaderia_consignacion = "N"
-cuit_titular = "20267565393"
+cuit_titular = "20287531894" 
 importe_cot = "10000.0"
 tipo_emisor = "I"        ' U: Usiario de molienda de trigo I: Industrial
 ruca_est_emisor = 1031
@@ -84,7 +84,7 @@ cod_remito = Null
 estado = Null
 observaciones = Null
 
-ok = WSRemHarina.CrearRemito(tipo_comprobante, punto_emision, tipo_movimiento, _
+ok = WSRemHarina.CrearRemito(tipo_comprobante, punto_emision, tipo_movimiento, _ 
                     cuit_titular, es_entrega_mostrador, es_mercaderia_consignacion, _
                     importe_cot, _
                     tipo_emisor, ruca_est_emisor, _
@@ -154,7 +154,7 @@ id_req = Int(DateDiff("s","24-Sep-23 00:00:00", Now))     ' usar un numero inter
 archivo = "qr.png"
 ok = WSRemHarina.GenerarRemito(id_req, archivo)
 
-If not ok Then
+If not ok Then 
     ' Imprimo pedido y respuesta XML para depuración (errores de formato)
     Wscript.Echo "Traceback", WSRemHarina.Traceback
     Wscript.Echo "XmlResponse", WSRemHarina.XmlResponse
@@ -175,3 +175,4 @@ Wscript.Echo "Errores:", WSRemHarina.ErrMsg
 Wscript.Echo "Evento:", WSRemHarina.Evento
 
 MsgBox "Resultado:" & WSRemHarina.Resultado & " CodRemito: " & WSRemHarina.CodRemito, vbInformation + vbOKOnly
+
