@@ -7,54 +7,64 @@ Sub Main()
     Dim WSAA As Object, WSFEXv1 As Object
     
     On Error GoTo ManejoError
-    
-    ' Crear objeto interface Web Service Autenticación y Autorización
     Set WSAA = CreateObject("WSAA")
     
-    ' Generar un Ticket de Requerimiento de Acceso (TRA) para WSFEX
-    tra = WSAA.CreateTRA("wsfex")
-    Debug.Print tra
+    ' inicializo las variables:
+    token = ""
+    sign = ""
     
-    ' Especificar la ubicacion de los archivos certificado y clave privada
-    Path = CurDir() + "\"
-    ' Certificado: certificado es el firmado por la AFIP
-    ' ClavePrivada: la clave privada usada para crear el certificado
-    Certificado = "..\..\reingart.crt" ' certificado de prueba
-    ClavePrivada = "..\..\reingart.key" ' clave privada de prueba
-    
-    ' Generar el mensaje firmado (CMS)
-    cms = WSAA.SignTRA(tra, Path + Certificado, Path + ClavePrivada)
-    Debug.Print cms
-    
-    ' Conectarse con el webservice de autenticación:
-    cache = ""
-    proxy = "" '"usuario:clave@localhost:8000"
-    wrapper = "" ' libreria http (httplib2, urllib2, pycurl)
-    
-    ' Ejemplo para pasar el contenido del certificado CA
-    cacert = WSAA.InstallDir & "conf\afip_ca_info.crt" ' certificado de la autoridad de certificante
-    
-    ' Conectar al webservice (Homologación)
-    wsdl = "https://wsaahomo.afip.gov.ar/ws/services/LoginCms?wsdl"
-    ok = WSAA.Conectar(cache, wsdl, proxy, wrapper, cacert)
-    
-    If WSAA.Excepcion <> "" Then
-        MsgBox WSAA.Excepcion, vbCritical, "Excepcion"
-        End
+    ' busco un ticket de acceso previamente almacenado:
+    If Dir("ta.xml") <> "" Then
+        ' leo el xml almacenado del archivo
+        Open "ta.xml" For Input As #1
+        Line Input #1, ta_xml
+        Close #1
+        ' analizo el ticket de acceso previo:
+        ok = WSAA.AnalizarXml(ta_xml)
+        If Not WSAA.Expirado() Then
+            ' puedo reusar el ticket de acceso:
+            token = WSAA.ObtenerTagXml("token")
+            sign = WSAA.ObtenerTagXml("sign")
+        End If
     End If
     
-    ' Llamar al webservice para solicitar acceso:
-    ok = WSAA.LoginCMS(cms)
+    ' Si no reuso un ticket de acceso, solicito uno nuevo:
+    If token = "" Or sign = "" Then
+        ' Generar un Ticket de Requerimiento de Acceso (TRA)
+        tra = WSAA.CreateTRA("wsfex", 43200) ' 3600*12hs
+        
+        Path = WSAA.InstallDir + "\"
+        
+        ' Especificar la ubicacion de los archivos certificado y clave privada
+        cert = "reingart.crt" ' certificado de prueba
+        clave = "reingart.key" ' clave privada de prueba
+        ' Generar el mensaje firmado (CMS)
+        cms = WSAA.SignTRA(tra, Path + cert, Path + clave)
+        If cms <> "" Then
+            ' Llamar al web service para autenticar (cambiar URL para produccion):
+            wsdl = "https://wsaahomo.afip.gov.ar/ws/services/LoginCms?wsdl"
+            ok = WSAA.Conectar("", wsdl)
+            ta_xml = WSAA.LoginCMS(cms)
+            If ta_xml <> "" Then
+                ' guardo el ticket de acceso en el archivo
+                Open "ta.xml" For Output As #1
+                Print #1, ta_xml
+                Close #1
+            End If
+            token = WSAA.token
+            sign = WSAA.sign
+        End If
+        ' reviso que no haya errores:
+        Debug.Print "Excepcion:", WSAA.Excepcion
+        If WSAA.Excepcion <> "" Then
+            Debug.Print WSAA.Traceback
+        End If
     
-    If WSAA.Excepcion <> "" Then
-        MsgBox WSAA.Excepcion, vbCritical, "Excepcion"
-        End
     End If
     
-    ' Imprimir el ticket de acceso, ToKen y Sign de autorización
-    Debug.Print ta
-    Debug.Print "Token:", WSAA.Token
-    Debug.Print "Sign:", WSAA.Sign
+    ' Imprimir los datos del ticket de acceso: ToKen y Sign de autorización
+    Debug.Print "Token: " + token
+    Debug.Print "Sign: " + sign
     
     ' Una vez obtenido, se puede usar el mismo token y sign por 24 horas
     ' (este período se puede cambiar)
@@ -64,14 +74,14 @@ Sub Main()
     Debug.Print WSFEXv1.Version
     
     ' Setear tocken y sing de autorización (pasos previos)
-    WSFEXv1.Token = WSAA.Token
-    WSFEXv1.Sign = WSAA.Sign
+    WSFEXv1.token = token
+    WSFEXv1.sign = sign
     
     ' CUIT del emisor (debe estar registrado en la AFIP)
     WSFEXv1.Cuit = "20267565393"
     
     ' Conectar al Servicio Web de Facturación V1
-    wsdl_url = "https://wswhomo.afip.gov.ar/WSFEXv1/service.asmx?WSDL"
+    wsdl_url = "https://wswhomo.afip.gov.ar/wsfexv1/service.asmx?WSDL"
     ok = WSFEXv1.Conectar(cache, wsdl_url) ' homologación
     
     ' Llamo a un servicio nulo, para obtener el estado del servidor (opcional)
@@ -95,14 +105,16 @@ Sub Main()
     domicilio_cliente = "Rua N°76 km 34.5 Alagoas"
     id_impositivo = "PJ54482221-l"
     moneda_id = "DOL" ' para reales, "DOL" o "PES" (ver tabla de parámetros)
-    moneda_ctz = "8.00"
+    moneda_ctz = "1400.00"
     obs_comerciales = "Observaciones comerciales"
     obs = "Sin observaciones"
     forma_pago = "takataka"
     incoterms = "FOB" ' (ver tabla de parámetros)
     incoterms_ds = "Info complementaria" ' (opcional) Nuevo! 20 caracteres
     idioma_cbte = 1 ' (ver tabla de parámetros)
-    imp_total = "250.00"
+    imp_total = "15000.00"
+    fecha_pago = "" ' Format(Date, "yyyymmdd")
+    cancela_misma_moneda_ext = "N"
    
     ' Creo una factura (internamente, no se llama al WebService):
     ok = WSFEXv1.CrearFactura(tipo_cbte, punto_vta, cbte_nro, fecha_cbte, _
@@ -110,21 +122,22 @@ Sub Main()
             cliente, cuit_pais_cliente, domicilio_cliente, _
             id_impositivo, moneda_id, moneda_ctz, _
             obs_comerciales, obs, forma_pago, incoterms, _
-            idioma_cbte, incoterms_ds)
+            idioma_cbte, incoterms_ds, fecha_pago, _
+            cancela_misma_moneda_ext)
     
     ' Agrego un item:
     codigo = "PRO1"
     ds = "Producto Tipo 1 Exportacion MERCOSUR ISO 9001"
-    qty = 2
-    precio = "130.00"
+    qty = 1
+    precio = "15000.00"
     umed = 1 ' Ver tabla de parámetros (unidades de medida)
-    imp_total = "250.00" ' importe total final del artículo
-    bonif = "10.00" ' Nuevo!
+    imp_total = "15000.00" ' importe total final del artículo
+    bonif = "0" ' Nuevo!
     ' lo agrego a la factura (internamente, no se llama al WebService):
     ok = WSFEXv1.AgregarItem(codigo, ds, qty, umed, precio, imp_total, bonif)
-    ok = WSFEXv1.AgregarItem(codigo, ds, qty, umed, precio, imp_total, bonif)
-    ok = WSFEXv1.AgregarItem(codigo, "Descuento", 0, 99, 0, "-250.00", 0)
-    ok = WSFEXv1.AgregarItem("--", "texto adicional", 0, 0, 0, 0, 0)
+    'ok = WSFEXv1.AgregarItem(codigo, ds, qty, umed, precio, imp_total, bonif)
+    'ok = WSFEXv1.AgregarItem(codigo, "Descuento", 0, 99, 0, "-250.00", 0)
+    'ok = WSFEXv1.AgregarItem("--", "texto adicional", 0, 0, 0, 0, 0)
     
     ' Agrego un permiso (ver manual para el desarrollador)
     If permiso_existente = "S" Then
@@ -171,7 +184,6 @@ Sub Main()
     ' Imprimo pedido y respuesta XML para depuración (errores de formato)
     Debug.Print WSFEXv1.XmlRequest
     Debug.Print WSFEXv1.XmlResponse
-    Debug.Assert False
     
     MsgBox "Resultado:" & WSFEXv1.Resultado & " CAE: " & CAE & " Venc: " & WSFEXv1.Vencimiento & " Reproceso: " & WSFEXv1.Reproceso & " Obs: " & WSFEXv1.obs, vbInformation + vbOKOnly
     
@@ -258,3 +270,5 @@ ManejoError:
     'Debug.Assert False
 
 End Sub
+
+
