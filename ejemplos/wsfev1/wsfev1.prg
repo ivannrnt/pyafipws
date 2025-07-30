@@ -1,14 +1,14 @@
 *-- Ejemplo de Uso de Interface COM con Web Services AFIP (PyAfipWs)
 *-- Factura Electronica mercado interno RG2485 Version 1 
 *-- para Visual FoxPro 5.0 o superior (vfp5, vfp9.0)
-*-- Seg�n RG2485/08 y RG2904/10 Art. 4 Opci�n B (sin detalle, CAE tradicional)
+*-- Según RG2485/08 y RG2904/10 Art. 4 Opción B (sin detalle, CAE tradicional)
 *-- 2010 (C) Mariano Reingart <reingart@gmail.com>
 
 ON ERROR DO errhand1;
 
 CLEAR
 
-*-- Crear objeto interface Web Service Autenticaci�n y Autorizaci�n
+*-- Crear objeto interface Web Service Autenticación y Autorización
 WSAA = CREATEOBJECT("WSAA") 
 
 *-- Generar un Ticket de Requerimiento de Acceso (TRA)
@@ -22,10 +22,10 @@ ruta = WSAA.InstallDir + "\"
 cms = WSAA.SignTRA(tra, ruta + "reingart.crt", ruta + "reingart.key") && Cert. Demo
 
 *-- Conectarse con el webservice
-ok = WSAA.Conectar("", "https://wsaahomo.afip.gov.ar/ws/services/LoginCms") && Homologaci�n
+ok = WSAA.Conectar("", "https://wsaahomo.afip.gov.ar/ws/services/LoginCms") && Homologación
 
 *-- Llamar al web service para autenticar
-*-- Producci�n usar: ta = WSAA.CallWSAA(cms, "https://wsaa.afip.gov.ar/ws/services/LoginCms") && Producci�n
+*-- Producción usar: ta = WSAA.CallWSAA(cms, "https://wsaa.afip.gov.ar/ws/services/LoginCms") && Producción
 ta = WSAA.LoginCMS(cms) 
 
 ON ERROR DO errhand2;
@@ -36,13 +36,17 @@ WSFE = CREATEOBJECT("WSFE")
 ? WSFE.Version
 ? WSFE.InstallDir
 
-*-- Setear tocken y sing de autorizaci�n (pasos previos)
+*-- Setear tocken y sing de autorización (pasos previos)
 WSFE.Token = WSAA.Token 
 WSFE.Sign = WSAA.Sign    
 
 * CUIT del emisor (debe estar registrado en la AFIP)
 WSFE.Cuit = "20267565393"
 
+*-- Conectar al Servicio Web de Facturación
+*-- Producción usar: 
+*-- ok = WSFE.Conectar("", "https://servicios1.afip.gov.ar/wsfev1/service.asmx?WSDL") && Producción
+ok = WSFE.Conectar("")      && Homologación
 
 ? WSFE.DebugLog()
 
@@ -53,6 +57,7 @@ WSFE.Dummy()
 ? "authserver status", WSFE.AuthServerStatus
 
 
+*-- Recupero último número de comprobante para un punto de venta y tipo (opcional)
 tipo_cbte = 1
 punto_vta = 1
 LastCBTE = WSFE.CompUltimoAutorizado(tipo_cbte, punto_vta)
@@ -74,11 +79,13 @@ impto_liq_rni = "0.00"
 imp_op_ex = "0.00"
 fecha_cbte = Fecha
 fecha_venc_pago = Fecha
+*-- Fechas del período del servicio facturado (solo si concepto > 1)
 fecha_serv_desde = Fecha
 fecha_serv_hasta = Fecha
 moneda_id = "PES"
 moneda_ctz = "1.000"
 
+*-- Llamo al WebService de Autorización para obtener el CAE
 ok = WSFE.CrearFactura(concepto, tipo_doc, nro_doc, tipo_cbte, punto_vta, ;
         cbt_desde, cbt_hasta, imp_total, imp_tot_conc, imp_neto, ;
         imp_iva, imp_trib, imp_op_ex, fecha_cbte, fecha_venc_pago, ;
@@ -111,6 +118,7 @@ cae = WSFE.CAESolicitar()
 
 ? "LastCBTE:", LastCBTE 
 ? "CAE: ", cae
+? "Vencimiento ", WSFE.Vencimiento && Fecha de vencimiento o vencimiento de la autorización
 ? "Resultado: ", WSFE.Resultado && A=Aceptado, R=Rechazado
 ? "Motivo de rechazo o advertencia", WSFE.Obs
 *--? WSFE.XmlResponse
@@ -119,6 +127,7 @@ MESSAGEBOX("Resultado: " + WSFE.Resultado + " CAE " + cae + " Vencimiento: " + W
 
 
 
+*-- Depuración (grabar a un archivo los datos de prueba)
 * gnErrFile = FCREATE('c:\error.txt')  
 * =FWRITE(gnErrFile, WSFE.Token + CHR(13))
 * =FWRITE(gnErrFile, WSFE.Sign + CHR(13))	
@@ -138,6 +147,7 @@ PROCEDURE errhand1
 	*--? WSAA.XmlRequest
 	*--? WSAA.XmlResponse
 
+	*-- trato de extraer el código de error de afip (1000)
 	afiperr = ERROR() -2147221504 
 	if afiperr>1000 and afiperr<2000 then
 		? 'codigo error afip:',afiperr
