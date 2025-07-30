@@ -1269,6 +1269,23 @@ class WSCPE(BaseWS):
                 ("%s {nroPlanta} %s {codProvincia} %s {codLocalidad} %s" % (sep, sep, sep, sep)).format(**it)
                 if sep else it for it in array
             ]
+        
+    @inicializar_y_capturar_excepciones
+    def ConsultarRenspa(self, cuit, cod_provincia=1, sep="||"):
+        """Permite la consulta del numero de renspa"""
+        response = self.client.consultarRenspa(
+            auth={
+                "token": self.Token,
+                "sign": self.Sign,
+                "cuitRepresentada": self.Cuit,
+            },
+            cuit=cuit,
+            codProvincia=cod_provincia,
+        )
+        ret = response.get("respuesta")
+        self.nroRenspa = ret.get('nroRenspa')
+        self.__analizar_errores(ret)
+        return self.nroRenspa is not None and str(self.nroRenspa) or ''
 
     @inicializar_y_capturar_excepciones
     def Dummy(self):
@@ -1716,6 +1733,10 @@ if __name__ == "__main__":
 
     if "--localidades_productor" in sys.argv:
         ret = wscpe.ConsultarLocalidadesProductor(cuit_productor=CUIT)
+        print("\n".join(ret))
+
+    if "--consultar_renspa" in sys.argv:
+        ret = wscpe.ConsultarRenspa(cuit=CUIT)
         print("\n".join(ret))
 
     if "--plantas" in sys.argv:
