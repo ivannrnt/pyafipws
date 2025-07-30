@@ -31,7 +31,7 @@ if 'xrange' not in dir(__builtins__):
 __author__ = "Mariano Reingart <reingart@gmail.com>"
 __copyright__ = "Copyright (C) 2023- Mariano Reingart"
 __license__ = "LGPL 3.0"
-__version__ = "1.07a"
+__version__ = "1.08a"
 
 LICENCIA = """
 wscpe.py: Interfaz para generar Carta de Porte Electrónica AFIP v1.5.0
