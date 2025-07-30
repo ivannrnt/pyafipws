@@ -303,6 +303,7 @@ class WSCPE(BaseWS):
         planta=None,
         cod_provincia_productor=None,
         cod_localidad_productor=None,
+        nro_renspa_productor = None,
         **kwargs
     ):
         """Inicializa internamente los datos de origen para una cpe."""
@@ -314,6 +315,7 @@ class WSCPE(BaseWS):
         productor = {
             "codProvincia": cod_provincia_productor,
             "codLocalidad": cod_localidad_productor,
+            "nroRenspa": nro_renspa_productor,
         }
         origen = {}
         if planta:
@@ -1337,7 +1339,8 @@ if __name__ == "__main__":
             # cod_provincia_operador=12,
             # cod_localidad_operador=7717,
             cod_provincia_productor=1,
-            cod_localidad_productor=14310
+            cod_localidad_productor=14310,
+            nro_renspa_productor="1",
         )
         ok = wscpe.AgregarDestino(
             planta=1938,
