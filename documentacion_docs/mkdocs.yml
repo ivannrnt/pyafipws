@@ -1,0 +1,60 @@
+site_name: ""
+site_description: Documentación
+site_url: https://<USER_OR_DOMAIN>.github.io/<REPO>/
+use_directory_urls: true
+
+theme:
+  name: readthedocs
+  logo: media/logo-pyafipws.png
+  custom_dir: overrides
+
+extra_css:
+  - ./stylesheets/extra.css
+
+nav:
+  - Factura Electronica:
+    - Introduccion: websites/factura_electronica.md
+  - Documentación Componentes y Herramientas Generales:
+    - "PyAfipWs: Interfase simil OCX con otros lenguajes (VB, VFP, Cobol ...) Costos y Condiciones": websites/documentacion_herramientas/pyafipws.md
+    - "Manual: Documentación, Información Importante, Certificados, Errores Frecuentes": websites/documentacion_herramientas/manualpyafipws.md
+  - Factura Electrónica - Servicios Web AFIP:
+    - "Mercado Interno: Factura Electrónica A/B/C/M WSFEv1": websites/factura_electronica/wsfev1.md
+    - "Matrix (codificación productos): Factura Electrónica A/B con detalle (RG2904/3536)": websites/factura_electronica/wsmtxca.md
+    - "Bienes de Capital: Bonos Fiscales Electrónicos - Factura Electrónica A (RG2557)": websites/factura_electronica/wsbfe.md
+    - "Exportación: Factura Electrónica E Exportadores (RG2758 RG3689 RG4401)": websites/factura_electronica/wsfex.md
+    - "Turismo: Comprobantes Factura Electrónica T WSCT CAE/CAEA (RG3971)": websites/factura_electronica/wsct.md
+    - "FE Cred (FCE): Factura Electrónica Crédito MiPyMEs (RG4367)": websites/factura_electronica/wsfecred.md
+    - "Código de Autorización Electrónico Anticipado CAEA": websites/factura_electronica/caea.md
+  - Agropecuario - Servicios web AFIP:
+    - "Código Trazabilidad de Granos: Transporte de granos WSCTGv4 (RG2806 RG3113 RG3493)": pagina5.md
+    - "Liquidación y Certificación de Granos: WSLPGv1.17 F. C1116 A / B / RT (RG3419 RG3690 RG3691)": pagina6.md
+    - "Liquidación de Tabaco Verde: WSLTVv1.3": pagina7.md
+    - "Liquidación Única Mensual Lechería: WSLUMv1.3": pagina8.md
+    - "Liquidación Sector Pecuario: Hacienda, Compra directa, Carne WSLSPv1.3": pagina9.md
+    - "Remito Electrónico Cárnico: WSRemCarne (RG4256/18 y RG4303/18)": pagina10.md
+    - "Remito Electrónica Harinero: WSRemHarina - (RG 4519/19)": pagina11.md
+    - "Remito Electrónico Azúcar y Derivados: WSRemAzucar - (RG 4519/19)": pagina12.md
+    - "Carta de Porte: WSCPE - (RG 5017/21)": pagina13.md
+    - "Carta de Porte Derivados Granarios: WSCPEv2 - (RG 5235/22) Nuevo!": pagina14.md
+  - "Otros webservices y utilidades AFIP":
+    - "Constatación de Comprobantes CAI, CAE, CAEA (WSCDC)": pagina16.md
+    - "Padron Contribuyentes AFIP: Constancia de Inscripción RG1817/2005 WS-SR-Padron": pagina17.md
+    - "Consulta de Operaciones Cambiarias: Compra de Divisas (WSCOC)": pagina18.md
+    - "SIRE_CertificadoRetencionElectronica: Certificado de retención electrónica del Impuesto al Valor Agregado (SIRE-WS) RG4523/19": pagina19.md
+  - "Webservices provinciales: ARBA (Prov. Bs.As.), AGIP (C.A.B.A), API (Sta.Fe), DGR (Córdoba)":
+    - "Remito Electrónico: COT Código de Operaciones de Translado (ARBA, API, AGIP, DGR)": pagina21.md
+    - "Ingresos Brutos: Consulta de alícuotas WS DFE IIBB ARBA": pagina22.md
+  - "SNT: Sistema Nacional de Trazabilidad ANMAT, SEDRONAR, SENASA":
+    - "Trazabilidad de Medicamentos: ANMAT Disposición 3683/2011": pagina24.md
+    - "Trazabilidad de Productos Médicos: ANMAT Disposición 2303/2014 y 2175/14": pagina25.md
+    - "Trazabilidad de Precursores Químicos: RENPRE SEDRONAR Resolución 900/12": pagina26.md
+    - "Trazabilidad de Productos Fitosanitarios: SENASA Resolución 369/13": pagina27.md
+    - "Trazabilidad de Productos Fitosanitarios: SENASA Resolución 369/21 (WS_INFO_EMPRESAS / WS_DATOS_GENERALES)": pagina28.md
+  - "Aplicativos Genéricos y Herramientas Avanzadas":
+    - "PyRece: Aplicativo visual simil SIAP - RECE (CSV, PDF, Email)": pagina30.md
+    - "FE.py: Herramienta universal, unificada e integrada": pagina31.md
+    - "FacturaLibre: Aplicacion online (web2py)": pagina32.md
+    - "PyFactura: Aplicativo visual y simple (gui2py) para CAE y PDF factura electrónica": pagina33.md
+    - "LibPyAfipWs: Biblioteca DLL para lenguajes C / C++ y similares": pagina34.md
+    - "Factura Electrónica en Python: Información Técnica (SOAP, XML, PDF, DBF, etc.)": pagina35.md
+

@@ -1,0 +1,36 @@
+.wy-menu-vertical a,
+.wy-menu-vertical a.reference,
+.wy-menu-vertical a.reference.internal,
+.wy-menu-vertical .caption-text,
+.toctree-l1 > a,
+.toctree-l2 > a,
+.toctree-l3 > a {
+    white-space: normal !important;
+    display: block !important;
+    line-height: 1.2em !important;
+    height: auto !important;
+    overflow-wrap: break-word !important; 
+    word-break: break-word !important;
+}
+
+.wy-menu-vertical li {
+    height: auto !important;
+    overflow: visible !important;
+}
+
+.wy-menu-vertical .caption-text {
+    padding: 0 0 0 12px !important;
+    margin: 18px 0 6px 0 !important;
+    line-height: 1.2em !important;
+    display: block !important;
+    height: auto !important;
+    white-space: normal !important;
+}
+
+
+.wy-menu-vertical .caption {
+    padding: 0 !important;
+    margin: 0 !important;
+    height: auto !important;
+}
+
