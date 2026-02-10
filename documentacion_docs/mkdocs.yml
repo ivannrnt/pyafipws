@@ -17,6 +17,7 @@ nav:
   - Documentación Componentes y Herramientas Generales:
     - "PyAfipWs: Interfase simil OCX con otros lenguajes (VB, VFP, Cobol ...) Costos y Condiciones": websites/documentacion_herramientas/pyafipws.md
     - "Manual: Documentación, Información Importante, Certificados, Errores Frecuentes": websites/documentacion_herramientas/manualpyafipws.md
+    - "Factura Electrónica: Ventajas Automatización COM PyAfipWs vs OCX y otros": websites/documentacion_herramientas/ocx_factura_electronica.md
   - Factura Electrónica - Servicios Web AFIP:
     - "Mercado Interno: Factura Electrónica A/B/C/M WSFEv1": websites/factura_electronica/wsfev1.md
     - "Matrix (codificación productos): Factura Electrónica A/B con detalle (RG2904/3536)": websites/factura_electronica/wsmtxca.md
@@ -38,20 +39,20 @@ nav:
     - "Carta de Porte Derivados Granarios: WSCPEv2 - (RG 5235/22) Nuevo!": pagina14.md
   - "Otros webservices y utilidades AFIP":
     - "Constatación de Comprobantes CAI, CAE, CAEA (WSCDC)": pagina16.md
-    - "Padron Contribuyentes AFIP: Constancia de Inscripción RG1817/2005 WS-SR-Padron": pagina17.md
-    - "Consulta de Operaciones Cambiarias: Compra de Divisas (WSCOC)": pagina18.md
+    - "Padron Contribuyentes AFIP: Constancia de Inscripción RG1817/2005 WS-SR-Padron": websites/otros_webservices/padron_contribuyentes_afip.md
+    - "Consulta de Operaciones Cambiarias: Compra de Divisas (WSCOC)": websites/otros_webservices/consulta_operaciones_cambiarias.md
     - "SIRE_CertificadoRetencionElectronica: Certificado de retención electrónica del Impuesto al Valor Agregado (SIRE-WS) RG4523/19": pagina19.md
   - "Webservices provinciales: ARBA (Prov. Bs.As.), AGIP (C.A.B.A), API (Sta.Fe), DGR (Córdoba)":
-    - "Remito Electrónico: COT Código de Operaciones de Translado (ARBA, API, AGIP, DGR)": pagina21.md
+    - "Remito Electrónico: COT Código de Operaciones de Translado (ARBA, API, AGIP, DGR)": websites/remito_electronico_cot_arba.md
     - "Ingresos Brutos: Consulta de alícuotas WS DFE IIBB ARBA": pagina22.md
   - "SNT: Sistema Nacional de Trazabilidad ANMAT, SEDRONAR, SENASA":
-    - "Trazabilidad de Medicamentos: ANMAT Disposición 3683/2011": pagina24.md
+    - "Trazabilidad de Medicamentos: ANMAT Disposición 3683/2011": websites/trazabilidad/trazabilidad_medicamentos.md
     - "Trazabilidad de Productos Médicos: ANMAT Disposición 2303/2014 y 2175/14": pagina25.md
-    - "Trazabilidad de Precursores Químicos: RENPRE SEDRONAR Resolución 900/12": pagina26.md
-    - "Trazabilidad de Productos Fitosanitarios: SENASA Resolución 369/13": pagina27.md
+    - "Trazabilidad de Precursores Químicos: RENPRE SEDRONAR Resolución 900/12": websites/trazabilidad/trazabilidad_precursores_quimicos.md
+    - "Trazabilidad de Productos Fitosanitarios: SENASA Resolución 369/13": websites/trazabilidad/trazabilidad_productos_fitosanitarioss.md
     - "Trazabilidad de Productos Fitosanitarios: SENASA Resolución 369/21 (WS_INFO_EMPRESAS / WS_DATOS_GENERALES)": pagina28.md
   - "Aplicativos Genéricos y Herramientas Avanzadas":
-    - "PyRece: Aplicativo visual simil SIAP - RECE (CSV, PDF, Email)": pagina30.md
+    - "PyRece: Aplicativo visual simil SIAP - RECE (CSV, PDF, Email)": websites/aplcativos_y_herramientas/pyrece.md
     - "FE.py: Herramienta universal, unificada e integrada": pagina31.md
     - "FacturaLibre: Aplicacion online (web2py)": pagina32.md
     - "PyFactura: Aplicativo visual y simple (gui2py) para CAE y PDF factura electrónica": pagina33.md

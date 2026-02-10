@@ -1,5 +1,4 @@
 ﻿# [PyAfipWs](http://www.pyafipws.com.ar/): Interface de Servicios Web de la AFIP para Windows
-[[TracNav(FacturaElectronica|noreorder|nocollapse)]]
 
 Interfaz libre multiplataforma para Emisión y almacenamiento electrónico de comprobantes originales AFIP - Argentina. 
 Por Automatización COM (EXE/DLL) simil OCX / ActiveX (Windows) y por línea de comando - archivos de texto (DOS) y tablas DBF.
@@ -16,23 +15,18 @@ Para otros productos (herramientas, aplicativos, generación de PDF, etc.) ver e
 - PyFactura: **Aplicativo independiente -visual-** para facturación electrónica simple (ingreso de datos, obtención de CAE, generación en formato PDF, consultas)
 - HerramientaFacturaElectronica (FE.py): **Herramienta integrada** para la solicitud de CAE, generación y envío de Factura Electrónica por **bases de datos**
 
-
-[[Image(htdocs:logo-pyafipws.png,align=right)]]
-
-## Índice
-[[TOC(noheading,inline,depth=2)]]
 ## Introducción
-PyAfipWs es una interface de software libre a los Servicios Web de la AFIP, desarrollado en Python compatible con Visual Basic, ASP, Fox Pro, Cobol, Delphi, Genexus, !PowerBuilder, PHP, .Net, Java, etc. y cualquier lenguaje/aplicación que pueda crear objetos [COM (automatización)](http://es.wikipedia.org/wiki/Component_Object_Model) en Windows o mediante archivos de texto o tablas DBF simil SIAP/RECE. Funciona tanto para web services de autenticación, factura electrónica, [bienes de capital - bono fiscal electrónico](wiki:BonosFiscales) y [facturas de exportación](wiki:FacturaElectronicaExportacion) y otros webservices de AFIP (próximamente remito electrónico, seguros de caución).
+PyAfipWs es una interface de software libre a los Servicios Web de la AFIP, desarrollado en Python compatible con Visual Basic, ASP, Fox Pro, Cobol, Delphi, Genexus, !PowerBuilder, PHP, .Net, Java, etc. y cualquier lenguaje/aplicación que pueda crear objetos [COM (automatización)](http://es.wikipedia.org/wiki/Component_Object_Model) en Windows o mediante archivos de texto o tablas DBF simil SIAP/RECE. Funciona tanto para web services de autenticación, factura electrónica, [bienes de capital - bono fiscal electrónico](../factura_electronica/wsbfe.md) y [facturas de exportación](../factura_electronica/wsfex.md) y otros webservices de AFIP (próximamente remito electrónico, seguros de caución).
 
 La interfase ha sido basada en los ejemplos de la AFIP y ha sido probada con éxito por varias empresas.
 
-Actualmente implementa [Factura Electrónica](wiki:ProyectoWSFEv1) (emisión electrónica de comprobantes originales) según RG 1956/05, 1345/02, 2265/07, 2289/07, 2485, y 2557/09 (BonosFiscales - Bienes de Capital), 3057, 2953. [Facturas Electrónicas de Exportación](wiki:FacturaElectronicaExportacion) (según RG 2758/10) y [Factura Electrónica con detalle](wiki:FacturaElectronicaMTXCAService) (RG 2904/10 y RG 2926), Factura Electrónica Importadores (RG2975/10), Turismo (RG2959/10) y Proveedores del Estado (RG2853/10). Proximamente incluirá para Pólizas de Seguro de Caución (según RG 2668/09).
+Actualmente implementa [Factura Electrónica](../factura_electronica/wsfev1.md) (emisión electrónica de comprobantes originales) según RG 1956/05, 1345/02, 2265/07, 2289/07, 2485, y 2557/09 (BonosFiscales - Bienes de Capital), 3057, 2953. [Facturas Electrónicas de Exportación](../factura_electronica/wsfex.md) (según RG 2758/10) y [Factura Electrónica con detalle](../factura_electronica/wsmtxca.md) (RG 2904/10 y RG 2926), Factura Electrónica Importadores (RG2975/10), Turismo (RG2959/10) y Proveedores del Estado (RG2853/10). Proximamente incluirá para Pólizas de Seguro de Caución (según RG 2668/09).
 
-También se incluye una interfase por archivo de texto (similar al SIAP/RECE pero online y más simplificada), para lenguajes que no soporten Objetos COM, como algunas versiones de Cobol y Fox Pro (ver el [Manual de Uso](wiki:ManualPyAfipWs) para mayor información). Incluyendo soporte para tablas DBF, JSON, XML y  otros formatos.
+También se incluye una interfase por archivo de texto (similar al SIAP/RECE pero online y más simplificada), para lenguajes que no soporten Objetos COM, como algunas versiones de Cobol y Fox Pro (ver el [Manual de Uso](./manualpyafipws.md) para mayor información). Incluyendo soporte para tablas DBF, JSON, XML y  otros formatos.
 
-En paralelo se ha desarrollado PyRece, un aplicativo ad-hoc para autorizar, generar pdf y enviar por correo electrónico facturas electrónicas. [Ver Más](wiki:PyRece); Herramientas PyFEPDF para generar facturas en formato PDF y PyI25 para generar códigos de barra.
+En paralelo se ha desarrollado PyRece, un aplicativo ad-hoc para autorizar, generar pdf y enviar por correo electrónico facturas electrónicas. [Ver Más](../aplicativos_y_herramientas/pyrece.md); Herramientas PyFEPDF para generar facturas en formato PDF y PyI25 para generar códigos de barra.
 
-Temas relacionados: **COT**, biblioteca para Remito Electrónico. [Ver Más](wiki:RemitoElectronicoCotArba); servicio web **WSCOC**, Consulta de operaciones cambiaras, [PadronContribuyentesAFIP Padrón Contribuyentes],  [Ver Más](wiki:ConsultaOperacionesCambiarias); Servicio web Trazabilidad de [ Medicamentos](wiki:TrazabilidadMedicamentos) (**!TrazaMed** ANMAT), [ Precursores Químicos](wiki:TrazabilidadPrecursoresQuimicos) (**!TrazaRenpre** SEDRONAR), [ Fitosanitarios](wiki:TrazabilidaProductosFitosanitarios) (**!TrazaFito** SENASA).
+Temas relacionados: **COT**, biblioteca para Remito Electrónico. [Ver Más](../webservices_provinciales/remito_electronico_cot_arba.md); servicio web **WSCOC**, Consulta de operaciones cambiaras, [Padrón Contribuyentes](../otros_webservices/padron_contribuyentes_afip.md),  [Consultar Operaciones Cambiarias](../otros_webservices/consulta_operaciones_cambiarias.md); Servicio web Trazabilidad de [Medicamentos](../trazabilidad/trazabilidad_medicamentos.md) (**!TrazaMed** ANMAT), [ Precursores Químicos](../trazabilidad/trazabilidad_precursores_quimicos.md) (**!TrazaRenpre** SEDRONAR), [ Fitosanitarios](../trazabilidad/trazabilidad_productos_fitosanitarios.md) (**!TrazaFito** SENASA).
 
 Consultar por desarrollos especiales, interfaces web, etc.
 ## Licencia
@@ -45,7 +39,7 @@ A su vez, al ser software libre de código abierto "open source", permite proteg
 Cuenta con un [foro](http://groups.google.com/group/pyafipws) (grupo público de usuarios y desarrolladores) de más de 350 miembros de todo el país, donde se brinda soporte comunitario sin costo (gratuito) y sin compromiso.
 El repositorio con el código fuente e historial de cambios se encuentra públicado en [GoogleCode](https://code.google.com/p/pyafipws/) (histórico) y [GitHub](https://github.com/reingart/pyafipws) (actualizado).
 
-Por consultas sobre el lenguaje Python y demás, dirigirse a [PyAr](http://www.python.org.ar). Para más información ver FacturaElectronica.
+Por consultas sobre el lenguaje Python y demás, dirigirse a [PyAr](http://www.python.org.ar). Para más información ver [Factura Electronica](../factura_electronica.md).
 
 
 
@@ -60,13 +54,13 @@ Por consultas sobre el lenguaje Python y demás, dirigirse a [PyAr](http://www.p
 - Sin dependencias ni librerias o runtimes externas (Php, .Net o Java)
 - Sin licencia de uso ni límites por cada usuario final
 - Código abierto: archivos fuentes publicados, revisados y modificables (Software Libre)
-- Sin problemas de instalación de OCX ni ActiveX (ver [comparativa](wiki:OcxFacturaElectronica))
+- Sin problemas de instalación de OCX ni ActiveX (ver [comparativa](./ocx_factura_electronica.md))
 - No requiere formularios visuales ni referencias a DLL
 
 ## Funcionamiento
 La interface maneja automáticamente la generación de documentos xml, firmas digitales criptográficas y servicios web (SOAP), por lo que no se requiere el manejo de dichos temas por parte de la aplicación.
 
-Ver [Tabla Comparativa](wiki:ManualPyAfipWs#TablacomparativaWebservices) para mayor información.
+Ver [Tabla Comparativa](./manualpyafipws.md#tabla-comparativa-webservices) para mayor información.
 
 La interfase del **Web Service de Autenticación y Autorización (WSAA)** permite:
 
@@ -82,14 +76,14 @@ La interfase del **Web Service de Facturación Electrónica (WSFE)** permite:
 - Ejecución del método remoto RecuperaLastCMP() para obtención del último número de comprobante autorizado (uso opcional)
 - Ejecución del método remoto !RecuperaQty() para recuperar la cantidad máxima de registros de detalle (uso opcional)
 
-La interfase del **Web Service de Bono Fiscal Electrónico (WSBFE)** (ver [Bonos Fiscales - Bienes de Capital](wiki:BonosFiscales) RG2557) permite:
+La interfase del **Web Service de Bono Fiscal Electrónico (WSBFE)** (ver [Bonos Fiscales - Bienes de Capital](../factura_electronica/wsbfe.md) RG2557) permite:
 
 - Ejecución del método remoto Dummy() para obtención del estado de servidores (uso opcional)
 - Ejecución del método remoto !CrearFactura() para crear una factura de bono fiscal electrónico 
 - Ejecución del método remoto !AgregarItem() para agregar un artículo a una factura de bono fiscal electrónico
 - Ejecución del método remoto Authorize() devuelve el Código de Autorización Electrónico o de Emisión (CAE)
 
-La interfase del **Web Service de Factura Electrónica de Exportación (WSFEXv1)** (ver [Factura Exportación](wiki:FacturaElectronicaExportacion) RG2758) permite:
+La interfase del **Web Service de Factura Electrónica de Exportación (WSFEXv1)** (ver [Factura Exportación](../factura_electronica/wsfex.md) RG2758) permite:
 
 - Ejecución del método remoto Dummy() para obtención del estado de servidores (uso opcional)
 - Ejecución del método remoto !CrearFactura() para crear una factura electrónica de exportación 
@@ -99,7 +93,7 @@ La interfase del **Web Service de Factura Electrónica de Exportación (WSFEXv1)
 - Ejecución del método remoto Authorize() devuelve el Código de Autorización Electrónico o de Emisión (CAE)
 - Ejecición de los métodos remotos !GetParamMon, !GetParamTipoCbte, !GetParamTipoExpo, !GetParamIdiomas, !GetParamUMed, !GetParamIncoterms, !GetParamDstPais, !GetParamDstCUIT, !GetParamCtz para obtención de tablas referenciales y datos auxiliares.
 
-La interfase del **Web Service de Factura Electrónica Mercado Interno Versión 1 (WSFEv1)** (ver [wiki:ProyectoWSFEv1] RG2485, RG2975 Importadores, RG2959 Turismo, RG3057 Monotributistas, RG2953 Proveedores del Estado Nacional, RG2926 CAE Anticipado Autoimpresores, entre otros) permite:
+La interfase del **Web Service de Factura Electrónica Mercado Interno Versión 1 (WSFEv1)** (ver [WSFEV1](../factura_electronica/wsfev1.md) RG2485, RG2975 Importadores, RG2959 Turismo, RG3057 Monotributistas, RG2953 Proveedores del Estado Nacional, RG2926 CAE Anticipado Autoimpresores, entre otros) permite:
 
 - Ejecución del método remoto Dummy() para obtención del estado de servidores (uso opcional)
 - Ejecución del método remoto !CrearFactura() para crear una factura electrónica local A, B, C o M (en moneda nacional o extranjera)
@@ -111,7 +105,7 @@ La interfase del **Web Service de Factura Electrónica Mercado Interno Versión 
 - Ejecución del método remoto !CompConsultar para recuperar un comprobante.
 - Ejecución de los métodos remotos !ParamGetTiposCbte, !ParamGetTiposConcepto, !ParamGetTiposDoc, !ParamGetTiposIva, !ParamGetTiposMonedas, !ParamGetTiposOpcional, !ParamGetTiposTributos, !ParamGetCotizacion, !ParamGetPtosVenta para obtención de tablas referenciales y datos auxiliares.
 
-La interfase del **Web Service de Factura Electrónica Mercado Interno con Detalle (WSMTXCA)** (ver [wiki:FacturaElectronicaMTXCAService] RG2904 Sujetos Notificados, RG2926 CAE Anticipado Autoimpresores, entre otros) permite:
+La interfase del **Web Service de Factura Electrónica Mercado Interno con Detalle (WSMTXCA)** (ver [WSMTXCA](../factura_electronica/wsmtxca.md) RG2904 Sujetos Notificados, RG2926 CAE Anticipado Autoimpresores, entre otros) permite:
 
 - Ejecución del método remoto Dummy() para obtención del estado de servidores (uso opcional)
 - Ejecución del método remoto !CrearFactura() para crear una factura electrónica A o B 
@@ -200,7 +194,7 @@ GET PROPERTY OF WSAA 'Sign' = SIGN.
 ```
 
 Para más información ver:
-http://wiki.sdn.sap.com/wiki/display/Snippets/ABAP+-+OLE+Automation+using+MS-Word
+[http://wiki.sdn.sap.com/wiki/display/Snippets/ABAP+-+OLE+Automation+using+MS-Word](http://wiki.sdn.sap.com/wiki/display/Snippets/ABAP+-+OLE+Automation+using+MS-Word)
 
 
 ### Ejemplo para Delphi
@@ -543,7 +537,7 @@ En caso de inconvenientes, los servidores de la AFIP responderán con un mensaje
 
 ## Descargas
 
-- [Manual de Uso](wiki:ManualPyAfipWs): Documentación ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf))
+- [Manual de Uso](./manualpyafipws.md)
 - [GitHub](https://github.com/reingart/pyafipws/releases): Instalador para Homologación (Ejecutable Autoinstalable)
 - [ej_vb.zip](http://www.sistemasagiles.com.ar/soft/pyafipws/ej_vb.zip): Proyecto de ejemplo en Visual Basic 5/6 (comprimido)
 - [ej_vfp.zip](http://www.sistemasagiles.com.ar/soft/pyafipws/ej_vfp.zip): Proyecto de ejemplo en Visual Fox Pro 5 o posterior (comprimido)
@@ -560,8 +554,8 @@ En caso de inconvenientes, los servidores de la AFIP responderán con un mensaje
 ## Costos y Condiciones
 
 - Instalador para demostración sin cargo completamente funcional (para homologación)
-- Código fuente publicado licenciado bajo GPLv3 (ver [Licencia](wiki:PyAfipWs#Licencia))
-- Soporte comunitario: para uso gratuito sin cargo por el [fóro público](http://groups.google.com/group/pyafipws) (Google Group), foro PyAFIPWs (Telegram) ver [Modos Homologación/Producción](wiki:ManualPyAfipWs#ModosHomologaciónyProducción) e [Instalación Codigo Fuente](https://github.com/reingart/pyafipws/wiki/InstalacionCodigoFuente)
+- Código fuente publicado licenciado bajo GPLv3 (ver [Licencia](#licencia))
+- Soporte comunitario: para uso gratuito sin cargo por el [fóro público](http://groups.google.com/group/pyafipws) (Google Group), foro PyAFIPWs (Telegram) ver [Modos Homologación/Producción](./manualpyafipws.md#modos-homologacion-y-produccion) e [Instalación Codigo Fuente](https://github.com/reingart/pyafipws/wiki/InstalacionCodigoFuente)
 - Costo del soporte técnico comercial básico para webservices de AFIP y productos relacionados: (por única vez por empresa desarrolladora de software, sin activación ni limitaciones de CUIT, consultar por presupuestos a medida)
 - Para [Colaboraciones $](https://link.mercadopago.com.ar/colaboracionespyafip)
 
@@ -570,7 +564,7 @@ En caso de inconvenientes, los servidores de la AFIP responderán con un mensaje
 
 Planes con descuento adquiriendo soporte para varios webservices (consultar por presupuestos especiales, ver abajo precios individuales, condiciones y aclaraciones):
 
-| **Paquete Recomendado: Webservice / Herramienta y funcionalidades** | **Período de Cobertura "garantía limitada"** [**](wiki:PyAfipWs#ProductosyServiciosincluidos) | **Hs. de soporte estimadas** | **Costo** |
+| **Paquete Recomendado: Webservice / Herramienta y funcionalidades** | **Período de Cobertura "garantía limitada"** [**](#productos-y-servicios-incluidos) | **Hs. de soporte estimadas** | **Costo** |
 |---|---|---|---|
 | Consultas por temas menores (certificados WSAA, constatación WSCDC, padrón contribuyentes RG1817, almacenamiento RG1361, código barras, envío emails, etc.) *-sin cargo para clientes con soporte vigente, según hs contratadas-* *(asesoramiento gratuito de cortesía en homologación)* | 1 semana | hasta 1hs | **$65.000** |
 | **Instaladores / Actualizaciones**: soporte mínimo instalación en producción, solo acceso a instalador para producción (aplicable a todos los componentes y herramientas para AFIP, sin consultas ni ajustes) **No válido para WSLPG, WSRemCarnico, WSRemHarina, WSRemAzucar, WSFECred y WSCPE**. Solo disponible para clientes con versiones recientes (12 meses) | 1 semana |  | **$** |
@@ -598,7 +592,7 @@ Planes con descuento adquiriendo soporte para varios webservices (consultar por 
 | **WSAA + WSLTVv1.1:** liquidación de tabaco verde (soporte general recomendado, consultar alcance y métodos contemplados*) | 4 meses | hasta 20hs | **$** |
 
 **Importante***: Consultar por paquetes a medida (soporte mínimo solo instalador, soporte por actualizaciones y cambios de AFIP, mayor o menor cantidad de horas o meses de cobertura, etc.).
- Ver [Productos y Servicios incluidos](http://www.sistemasagiles.com.ar/trac/wiki/PyAfipWs#ProductosyServiciosincluidos) para más información y períodos aplicables.
+ Ver [Productos y Servicios incluidos](#productos-y-servicios-incluidos) para más información y períodos aplicables.
                    Para LINUX se adiciona soporte Avanzado, consultar.
 
 
@@ -689,7 +683,7 @@ Para consultas puntuales o temas menores ofrecemos un paquete de 1 hora de sopor
 - Forma de entrega: Se envía el instalador para producción por email y Factura por correo electrónico
 - Consultar por facilidades de pago, soporte técnico comercial avanzado, desarrollos a medida o ajustes especiales.
 - Los precios no incluyen IVA, adicionar IVA 21% 
-- La cantidad de horas es estimativa (promedio estandarizado basado en nuestra experiencia para cada webservice, y no es cronometrada, por lo que no se cobran adicionales no presupuestados ni se bonifica por servicios no utilizados), cubre todos los aspectos del servicio (consultas, ajustes y mantenimiento postventa, ya sean solicitados o no). Ver [Aclaraciones](wiki:PyAfipWs#Aclaraciones)
+- La cantidad de horas es estimativa (promedio estandarizado basado en nuestra experiencia para cada webservice, y no es cronometrada, por lo que no se cobran adicionales no presupuestados ni se bonifica por servicios no utilizados), cubre todos los aspectos del servicio (consultas, ajustes y mantenimiento postventa, ya sean solicitados o no). Ver [Aclaraciones](#aclaraciones)
 
 ### Productos y Servicios incluidos
 
@@ -730,7 +724,7 @@ Los servicios detallados en el presente serán prestados sólo al profesional o 
 
 ### Disclaimer / Aviso Legal
 
-Toda información es proporcionada a Titulo Informativo. El programa es software libre liberado bajo licencia GPLv3 (ver [Licencia](wiki:PyAfipWs#Licencia)) y se entrega como está, sin garantías explícitas ni implícitas de ningún tipo, incluyendo sin limitación, pérdida de ganancias, interrupción de negocios, pérdida de programas u otros datos en sistemas de computación o cualquier otro reclamo. Al usarlo acepta hacerlo bajo su propia responsabilidad, conociendo la normativa y reglamentaciones existentes.
+Toda información es proporcionada a Titulo Informativo. El programa es software libre liberado bajo licencia GPLv3 (ver [Licencia](#licencia)) y se entrega como está, sin garantías explícitas ni implícitas de ningún tipo, incluyendo sin limitación, pérdida de ganancias, interrupción de negocios, pérdida de programas u otros datos en sistemas de computación o cualquier otro reclamo. Al usarlo acepta hacerlo bajo su propia responsabilidad, conociendo la normativa y reglamentaciones existentes.
 
 Estos términos y condiciones se rigen y elaboran en base a las leyes de la República Argentina.  
 Si el descargo de responsabilidad de garantía y el límite de responsabilidad proporcionado anteriormente no tiene efectos legales de acuerdo a otras leyes aplicables, los juzgados deberán aplicar la ley local que más se asemeje a una renuncia absoluta de la responsabilidad civil concerniente al Programa.
@@ -798,7 +792,7 @@ A su vez, hemos presentado la interfaz en conferencias y eventos de software lib
 Esta interfase también se ofrecía por !TrabajoFreelance.com, ver [Comentarios](http://www.trabajofreelance.com.ar/perfil-marianix:reputacion)
 ## Capacitación
 
-- [Manual de Uso](wiki:ManualPyAfipWs)
+- [Manual de Uso](./manualpyafipws.md)
 - Ver [Curso en la ACP](http://www.clubdeprogramadores.com/cursos/CursoMuestra.php?Id=485)
 
 ## Novedades
@@ -807,10 +801,10 @@ Esta interfase también se ofrecía por !TrabajoFreelance.com, ver [Comentarios]
 
 ## Contacto
 
-Para mayor información, consultar por mail a [[reingart@gmail.com](mailto:facturaelectronica@sistemasagiles.com.ar],) (directo), [r.castrogiovani@gmail.com] (directo) o telefónicamente de Lu a Vi de 10 a 17hs al 15-3048-9211
+Para mayor información, consultar por mail a [reingart@gmail.com](mailto:facturaelectronica@sistemasagiles.com.ar],) (directo), r.castrogiovani@gmail.com (directo), in.reingart@gmail.com (directo), o telefónicamente de Lu a Vi de 10 a 17hs al 15-3048-9211
 
 Para soporte de la comunidad gratuito, ver [Foro Público](http://groups.google.com/group/pyafipws) (grupo google), revisar la [lista de temas](http://code.google.com/p/pyafipws/issues/list?can=1&q=) y/o [crear uno nuevo](http://code.google.com/p/pyafipws/issues/entry) 
 
-PyAfipWs Copyright 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 por MarianoReingart
+PyAfipWs Copyright 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 por MarianoReingart
 
-**[https://link.mercadopago.com.ar/colaboracionespyafip] Colaboraciones**
+**[Colaboraciones](https://link.mercadopago.com.ar/colaboracionespyafip)**

@@ -48,7 +48,7 @@ Interfase con otros lenguajes y miscelaneas (PyAfipWs, PyRece)
 - [Factura Electrónica en Python](wiki:FacturaElectronicaPython): Información Técnica (SOAP, XML, PDF, DBF, etc.)
 
 
-**Importante**: Ver [Preguntas Frecuentes generales](wiki:FacturaElectronica#PreguntasFrecuentes) abajo.
+**Importante**: Ver [Preguntas Frecuentes generales](#preguntas-frecuentes) abajo.
 
 ## Interfase con otros Lenguajes
 Hemos desarrollado una interface COM autoinstalable para windows compatible con otros lenguajes (Visual Basic, Visual Fox Pro, Delphi, PHP, .Net, Java, etc.) y una interfase por línea de comando ("DOS") - archivo de texto simil SIAP/RECE para lenguajes que no soporten la creación de objetos COM (algunas versiones de COBOL y Fox Pro). DLL/EXE de automatización COM similar a OCX/ActiveX (ver [ventajas](wiki:OcxFacturaElectronica)). Software libre de código abierto, incorporable a sistemas propietarios (ver [PyAfipWs#CostosyCondiciones condiciones]).
@@ -118,7 +118,8 @@ Consultar por capacitación y cursos a medida.
 
 
 ----
-## Preguntas Frecuentes ¿Qué es la factura electrónica?
+## Preguntas Frecuentes
+### ¿Qué es la factura electrónica?
 Las facturas electrónicas son comprobantes originales respaldatorios de las operaciones comerciales.
 Contienen los mismos datos y tienen la misma validez que los comprobantes tradicionales (talonarios "físicos" en papel), pero su confección, autorización, transmisión y almacenamiento es totalmente electrónico (por computadora, internet, etc., aunque también pueden ser impresos).
 
