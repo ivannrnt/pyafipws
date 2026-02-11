@@ -43,16 +43,16 @@ nav:
     - "Consulta de Operaciones Cambiarias: Compra de Divisas (WSCOC)": websites/otros_webservices/consulta_operaciones_cambiarias.md
     - "SIRE_CertificadoRetencionElectronica: Certificado de retención electrónica del Impuesto al Valor Agregado (SIRE-WS) RG4523/19": pagina19.md
   - "Webservices provinciales: ARBA (Prov. Bs.As.), AGIP (C.A.B.A), API (Sta.Fe), DGR (Córdoba)":
-    - "Remito Electrónico: COT Código de Operaciones de Translado (ARBA, API, AGIP, DGR)": websites/remito_electronico_cot_arba.md
+    - "Remito Electrónico: COT Código de Operaciones de Translado (ARBA, API, AGIP, DGR)": websites/webservices_provinciales/remito_electronico_cot_arba.md
     - "Ingresos Brutos: Consulta de alícuotas WS DFE IIBB ARBA": pagina22.md
   - "SNT: Sistema Nacional de Trazabilidad ANMAT, SEDRONAR, SENASA":
     - "Trazabilidad de Medicamentos: ANMAT Disposición 3683/2011": websites/trazabilidad/trazabilidad_medicamentos.md
     - "Trazabilidad de Productos Médicos: ANMAT Disposición 2303/2014 y 2175/14": pagina25.md
     - "Trazabilidad de Precursores Químicos: RENPRE SEDRONAR Resolución 900/12": websites/trazabilidad/trazabilidad_precursores_quimicos.md
-    - "Trazabilidad de Productos Fitosanitarios: SENASA Resolución 369/13": websites/trazabilidad/trazabilidad_productos_fitosanitarioss.md
+    - "Trazabilidad de Productos Fitosanitarios: SENASA Resolución 369/13": websites/trazabilidad/trazabilidad_productos_fitosanitarios.md
     - "Trazabilidad de Productos Fitosanitarios: SENASA Resolución 369/21 (WS_INFO_EMPRESAS / WS_DATOS_GENERALES)": pagina28.md
   - "Aplicativos Genéricos y Herramientas Avanzadas":
-    - "PyRece: Aplicativo visual simil SIAP - RECE (CSV, PDF, Email)": websites/aplcativos_y_herramientas/pyrece.md
+    - "PyRece: Aplicativo visual simil SIAP - RECE (CSV, PDF, Email)": websites/aplicativos_y_herramientas/pyrece.md
     - "FE.py: Herramienta universal, unificada e integrada": pagina31.md
     - "FacturaLibre: Aplicacion online (web2py)": pagina32.md
     - "PyFactura: Aplicativo visual y simple (gui2py) para CAE y PDF factura electrónica": pagina33.md

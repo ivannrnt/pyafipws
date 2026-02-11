@@ -32,7 +32,7 @@ Junio 2020:
 Febrero 2019:
 
 - [RG4367/18 Factura de Crédito Electrónica MiPyMEs FEv2.13 FCE](../factura_electronica/wsfev1.md#importante-rg43672018-fev213): Se agrega fecha en método [WSFEv1.AgregarCmpAsoc](#metodos-basicos-de-wsfev1) y [datos opcionales CBU](#datos-opcionales-afip-wsfev1) 
-- [RG4401/19 WSFEXv1.5.0](../factura_electronica/wsfex.md#factura-electrónica-de-exportación-rg27582010-y-rg368914---rg440119): Se agrega método [WSFEXv1.GetParamMonConCotizacion](#metodos) y ejemplo [RECEX1 /monctz](#ejemplo-recex1-consulta-monedas-con-cotizacion) para consultar cotización moneda aduana por fecha
+- [RG4401/19 WSFEXv1.5.0](../factura_electronica/wsfex.md#factura-electronica-de-exportacion-rg27582010-y-rg368914---rg440119): Se agrega método [WSFEXv1.GetParamMonConCotizacion](#metodos) y ejemplo [RECEX1 /monctz](#ejemplo-recex1-consulta-monedas-con-cotizacion) para consultar cotización moneda aduana por fecha
 
 Agosto 2018:
 
@@ -510,7 +510,7 @@ Nota: De realizar la verificación, debe agregar los parámetros a todas las sec
 
 Para verificar la Autoridad Certificante (CACERT), se recomienda probar el [último ejemplo interactivo](http://pyafipws.googlecode.com/files/ej-wsaa-v2.1.0.3.exe)
 (cambiando httplib2 por pycurl para validar el nuevo certificado de wsaa). 
-Para más información ver [Ejemplo Interactivo de Autenticación](#ejemplo-interactivo-de-autenticación-ej-wsaa) (requiere instalación)
+Para más información ver [Ejemplo Interactivo de Autenticación](#ejemplo-interactivo-de-autenticacion-ej-wsaa) (requiere instalación)
 
 De encontrarse alguna inconsistencia, el método Conectar devolverá falso y en Excepción estará el motivo de error: 
 
@@ -532,9 +532,9 @@ A continuación se presenta un resumen de webservices, herramientas, atributos y
 | Objeto COM (Windows) | WSFE | WSFEv1 | WSBFE o WSBFEv1 | WSFEX o WSFEXv1 | WSMTXCA |
 | Biblioteca COM (Windows) | wsfe.dll | wsfev1.dll | pyafipws.dll o wsbfev1.dll | pyafipws.dll o wsfexv1.dll | wsmtx.dll |
 | Modulo Python (Linux) | wsfe.py | wsfev1.py | wsbfe.py o wsbfev1.py | wsfex.py o wsfexv1.py | wsmtx.py |
-| [Herramienta símil SIAP/RECE](#interfase-por-archivos-de-texto-símil-siap---rece) (Windows/Linux) | rece.exe / rece.py | rece1.exe / rece1.py | receb.exe / receb.py | recex.exe / recex.py | recem.exe / recem.py |
+| [Herramienta símil SIAP/RECE](#interfase-por-archivos-de-texto-simil-siap---rece) (Windows/Linux) | rece.exe / rece.py | rece1.exe / rece1.py | receb.exe / receb.py | recex.exe / recex.py | recem.exe / recem.py |
 | Información General | [PyAfipWs](./pyafipws.md) | [Proyecto Version 1](../factura_electronica/wsfev1.md) | [Bonos Fiscales Electrónicos](../factura_electronica/wsbfe.md) | [Factura Electrónica Exportación](../factura_electronica/wsfex.md) | [Proyecto "Matrix"](../factura_electronica/wsmtxca.md) |
-| Documentación Técnica (Manual) | [WSFE](#servicio-web-de-factura-electronica-wsfe) | [WSFEv1](#servicio-web-de-factura-electrónica-mercado-interno-versión-1-wsfev1) | [WSBFE](#servicio-web-de-bono-fiscal-electrónico-wsbfe) | [WSFEX](#servicio-web-de-factura-electrónica-exportación-wsfex) | [WSMTXCA](#servicio-web-de-factura-electrónica-mercado-interno-programa-matrix-wsmtxca) |
+| Documentación Técnica (Manual) | [WSFE](#servicio-web-de-factura-electronica-wsfe) | [WSFEv1](#servicio-web-de-factura-electronica-mercado-interno-versión-1-wsfev1) | [WSBFE](#servicio-web-de-bono-fiscal-electronico-wsbfe) | [WSFEX](#servicio-web-de-factura-electronica-exportación-wsfex) | [WSMTXCA](#servicio-web-de-factura-electronica-mercado-interno-programa-matrix-wsmtxca) |
 | Nombre de servicio para `WSAA.CreateTRA` | "wsfe" | "wsfe" | "wsbfe" | "wsfex" | "wsmtxca" |
 | Método Solicitud de Autorización CAE o información de CAEA | `Aut` (CAE) | `CAESolicitar` / `CAEARegInformativo` | `Authorize` (CAE) | `Authorize` (CAE) | `AutorizarComprobante` / `InformarComprobanteCAEA` |
 | Métodos para CAEA (anticipado) |  | `CAEASolicitar`, `CAEAConsultar` |  |  | `SolicitarCAEA`, `ConsultarCAEAEntreFechas`, `ConsultarCAEA` (emulado) |
@@ -604,7 +604,7 @@ Para guias iniciales, ver base de datos con ejemplos completos de WSFEv1 y WSFEX
 De encontrar problemas de instalación (por causas del sistema operativo o similar) que impidan crear el objeto o conectarse al webservice, se recomienda utilizar las versiones anteriores o registrar manualmente los componentes de forma autónoma con `--register`. Ver [Instalación Manual](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs#InstalaciónManualAvanzada) para más detalles. 
 Recordamos que este tipo de incidentes pueden ser consultados con el soporte comercial o soporte comunitario, ver [Más Información](#mas-informacion) 
 
-**Incidencias Conocidas**: Dado que existen varias versiones dependiendo de que sistema operativo se utilice, en general no debería haber problemas de instalación, pero puede haber cuestiones de permisos de acceso / políticas de seguridad en algunos entornos Windows (por ej. *Permission Denied*). En esos casos recomendamos instalarlo como Administrador o darle permisos de modificación (Propiedades, Solapa de Seguridad) al usuario del sistema operativo en la carpeta del componente (generalmente `C:\Archivos de programa\PyAfipWs` o `Program Files`). Ver [Permisos en Windows](#errores-de-permisos-en-windows) para mayor información.
+**Incidencias Conocidas**: Dado que existen varias versiones dependiendo de que sistema operativo se utilice, en general no debería haber problemas de instalación, pero puede haber cuestiones de permisos de acceso / políticas de seguridad en algunos entornos Windows (por ej. *Permission Denied*). En esos casos recomendamos instalarlo como Administrador o darle permisos de modificación (Propiedades, Solapa de Seguridad) al usuario del sistema operativo en la carpeta del componente (generalmente `C:\Archivos de programa\PyAfipWs` o `Program Files`). Ver [Permisos en Windows](#errores-de-permisos) para mayor información.
 
 Se recomienda desinstalar cualquier versión anterior, y borrar la carpeta de instalación para evitar archivos temporales residentes o temas similares.
 ### Instalación Manual Avanzada
@@ -1042,7 +1042,7 @@ wsfev1.SetTicketAcceso(ta)
 
 ```
 
-**Nota**: dependiendo del sistema operativo, deberá conceder permisos de acceso de escritura en la carpeta cache para poder almacenar el ticket de acceso. También es posible pasar el 8vo parámetro cache de Autenticar con otro directorio para los archivos temporales. Ver [Permisos en Windows](#errores-de-permisos-en-windows) para más información.
+**Nota**: dependiendo del sistema operativo, deberá conceder permisos de acceso de escritura en la carpeta cache para poder almacenar el ticket de acceso. También es posible pasar el 8vo parámetro cache de Autenticar con otro directorio para los archivos temporales. Ver [Permisos en Windows](#errores-de-permisos) para más información.
 ### Obtención de Atributos Avanzados WSAA
 
 En versiones recientes (2.04a o superior), si no hubo excepción es posible revisar y obtener datos avanzados del ticket de acceso (útiles para depuración y solución de errores):
@@ -1861,7 +1861,7 @@ Importante: en `condicion_iva_receptor_id` es obligatorio a partir de la Version
 #### Métodos Auxiliares del webservice
 
 - **`Dummy()`**: servicio de prueba para obtener el estado de los servidores de la AFIP.
-- **`ParamGetTiposMonedas()`**, **`ParamGetTiposCbte()`**, **`ParamGetTiposDoc()`**, **`ParamGetTiposIva()`**, **`ParamGetTiposOpcional()`**, **`ParamGetTiposTributos()`**, **`ParamGetTiposPaises()`**: recupera valores referenciales de códigos de las tablas de parámetros, devuelve una lista de strings con el id/código, descripción del parámetro y vigencia -si corresponde- (ver ejemplos). Más información en [Tablas de Parámetros](../factura_electronica/wsfev1#tablas-de-parametros). **`ParamGetTiposPaises`** agregado para "COMPGv2.6"
+- **`ParamGetTiposMonedas()`**, **`ParamGetTiposCbte()`**, **`ParamGetTiposDoc()`**, **`ParamGetTiposIva()`**, **`ParamGetTiposOpcional()`**, **`ParamGetTiposTributos()`**, **`ParamGetTiposPaises()`**: recupera valores referenciales de códigos de las tablas de parámetros, devuelve una lista de strings con el id/código, descripción del parámetro y vigencia -si corresponde- (ver ejemplos). Más información en [Tablas de Parámetros](../factura_electronica/wsfev1.md#tablas-de-parametros). **`ParamGetTiposPaises`** agregado para "COMPGv2.6"
 - **`ParamGetCotizacion(moneda_id)`**: devuelve cotización y fecha de la moneda indicada como parámetro
 - **`ParamGetPtosVenta()`**: devuelve los puntos de venta autorizados para factura electrónica
 - **`ParamGetActividades()`**: devuelve los códigos de actividades, sus descripciones y el orden (si es actividad primaria, secundaria, etc). 
@@ -1913,7 +1913,7 @@ AFIP realiza varias validaciones a los datos enviados, muchas agregadas reciente
 
 - *10063: Factura individual, !DocTipo: 80, !DocNro XXXXXXXXX no se encuentra inscripto en condicion ACTIVA en el impuesto.*: Las facturas A solo pueden ser emitidas a Responsables Inscriptos, consignando el CUIT válido y registrado (tipo_doc=80). 
 - *10014: Para facturas B (!CbteDesde distinto a !CbteHasta) el resultado de la operación !ImpTotal / (!CbteHasta - !CbteDesde + 1 ) debe ser menor a $1000.* y *10015: Para facturas B (!CbteDesde distinto a !CbteHasta) menor a $1000 el campo !DocNro deberá ser cero (0) y el campo !DocTipo 99.*: Los lotes de facturas B menores a $1000.- pueden ser emitidos a sólo a Consumidor Final (tipo_doc=99 y nro_doc=0), indicando el importe total del reango de facturas.
-- *10043: El campo !ImpTotConc (Importe Total del Concepto) para comprobantes tipo C debe ser igual a cero (0).* y *10047: El campo ImpIVA (Importe de IVA) para comprobantes tipo C debe ser igual a cero (0).*, *10071: Para comprobantes tipo C el objeto IVA no debe informarse.*: Para emitir Facturas C, no se informa iva ni imp_tot_conc, ver caso especial [Monotributo](#factura-c-monotributo--exento)
+- *10043: El campo !ImpTotConc (Importe Total del Concepto) para comprobantes tipo C debe ser igual a cero (0).* y *10047: El campo ImpIVA (Importe de IVA) para comprobantes tipo C debe ser igual a cero (0).*, *10071: Para comprobantes tipo C el objeto IVA no debe informarse.*: Para emitir Facturas C, no se informa iva ni imp_tot_conc, ver caso especial [Monotributo](#factura-c-monotributo-exento)
 - *10048: El campo  'Importe Total' !ImpTotal, debe ser igual  a la  suma de !ImpTotConc + !ImpNeto + !ImpOpEx + !ImpTrib + ImpIVA.*: La sumatoria de los campos imp_neto, impto_iva, imp_op_ex, imp_tot_conc imp_trib contra imp_total no debe diferir en más de 1 centavo (o 0.01%).
 - *10051: Los importes informados en AlicIVA no se corresponden con los porcentajes.*: La base imponible por la alícuota de IVA no debe diferir en más de 1 centavo con el impuesto liquidado de IVA (para cada tasa, ver AgregarIVA).
 - *10020: El  campo  !BaseImp  en AlicIVA es obligatorio  y debe ser mayor a 0 cero.*: Si el imp_neto es 0, no se debe enviar subtotal de IVA, ni para la tasa 0% (no usar AgregarIVA). 
@@ -2199,7 +2199,7 @@ Debug.Print "Resultado", WSFEv1.Resultado
 Como primer paso, se debe crear una factura (utilizada internamente por la interfase para contener los valores a autorizar),  llamando al método !CrearFactura o completar el registro de encabezado (ver archivo de intercambio), con los siguiente parámetros:
 
 - tipo_doc, nro_doc: Tipo (80 CUIT, 96 DNI, etc. según [tabla de parámetros de AFIP](../factura_electronica/wsfev1##tipos-de-documento)) y número de Documento del cliente (receptor de la factura). Usar tipo_doc=99 y nro_doc=0 para consumidores finales (Factura B < $1000)
-- tipo_cbte: Tipo de comprobante (según [tabla de parámetros AFIP](../factura_electronica/wsfev1#tipos-de-comprobante))
+- tipo_cbte: Tipo de comprobante (según [tabla de parámetros AFIP](../factura_electronica/wsfev.md#tipos-de-comprobante))
 - punto_vta: Nº de punto de venta (debe estar autorizado para WSFE)
 - cbt_desde, cbt_hasta: Nº de comprobante (desde, hasta, generalmente el mismo número si es una factura individual, o un rango si son Factura B < $ 1000 a Consumidor Final -en este último caso se obtiene un único CAE para el "lote"-)
 - fecha_cbte: Fecha del comprobante (no puede ser mayor o menor a 10 días)
@@ -2218,7 +2218,7 @@ Como primer paso, se debe crear una factura (utilizada internamente por la inter
 
 Luego, por cada alicuota de IVA (excepto para no gravado y exento), se debe llamar al método !AgregarIva o completar el registro respectivo, con los siguientes parámetros:
 
-- iva_id: código Alícuota de IVA (según [tabla de parámetros AFIP](../factura_electronica/wsfev1#alicuotas-de-iva))
+- iva_id: código Alícuota de IVA (según [tabla de parámetros AFIP](../factura_electronica/wsfev1.md#alicuotas-de-iva))
 - base_imp: base imponible (importe)
 - importe_iva: importe liquidado (base_imp por alicuota)
 
@@ -2232,7 +2232,7 @@ De existir otros tributos (percepciones/retenciones o similares), se debe llamar
 
 También se puede llamar al método !AgregarCmpAsoc o completar el registro respectivo, para detallar los comprobantes asociados a una nota de crédito, con los siguientes parámetros:
 
-- tipo: Código de tipo de comprobante (según [tabla de parámetros AFIP](../factura_electronica/wsfev1#tipos-de-comprobante))
+- tipo: Código de tipo de comprobante (según [tabla de parámetros AFIP](../factura_electronica/wsfev.md#tipos-de-comprobante))
 - pto_vta: Punto de venta
 - nro: Numero de comprobante
 
@@ -2804,7 +2804,7 @@ Para lenguajes donde no es posible utilizar objetos COM, se desarrolló una inte
 
 Formatos de archivos de intercambio soportados:
 
-- [Archivos TXT](#formato-de-archivos-de-entrrada-y-salida) de Texto plano estilo COBOL y aplicativos SIAP AFIP
+- [Archivos TXT](#formato-de-archivos-de-entrada-y-salida) de Texto plano estilo COBOL y aplicativos SIAP AFIP
 - [Tablas DBF](#formato-tablas-xbase-dbf-dbase-iii--fox--clipper) para dBase III / Fox / Clipper, Harbour (xBase), etc.
 - [Formato JSON](#formato-json) para lenguajes de programación más modernos (PHP, JAVA, !JavaScript, etc.)
 
@@ -2814,9 +2814,9 @@ Ver secciones anteriores sobre la descripción de las opciones de configuración
 
 - [Consideraciones Generales](#importante-leer-primero-antes-de-comenzar)
 - [Autenticación (WSAA)](#servicio-web-de-autenticacion-y-autorizacion-wsaa): ticket de acceso, certificados y claves privadas
-- [Gestión de CAE (WSFEv1)](#descripción-de-la-obtención-de-cae--caea): mercado interno sin detalle (version 1)
-- [Gestión de CAE (WSMTXCA)](#descripción-de-la-obtención-de-cae--caea-1): mercado interno con detalle ("matrix")
-- [Gestión de CAE (WSFEX)](#descripción-de-la-obtención-de-cae-1): exportación
+- [Gestión de CAE (WSFEv1)](#descripcion-de-la-obtencion-de-cae--caea): mercado interno sin detalle (version 1)
+- [Gestión de CAE (WSMTXCA)](#descripcion-de-la-obtencion-de-cae--caea-1): mercado interno con detalle ("matrix")
+- [Gestión de CAE (WSFEX)](#descripcion-de-la-obtencion-de-cae-1): exportación
 
 ### Configuración
 Editar el archivo RECE.INI en la carpeta de la intefase (C:\PYAFIPWS):
@@ -3810,7 +3810,7 @@ La interfaz maneja automáticamente:
 - Textos ilimitados* (detalles, observaciones, etc)
 - IVA discriminado (subtotales facturas A)
 - Código de barras Interleaved 2 of 7 con dígito verificador (reemplazado por código QR)
-- Código QR (Obligatorio a partir de Marzo 2021 - [ver cronograma de implementación](#pyqr-generador-de-códigos-qr))
+- Código QR (Obligatorio a partir de Marzo 2021 - [ver cronograma de implementación](#pyqr-generador-de-codigos-qr))
 - Metadatos en las propiedades del PDF para búsquedas y archivamiento
 - Impresión directa* sin intervención del usuario
 
@@ -3823,8 +3823,8 @@ De manera similar a las otras interfaces y herramientas, el instalador de PyFEPD
 
 ### Aclaraciones PDF
 
-- **Código de Barras:** es recomendable generarlo, especialmente si se imprime (dependiendo del caso sería obligatorio). Este componente contempla internamente la generación directa de la imágen de manera vectorial (escalable en cualquier resolución) según el formato que requiere AFIP (*Interleaved 2 of 5*), y no es necesario utilizar ninguna tipografia ni cuestión adicional. Simplemente debe completarse el CUIT emisor, punto de venta, tipo de comprobante, CAE y fecha de vencimiento del CAE (esta última en formato AFIP AAAAMMDD). El componente contempla también el cálculo del dígito verificador. De no estar todos los datos correctos, no se generará el código de barras. Para información general ver nuestro componente auxiliar [PyI25](#pyi25-generador-de-códigos-de-barras)
-- **Observaciones AFIP:** Si esta presente `motivos_obs` (respuesta de AFIP en `WSFEv1.Obs` o similar) debería agregarse la leyenda *"El IVA discriminado no puede computarse como Crédito Fiscal..." (RG2485/08 Art. 27)* -esto está contemplado internamente en el componente-. Por ej., un mensaje de observación de AFIP sería: *"Factura individual, !DocTipo: 80, !DocNro 30000000007 no se encuentra registrado en los padrones de AFIP."*. Anteriormente AFIP solo informaba el código (09 en este caso), para más información ver [WSFE F136](#descripción-del-método-aut-obtención-de-cae)
+- **Código de Barras:** es recomendable generarlo, especialmente si se imprime (dependiendo del caso sería obligatorio). Este componente contempla internamente la generación directa de la imágen de manera vectorial (escalable en cualquier resolución) según el formato que requiere AFIP (*Interleaved 2 of 5*), y no es necesario utilizar ninguna tipografia ni cuestión adicional. Simplemente debe completarse el CUIT emisor, punto de venta, tipo de comprobante, CAE y fecha de vencimiento del CAE (esta última en formato AFIP AAAAMMDD). El componente contempla también el cálculo del dígito verificador. De no estar todos los datos correctos, no se generará el código de barras. Para información general ver nuestro componente auxiliar [PyI25](#pyi25-generador-de-codigos-de-barras)
+- **Observaciones AFIP:** Si esta presente `motivos_obs` (respuesta de AFIP en `WSFEv1.Obs` o similar) debería agregarse la leyenda *"El IVA discriminado no puede computarse como Crédito Fiscal..." (RG2485/08 Art. 27)* -esto está contemplado internamente en el componente-. Por ej., un mensaje de observación de AFIP sería: *"Factura individual, !DocTipo: 80, !DocNro 30000000007 no se encuentra registrado en los padrones de AFIP."*. Anteriormente AFIP solo informaba el código (09 en este caso), para más información ver [WSFE F136](#descripcion-del-método-aut-obtencion-de-cae)
 - **Discriminación de IVA**: el programador es responsable de enviar los datos correctos según las diferentes normativas de AFIP. Generalmente el importe de IVA solo se debe discriminar para facturas clase A o M. En las facturas clase B por lo general solo se muestra la tasa, pero no el neto ni IVA liquidado. En las facturas clase C y E generalmente no se muestra la columna de IVA ni NETO. Esta lógica esta contemplada internamente pero es responsabilidad de la aplicación que utilice el componente el revisar por la consistencia de los datos. Salvo en la Factura A, para el resto se debe indicar el precio unitario IVA Incluido (de corresponder), y el importe total de cada artículo también debería ser IVA Incluido en todos los casos (de manera similar a como se emiten los comprobantes por el sitio de clave fiscal de AFIP). Recomendamos utilizar el campo `imp_subtotal` para evitar diferencias de calculo y redondeo (debería ser la suma del neto + importes no gravado y exento para comprobantes clase A, e incluir el importe de IVA para los comprobantes clase B).
 - **Descuentos**: si bien se provee un campo `descuento` para los importes generales, es recomendable que se utilice un artículo de bonificación general en el detalle, con código de unidad de medida `umed=99` y el importe en negativo, para un correcto cálculo de los subtotales (especialmente si la factura se extiende por varias páginas) y contemplar la normativa de almacenamiento/información y formatos de otros webservices como WSMTXCA, WSBFEv1 y WSFEXv1.
 - **Logotipo AFIP:** en las últimas actualizaciones (1.07q), se incluye el logotipo de AFIP (similar al que se incluye en las facturas emitidas por clave fiscal). Para que muestre la leyenda "Comprobante Autorizado", debe establecerse el campo `resultado` = `"A"` y no debe ser un instalador de homologación. Próximamente se agregarán más validaciones en este sentido (la constatación del comprobante es responsabilidad de la aplicación que utilice el componente, ver [WSCDC](http://www.sistemasagiles.com.ar/trac/wiki/ConstatacionComprobantes)). Ver ejemplos y formatos a continuación para mayor información.
@@ -4199,7 +4199,7 @@ NOTA: estos campos pueden no utilizarse, o tener el mismo valor que los campos o
 | umed | Numerico | 2 | 44 | umed N(2,0) | código de unidad de medida según tabla de parámetros AFIP [WSMTXCA](../factura_electronica/wsmtxca.md#unidades-de-medida) (ej. 1 - kg) |
 | precio | Importe | 12.3 | 46 | precio N(12,3) | importe unitario (con hasta 3 decimales) |
 | importe | Importe | 14.3 | 58 | importe N(14,3) | importe subtotal (con hasta 3 decimales) |
-| iva_id | Numerico | 5 | 72 | ivaid N(5,0) | código de alícuota de IVA según tabla de parámetros AFIP [WSFEv1](../factura_electronica/wsfev1#alicuotas-de-iva) / [WSMTXCA](../factura_electronica/wsmtxca.md#condiciones-de-iva) (ej. 5 - IVA RI Tasa General 21 %) |
+| iva_id | Numerico | 5 | 72 | ivaid N(5,0) | código de alícuota de IVA según tabla de parámetros AFIP [WSFEv1](../factura_electronica/wsfev1.md#alicuotas-de-iva) / [WSMTXCA](../factura_electronica/wsmtxca.md#condiciones-de-iva) (ej. 5 - IVA RI Tasa General 21 %) |
 | ds | Alfanumerico | 4000 | 77 | ds M | descripción del artículo (usar "<br/>" para salto de linea) |
 | ncm | Alfanumerico | 15 | 4077 | ncm C(15) | código habilitado del Nomenclador Común de Mercosur -sólo WSBFEv1- |
 | sec | Alfanumerico | 15 | 4092 | sec C(15) | código habilitado de la Secretaría de Comercio -reservado- |

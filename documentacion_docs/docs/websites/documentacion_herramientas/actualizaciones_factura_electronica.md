@@ -1,31 +1,30 @@
-﻿= Actualización Factura Electrónica =
-[[PageOutline]]
+﻿# Actualización Factura Electrónica
 
 ## Service Pack 2
 
-El miercoles 15 de Marzo de 2017 surgió una incidencia puntual dado que AFIP ha publicado una nueva especificación técnica [FEv2.9](wiki:ProyectoWSFEv1#Importante:FEv2.9).
+El miercoles 15 de Marzo de 2017 surgió una incidencia puntual dado que AFIP ha publicado una nueva especificación técnica [FEv2.9](../factura_electronica/wsfev1.md#importante-fev29).
 
 Si no han podido obtener CAE para **Notas de Crédito y Débito**, seguramente estén utilizando una versión desactualizada.
 
 *Motivo*: Desde AFIP agregaron un campo CUIT en Comprobantes Asociados, y lamentablemente desde el webservice están enviando ese nuevo campo vacio (sin datos) en algunos casos (aunque no correspondería ni se haya enviado en la solicitud original de CAE), por lo que no puede ser manejado correctamente por versiones previas.
 
 - El nuevo campo CUIT sólo afectaría a las N/C y N/D que tengan comprobantes asociados, y hay nuevos tipos de comprobante 88 o 991.
-- También hay novedades respecto a [tipos de datos Opcionales](wiki:ProyectoWSFEv1#Tiposdedatosopcionales) por **RG 4004-E** Locación de inmuebles destino "casa-habitación", relacionada a alquileres / impuesto a las ganancias.
+- También hay novedades respecto a [tipos de datos Opcionales](../factura_electronica/wsfev1.md#tipos-de-datos-opcionales) por **RG 4004-E** Locación de inmuebles destino "casa-habitación", relacionada a alquileres / impuesto a las ganancias.
 
 *Solución Provisoria*: se podría borrar los archivos de la carpeta cache (generalmente subdirectorio de C:\Archivos de Programa\PyAfipWs).
 Dichos archivos temporales (WSDL) deberían regenerarse automáticamente con los nuevos campos publicados por AFIP, aunque internamente versiones previas no lo utilicen.
 Recordar revisar los permisos (solapa de seguridad de Windows), para que puedan ser creados los nuevos archivos.
 
-Estamos preparando una nueva actualización, ver [Descargas WSFEv1](http://www.sistemasagiles.com.ar/trac/wiki/ProyectoWSFEv1#Descargas) para evaluación, e [Instaladores](wiki:ActualizacionesFacturaElectronica#Instaladores) especiales de cortesía para superar la situación de manera urgente.
+Estamos preparando una nueva actualización, ver [Descargas WSFEv1](../factura_electronica/wsfev1.md#descargas) para evaluación, e [Instaladores](#instaladores) especiales de cortesía para superar la situación de manera urgente.
 
-Recomendamos contratar un mínimo de horas de [soporte comercial](http://www.sistemasagiles.com.ar/trac/wiki/PyAfipWs#CostosyCondiciones), especialmente si deben usar estas nuevas características y/o no habían actualizado recientemente.
+Recomendamos contratar un mínimo de horas de [soporte comercial](./pyafipws.md#costos-y-condiciones), especialmente si deben usar estas nuevas características y/o no habían actualizado recientemente.
 
-[Mensaje de excepción](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs#ManejodeExcepciones) relacionado (al solicitar o consultar CAE para N/C y N/D con Comprobantes Asociados) para versiones afectadas:
+[Mensaje de excepción](./manualpyafipws.md#manejo-de-excepciones) relacionado (al solicitar o consultar CAE para N/C y N/D con Comprobantes Asociados) para versiones afectadas:
 ```
 TypeError: Tag: Cuit invalid (type not found)
 ```
 
-Fragmento relacionado del [Mensaje XML](wiki:ManualPyAfipWs#MensajesXML) -respuesta devuelta por AFIP- (notar campo **<Cuit />** sin datos):
+Fragmento relacionado del [Mensaje XML](./manualpyafipws.md#mensajes-xml) -respuesta devuelta por AFIP- (notar campo **<Cuit />** sin datos):
 ```
 #!xml
 <CbteAsoc><Tipo>3</Tipo><PtoVta>2</PtoVta><Nro>1234</Nro><Cuit /></CbteAsoc>
@@ -40,7 +39,7 @@ A partir de 2017 los instaladores son firmados digitalmente para garantizar su i
 
 Al ejecutarlos bajo Windows debería aparecer **"Editor Comprobado: Sistemas Agiles (Mariano Reingart)"**, para validar que es el compilado originalmente y no ha sido alterado.
 
-Para más información ver: [Firma Digital - Editor Comprobado](wiki:ManualPyAfipWs#FirmaDigitalEditorComprobado) (recomendamos descargarlos desde nuestro [Sitio Seguro](https://www.sistemasagiles.com.ar) por HTTPS)
+Para más información ver: [Firma Digital - Editor Comprobado](./manualpyafipws.md#firma-digital-editor-comprobado) (recomendamos descargarlos desde nuestro [Sitio Seguro](https://www.sistemasagiles.com.ar) por HTTPS)
 ## Service Pack 1
 
 Lamentablemente en 2016 se juntaron varias cuestiones, y hubo un tema en particular con los mensajes de Eventos que AFIP rara vez utilizó (error `'code'`).
@@ -56,12 +55,12 @@ Si no han podido obtener CAE, seguramente estén utilizando una versión desactu
 
 Sumado a estos temas, a lo largo del año hubo mas de 200 cambios menores en los distintos componentes, con mejoras y ajustes acumulados. Entre ellos:
 
-- [Generación claves 2048+ bits](wiki:ManualPyAfipWs#Erroraldardealtacomputador) (incluyendo firma SHA-256)
-- [Análisis de vencimiento de certificados](wiki:ManualPyAfipWs#MétodosparaCertificados)
-- [Nueva especificación técnica COMPGv2.8 Sept'16](wiki:ProyectoWSFEv1#Importante:COMPGv2.8)
-- [Solicitud de múltiples CAEs por envío](wiki:ManualPyAfipWs#MétodosalternativosparasolicituddemúltiplesCAE)
+- [Generación claves 2048+ bits](./manualpyafipws.md#error-al-dar-de-alta-computador) (incluyendo firma SHA-256)
+- [Análisis de vencimiento de certificados](./manualpyafipws.md#metodos-para-certificados)
+- [Nueva especificación técnica COMPGv2.8 Sept'16](../factura_electronica/wsfev1.md#importante-compgv28)
+- [Solicitud de múltiples CAEs por envío](./manualpyafipws.md#metodos-alternativos-para-solicitud-de-multiples-cae)
 
-Para más información ver: [Historial de Cambios](wiki:ManualPyAfipWs#HistorialdeCambios) (manual)
+Para más información ver: [Historial de Cambios](./manualpyafipws.md#historial-de-cambios) (manual)
 
 Ver sitio del proyecto para información detallada:
 
@@ -70,7 +69,7 @@ Ver sitio del proyecto para información detallada:
 
 El proyecto usa el esquema de ***liberación continua*** y en general no se hacen cambios a versiones antiguas, por lo que es recomendable actualizar frecuentemente, ya que todos estos temas ya están resueltos/contemplados en el código actualizado.
 
-Generalmente ofrecemos planes de [soporte comercial](http://www.sistemasagiles.com.ar/trac/wiki/PyAfipWs#CostosyCondiciones) con atención y prioritaria específicos para cada caso, dependiendo de que webservices quisieran actualizar, sistemas operativos donde tienen instalado, lenguaje de programación, características que utilizan, etc. y cualquier otra consulta adicional que podrían tener. 
+Generalmente ofrecemos planes de [soporte comercial](./pyafipws.md#costos-y-condiciones) con atención y prioritaria específicos para cada caso, dependiendo de que webservices quisieran actualizar, sistemas operativos donde tienen instalado, lenguaje de programación, características que utilizan, etc. y cualquier otra consulta adicional que podrían tener. 
 
 En caso de optar por el soporte comunitario sin cargo y sin compromiso, dirigirse al [foro público](http://groups.google.com/group/pyafipws), donde también comunicamos las novedades generales del proyecto.
 
@@ -78,7 +77,7 @@ En caso de optar por el soporte comunitario sin cargo y sin compromiso, dirigirs
 
 Por estas cuestiones compilamos la actualización especial parcial "Service Pack" para WSFEv1 en producción (recomendado, especialmente para clientes que hayan actualizado de 2015 en adelante) y una versión de WSAA con los ajustes para nuevos certificados:
 
-- https://www.sistemasagiles.com.ar/soft/pyafipws/PyAfipWsSP2-2.7.1939-32bit+wsfev1_1.18c-update.exe: **Service Pack 2**, actualiza sólo archivos temporales por nueva especificación técnica AFIP [FEv2.9](wiki:ProyectoWSFEv1#Importante:FEv2.9) 13-03-2017, no incluye nuevos campos ni otros ajustes.
+- https://www.sistemasagiles.com.ar/soft/pyafipws/PyAfipWsSP2-2.7.1939-32bit+wsfev1_1.18c-update.exe: **Service Pack 2**, actualiza sólo archivos temporales por nueva especificación técnica AFIP [FEv2.9](../factura_electronic../factura_electronica/wsfev1.md#importante-fev29a/wsfev1.md#tipos-de-comprobante) 13-03-2017, no incluye nuevos campos ni otros ajustes.
 - https://github.com/reingart/pyafipws/releases/download/2.7.1872/PyAfipWsSP1-2.7.1874-32bit.wsfev1_1.18a-update.exe o [update4](https://www.sistemasagiles.com.ar/soft/pyafipws/PyAfipWsSP1-2.7.1876-32bit+wsfev1_1.18a-update4.exe) (Service Pack 1, con ajustes menores)
 - https://github.com/reingart/pyafipws/releases/download/2.7.1843/PyAfipWs-2.7.1843-32bit.wsaa_2.10g-full.exe (WSAA para claves de 2048 bits + SHA2)
 
@@ -98,7 +97,7 @@ Las compilamos especialmente para los clientes que no habían actualizado desde 
  
 En general no es necesario modificar nada en la programación de su sistema, salvo que estén utilizando alguna de las últimas características que si se modificaron desde AFIP, o tengan casos puntuales que detallamos a continuación.
 
-Deben revisar bien la [validez de comprobantes emitidos](wiki:ManualPyAfipWs#ValidezdeComprobantesElectronicosemitidos), tanto CAE como datos de las facturas enviadas, ya que pudo haber habido cambios en el formato, cantidad de decimales, validaciones, etc. desde la última vez que actualizaron.
+Deben revisar bien la [validez de comprobantes emitidos](./manualpyafipws.md#validez-de-comprobantes-electronicos-emitidos), tanto CAE como datos de las facturas enviadas, ya que pudo haber habido cambios en el formato, cantidad de decimales, validaciones, etc. desde la última vez que actualizaron.
 
 Esto no incluye otros ajustes acumulados a WSAA, PDF y otros componentes (justamente para minimizar el impacto de la actualización), pero debería ser suficiente para las incidencias de estos días.
 
@@ -118,21 +117,21 @@ Utilizar las siguiente guía de comprobación (***check-list***) para descartar 
 Antes de instalar el ajuste, cerrar todas las aplicaciones para evitar bloqueos de archivos y que no sean actualizados. 
 
 En este caso, WSFEv1 se instalará en una carpeta especial (`PyAfipWsSP1` o `PyAfipWsUPDATE`), para no modificar los otros servicios. 
-Se puede indicar una ruta especial, ver [instalación avanzada/desatendida](wiki:ManualPyAfipWs#InstalaciónSilenciosaDesatendida).
+Se puede indicar una ruta especial, ver [instalación avanzada/desatendida](./manualpyafipws.md#instalacion-silenciosa-desatendida).
 
 Si se utiliza la herramienta `RECE1.exe`, es preferible copiar la configuración anterior (`rece.ini`, clave y certificado) a la nueva carpeta de instalación del ajuste, y ejecutar el programa desde su nueva ubicación.
 
-**IMPORTANTE**: Luego de aplicar el ajuste, es recomendable revisar los CAE obtenidos, constatando los importes y demás datos registrados en AFIP, ver [manual](wiki:ManualPyAfipWs#ValidezdeComprobantesElectronicosemitidos)
+**IMPORTANTE**: Luego de aplicar el ajuste, es recomendable revisar los CAE obtenidos, constatando los importes y demás datos registrados en AFIP, ver [manual](./manualpyafipws.md#validez-de-comprobantes-electronicos-emitidos)
 
-Para una lista completa de las incidencias frecuentes, antes de reportarlo revisar [Errores Frecuentes](wiki:ManualPyAfipWs#ErroresFrecuentes), donde podrán encontrar las soluciones a los temas más comunes.
+Para una lista completa de las incidencias frecuentes, antes de reportarlo revisar [Errores Frecuentes](./manualpyafipws.md#errores-frecuentes), donde podrán encontrar las soluciones a los temas más comunes.
 #### Configuración
 
 Una vez instalado el ajuste, recomendamos revisar la configuración de conexión (`rece.ini` o parámetros del método `Conectar`), especialmente:
 
 - `[WSAA]` y `[WSFEv1]`:
-- `URL`: utilizar las URL oficiales, sin espacios y respetando mayúsculas y minúsculas, ver [Manual](wiki:ManualPyAfipWs#ConfiguraciónparaProducción)
+- `URL`: utilizar las URL oficiales, sin espacios y respetando mayúsculas y minúsculas, ver [Manual](./manualpyafipws.md#configuracion-para-produccion)
 - `WRAPPER`: ver sección posterior si están utilizando un transporte alternativo, no es necesario configurar esta opción si no han tenido problemas de SSL
-- `CACERT`: las versiones más actualizadas refuerzan la [verificacion de canal seguro](wiki:ManualPyAfipWs#VerificacióndelCanaldeComunicaciónSeguro), dejar en blanco o eliminar esta opción para usar la configuración predeterminada, o usar `conf\afip_ca_info.crt` (siempre que dicho archivo esté instalado y actualizado) 
+- `CACERT`: las versiones más actualizadas refuerzan la [verificacion de canal seguro](./manualpyafipws.md#verificacion-del-canal-de-comunicacion-seguro), dejar en blanco o eliminar esta opción para usar la configuración predeterminada, o usar `conf\afip_ca_info.crt` (siempre que dicho archivo esté instalado y actualizado) 
 - `[PROXY]`: no utilizar si no es necesario (en lo posible eliminar cualquier sección y/o valor residual que haya podido quedar en la configuración)
 
 #### Permisos
@@ -166,8 +165,8 @@ Deben revisar el parámetro CACERT en la configuración o en método Conectar (d
  
 Más info: 
 
-- [Errores Protocolo SSL](wiki:ManualPyAfipWs#ErroresdeProtocoloSSL)
-- [Verificación de Canal Seguro](wiki:ManualPyAfipWs#VerificacióndelCanaldeComunicaciónSeguro)
+- [Errores Protocolo SSL](./manualpyafipws.md#errores-de-protocolo-ssl)
+- [Verificación de Canal Seguro](./manualpyafipws.md#verificacion-del-canal-de-comunicacion-seguro)
 
 ##### OpenSSL
 
@@ -193,8 +192,8 @@ OpenSSL 1.0.2h  3 May 2016
 
 Si bien no ha habido cambios mayores en los formatos, los siguientes cambios pueden afectar si la versión anterior utilizada era muy antigua:
 
-- [Formato TXT](wiki:ManualPyAfipWs#FacturaelectrónicaMercadoInternoVersión1WSFEv1): usar 2 decimales para los importes (por validación de AFIP)
-- [Formato DBF](wiki:ManualPyAfipWs#FacturaelectrónicamercadointernoWSFEv1): Campo `ID` en tabla `IVA` se renombró a `IVAID`. Campo `CAE` debe ser alfanumérico. Ver muestras en [tablas-dbf.zip](attachment:tablas-dbf.zip)
+- [Formato TXT](./manualpyafipws.md#factura-electronica-mercado-interno-wsfev1): usar 2 decimales para los importes (por validación de AFIP)
+- [Formato DBF](./manualpyafipws.md#factura-electronica-mercado-interno-wsfev1): Campo `ID` en tabla `IVA` se renombró a `IVAID`. Campo `CAE` debe ser alfanumérico. Ver muestras en [tablas-dbf.zip](attachment:tablas-dbf.zip)
 
 Siempre es posible revisar el formato actual que utiliza la herramienta ejecutando:
 ```
@@ -202,7 +201,7 @@ RECE1.exe /formato
 RECE1.exe /formato /dbf
 ```
 
-En ambos casos, se agregó la estructura para [Datos Opcionales](wiki:ManualPyAfipWs#DatosOpcionalesAFIPWSFEv1) por resolución de AFIP.
+En ambos casos, se agregó la estructura para [Datos Opcionales](./manualpyafipws.md#datos-opcionales-afip-wsfev1) por resolución de AFIP.
 No es necesario incluir estos datos si no se utilizan, pero en el caso de Tablas DBF, la misma debe estar vacía.
 
 ```
@@ -238,8 +237,8 @@ En este, ejemplo se deberí revisar linea 5 caracter 1234 en el requerimiento XM
 
 Para más información sobre como depurar estos casos, ver:
 
-- [Mensajes XML](wiki:ManualPyAfipWs#MensajesXML)
-- [Manejo de Excepciones](wiki:ManualPyAfipWs#ManejodeExcepciones)
+- [Mensajes XML](./manualpyafipws.md#mensajes-xml)
+- [Manejo de Excepciones](./manualpyafipws.md#manejo-de-excepciones)
   
 ### Linux
 
@@ -284,8 +283,8 @@ Resumiendo, en general, si tienen el sistema operativo actualizado y versiones r
 
 Para mas información y alternativas sobre estos temas ver:
 
-- [Verificación de Canal Seguro](wiki:ManualPyAfipWs#VerificacióndelCanaldeComunicaciónSeguro)
-- [Protocolo SSL](wiki:ActualizacionesFacturaElectronica#ProtocolosSSL)
+- [Verificación de Canal Seguro](./manualpyafipws.md#verificacion-del-canal-de-comunicacion-seguro)
+- [Protocolo SSL](#protocolos-ssl)
 
 **NOTA:**: en caso de que eventualmente AFIP cambie de entidad certificante, se podrían seguir algunas de las siguientes alternativas de configuración (método `Conectar` o secciones `[WSAA]` / `[WSFEv1]` del `rece.ini`):
 
@@ -303,9 +302,9 @@ Mas allá del tema mencionado anteriormente, todos los contribuyentes deberían 
 
     *Este cambio NO implica que deba gestionarse nuevamente el certificado de su computador fiscal. El mismo podrá seguir siendo utilizado hasta su fecha de vencimiento. Solo deberá asegurarse de que su sistema pueda dialogar con los servicios web de AFIP mediante SSL validando los nuevos certificados de los sitios de AFIP con tecnología SHA-2. Le recomendamos realizar las pruebas antes del 1/11/2016 en el ambiente de homologación, que ya cuenta con los certificados renovados.*
 
-Es posible revisar la fecha de vencimiento por Clave Fiscal, "Administrador de Certificados Digitales", utilizando nuestra herramienta (ver [Métodos para Certificados WSAA](wiki:ManualPyAfipWs#MétodosparaCertificados)) u OpenSSL directamente.
+Es posible revisar la fecha de vencimiento por Clave Fiscal, "Administrador de Certificados Digitales", utilizando nuestra herramienta (ver [Métodos para Certificados WSAA](./manualpyafipws.md#metodos-para-certificados)) u OpenSSL directamente.
 
-Con las últimas versiones de la interfaz PyAFIPWs, pueden generarse los archivos con los últimos requerimientos de AFIP: [Generación de Certificados](wiki:ManualPyAfipWs#Generación)
+Con las últimas versiones de la interfaz PyAFIPWs, pueden generarse los archivos con los últimos requerimientos de AFIP: [Generación de Certificados](./manualpyafipws.md#generacion)
 
 Para evaluar un instalador de nuestra herramienta WSAA con estos ajustes iniciales, ver [release](https://github.com/reingart/pyafipws/releases/tag/2.7.1843):
 
@@ -319,4 +318,4 @@ El evento código 4 mensaje *"IMPORTANTE: El 01/11/2016 se renovarán los certif
 
 Dado que AFIP puede utilizar los eventos para difundir cuestiones importantes, se recomienda mostrarlo al usuario, desarrollador o quien corresponda.
 
-En caso de necesitar acompañamiento particular para renovar un certificado (generación, trámites, etc.), consultar (ver [planes de soporte comercial](http://www.sistemasagiles.com.ar/trac/wiki/PyAfipWs#Paquetespromocionales)).
+En caso de necesitar acompañamiento particular para renovar un certificado (generación, trámites, etc.), consultar (ver [planes de soporte comercial](./pyafipws.md#paquetes-promocionales)).
