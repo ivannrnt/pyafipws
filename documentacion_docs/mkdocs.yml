@@ -8,6 +8,9 @@ theme:
   logo: media/logo-pyafipws.png
   custom_dir: overrides
 
+extra:
+  url_logo: websites/factura_electronica/
+
 extra_css:
   - ./stylesheets/extra.css
 
