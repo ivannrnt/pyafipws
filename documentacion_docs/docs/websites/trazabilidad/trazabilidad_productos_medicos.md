@@ -1,10 +1,9 @@
-﻿= Trazabilidad de Productos Médicos - WS !TrazaProdMed ANMAT/PAMI SNT =
+﻿# Trazabilidad de Productos Médicos - WS !TrazaProdMed ANMAT/PAMI SNT
 
 
 Interfaz para Servicio Web Código de Trazabilidad de Productos Médicos (SOAP) correspondiente a la [Disposición Nº 2303/2014](http://www.anmat.gov.ar/boletin_anmat/BO/Disposicion_2303-2014.pdf) y [Disposición Nº 2175/14](http://www.anmat.gov.ar/webanmat/Legislacion/ProductosMedicos/Disposicion_2175-2013.pdf) del A.N.M.A.T. que deberán implementar las personas físicas o jurídicas que intervengan en la cadena de distribución, dispensación y aplicación de productos médicos registrados ante la Administración Nacional de Medicamentos, en los términos establecidos en el artículo 1º y siguientes de la Resolución del Ministerio de Salud Nº 2175/2013. B.O. 23 de abril de 2014.. SNT Especificación Técnica.
 
-## Índice
-[[TOC(noheading,inline,depth=2)]]
+
 
 ## Introducción
 
@@ -201,8 +200,6 @@ Ejemplo de uso para Consultar transacciones en ANMAT:
 C:\PYANMAT>TrazaProdMed.exe --consulta "pruebasws" "pruebasws"
 | razonSocialOrigen||razonSocialInformador||fEvento||glnOrigen||vencimiento||nroSerial||descEstado||nroRemito||glnDestino||fTransaccion||idEstado||dEvento||descProducto||gtin||idTransaccionGlobal||razonSocialDestino||idMotivoDevolucion||lote ||
 | EJEMPLO | EJEMPLO | 2016-03-10 01:03 | 07791234567810 | 2018-05-09 00:00:00 | A1234 | Cargada | R0001-00000001 | 07791234567810 | 2016-03-10 12:36:07 | 5 | RECEPCIÓN DE PRODUCTO DE ESLABÓN ANTERIOR | - | 04222222222227 | 123456 | EJEMPLO | 0 | 25149 |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-
 ```
 
 Para generar un archivo de intercambio con los datos de las transacciones, especificar `--grabar` (*proximamente*):
@@ -406,7 +403,7 @@ Next
 ## Novedades
 
 Se recuerda que esta disponible el 
-[grupo de noticias](http://www.pyafipws.com.ar) (http://groups.google.com.ar/group/pyafipws) donde
+[grupo de noticias](http://groups.google.com.ar/group/pyafipws) donde
 se publicarán futuras novedades sobre PyAfipWS: servicios web de
 factura electrónica y sus interfases (se recomienda suscribirse)
 
@@ -446,20 +443,6 @@ dinámicas (deben pasar practicamente todo como string)
 
 Por soporte comercial consultar al (011) 15-3048-9211 o por mail a info@sistemasagiles.com.ar
 
-Costos de soporte estimativos (puede variar dependiendo de las necesidades de cada implementación puntual):
-
-- Soporte mínimo: $49.680.- (por 1 semana de cobertura), sólo acceso a instalador y soporte por temas de instalación únicamente, no incluye consultas generales o ajustes. (prefentemente para clientes actuales)
-- Soporte básico: $131.100.- (hasta 6 hs en total por 1 mes máx.), incluye consultas particulares y ajustes menores, contemplando TLB (TypeLib para lenguajes estáticos -solo TrazaMed, consultar otros WS-)
-- Soporte avanzado: $196.650.- (hasta 9hs en total por 3 meses máx.) adicional, incluyendo ajustes y desarrollo de ejemplos, documentación, pruebas, etc., contempla temas urgentes y/o grandes empresas/ciclos de desarrollo
-- Soporte por actualización: desde $49.680 (1 semana máx., hasta 1 hs en total, solo instalación y acceso a actualizaciones por correcciones generales), aplica a la versión 2 para clientes previos.
-
 Para soporte sin cargo de la comunidad, revisar la [lista de temas](https://github.com/reingart/pyafipws/issues) y/o [crear uno nuevo](https://github.com/reingart/pyafipws/issues/new). 
 Por novedades y consultas genereales, puede usar el  [Google Groups](https://groups.google.com/forum/#!forum/pyafipws) (Foro Público).
 Código fuente en [GitHub](https://github.com/reingart/pyafipws/).
-
-
-Más información en PyAfipWs
-
-MarianoReingart
-MarianoReingart
-MarianoReingart

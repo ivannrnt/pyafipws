@@ -1,12 +1,11 @@
-﻿= Trazabilidad de Precursores Químicos - !TrazaMed SDRN RENPRE SEDRONAR SNT =
+﻿# Trazabilidad de Precursores Químicos - !TrazaMed SDRN RENPRE SEDRONAR SNT
 
 
 Interfaz para Servicio Web Trazabilidad de Precursores Químicos !TrazaMed.SDRN (SOAP) para informar movimientos de [Sustancias Químicas Controladas](http://renpre.servicios.pami.org.ar/portal_traza_renpre/pdfs/precursores_quimicos.pdf) –[Decreto 1095/96](http://www.renpre.gov.ar/pdfs/decretos/decreto_nacional_1168_96_comit_trabajo_conjunto.pdf), modificado por [Decreto 1161/00](http://www.renpre.gov.ar/pdfs/decretos/decreto_nacional_1095_96_actualizado_por_1161_00.pdf): Sistema Nacional de Trazabilidad modulo de Precursores Químicos (RENPRE SEDRONAR PAMI INSSJP) que deberán implementar el operador de precursores químicos obtención de número de CUFE (Código de Ubicación Física de Establecimiento). Entrenamiento y Alineación de Datos. [Resolución 900/12 RENPRE](http://www.renpre.gov.ar/pdfs/reso_y_dispo/2012_resolucion_900_12.pdf)
 
 
 
-## Índice
-[[TOC(noheading,inline,depth=2)]]
+
 
 ## Introducción
 
@@ -214,7 +213,7 @@ Next
 ## Novedades
 
 Se recuerda que esta disponible el 
-[grupo de noticias](http://www.pyafipws.com.ar) (http://groups.google.com.ar/group/pyafipws) donde
+[grupo de noticias](http://groups.google.com.ar/group/pyafipws) donde
 se publicarán futuras novedades sobre PyAfipWS: servicios web de
 factura electrónica y sus interfases (se recomienda suscribirse)
 
@@ -226,22 +225,6 @@ Historial de cambios:
 
 Por soporte comercial consultar al (011) 15-3048-9211 o por mail a info@sistemasagiles.com.ar
 
-Costos de soporte estimativos (puede variar dependiendo de las necesidades de cada implementación puntual):
-
-- Soporte mínimo: $49.680.- (por 1 semana de cobertura), sólo acceso a instalador y soporte por temas de instalación únicamente, no incluye consultas generales o ajustes. (prefentemente para clientes actuales)
-- Soporte básico: $131.100.- (hasta 6 hs en total por 1 mes máx.), incluye consultas particulares y ajustes menores, contemplando TLB (TypeLib para lenguajes estáticos -solo TrazaMed, consultar otros WS-)
-- Soporte avanzado: $196.650.- (hasta 9hs en total por 3 meses máx.) adicional, incluyendo ajustes y desarrollo de ejemplos, documentación, pruebas, etc., contempla temas urgentes y/o grandes empresas/ciclos de desarrollo
-- Soporte por actualización: desde $49.680 (1 semana máx., hasta 1 hs en total, solo instalación y acceso a actualizaciones por correcciones generales), aplica a la versión 2 para clientes previos.
-
 Para soporte sin cargo de la comunidad, revisar la [lista de temas](https://github.com/reingart/pyafipws/issues) y/o [crear uno nuevo](https://github.com/reingart/pyafipws/issues/new). 
 Por novedades y consultas genereales, puede usar el  [Google Groups](https://groups.google.com/forum/#!forum/pyafipws) (Foro Público).
 Código fuente en [GitHub](https://code.google.com/p/pyafipws/source/browse/).
-
-
-Más información en PyAfipWs
-
-MarianoReingart
-MarianoReingart
-MarianoReingart
-MarianoReingart
-MarianoReingart

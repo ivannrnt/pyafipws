@@ -1,11 +1,10 @@
-﻿= Trazabilidad de Productos Fitosanitarios SENASA - Web Service para Empresas (WS_INFO_EMPRESAS / WS_DATOS_GENERALES) =
+﻿# Trazabilidad de Productos Fitosanitarios SENASA - Web Service para Empresas (WS_INFO_EMPRESAS / WS_DATOS_GENERALES)
 
 Interfaz para Servicio Web de Trazabilidad de Productos Fitosanitarios (API REST) correspondiente a la  [Resolución 369/2021](https://www.boletinoficial.gob.ar/detalleAviso/primera/246753/20210712) del Servicio Nacional de Sanidad y Calidad Agroalimentaria (SENASA) conformado por los servicios Operaciones, referida a los Web Service que tendrá Senasa con las empresas (formuladora, sintetizadora, fraccionadora y distribuidor/comercializador) quienes informaran por servicio sus actividades y/o movimientos.
 Y Consultas, para que las empresas/usuarios realicen consultas de códigos generales.
 
 
-## Índice
-[[TOC(noheading,inline,depth=2)]]
+
 
 ## Introducción
 
@@ -81,10 +80,4 @@ Costos de soporte estimativos (puede variar dependiendo de las necesidades de ca
 Para soporte sin cargo de la comunidad, revisar la [lista de temas](https://github.com/reingart/pyafipws/issues) y/o [crear uno nuevo](https://github.com/reingart/pyafipws/issues/new). 
 Por novedades y consultas genereales, puede usar el  [Google Groups](https://groups.google.com/forum/#!forum/pyafipws) (Foro Público).
 Código fuente en [GitHub](https://github.com/reingart/pyafipws/).
-
-
-MarianoReingart
-
-
-
 

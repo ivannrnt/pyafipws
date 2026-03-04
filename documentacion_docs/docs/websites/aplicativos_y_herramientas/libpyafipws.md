@@ -15,8 +15,7 @@ Para otros productos (herramientas, aplicativos, generación de PDF, etc.) ver e
 
 
 [[Image(htdocs:logo-pyafipws.png,align=right)]]
-## Índice
-[[TOC(noheading,inline,depth=2)]]
+
 ## Introducción
 LibPyAfipWs es una biblioteca de software libre a los Servicios Web de la AFIP, desarrollado en Python compatible con C, C++, C#, Visual Basic, Visual Fox Pro, Cobol, Delphi, .Net, Java, etc. y cualquier lenguaje/aplicación que pueda crear utilizar bibliotecas compartidas de enlace dinámico  [DLL](http://es.wikipedia.org/wiki/DLL) en Windows o .SO en linux.
 

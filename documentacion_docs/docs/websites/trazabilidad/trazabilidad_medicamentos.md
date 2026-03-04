@@ -1,11 +1,10 @@
-﻿= Trazabilidad de Medicamentos - WS !TrazaMed ANMAT/PAMI SNT =
+﻿# Trazabilidad de Medicamentos - WS !TrazaMed ANMAT/PAMI SNT
 
 
 Interfaz para Servicio Web Código de Trazabilidad de Medicamentos (SOAP) correspondiente a la [Resolución 435/2011](http://www.anmat.gov.ar/webanmat/Legislacion/Medicamentos/Resolucion_435-2011.pdf) del Ministerio de Salud y [Disposición 3683/2011](http://www.anmat.gov.ar/webanmat/Legislacion/Medicamentos/Disposicion_3683-2011.pdfp) de A.N.M.A.T.: Sistema Nacional de Trazabilidad de Medicamentos que deberán implementar las personas físicas o jurídicas que intervengan en la cadena de comercialización, distribución y  dispensación de especialidades medicinales incluidas en el Registro de Especialidades Medicinales. SNT Especificación Técnica V2.
 
 
-## Índice
-[[TOC(noheading,inline,depth=2)]]
+
 
 ## Introducción
 
@@ -216,13 +215,14 @@ Ejemplo de uso para Consultar transacciones no confirmadas -v2-:
 
 ```
 C:\PYANMAT>trazamed.exe --consulta "pruebasws" "pruebasws"
+```
+
 | _gtin | _lote | _numero_serial | _id_transaccion | _estado | _f_transaccion | _d_evento | _gln_origen | _gln_destino |
 |---|---|---|---|---|---|---|---|---|
 | 07795360005385 | 412568 | 1200 | 5114793 | Informada | 19/02/2013 | ENVIO... | 9992105600005 | glnws |
 | 07795347900511 | 412568 | 1200 | 5114796 | Informada | 19/02/2013 | ENVIO... | 9992105600005 | glnws |
 | 00121231323232 | 412568 | 1200 | 5114798 | Informada | 19/02/2013 | ENVIO... | 9992105600005 | glnws |
 | 55564646464645 | 412568 | 1200 | 5114801 | Informada | 19/02/2013 | ENVIO... | 9992105600005 | glnws |
-```
 
 Para generar un archivo de intercambio con los datos de las transacciones, especificar `--grabar` (*disponible desde actualización 1.11a*):
 
@@ -236,12 +236,13 @@ Ejemplo de uso para Consultar transacciones alertadas por el eslabón posterior 
 C:\PYANMAT>trazamed.exe --alertadas --consulta "pruebasws" "pruebasws"
 CantPaginas None
 HayError None
-| _id_transaccion | _id_transaccion_global | _f_evento | _f_transaccion | _gtin | _lote | _numero_serial | _d_evento | _gln_origen | _gln_destino | _n_remito | _n_factura | _vencimiento |
+```
 
+| _id_transaccion | _id_transaccion_global | _f_evento | _f_transaccion | _gtin | _lote | _numero_serial | _d_evento | _gln_origen | _gln_destino | _n_remito | _n_factura | _vencimiento |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 2224635 | 842235 | 14/06/2012 | 15/06/2012 15:14 | 000000000GTIN2 | 9999 | 998 | RECEPCION DE PRODUCTO DESDE UN ESLABON ANTERIOR | 9999999999918 | glnws | 4433 | A000100000001 | 15/12/2012 |
 | 10493358 | 12479556 | 06/03/2013 | 23/04/2013 09:54 | 000000000GTIN4 | 1 | 77777565 | ENVIO DE PRODUCTO EN CARACTER DEVOLUCION | 9991106600007 | glnws | 1 | 1 | 31/12/2015 |
 | 10493357 | 12479556 | 06/03/2013 | 23/04/2013 09:54 | 000000000GTIN4 | 1 | 77777564 | ENVIO DE PRODUCTO EN CARACTER DEVOLUCION | 9991106600007 | glnws | 1 | 1 | 31/12/2015 |
-```
 
 
 Ejemplo de uso para confirmar una transacción -v2- (recibe usuario, password, número de transacción y fecha de operación):
@@ -303,7 +304,9 @@ Desde la actualización 1.11a, la herramienta soporta archivos de intercambio en
 | nro_asociado | Alfanumerico | 30 | 791 | nroasociad |
 | cantidad | Numerico | 3 | 821 | cantidad |
 | codigo_transaccion | Alfanumerico | 14 | 824 | codigotran |
+
 ### Formato para Transacciones
+
 | Nombre | Tipo | Long. | Pos(txt) | Campo(dbf) |
 |---|---|---|---|---|
 | id_transaccion | Alfanumerico | 14 | 1 | idtransacc |
@@ -322,11 +325,14 @@ Desde la actualización 1.11a, la herramienta soporta archivos de intercambio en
 | n_remito | Alfanumerico | 20 | 835 | nremito |
 | n_factura | Alfanumerico | 20 | 855 | nfactura |
 | vencimiento | Alfanumerico | 10 | 875 | vencimient |
+
 ### Formato para Errores
+
 | Nombre | Tipo | Long. | Pos(txt) | Campo(dbf) |
 |---|---|---|---|---|
 | _c_error | Alfanumerico | 4 | 1 | cerror |
 | _d_error | Alfanumerico | 250 | 5 | derror |
+
 ## Ejemplos
 
 ### Intefase COM en VB (5/6)
@@ -650,7 +656,7 @@ Ejemplos para los métodos de confirmación:
 ## Novedades
 
 Se recuerda que esta disponible el 
-[grupo de noticias](http://www.pyafipws.com.ar) (http://groups.google.com.ar/group/pyafipws) donde
+[grupo de noticias](http://groups.google.com.ar/group/pyafipws) donde
 se publicarán futuras novedades sobre PyAfipWS: servicios web de
 factura electrónica y sus interfases (se recomienda suscribirse)
 
@@ -721,11 +727,3 @@ Costos de soporte estimativos (puede variar dependiendo de las necesidades de ca
 Para soporte sin cargo de la comunidad, revisar la [lista de temas](https://github.com/reingart/pyafipws/issues) y/o [crear uno nuevo](https://github.com/reingart/pyafipws/issues/new). 
 Por novedades y consultas genereales, puede usar el  [Google Groups](https://groups.google.com/forum/#!forum/pyafipws) (Foro Público).
 Código fuente en [GitHub](https://github.com/reingart/pyafipws/).
-
-
-Más información en PyAfipWs
-
-MarianoReingart
-MarianoReingart
-MarianoReingart
-MarianoReingart

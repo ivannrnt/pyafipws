@@ -1,8 +1,7 @@
 ﻿= PyRece: Aplicativo Autorizador y Generador de Facturas Electrónicas =
 
 
-## Índice
-[[TOC(noheading,inline,depth=2)]]
+
 
 ## Descripción General
 

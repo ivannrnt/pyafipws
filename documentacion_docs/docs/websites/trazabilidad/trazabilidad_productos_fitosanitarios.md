@@ -1,11 +1,10 @@
-﻿= Trazabilidad de Productos Agroquímicos Fitosanitarios/Veterinarios - WS !TrazaAgr !TrazaVet SENASA PAMI SNT =
+﻿# Trazabilidad de Productos Agroquímicos Fitosanitarios/Veterinarios - WS !TrazaAgr !TrazaVet SENASA PAMI SNT
 
 
 Interfaz para Servicio Web Código de Trazabilidad de Productos Fitosanitarios / Veterinarios (SOAP) correspondiente a la [Resolución 369/2013](http://www.senasa.gov.ar/contenido.php?to=n&in=1592&io=24640) del Servicio Nacional de Sanidad y Calidad Agroalimentaria (SENASA) que contemplan en su composición en principio los Principios Activos incluidos en el Anexo I. Sistema Nacional de Trazabilidad.
 
 
-## Índice
-[[TOC(noheading,inline,depth=2)]]
+
 
 ## Introducción
 
@@ -98,12 +97,13 @@ HayError None
 
 CantPaginas 1
 HayError None
-| id_transaccion_global | id_transaccion | f_transaccion | f_operacion | f_vencimiento | f_elaboracion | d_evento | n_cantidad | id_unidad | d_unidad | cod_producto | .... |
+```
 
+| id_transaccion_global | id_transaccion | f_transaccion | f_operacion | f_vencimiento | f_elaboracion | d_evento | n_cantidad | id_unidad | d_unidad | cod_producto | .... |
+|---|---|---|---|---|---|---|---|---|---|---|---|
 | 14904794 | 33681508 | 2014-05-16 00:00:00 | 2014-05-10 00:00:00 |  |  | Venta/Envío |  |  |  | 88900000000001 | ... |
 | 14904796 | 33681509 | 2014-05-16 00:00:00 | 2014-05-10 00:00:00 |  |  | Venta/Envío |  |  |  | 88900000000001 | ... |
 ...
-```
 
 Ejemplo de uso para confirmar una transacción (recibe usuario, password, número de transacción y fecha de operación):
 
@@ -135,7 +135,7 @@ Formato:
 
 ### TransaccionDTO
 | **Nombre** | **Tipo** | **Long.** | **Pos(txt)** | **Campo(dbf)** |
-
+|---|---|---|---|---|
 | gln_origen | Alfanumerico | 13 | 1 | glnorigen |
 | gln_destino | Alfanumerico | 13 | 14 | glndestino |
 | f_operacion | Alfanumerico | 10 | 27 | foperacion |
@@ -163,9 +163,10 @@ Formato:
 | n_postal | Alfanumerico | 8 | 1858 | npostal |
 | cuit | Alfanumerico | 11 | 1866 | cuit |
 | codigo_transaccion | Alfanumerico | 14 | 1877 | codigotran |
+
 ### Transacciones
 | **'Nombre** | **Tipo** | **Long.** | **Pos(txt)** | **Campo(dbf)** |
-
+|---|---|---|---|---|
 | id_transaccion_global | Numerico | 15 | 1 | idtransacc |
 | id_transaccion | Numerico | 15 | 16 | idtransac1 |
 | f_transaccion | Alfanumerico | 10 | 31 | ftransacci |
@@ -202,12 +203,12 @@ Formato:
 | d_producto | Alfanumerico | 250 | 3501 | dproducto |
 | d_estado_transaccion | Alfanumerico | 30 | 3751 | destadotra |
 | d_tipo_transaccion | Alfanumerico | 30 | 3781 | dtipotrans |
+
 ### Errores
 | **Nombre** | **Tipo** | **Long.** | **Pos(txt)** | **Campo(dbf)** |
-
+|---|---|---|---|---|
 | _c_error | Alfanumerico | 4 | 1 | cerror |
 | _d_error | Alfanumerico | 250 | 5 | derror |
-
 
 ## Ejemplos
 
@@ -346,6 +347,7 @@ A continuación se analiza el Set de Datos para Prueba de Servicios Fitosanitari
 ### Eventos
 
 Codificación:
+
 | **Código** | **Descripción** |
 |---|---|
 | 1 | Importación |
@@ -392,7 +394,7 @@ Codificación:
 A modo de ejemplo, se copia a continuación la tabla que devuelve la consulta de transacciones no confirmadas al 17 de mayo de 2014 en el ambiente de pruebas (resumida y simplificada por cuestiones de espacio):
 
 | **id_transaccion_global** | **id_transaccion** | **f_transaccion** | **f_operacion** | **d_evento** | **cod_producto** | **n_serie** | **n_lote** | **en_transporte** | **n_remito** | **d_agente_informador** | **d_agente_origen** | **d_agente_destino** | **d_producto** | **d_estado_transaccion** | **d_tipo_transaccion** |
-
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 14904791 | 33681506 | 2014-05-16 | 2014-05-10 | Venta/Envío | 88900000000001 |  | 234 | N | 12345 | 9876543210982 - 1234567891019 | 9876543210982 - 1234567891019 | 9876543210982 - 1234567891019 | ABAMECTINA | Informada | Informe |
 | 14904792 | 33681507 | 2014-05-16 | 2014-05-10 | Venta/Envío | 88900000000001 |  | 234 | N | 12345 | 9876543210982 - 1234567891019 | 9876543210982 - 1234567891019 | 9876543210982 - 1234567891019 | ABAMECTINA | Informada | Informe |
 | 14904794 | 33681508 | 2014-05-16 | 2014-05-10 | Venta/Envío | 88900000000001 |  | 234 | N | 12345 | 9876543210982 - 1234567891019 | 9876543210982 - 1234567891019 | 9876543210982 - 1234567891019 | ABAMECTINA | Informada | Informe |
@@ -467,7 +469,7 @@ Ejemplos para los métodos de confirmación:
 ## Novedades
 
 Se recuerda que esta disponible el 
-[grupo de noticias](http://www.pyafipws.com.ar) (http://groups.google.com.ar/group/pyafipws) donde
+[grupo de noticias](http://groups.google.com.ar/group/pyafipws) donde
 se publicarán futuras novedades sobre PyAfipWS: servicios web de
 factura electrónica y sus interfases (se recomienda suscribirse)
 
@@ -481,14 +483,6 @@ Por soporte comercial consultar al (011) 15-3048-9211 o por mail a info@sistemas
 
 Costos de soporte estimativos (puede variar dependiendo de las necesidades de cada implementación puntual):
 
- [http://www.sistemasagiles.com.ar/trac/wiki/PyAfipWs#ServicioswebSistemaNacionaldeTrazabilidadSNT]
-
 Para soporte sin cargo de la comunidad, revisar la [lista de temas](https://github.com/reingart/pyafipws/issues) y/o [crear uno nuevo](https://github.com/reingart/pyafipws/issues/new). 
 Por novedades y consultas genereales, puede usar el  [Google Groups](https://groups.google.com/forum/#!forum/pyafipws) (Foro Público).
 Código fuente en [GitHub](https://github.com/reingart/pyafipws/).
-
-
-Más información en PyAfipWs
-
-MarianoReingart
-MarianoReingart
