@@ -2198,8 +2198,8 @@ Debug.Print "Resultado", WSFEv1.Resultado
 
 Como primer paso, se debe crear una factura (utilizada internamente por la interfase para contener los valores a autorizar),  llamando al método !CrearFactura o completar el registro de encabezado (ver archivo de intercambio), con los siguiente parámetros:
 
-- tipo_doc, nro_doc: Tipo (80 CUIT, 96 DNI, etc. según [tabla de parámetros de AFIP](../factura_electronica/wsfev1##tipos-de-documento)) y número de Documento del cliente (receptor de la factura). Usar tipo_doc=99 y nro_doc=0 para consumidores finales (Factura B < $1000)
-- tipo_cbte: Tipo de comprobante (según [tabla de parámetros AFIP](../factura_electronica/wsfev.md#tipos-de-comprobante))
+- tipo_doc, nro_doc: Tipo (80 CUIT, 96 DNI, etc. según [tabla de parámetros de AFIP](../factura_electronica/wsfev1.md##tipos-de-documento)) y número de Documento del cliente (receptor de la factura). Usar tipo_doc=99 y nro_doc=0 para consumidores finales (Factura B < $1000)
+- tipo_cbte: Tipo de comprobante (según [tabla de parámetros AFIP](../factura_electronica/wsfev1.md#tipos-de-comprobante))
 - punto_vta: Nº de punto de venta (debe estar autorizado para WSFE)
 - cbt_desde, cbt_hasta: Nº de comprobante (desde, hasta, generalmente el mismo número si es una factura individual, o un rango si son Factura B < $ 1000 a Consumidor Final -en este último caso se obtiene un único CAE para el "lote"-)
 - fecha_cbte: Fecha del comprobante (no puede ser mayor o menor a 10 días)
@@ -2224,7 +2224,7 @@ Luego, por cada alicuota de IVA (excepto para no gravado y exento), se debe llam
 
 De existir otros tributos (percepciones/retenciones o similares), se debe llamar al método !AgregarTributo o completar el registro respectivo, con los siguientes parámetros:
 
-- tributo_id: código tipo de impuesto (según [tabla de parámetros AFIP](../factura_electronica/wsfev1#tipos-de-tributo))
+- tributo_id: código tipo de impuesto (según [tabla de parámetros AFIP](../factura_electronica/wsfev1.md#tipos-de-tributo))
 - desc: descripción del tributo (por ej. "Impuesto Municipal Matanza")
 - base_imp: base imponible (importe)
 - alic: alicuota (porcentaje)
@@ -2232,7 +2232,7 @@ De existir otros tributos (percepciones/retenciones o similares), se debe llamar
 
 También se puede llamar al método !AgregarCmpAsoc o completar el registro respectivo, para detallar los comprobantes asociados a una nota de crédito, con los siguientes parámetros:
 
-- tipo: Código de tipo de comprobante (según [tabla de parámetros AFIP](../factura_electronica/wsfev.md#tipos-de-comprobante))
+- tipo: Código de tipo de comprobante (según [tabla de parámetros AFIP](../factura_electronica/wsfev1.md#tipos-de-comprobante))
 - pto_vta: Punto de venta
 - nro: Numero de comprobante
 
@@ -2337,7 +2337,7 @@ Documentación Oficial:
 [Facturación Electrónica RG 2485 – Proyecto FE v2.5 - Manual para el desarrollador](http://www.afip.gov.ar/fe/documentos/manua_desarrolladorCOMPGv25.pdf) (Revisión correspondiente al 01 de Abril de 2015)
 ### Datos Opcionales AFIP WSFEv1
 
-El componente permite enviar los datos opcionales requeridos por las diversas resoluciones de AFIP según la [tabla de parámetros](../factura_electronica/wsfev1#tipos-de-datos-opcionales). *Disponible desde actualización 1.15b*
+El componente permite enviar los datos opcionales requeridos por las diversas resoluciones de AFIP según la [tabla de parámetros](../factura_electronica/wsfev1.md#tipos-de-datos-opcionales). *Disponible desde actualización 1.15b*
 
 Datos opcionales para proyectos promovidos:
 ```
@@ -2357,7 +2357,7 @@ WSFEv1.AgregarOpcional(93, "Balcarce 50")   ' Domicilio
 ```
 
 
-Datos opcionales para [RG 3668 Impuesto al Valor Agregado - Art.12](../factura_electronica/wsfev1#importante-rg36682014-afip) (*"presunción de no vinculación con la actividad gravada"*, FORM 8001):
+Datos opcionales para [RG 3668 Impuesto al Valor Agregado - Art.12](../factura_electronica/wsfev1.md#importante-rg36682014-afip) (*"presunción de no vinculación con la actividad gravada"*, FORM 8001):
 ```
 #!vb
 
@@ -2368,7 +2368,7 @@ WSFEv1.AgregarOpcional(7, "01")             ' Carácter del Firmante (01: Titula
 ```
 
 
-Datos opcionales para [RG 3749 ](../factura_electronica/wsfev1#importante-rg37492015-afip) (*"RG 3.368 Establecimientos de educación pública de gestión privada"*):
+Datos opcionales para [RG 3749 ](../factura_electronica/wsfev1.md#importante-rg37492015-afip) (*"RG 3.368 Establecimientos de educación pública de gestión privada"*):
 ```
 #!vb
 
@@ -5477,7 +5477,7 @@ Este campo es obligatorio. Para mayor detalle consular el método FEParamGetCond
 
 A partir de 2025 es necesario enviar el nuevo campo `condicion_iva_receptor_id`, ver [WSFEv1 RG5616](../factura_electronica/wsfev1.md#rg56142024)
 
-Para la lista de condiciones de IVA. Para más información ver: [WSFEV1 RG5616](../factura_electronica/wsfev1#condicion-iva-receptor-a])
+Para la lista de condiciones de IVA. Para más información ver: [WSFEV1 RG5616](../factura_electronica/wsfev1.md#condicion-iva-receptor-a])
 ### Errores internos de AFIP
 
 Ocasionalmente pueden producirse errores no documentados en las especificaciones técnicas de AFIP.

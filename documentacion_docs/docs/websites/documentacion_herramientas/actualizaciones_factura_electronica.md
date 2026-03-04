@@ -77,7 +77,7 @@ En caso de optar por el soporte comunitario sin cargo y sin compromiso, dirigirs
 
 Por estas cuestiones compilamos la actualización especial parcial "Service Pack" para WSFEv1 en producción (recomendado, especialmente para clientes que hayan actualizado de 2015 en adelante) y una versión de WSAA con los ajustes para nuevos certificados:
 
-- https://www.sistemasagiles.com.ar/soft/pyafipws/PyAfipWsSP2-2.7.1939-32bit+wsfev1_1.18c-update.exe: **Service Pack 2**, actualiza sólo archivos temporales por nueva especificación técnica AFIP [FEv2.9](../factura_electronic../factura_electronica/wsfev1.md#importante-fev29a/wsfev1.md#tipos-de-comprobante) 13-03-2017, no incluye nuevos campos ni otros ajustes.
+- https://www.sistemasagiles.com.ar/soft/pyafipws/PyAfipWsSP2-2.7.1939-32bit+wsfev1_1.18c-update.exe: **Service Pack 2**, actualiza sólo archivos temporales por nueva especificación técnica AFIP [FEv2.9](../factura_electronica/wsfev1.mdimportante-fev29a/wsfev1.md#tipos-de-comprobante) 13-03-2017, no incluye nuevos campos ni otros ajustes.
 - https://github.com/reingart/pyafipws/releases/download/2.7.1872/PyAfipWsSP1-2.7.1874-32bit.wsfev1_1.18a-update.exe o [update4](https://www.sistemasagiles.com.ar/soft/pyafipws/PyAfipWsSP1-2.7.1876-32bit+wsfev1_1.18a-update4.exe) (Service Pack 1, con ajustes menores)
 - https://github.com/reingart/pyafipws/releases/download/2.7.1843/PyAfipWs-2.7.1843-32bit.wsaa_2.10g-full.exe (WSAA para claves de 2048 bits + SHA2)
 

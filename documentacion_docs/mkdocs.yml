@@ -27,35 +27,36 @@ nav:
     - "FE Cred (FCE): Factura Electrónica Crédito MiPyMEs (RG4367)": websites/factura_electronica/wsfecred.md
     - "Código de Autorización Electrónico Anticipado CAEA": websites/factura_electronica/caea.md
   - Agropecuario - Servicios web AFIP:
-    - "Código Trazabilidad de Granos: Transporte de granos WSCTGv4 (RG2806 RG3113 RG3493)": pagina5.md
-    - "Liquidación y Certificación de Granos: WSLPGv1.17 F. C1116 A / B / RT (RG3419 RG3690 RG3691)": pagina6.md
-    - "Liquidación de Tabaco Verde: WSLTVv1.3": pagina7.md
-    - "Liquidación Única Mensual Lechería: WSLUMv1.3": pagina8.md
-    - "Liquidación Sector Pecuario: Hacienda, Compra directa, Carne WSLSPv1.3": pagina9.md
-    - "Remito Electrónico Cárnico: WSRemCarne (RG4256/18 y RG4303/18)": pagina10.md
-    - "Remito Electrónica Harinero: WSRemHarina - (RG 4519/19)": pagina11.md
-    - "Remito Electrónico Azúcar y Derivados: WSRemAzucar - (RG 4519/19)": pagina12.md
-    - "Carta de Porte: WSCPE - (RG 5017/21)": pagina13.md
-    - "Carta de Porte Derivados Granarios: WSCPEv2 - (RG 5235/22) Nuevo!": pagina14.md
+    - "Código Trazabilidad de Granos: Transporte de granos WSCTGv4 (RG2806 RG3113 RG3493)": websites/agropecuario/codigo_trazabildad_granos.md
+    - "Liquidación y Certificación de Granos: WSLPGv1.17 F. C1116 A / B / RT (RG3419 RG3690 RG3691)": websites/agropecuario/liquidacion_primaria_granos.md
+    - "Liquidación de Tabaco Verde: WSLTVv1.3": websites/agropecuario/liquidacion_tabaco_verde.md
+    - "Liquidación Única Mensual Lechería: WSLUMv1.3": websites/agropecuario/liquidacion_unica_mensual_lecheria.md
+    - "Liquidación Sector Pecuario: Hacienda, Compra directa, Carne WSLSPv1.3": websites/agropecuario/liquidacion_sector_pecuario.md
+    - "Remito Electrónico Cárnico: WSRemCarne (RG4256/18 y RG4303/18)": websites/agropecuario/remito_electronico_carnico.md
+    - "Remito Electrónica Harinero: WSRemHarina - (RG 4519/19)": websites/agropecuario/remito_electronico_harina.md
+    - "Remito Electrónico Azúcar y Derivados: WSRemAzucar - (RG 4519/19)": websites/agropecuario/remito_electronico_azucar.md
+    - "Carta de Porte: WSCPE - (RG 5017/21)": websites/agropecuario/carta_de_porte.md
+    - "Carta de Porte Derivados Granarios: WSCPEv2 - (RG 5235/22)": websites/agropecuario/carta_de_porte_derivados_granarios.md
   - "Otros webservices y utilidades AFIP":
-    - "Constatación de Comprobantes CAI, CAE, CAEA (WSCDC)": pagina16.md
+    - "Constatación de Comprobantes CAI, CAE, CAEA (WSCDC)": websites/otros_webservices/constatacion_comprobantes.md
     - "Padron Contribuyentes AFIP: Constancia de Inscripción RG1817/2005 WS-SR-Padron": websites/otros_webservices/padron_contribuyentes_afip.md
     - "Consulta de Operaciones Cambiarias: Compra de Divisas (WSCOC)": websites/otros_webservices/consulta_operaciones_cambiarias.md
-    - "SIRE_CertificadoRetencionElectronica: Certificado de retención electrónica del Impuesto al Valor Agregado (SIRE-WS) RG4523/19": pagina19.md
+    - "SIRE_CertificadoRetencionElectronica: Certificado de retención electrónica del Impuesto al Valor Agregado (SIRE-WS) RG4523/19": websites/otros_webservices/sire_certificado_retencion_electronica.md
   - "Webservices provinciales: ARBA (Prov. Bs.As.), AGIP (C.A.B.A), API (Sta.Fe), DGR (Córdoba)":
     - "Remito Electrónico: COT Código de Operaciones de Translado (ARBA, API, AGIP, DGR)": websites/webservices_provinciales/remito_electronico_cot_arba.md
-    - "Ingresos Brutos: Consulta de alícuotas WS DFE IIBB ARBA": pagina22.md
+    - "Ingresos Brutos: Consulta de alícuotas WS DFE IIBB ARBA": websites/webservices_provinciales/ingresos_brutos_arba.md
+    - "Retenciones A-122R: Ingreso de comprobantes de retenciones": websites/webservices_provinciales/wsa122r.md
   - "SNT: Sistema Nacional de Trazabilidad ANMAT, SEDRONAR, SENASA":
     - "Trazabilidad de Medicamentos: ANMAT Disposición 3683/2011": websites/trazabilidad/trazabilidad_medicamentos.md
-    - "Trazabilidad de Productos Médicos: ANMAT Disposición 2303/2014 y 2175/14": pagina25.md
+    - "Trazabilidad de Productos Médicos: ANMAT Disposición 2303/2014 y 2175/14": websites/trazabilidad/trazabilidad_productos_medicos.md
     - "Trazabilidad de Precursores Químicos: RENPRE SEDRONAR Resolución 900/12": websites/trazabilidad/trazabilidad_precursores_quimicos.md
     - "Trazabilidad de Productos Fitosanitarios: SENASA Resolución 369/13": websites/trazabilidad/trazabilidad_productos_fitosanitarios.md
-    - "Trazabilidad de Productos Fitosanitarios: SENASA Resolución 369/21 (WS_INFO_EMPRESAS / WS_DATOS_GENERALES)": pagina28.md
+    - "Trazabilidad de Productos Fitosanitarios: SENASA Resolución 369/21 (WS_INFO_EMPRESAS / WS_DATOS_GENERALES)": websites/trazabilidad/trazabilidad_productos_fitosanitarios_empresa.md
   - "Aplicativos Genéricos y Herramientas Avanzadas":
     - "PyRece: Aplicativo visual simil SIAP - RECE (CSV, PDF, Email)": websites/aplicativos_y_herramientas/pyrece.md
-    - "FE.py: Herramienta universal, unificada e integrada": pagina31.md
-    - "FacturaLibre: Aplicacion online (web2py)": pagina32.md
-    - "PyFactura: Aplicativo visual y simple (gui2py) para CAE y PDF factura electrónica": pagina33.md
-    - "LibPyAfipWs: Biblioteca DLL para lenguajes C / C++ y similares": pagina34.md
-    - "Factura Electrónica en Python: Información Técnica (SOAP, XML, PDF, DBF, etc.)": pagina35.md
+    - "FE.py: Herramienta universal, unificada e integrada": websites/aplicativos_y_herramientas/herramienta_factura_electronica.md
+    - "FacturaLibre: Aplicacion online (web2py)": websites/aplicativos_y_herramientas/factura_libre.md
+    - "PyFactura: Aplicativo visual y simple (gui2py) para CAE y PDF factura electrónica": websites/aplicativos_y_herramientas/pyfactura.md
+    - "LibPyAfipWs: Biblioteca DLL para lenguajes C / C++ y similares": websites/aplicativos_y_herramientas/libpyafipws.md
+    - "Factura Electrónica en Python: Información Técnica (SOAP, XML, PDF, DBF, etc.)": websites/aplicativos_y_herramientas/factura_electronica_python.md
 
