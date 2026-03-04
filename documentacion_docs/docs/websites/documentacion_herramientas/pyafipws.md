@@ -39,7 +39,7 @@ A su vez, al ser software libre de código abierto "open source", permite proteg
 Cuenta con un [foro](http://groups.google.com/group/pyafipws) (grupo público de usuarios y desarrolladores) de más de 350 miembros de todo el país, donde se brinda soporte comunitario sin costo (gratuito) y sin compromiso.
 El repositorio con el código fuente e historial de cambios se encuentra públicado en [GoogleCode](https://code.google.com/p/pyafipws/) (histórico) y [GitHub](https://github.com/reingart/pyafipws) (actualizado).
 
-Por consultas sobre el lenguaje Python y demás, dirigirse a [PyAr](http://www.python.org.ar). Para más información ver [Factura Electronica](../factura_electronica.md).
+Por consultas sobre el lenguaje Python y demás, dirigirse a [PyAr](http://www.python.org.ar). Para más información ver [Factura Electronica](../inicio/factura_electronica.md).
 
 
 

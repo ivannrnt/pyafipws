@@ -39,7 +39,7 @@ Sustitución RG3689/14 y modificaciones.
 
 Nuevos métodos y parámetros WSFEX version 1.5.0:
 
-- Se agrega método [WSFEXv1.GetParamMonConCotizacion](../documentacion_herramientas/manualpyafipws.md#M%C3%A9todos3) y ejemplo [RECEX1 /monctz](../documentacion_herramientas/manualpyafipws.md#EjemploRECEX1consultamonedasconcotización) para consultar cotización moneda ADUANA por fecha
+- Se agrega método [WSFEXv1.GetParamMonConCotizacion](../documentacion_herramientas/manualpyafipws.md#metdos) y ejemplo [RECEX1 /monctz](../documentacion_herramientas/manualpyafipws.md#EjemploRECEX1consultamonedasconcotización) para consultar cotización moneda ADUANA por fecha
 
 Errores frecuentes:
 
@@ -52,7 +52,7 @@ AFIP publicó una nueva [Especificación Técnica "FEXv2.0.0"](https://www.afip.
 Se incorpora método para la consulta de Actividades vigentes (GetParamActividades) y una estructura de actividades vinculadas al comprobante tanto en la
 emisión de CAE, como en la consulta de los comprobantes ya autorizados.
 
-ver: [Métodos WSFEXv1](../documentacion_herramientas/manualpyafipws.md#M%C3%A9todos3) 
+ver: [Métodos WSFEXv1](../documentacion_herramientas/manualpyafipws.md#metodos-3) 
 
 Aplicación:
 

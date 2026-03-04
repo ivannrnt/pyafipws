@@ -9,7 +9,7 @@ Respecto a un OCX, nuestra interface PyAfipWs tiene las siguientes ventajas:
 - Factura Electrónica en 10 líneas, sin necesidad de referencias ni agregar controles ni constantes
 - Funciona en aplicaciones Visuales (con formularios) y también en no Visuales (módulos de código). Ver ejemplos completos: [VB](https://github.com/reingart/pyafipws/blob/master/ejemplos/wsfev1/wsfev1.bas), [VFP](https://github.com/reingart/pyafipws/blob/master/ejemplos/wsfev1/wsfev1.prg), [VB.NET](https://github.com/reingart/pyafipws/blob/master/ejemplos/wsfev1/wsfev1.vb), [PHP](https://github.com/reingart/pyafipws/blob/master/ejemplos/wsfe/php/ejemplo.php), [Delphi](https://github.com/reingart/pyafipws/blob/master/ejemplos/wsfe/delphi/Project1.dpr), etc.
 - Compatible con herramientas de oficina ([Access 97](https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/pyafipws/pyafipws.mdb) / [Access 2000](https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/pyafipws/pyafipws2k.mdb), Excel, etc.) y programas de terceros con soporte COM ([SAP ABAP](./pyafipws.md#ejemplo-para-sap-abap), [Fujitsu NetCobol](./pyafipws.md#ejemplo-para-fujitsu-net-cobol), [Clarion](./pyafipws.md#ejemplo-para-clarion), [Power Builder](./pyafipws.md#ejemplo-para-powerbuilder), etc.)
-- Herramientas alternativas por linea de comandos para soporte de archivos de intercambio simil [SIAP RECE](./manualpyafipws.md#interfase-por-archivos-de-texto-símil-siap---rece) (TXT ancho fijo COBOL, DBF, JSON, XML, etc.)
+- Herramientas alternativas por linea de comandos para soporte de archivos de intercambio simil [SIAP RECE](./manualpyafipws.md#interfase-por-archivos-de-texto-simil-siap---rece) (TXT ancho fijo COBOL, DBF, JSON, XML, etc.)
 - Actualización simple, sin necesidad de modificar el proyecto ni recompilar
 - Tipos de datos dinámicos y métodos flexibles para simplicidad y compatibilidad con lenguajes legados
 
@@ -55,4 +55,4 @@ Este proyecto es y se sustenta en Software Libre, particularmente:
 
 Para más detalles técnicos respecto al Servidor COM de autenticación y su funcionamiento desde Python ver [ejemplo](http://python.org.ar/pyar/Recetario/ServidorCom)
 
-Para más información, ver [FacturaElectronica](../factura_electronica.md) y [PyAfipWs](./pyafipws.md)
+Para más información, ver [FacturaElectronica](../inicio/factura_electronica.md) y [PyAfipWs](./pyafipws.md)

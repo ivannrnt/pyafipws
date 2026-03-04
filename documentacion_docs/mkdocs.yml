@@ -1,4 +1,4 @@
-site_name: ""
+site_name: "PyAfipWs"
 site_description: Documentación
 site_url: https://<USER_OR_DOMAIN>.github.io/<REPO>/
 use_directory_urls: true
@@ -9,14 +9,14 @@ theme:
   custom_dir: overrides
 
 extra:
-  url_logo: websites/factura_electronica/
+  url_logo: websites/inicio/factura_electronica/
 
 extra_css:
   - ./stylesheets/extra.css
 
 nav:
   - Factura Electronica:
-    - Introduccion: websites/factura_electronica.md
+    - Introduccion: websites/inicio/factura_electronica.md
   - Documentación Componentes y Herramientas Generales:
     - "PyAfipWs: Interfase simil OCX con otros lenguajes (VB, VFP, Cobol ...) Costos y Condiciones": websites/documentacion_herramientas/pyafipws.md
     - "Manual: Documentación, Información Importante, Certificados, Errores Frecuentes": websites/documentacion_herramientas/manualpyafipws.md

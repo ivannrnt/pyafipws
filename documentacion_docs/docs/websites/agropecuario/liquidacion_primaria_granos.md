@@ -64,7 +64,7 @@ El 22/10/2014 AFIP ha publicado las siguientes resoluciones generales:
 Según AFIP, al 14/11/2014 todos los métodos son preliminares , solo se encuentra disponible la documentación técnica tentativa ["WEB SERVICE LpgService Versión 1.6 Manual para el Desarrollador"](http://www.afip.gob.ar/ws/WSLiquiGranos/ManualDelDesarrolladorWSLPGV16.pdf). 
 Todavía no estan disponible los cambios en el webservice, ni hay ejemplos como para poder probar el servicio. 
 
-A partir de la actualización 1.17 de la interfaz, se están incorporando los métodos necesarios para utilizar estas nueva funcionalidades ver abajo secciones [Versión 1.6](#version-16) con [Métodos](#metodos), [Formato de Intercambio](#formato-de-intercambioo) y ejemplos ([Autorizar Liquidación Secundaria](#autorizar-liquidacion-secundaria), [Autorizar Certificación](#autorizar-certificacion)).
+A partir de la actualización 1.17 de la interfaz, se están incorporando los métodos necesarios para utilizar estas nueva funcionalidades ver abajo secciones [Versión 1.6](#version-16) con [Métodos](#metodos), [Formato de Intercambio](#formato-de-intercambio) y ejemplos ([Autorizar Liquidación Secundaria](#autorizar-liquidacion-secundaria), [Autorizar Certificación](#autorizar-certificacion)).
 
 
 ### Versión 1.1
@@ -1903,7 +1903,7 @@ También se pueden agregar campos adicionales fijos para leyendas y aclaraciones
 
 Los campos adicionales se especifican por el nuevo tipo de registro 9 [DATO](#dato) en el archivo de texto de intercambio, en la sección [PDF] de la configuración o llamando al método !AgregarDatoPDF
 
-El diseño esta guardado en una plantilla csv (`liquidacion_form_c1116b_wslpg.csv`), esta se puede editar con un editor de texto, hoja de cálculo o usando nuestro [Diseñador Visual](../documentacion_herramientas/manualpyafipws.md#DiseñadorVisualPyFEPDF)
+El diseño esta guardado en una plantilla csv (`liquidacion_form_c1116b_wslpg.csv`), esta se puede editar con un editor de texto, hoja de cálculo o usando nuestro [Diseñador Visual](../documentacion_herramientas/manualpyafipws.md)
 
 Ver [ métodos](#metodos) y [ejemplos](#descargas) o [opción `--pdf`](#parametros-por-linea-de-comando) para generar el archivo, mostrarlo e imprimirlo.
 

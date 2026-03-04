@@ -27,7 +27,7 @@ Es similar al aplicativo *Régimen de Emisión de Comprobantes Electrónicos* (R
 
 - Pantalla para carga de datos de clientes y artículos a facturar (utilizando PadronContribuyentesAFIP RG1817 y almacenamiento según RG1361), contemplando las normativas de AFIP aplicables para facturación electrónica y permitiendo almacenar datos de clientes y facturación para no tener que escribirlos por cada factura.
 - Autoriza las facturas en linea (usando webservice), simplificando el proceso (no requiere ventanilla electrónica ni ningún otro servicio de clave fiscal o página web), sin limite de facturas ni textos a incluir
-- Genera las facturas en un formato PDF gráfico adaptable mediante un [Diseñador Visual](../documentacion_herramientas/manualpyafipws.md#DiseñadorVisualPyFEPDF), pudiendo incluir imágenes (logos) e información adicional, incluyendo el código de barras para ser impreso (opcional).
+- Genera las facturas en un formato PDF gráfico adaptable mediante un [Diseñador Visual](../documentacion_herramientas/manualpyafipws.md#diseñador-visual-pyfepdf), pudiendo incluir imágenes (logos) e información adicional, incluyendo el código de barras para ser impreso (opcional).
 - Permite múltiples hojas de orientación apaisada (landscape) o retrato (portrait), descripciones de múltiples líneas (con corte y transporte automático)  y control arbitrario de la impresión de decimales.
 - Envía mensajes de correo electrónico conteniendo la factura en PDF y un mensaje configurable (tanto en texto plano como en texto estilizado con HTML)
 - Importación / exportación desde [Múltiples Formatos de Archivos de Intercambio](wiki:PyRece#Caracterísiticas) (planillas CSV -editables por planilla de cálculo-, archivos de texto de longitud fija TXT similar a RECE, archivos XML similares al Facturador Plus, tablas DBF y archivos JSON) *Próximamente*
@@ -57,7 +57,7 @@ Adicionalmente, como no se informa el detalle de los artículos, solo se muestra
 - Enviar por email con el PDF adjuntado, pudiendo agregar un motivo y cuerpo (texto) configurable.
 - Base de datos interna de facturación y clientes (sqlite incorporada, conectable a otros motores como PostgreSQL, MySQL u ODBC -MSSQL Server y MS Access-)
 
-Los datos podrían importarse por archivos de varios formatos (Ver [CSV compatible con Planilla de Calculo, XML similar al [Facturador Plus](pyrece.md]):), TXT similar al [SIAP RECE](../documentacion_herramientas/manualpyafipws.md#interfase-por-archivos-de-texto-simil-siap---rece), DBF compatible con tablas [Tablas dBase/FoxPro](../documentacion_herramientas/manualpyafipws.md#formato-tablas-xbase-dbf-dbase-iii--fox--clipper), JSON (javascript object notation) para lenguajes modernos con páginas web.
+Los datos podrían importarse por archivos de varios formatos (Ver [CSV compatible con Planilla de Calculo, XML similar al [Facturador Plus](pyrece.md):), TXT similar al [SIAP RECE](../documentacion_herramientas/manualpyafipws.md#interfase-por-archivos-de-texto-simil-siap---rece), DBF compatible con tablas [Tablas dBase/FoxPro](../documentacion_herramientas/manualpyafipws.md#formato-tablas-xbase-dbf-dbase-iii--fox--clipper), JSON (javascript object notation) para lenguajes modernos con páginas web.
 
 Consultar por adaptación lectura de facturas a autorizar desde bases de datos u otro método (no incluido en el programa básico)
 

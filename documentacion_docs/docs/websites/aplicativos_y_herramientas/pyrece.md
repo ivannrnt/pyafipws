@@ -10,7 +10,7 @@ Es similar al aplicativo *Régimen de Emisión de Comprobantes Electrónicos* (R
 
 - Permite leer y grabar las facturas desde [Múltiples Formatos de Archivos de Intercambio](#caracterisiticas) (planillas CSV o XLSX -editables por planilla de cálculo / MS Excel-, archivos de texto de longitud fija TXT similar a RECE, archivos XML similares al Facturador Plus, tablas DBF y archivos JSON)
 - Autoriza las facturas en linea (usando webservice), simplificando el proceso (no requiere ventanilla electrónica ni ningún otro servicio de clave fiscal o página web)
-- Genera las facturas en un formato PDF gráfico adaptable mediante un [Diseñador Visual](../documentacion_herramientas/manualpyafipws.md#DiseñadorVisualPyFEPDF), pudiendo incluir imágenes (logos) e información adicional, incluyendo el código de barras para ser impreso (opcional).
+- Genera las facturas en un formato PDF gráfico adaptable mediante un [Diseñador Visual](../documentacion_herramientas/manualpyafipws.md#diseñador-visual-pyfepdf), pudiendo incluir imágenes (logos) e información adicional, incluyendo el código de barras para ser impreso (opcional).
 - Permite múltiples hojas de orientación apaisada (landscape) o retrato (portrait), descripciones de múltiples líneas (con corte y transporte automático)  y control arbitrario de la impresión de decimales.
 - Envía mensajes de correo electrónico conteniendo la factura en PDF y un mensaje configurable (tanto en texto plano como en texto estilizado con HTML)
 
@@ -37,8 +37,8 @@ Los datos se ingresan por archivos de varios formatos:
 - XLSX compatible con MS Excel / !LibreOffice Calc. Ver [Planilla de Ejemplo (XLSX)](https://github.com/reingart/pyafipws/blob/master/datos/facturas.xlsx)
 - CSV compatible con Planilla de Calculo. Ver [Planilla de Ejemplo (CSV)](attachment:facturas.csv)
 - XML similar al [Facturador Plus](#formato-xml-simil-facturador-plus) [Archivo de Ejemplo (XML)](attachment:facturas.xml)
-- TXT similar al [SIAP RECE](../documentacion_herramientas/manualpyafipws.md#Archivodetextodeinterfambio) [Archivo de Ejemplo (TXT)](attachment:facturas.txt)
-- DBF compatible con tablas [Tablas dBase/FoxPro](../documentacion_herramientas/manualpyafipws.md#TablasenDBFparaPyFEPDF) [Carpeta Comprimida (DBF)](attachment:tablas-dbf.zip)
+- TXT similar al [SIAP RECE](../documentacion_herramientas/manualpyafipws.md#interfase-por-archivos-de-texto-simil-siap---rece) [Archivo de Ejemplo (TXT)](attachment:facturas.txt)
+- DBF compatible con tablas [Tablas dBase/FoxPro](../documentacion_herramientas/manualpyafipws.md#formato-tablas-xbase-dbf-dbase-iii--fox--clipper) [Carpeta Comprimida (DBF)](attachment:tablas-dbf.zip)
 - JSON (javascript object notation) para lenguajes modernos e hiperactividad con páginas web.
 
 Consultar por adaptación lectura de facturas a autorizar desde bases de datos u otro método (no incluido en el programa básico)
@@ -376,7 +376,7 @@ Ver [Muestra (PDF)](attachment:factura-0004-00000001.pdf) y [Formato de ejemplo 
 
 La herramienta incluye el progama `designer.exe` para modificar visualmente los diseños de factura.
 
-A modo de ejemplo se muestra un pantallazo del [Diseñador Visual](../documentacion_herramientas/manualpyafipws.md#DiseñadorVisualPyFEPDF), con el elemento logo seleccionado, editando sus propiedades:
+A modo de ejemplo se muestra un pantallazo del [Diseñador Visual](../documentacion_herramientas/manualpyafipws.md#diseñador-visual-pyfepdf), con el elemento logo seleccionado, editando sus propiedades:
 ![image](../../media/designer.png)
 ### Mensaje de Correo Electrónico
 

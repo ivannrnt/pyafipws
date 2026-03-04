@@ -230,7 +230,7 @@ Ver archivos y últimas actualizaciones para descargas en [GitHub](https://githu
 - [instalador-WSMTXCA-1.04b-homo.exe](https://pyafipws.googlecode.com/files/instalador-WSMTXCA-1.04b-homo.exe)
 - Ejemplo en VB: [wsmtx.bas](https://github.com/reingart/pyafipws/blob/master/ejemplos/wsmtxca/wsmtx.bas)
 - Ejemplo en VFP: [wsmtxca.prg](https://github.com/reingart/pyafipws/blob/master/ejemplos/wsmtxca/wsmtxca.prg)
-- Tablas DBF ejemplo: [RECEM_dbf.zip](attachment:recem_dbf.zip) (para dBase, Clipper, !FoxPro, Harbour, etc.) Ver [ManualPyAfipWs#InterfaseporarchivosdetextosímilSIAP-RECE RECEM]
+- Tablas DBF ejemplo: [RECEM_dbf.zip](attachment:recem_dbf.zip) (para dBase, Clipper, !FoxPro, Harbour, etc.) Ver [ManualPyAfipWs#interfase-por-archivos-de-texto-simil-siap---rece RECEM]
 - [Manual de Uso](../documentacion_herramientas/manualpyafipws.md): Documentación ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf)) [Documentación Oficial PDF AFIP](http://www.afip.gov.ar/fe/documentos/manualdesarrolladormtx_v0_1.pdf)
 - Código Fuente (Python): ver archivos publicados en [Google Code](http://code.google.com/p/pyafipws/source/checkout) 
 

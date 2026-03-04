@@ -414,7 +414,7 @@ Ver archivos y últimas actualizaciones para descargas en [GitHub](https://githu
 - Ejemplos MS Access/VBA: 
 - [pyafipws.mdb](http://pyafipws.googlecode.com/files/pyafipws.mdb): WSFEv1 y WSFEX (base de datos MS Access 97 o sup.) 
 - [pyafipws2k.mdb](http://pyafipws.googlecode.com/files/pyafipws2k.mdb): WSFEv1 y WSFEX (base de datos MS Access 2000 o sup.) 
-- Tablas DBF ejemplo: [RECE1_dbf.zip](attachment:rece1_dbf.zip) (para dBase, Clipper, !FoxPro, Harbour, etc.) Ver [ManualPyAfipWs#InterfaseporarchivosdetextosímilSIAP-RECE RECE1]
+- Tablas DBF ejemplo: [RECE1_dbf.zip](attachment:rece1_dbf.zip) (para dBase, Clipper, !FoxPro, Harbour, etc.) Ver [ManualPyAfipWs#interfase-por-archivos-de-texto-simil-siap---rece RECE1]
 - [Manual de Uso](../documentacion_herramientas/manualpyafipws.md): Documentación ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf))
 - Código Fuente (Python): ver archivos publicados en [GitHub](https://github.com/reingart/pyafipws/blob/master/wsfev1.py) 
 - Listado de empresas para Pruebas Factura de Crédito MiPymes: [http://www.afip.gob.ar/facturadecreditoelectronica/documentos/Pruebas-homologacion-WS-FCE.zip]

@@ -58,7 +58,7 @@ Para más información ver [Especificación Técnica AFIP WSLSP Versión 1.4.1](
  
 - Se amplían campos, agrega validaciones y modifica los anexos (funcionalidades)
 - Modificaciones en las consultas de tablas auxiliares de parámetros
-- Se actualiza tabla de parámetros de [Categorías](#categorias), [Operaciones](#operaciones), [Caracteres](#caracteres), [Razas](#razas), [Cortes](#cortes), [Tributos](#tributos)
+- Se actualiza tabla de parámetros de [Categorías](#categorias), [Operaciones](#operaciones), [Caracteres](#caracteres-participante-emisorreceptor), [Razas](#razas), [Cortes](#cortes), [Tributos](#tributos)
 
 Para más información ver [Especificación Técnica AFIP WSLSP Versión 1.7](http://www.afip.gob.ar/ws/WSLSP/manual_wslsp_1.7.pdf) del 25/05/2018
 
