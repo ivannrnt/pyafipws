@@ -9,7 +9,7 @@ Esta interfaz requiere un nuevo webservice de autenticación al servidor de ARBA
 ## Descargas
 
 - Instalador: [Instalador 1.01a para evaluación](https://www.sistemasagiles.com.ar/soft/pyafipws/PyAfipWs-2.7.3290-32bit+wsa122r_1.01a+wsidp_1.00b-homo.exe)
-- Ejemplo en VB: [Ejemplo](wiki:wsa122r#EjemploIntefaseCOMenVB)
+- Ejemplo en VB: [Ejemplo](#ejemplo-intefase-com-en-vb)
 - Código Fuente (Python):
 
 ## URL
@@ -19,7 +19,7 @@ Esta interfaz requiere un nuevo webservice de autenticación al servidor de ARBA
 
 ## Métodos WSA122R
 
-- **`SetToken(token)`**: Asigna el valor del token conseguido despues de ejecutar el metodo **`ObtenerToken(cuit, cit, url, trace)`** en [Métodos WSIDP](wiki:wsa122r#MétodosWSIDP). Ver ejemplo para el detalle de la asignación.
+- **`SetToken(token)`**: Asigna el valor del token conseguido despues de ejecutar el metodo **`ObtenerToken(cuit, cit, url, trace)`** en [Métodos WSIDP](#metodos-wsidp). Ver ejemplo para el detalle de la asignación.
 - **`Conectar(url, proxy, cacert, trace, testing)`**: los parámetros son similares a WSFEv1.Conectar (por el momento solo se usa url y trace para depuración).
 - **`IniciarDj(cuit_agente, actividad_id, anio, mes, quincena)`**: Permite iniciar una DJ. La respuesta a este request, devolverá el ID de la DJ, la cual es necesaria para ir agregando comprobantes a la declaración jurada iniciada. La DJ iniciada pertenecerá, a la cuit del agente que se asignó en el campo “cuitAgente”, debiéndose corresponder con el cuit del agente que generó el token.
 - **`CrearComprobanteInterno(cuit_contribuyente, cuit_agente, sucursal, alicuota, base_imponible, importe_retencion, razon_social_contribuyente, fecha_operacion, n_transaccion_agente):`**: Crea internamente un comprobante para luego poder darlo de alta, recibe los datos del comprobante a emitir. Ver ejemplo para el detalle de los parámetros.
@@ -63,13 +63,13 @@ La herramienta permite autenticar contra ARBA y realizar operaciones sobre Decla
 
 Opcionalmente se puede especificar --test para operar en entorno de pruebas y --trace para imprimir por pantalla los datos enviados y recibidos.
 
-## Uso General
+### Uso General
 
 ```
 wsa122r.exe --cuit-auth [cuit del agente] --cit-auth [cit del agente] --client_id [client_id] --secret [secret] [opciones] [operación]
 ```
 
-## Autenticación
+### Autenticación
 
 Parámetros obligatorios para todas las operaciones:
 
@@ -77,14 +77,14 @@ Parámetros obligatorios para todas las operaciones:
 --cuit-auth [cuit del agente] --cit-auth [cit del agente] --client_id [client_id] --secret [secret]
 ```
 
-## Entorno y Depuración
+### Entorno y Depuración
 
 ```
 --test Usa el entorno de pruebas (homologación)
 --trace Muestra por pantalla el request, response y traceback
 ```
 
-## Entrada y Salida de Datos
+### Entrada y Salida de Datos
 
 ```
 --cargar [archivo.json] Carga los datos desde un archivo JSON
@@ -105,7 +105,7 @@ cuit,id_dj,anio,mes,quincena,actividad_id,id_cmp,cuit_contribuyente,"tmp_sucursa
 **Nota**: Los valores que no se usen se deben enviar como 0 o "" en caso de ser string
 
 
-## Parámetros Comunes
+### Parámetros Comunes
 
 ```
 --cuit [cuit del agente]
@@ -323,7 +323,7 @@ End Sub
 ## Novedades
 
 Se recuerda que esta disponible el 
-[grupo de noticias](http://www.pyafipws.com.ar) (http://groups.google.com.ar/group/pyafipws) donde
+[grupo de noticias](http://groups.google.com.ar/group/pyafipws) donde
 se publicarán futuras novedades sobre PyAfipWS: servicios web de
 factura electrónica y sus interfases (se recomienda suscribirse)
 

@@ -3,10 +3,6 @@
 Emisión y almacenamiento electrónico de comprobantes originales AFIP - Argentina. 
 Resolución General 1361/02, 2265/07, 2289/07, 2485/08, RG2570/09, 2557/09, 2758/10, 2904/10, 3067/11, 3419/12, 3536/13, 3571/13, RG3668/14, RG3689/14, RG3749/15, RG3779/15, RG4109-E/17, RG4367/18, RG4401/19
 
-
-2008-2019 © Mariano Reingart – Febrero de 2019
-
-
 ## Importante: leer primero antes de comenzar
 
 ### Historial de Cambios

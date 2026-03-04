@@ -1,4 +1,4 @@
-﻿= Codigo de Operacion de Translado - COT ARBA - Remito Electrónico =
+﻿# Codigo de Operacion de Translado - COT ARBA - Remito Electrónico
 
 
 Interfaz para Servicio Web Código de Operaciones de Traslado (COT) "Remito Electronico" correspondiente al  articulo 41 del Código Fiscal que establece la obligación de amparar el traslado o transporte de bienes en el territorio de la provincia de Bs. As (T.O. 2011) incorporado por la Ley 13.405, prorrogada al 19/9/2011 según normativas 34/2011 y 45/2011 [ARBA (Rentas Proincia de Buenos Aires")](http://www.arba.gov.ar/Apartados/Agentes/AgenteCot.asp).  [Resolución General 0038/2014 API (Provincia de Santa Fe)](http://www.santafe.gov.ar/index.php/content/view/full/191149/). [Resolución N° 176 / 2017 AGIP (Ciudad Autónoma de Buenos Aires)](http://www.agip.gob.ar/normativa/resoluciones/2017/agip/resolucion-n-176--agip--2017). 
@@ -458,19 +458,19 @@ Con fecha 12/11/2015 se publicó la Resolución General Resolución General 0038
 ### Foro anuncios
 
 Se recuerda que esta disponible el 
-[grupo de noticias](http://www.pyafipws.com.ar) (http://groups.google.com.ar/group/pyafipws) donde
+[grupo de noticias](http://groups.google.com.ar/group/pyafipws) donde
 se publicarán futuras novedades sobre PyAfipWS: servicios web de
 factura electrónica y sus interfases (se recomienda suscribirse)
 ### Leyendas para Remitos - Número de COT
 
 Cuando se utiliza el canal AUTOMÁTICO, no sería necesaria ninguna documentación adicional, sólo bastaría consignar los datos originales (CUIT y N° de remito papel), para que el inspector de ARBA puede realizar la validación. Respuesta de ARBA:
-
     *Se exhibe el "comprobante papel", sea este remito, factura o equivalente, el cual estará amparado por su transferencia electrónica bajo la modalidad REMITO ELECTRONICO. Resulta recomendable agregar una leyenda en el comprobante haciendo mención a la "Transferencia electrónica en virtud de DN ARBA Nº 32/06 mod. y comp." Eso ayuda a quien visualice en un control que el comprobante exhibido tiene su transferencia electrónica. El nº de remito electrónico se compone de 16 digitos conformados por: 2 primeros en función al tipo de comprobante (91 si es remito) los dos siguientes son un espacio y la letra de ese comprobante ejemplo " R", los restantes 12 son taxativamente los números del comprobante físico Ejemplo 91 R000100004445 correspondiendo a un remito R papel nº 0001-00004445 Así debe ser generado respetando las tablas de validación y diseño especificas de remito electrónico*
+
 ## Aplicativo visual para COT
 
 La interfase de usuario es gráfica de escritorio (GUI), funciona en Windows o Linux:
 
-[[Image(aplicativo_remito_electronico.png, align=center)]]
+![image](../../media/aplicativo_remito_electronico.png)
 
 - Lee archivos de remitos desde distintas ubicaciones 
 - Procesa los archivos seleccionados (múltiples remitos)
@@ -482,6 +482,3 @@ La interfase de usuario es gráfica de escritorio (GUI), funciona en Windows o L
 Por soporte comercial consultar al (011) 15-3048-9211 o por mail a info@sistemasagiles.com.ar
 
 Más información en PyAfipWs (ver [Costos y Condiciones del Soporte Comercial](../documentacion_herramientas/pyafipws.md#costos-y-condiciones))
-
-MarianoReingart
-MarianoReingart

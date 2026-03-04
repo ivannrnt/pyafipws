@@ -1,4 +1,4 @@
-﻿= Ingresos Brutos - WS ARBA DFE =
+﻿# Ingresos Brutos - WS ARBA DFE
 
 
 Interfaz para Servicio web para obtención de Alícuotas "RÉGIMEN DE RECAUDACIÓN POR SUJETO" correspondiente a la Resolución Normativa N° 64/10, N° 55/12, N° 02/13, N° 13/13, N° 28/14 ARBA (Rentas Provincia de Buenos Aires).
@@ -16,7 +16,7 @@ Internamente genera y envía el archivo DFERespuesta_codigohash.xml con el algor
 - Instalador: [Instalador 1.01b para evaluación](http://www.sistemasagiles.com.ar/soft/pyafipws/PyAfipWs-2.7.1556-32bit+iibb_1.01b-homo.exe)
 - Ejemplo en VB: [iibb.bas](https://github.com/reingart/pyafipws/blob/master/ejemplos/iibb/iibb.bas)
 - Código Fuente (Python): https://github.com/reingart/pyafipws/blob/master/iibb.py
-- Documentación oficial: [http://www.arba.gov.ar/Informacion/IBrutos/LinksIIBB/RegimenSujeto.asp] (***Importante:** requiere clave ARBA*)
+- Documentación oficial: [http://www.arba.gov.ar/Informacion/IBrutos/LinksIIBB/RegimenSujeto.asp](http://www.arba.gov.ar/Informacion/IBrutos/LinksIIBB/RegimenSujeto.asp) (***Importante:** requiere clave ARBA*)
 
 ## URL
 
@@ -147,7 +147,7 @@ Debug.Print "alicuota", iibb.ObtenerTagXml('contribuyentes', 'contribuyente', 0,
 ## Novedades
 
 Se recuerda que esta disponible el 
-[grupo de noticias](http://www.pyafipws.com.ar) (http://groups.google.com.ar/group/pyafipws) donde
+[grupo de noticias](http://groups.google.com.ar/group/pyafipws) donde
 se publicarán futuras novedades sobre PyAfipWS: servicios web de
 factura electrónica y sus interfases (se recomienda suscribirse)
 
@@ -156,5 +156,3 @@ factura electrónica y sus interfases (se recomienda suscribirse)
 Por soporte comercial consultar al (011) 15-3048-9211 o por mail a info@sistemasagiles.com.ar
 
 Más información en PyAfipWs (ver [Costos y Condiciones del Soporte Comercial](../documentacion_herramientas/pyafipws.md#costos-y-condiciones))
-
-MarianoReingart
