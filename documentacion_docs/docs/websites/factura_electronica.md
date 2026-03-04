@@ -20,7 +20,7 @@ Interfase con otros lenguajes y miscelaneas (PyAfipWs, PyRece)
 - Código de Autorización Electrónico Anticipado [CAEA](wiki:FacturaElectronicaCAEAnticipado)
 - Agropecuario - Servicios web AFIP:
 - [Código Trazabilidad de Granos](wiki:CodigoTrazabilidadGranos): Transporte de granos WSCTGv4 (RG2806 RG3113 RG3493)
-- [Liquidación y Certificación de Granos](wiki:LiquidacionPrimariaGranos): WSLPGv1.17 F. C1116 A / B / RT (RG3419 RG3690 RG3691)  
+- [Liquidación y Certificación de Granos](#liquidacion-primaria-de-granos): WSLPGv1.17 F. C1116 A / B / RT (RG3419 RG3690 RG3691)  
 - [Liquidación de Tabaco Verde](wiki:LiquidacionTabacoVerde): WSLTVv1.3 ** ¡Actualizado! **
 - [Liquidación Única Mensual Lechería](wiki:LiquidacionUnicaMensualLecheria): WSLUMv1.3 
 - [Liquidación Sector Pecuario](wiki:LiquidacionSectorPecuario): Hacienda, Compra directa, Carne WSLSPv1.3

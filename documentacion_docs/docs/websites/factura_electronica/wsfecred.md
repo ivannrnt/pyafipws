@@ -1,14 +1,9 @@
 # Factura Crédito Electrónica MiPyMEs (RG4367) 
-[[TracNav(noreorder|FacturaElectronica)]]
+
 
 Interfaz para Servicio Web correspondiente al régimen Factura de Crédito Electrónica [Ley N° 27440](http://biblioteca.afip.gob.ar/dcp/LEY_C_027440_2018_05_09), reglamentado en el [Decreto 471/17](http://biblioteca.afip.gob.ar/dcp/DEC_C_000471_2018_05_17), e instrumentado según [RG 4367/2018](http://biblioteca.afip.gob.ar/dcp/REAG01004367_2018_12_19), sus modificatorias y complementarias. [RG4367/ 2018](http://www.afip.gov.ar/noticias/20181220-regimenFacturaCreditoElectronica.asp): [Factura de Crédito Electrónica](../factura_electronica/wsfev1.md#importante-rg43672018-fev213).
 
-| *En todas las operaciones comerciales en las que una Micro, Pequeña o Mediana Empresa esté obligada a emitir comprobantes electrónicos originales (factura o recibo) a una empresa grande, conforme las reglamentaciones que dicte la Administración Federal de Ingresos Públicos, entidad autárquica en el ámbito del Ministerio de Hacienda, se deberá emitir “Facturas de Crédito Electrónicas MiPyMEs”* |
-|---|
-
-## Índice
-[[Image(htdocs:logo-pyafipws.png, align=right)]]
-[[TOC(noheading,inline,depth=3)]]
+*En todas las operaciones comerciales en las que una Micro, Pequeña o Mediana Empresa esté obligada a emitir comprobantes electrónicos originales (factura o recibo) a una empresa grande, conforme las reglamentaciones que dicte la Administración Federal de Ingresos Públicos, entidad autárquica en el ámbito del Ministerio de Hacienda, se deberá emitir “Facturas de Crédito Electrónicas MiPyMEs”*
 
 ## Descripción General
 

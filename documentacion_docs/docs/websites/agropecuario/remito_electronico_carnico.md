@@ -1,4 +1,4 @@
-﻿= Remito Electrónico Cárnico - RG4256/18 RG4303 =
+﻿# Remito Electrónico Cárnico - RG4256/18 RG4303
 
 Interfaz para Servicio Web de AFIP para la emisión de Remito de carnes y subproductos derivados de la faena de bovinos y porcinos, Resolución General 4256/18 y Resolución General 4303/18.
 
@@ -707,7 +707,7 @@ print "Evento:", wsremcarne.Evento
 ## Novedades
 
 Se recuerda que esta disponible el 
-[grupo de noticias](http://www.pyafipws.com.ar) (http://groups.google.com.ar/group/pyafipws) donde
+[grupo de noticias](http://groups.google.com.ar/group/pyafipws) donde
 se publicarán futuras novedades sobre PyAfipWS: servicios web de
 factura electrónica y sus interfases (se recomienda suscribirse)
 
@@ -746,5 +746,3 @@ Impacto la interfaz con otros sistemas (en negrita):
 Ver [Condiciones del Soporte Comercial](../documentacion_herramientas/pyafipws.md#costos-y-condiciones).
 
 A su vez, se libera el código fuente bajo licencia GPL (software libre), al igual que se hizo con el restos de los servicios web. Para más detalles ver página FacturaElectronica.
-
-MarianoReingart

@@ -1,4 +1,4 @@
-﻿= Liquidación Electrónica de Tabaco Verde  =
+﻿# Liquidación Electrónica de Tabaco Verde
 
 
 Web Services – (Servicios Web) Liquidación de Tabaco Verde. Generación de una liquidación de tabaco comprado a productores y obtención del CAE (Código de Autorización Electrónico).
@@ -484,6 +484,7 @@ La interfaz permite obtener los diversos códigos de parámetros a utilizar. A c
 | VR | Virginia | X3L | 87 |
 | VR | Virginia | X4F | 93 |
 | VR | Virginia | X4L | 94 |
+
 ## Novedades
 
 Historial de Cambios:
@@ -492,7 +493,7 @@ Historial de Cambios:
 - Febrero 2017 (actualización 18): revisiones varias, ajusto link instalador actualizado
 
 Se recuerda que esta disponible el 
-[grupo de noticias](http://www.pyafipws.com.ar) (http://groups.google.com.ar/group/pyafipws) donde
+[grupo de noticias](http://groups.google.com.ar/group/pyafipws) donde
 se publicarán futuras novedades sobre PyAfipWS: servicios web de
 factura electrónica y sus interfases (se recomienda suscribirse)
 
@@ -501,5 +502,3 @@ factura electrónica y sus interfases (se recomienda suscribirse)
 Debido a la complejidad de este servicio, su fecha de aplicación y las modificaciones que pudieran surgir, los clientes que asi lo requieran pueden adquirir horas de soporte técnico comercial (ver [Condiciones del Soporte Comercial](../documentacion_herramientas/pyafipws.md#costos-y-condiciones)).
 
 A su vez, se libera el código fuente bajo licencia GPL (software libre), al igual que se hizo con el restos de los servicios web. Para más detalles ver página FacturaElectronica.
-
-MarianoReingart

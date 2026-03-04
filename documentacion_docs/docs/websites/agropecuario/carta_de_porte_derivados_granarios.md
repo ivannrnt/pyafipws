@@ -203,6 +203,7 @@ ok = wscpe.CrearCPE()
 ### Visual Basic
 
 #### Autorizar CPEDG
+
 ```
 #!vb
 
@@ -301,10 +302,9 @@ ok = wscpe.CrearCPE()
 ```    
 
 #### Consultar CPEDG Generados
+
 ```
 #!vb
-
-    
     ok = WSCPE.LoadTestXML(App.Path & "\consultar.xml")
     If nro_ctg <> 0 Then
         ok = WSCPE.ConsultarCPEAutomotor(Null, Null, Null, Null, nro_ctg)
@@ -316,10 +316,6 @@ ok = wscpe.CrearCPE()
     Debug.Print WSCPE.XmlResponse
     Debug.Print "Numero de CTG:", WSCPE.NroCTG
     Debug.Print "Errores:", WSCPE.ErrMsg
- ```       
-        
-
-    
 
 Exit Sub
 ManejoError:
@@ -337,7 +333,7 @@ ManejoError:
     Debug.Assert False
 
 End Sub
-
+```
 
     
 ## Tablas de Parámetros
@@ -428,4 +424,15 @@ La carta de porte electrónica DG automotor tendrá una validez de 10 días, mie
 
 Ambos períodos podrán extenderse en caso de declarar “Contingencias”.
 
+## Novedades
 
+Se recuerda que esta disponible el 
+[grupo de noticias](http://groups.google.com.ar/group/pyafipws) donde
+se publicarán futuras novedades sobre PyAfipWS: servicios web de
+factura electrónica y sus interfases (se recomienda suscribirse)
+
+## Costos y Condiciones
+
+Ver [Condiciones del Soporte Comercial](../documentacion_herramientas/pyafipws.md#costos-y-condiciones).
+
+A su vez, se libera el código fuente bajo licencia GPL (software libre), al igual que se hizo con el restos de los servicios web. Para más detalles ver página FacturaElectronica.

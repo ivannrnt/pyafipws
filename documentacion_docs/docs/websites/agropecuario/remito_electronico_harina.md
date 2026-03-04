@@ -1,4 +1,4 @@
-﻿= Remito Electrónico Harinero - RG 4519/19 =
+﻿# Remito Electrónico Harinero - RG 4519/19
 
 
 Interfaz para Servicio Web de AFIP para la emisión de Remito de harinas de trigo y los subproductos derivados de la molienda de trigo , Resolución General Conjunta 4514/2019
@@ -215,3 +215,16 @@ Métodos principales de consulta:
 | 12 | Evento que produjo pérdida Total de mercadería y que ocasiona anulación del Remito |
 | 13 | Demoras en traslado |
 | 14 | Corrección de pérdida informada, mercadería recuperada |
+
+## Novedades
+
+Se recuerda que esta disponible el 
+[grupo de noticias](http://groups.google.com.ar/group/pyafipws) donde
+se publicarán futuras novedades sobre PyAfipWS: servicios web de
+factura electrónica y sus interfases (se recomienda suscribirse)
+
+## Costos y Condiciones
+
+Ver [Condiciones del Soporte Comercial](../documentacion_herramientas/pyafipws.md#costos-y-condiciones).
+
+A su vez, se libera el código fuente bajo licencia GPL (software libre), al igual que se hizo con el restos de los servicios web. Para más detalles ver página FacturaElectronica.

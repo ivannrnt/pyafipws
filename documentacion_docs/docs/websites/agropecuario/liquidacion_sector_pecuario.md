@@ -1,6 +1,4 @@
-﻿= Liquidación Electrónica Sector Pecuario  =
-
-
+﻿# Liquidación Electrónica Sector 
 
 Web Services – (Servicios Web)  Liquidación Única Sector Pecuario. Generación de una liquidación mensual única (hacienda/compra directa/carne) y obtención del CAE (Código de Autorización Electrónico). 
 
@@ -11,7 +9,7 @@ Resolución General AFIP N° 3873/2016. Impuesto al Valor Agregado. "Sistema Reg
 
 ## Descripción General
 
-EL WSLSP (Web Service de Liquidación única Sector Pecuario) es un nuevo Servicio Web de la AFIP según [WSLSPv1.4.1](wiki:LiquidacionSectorPecuario#WSLSPv1.4.1)
+EL WSLSP (Web Service de Liquidación única Sector Pecuario) es un nuevo Servicio Web de la AFIP según [WSLSPv1.4.1](#wslspv141)
 El webservice permite:
 
 - Generación de una liquidación sector pecuario y obtención del CAE (Código de Autorización Electrónico).
@@ -34,9 +32,9 @@ URL:
 
 ### WSLSPv1.2
 
-- Cambios a [Ajustes de Liquidación](wiki:LiquidacionSectorPecuario#AjusteLiquidacion) (entrada en funcionamiento)
+- Cambios a [Ajustes de Liquidación](#ajuste-liquidacion) (entrada en funcionamiento)
 - Se modificó el envío y recepción de la información de la raza.
-- Se agregó el importe de precio recupero, numero_item (ver [métodos](http://www.sistemasagiles.com.ar/trac/wiki/LiquidacionSectorPecuario#Metodos))
+- Se agregó el importe de precio recupero, numero_item (ver [métodos](#metodos))
 
 Para más información ver [Especificación Técnica AFIP WSLSP Versión 1.2](http://www.afip.gov.ar/ws/WSLSP/manual_wslsp_1.2.pdf) del 22/02/2017
 
@@ -48,11 +46,11 @@ Para más información ver [Especificación Técnica AFIP WSLSP Versión 1.3](ht
 
 ### WSLSPv1.4.1
 
-- Se agrega tipo_iva_nulo a [AgregarGasto](wiki:LiquidacionSectorPecuario#Metodos), valores permitidos (sí alicuota_iva = 0 o nulo) 
+- Se agrega tipo_iva_nulo a [AgregarGasto](#metodos), valores permitidos (sí alicuota_iva = 0 o nulo) 
 - "NG": No Gravado
 - "NA": No Alcanzado
 - "EX": Exento
-- Se actualiza tabla de parámetros de [Categorías](wiki:LiquidacionSectorPecuario#Categorías)
+- Se actualiza tabla de parámetros de [Categorías](#categorias)
 
 Para más información ver [Especificación Técnica AFIP WSLSP Versión 1.4.1](http://www.afip.gov.ar/ws/WSLSP/manual_wslsp_1.4.1.pdf) del 30/06/2017
 
@@ -60,7 +58,7 @@ Para más información ver [Especificación Técnica AFIP WSLSP Versión 1.4.1](
  
 - Se amplían campos, agrega validaciones y modifica los anexos (funcionalidades)
 - Modificaciones en las consultas de tablas auxiliares de parámetros
-- Se actualiza tabla de parámetros de [Categorías](wiki:LiquidacionSectorPecuario#Categorías), [Operaciones](wiki:LiquidacionSectorPecuario#Operaciones), [Caracteres](wiki:LiquidacionSectorPecuario#Caracteres), [Razas](wiki:LiquidacionSectorPecuario#Razas), [Cortes](wiki:LiquidacionSectorPecuario#Cortes), [Tributos](wiki:LiquidacionSectorPecuario#Tributos)
+- Se actualiza tabla de parámetros de [Categorías](#categorias), [Operaciones](#operaciones), [Caracteres](#caracteres), [Razas](#razas), [Cortes](#cortes), [Tributos](#tributos)
 
 Para más información ver [Especificación Técnica AFIP WSLSP Versión 1.7](http://www.afip.gob.ar/ws/WSLSP/manual_wslsp_1.7.pdf) del 25/05/2018
 
@@ -74,8 +72,8 @@ Según documentación de AFIP:
   Asímismo, las validaciones correspondientes a los roles emisores, no serán
   efectuadas en el ambiente de testing/homologación.''
 
-| **CUIT** | **Denominación** | **Carácter ** | **Impuesto** | **CUIT Autorizado** |
-
+| **CUIT** | **Denominación** | **Carácter** | **Impuesto** | **CUIT Autorizado** |
+|---|---|---|---|---|
 | 20160000024 | Productor/criador | 1 | IVA |  |
 | 20160000032 | Productor/criador | 1 | EXENTO |  |
 | 20160000067 | Productor/criador | 1 | MONOTRIBUTO |  |
@@ -107,6 +105,7 @@ Los CUITs autorizados para los caracteres 4 y 9 son:
 | 23160000279 | CUIT PARA AUTORIZADOS |
 
 Los CUITs – N° RUCA para receptores caracteres 4 y 9 son:
+
 | **CUIT** | **Denominación** | **N° de RUCA** |
 |---|---|---|
 | 30160000011 | Establecimientos faenadores y/o frigorífico | 1011 |
@@ -123,11 +122,13 @@ Los CUITs – N° RUCA para receptores caracteres 4 y 9 son:
 | 20170000197 | Matarife RIVA con CBU sin Registro | 1197 |
 
 Números de Planta Frigorífico:
+
 | **CUIT** | **Nro Planta** |
 |---|---|
 | 30160000011 | 1 |
 | 20160000156 | 1 |
 | 20160000199 | 1 |
+
 ## Descargas
 
 - Instalador: [PyAfipWs-2.7.1982-32bit+wsaa_2.11c+wslsp_1.06a-homo.exe](https://www.sistemasagiles.com.ar/soft/pyafipws/PyAfipWs-2.7.1982-32bit+wsaa_2.11c+wslsp_1.06a-homo.exe) (versión actualizada para WSLSPv1.4.1)
@@ -150,9 +151,9 @@ Métodos para generar una liquidación de tabaco verde (LUM):
 - **`AgregarEmisor(tipo_cbte, pto_vta, nro_cbte, cod_caracter, fecha_inicio_act, iibb, nro_ruca, nro_renspa, cuit_autorizado)`**: agrega los datos del emisor (cuit_autorizado, iibb, ruca y renspa es opcional)
 - **`AgregarReceptor(cod_caracter)`**: agrega los datos del receptor
 - **`AgregarOperador(cuit, iibb, nro_ruca, nro_renspa, cuit_autorizado)`**: agrega los datos del operador (iibb, ruca, renspa y cuit autorizado es opcional)
-- **`AgregarItemDetalle(cuit_cliente, cod_categoria, tipo_liquidacion, cantidad, precio_unitario, alicuota_iva, cod_raza, cantidad_cabezas, nro_tropa, cod_corte, cantidad_kg_vivo, precio_recupero, detalle_raza,nro_item)`**: agrega el detalle de item de la liquidación (desde cantidad_cabezas son parámetros opcionales, detalle_raza y nro_item agregado en [WSLSPv1.2](wiki:LiquidacionSectorPecuario#WSLSPv1.2))
-- **`AgregarCompraAsociada(tipo_cbte, pto_vta, nro_cbte, cant_asoc, nro_item)`**: agrega la información referente a la liquidación compra asociada (para cada item); nro_item agregado en [WSLSPv1.2](wiki:LiquidacionSectorPecuario#WSLSPv1.2)
-- **`AgregarGasto(cod_gasto, descripcion, base_imponible, alicuota, importe, alicuota_iva,tipo_iva_nulo)`**: agrega uno o más gastos (sólo cod_gasto es obligatorio, pasar null en los parametros que no correspondan). Si alicuota_iva=0, se debe indicar tipo_iva_nulo ([WSLSPv1.4](wiki:LiquidacionSectorPecuario#WSLSPv1.4.1))
+- **`AgregarItemDetalle(cuit_cliente, cod_categoria, tipo_liquidacion, cantidad, precio_unitario, alicuota_iva, cod_raza, cantidad_cabezas, nro_tropa, cod_corte, cantidad_kg_vivo, precio_recupero, detalle_raza,nro_item)`**: agrega el detalle de item de la liquidación (desde cantidad_cabezas son parámetros opcionales, detalle_raza y nro_item agregado en [WSLSPv1.2](#wslspv12))
+- **`AgregarCompraAsociada(tipo_cbte, pto_vta, nro_cbte, cant_asoc, nro_item)`**: agrega la información referente a la liquidación compra asociada (para cada item); nro_item agregado en [WSLSPv1.2](#wslspv12)
+- **`AgregarGasto(cod_gasto, descripcion, base_imponible, alicuota, importe, alicuota_iva,tipo_iva_nulo)`**: agrega uno o más gastos (sólo cod_gasto es obligatorio, pasar null en los parametros que no correspondan). Si alicuota_iva=0, se debe indicar tipo_iva_nulo ([WSLSPv1.4](#wslspv141))
 - **`AgregarTributo(cod_tributo, descripcion, base_imponible, alicuota, importe)`**: agrega a información referente a los tributos de la liquidación (sólo cod_tributo es obligatorio)
 - **`AgregarDTE(nro_dte, nro_renspa)`**: agrega un DTE -uno o más elementos, detalle opcional-
 - **`AgregarGuia(nro_remito)`**: agrega una guia -uno o más elementos-
@@ -898,14 +899,14 @@ La interfaz permite obtener los diversos códigos de parámetros a utilizar. A c
 
 Historial de Cambios:
  
-- Mayo 2018: Inclusión de liquidaciones para especies porcinas, especificación técnica [WSLSPv1.7](wiki:LiquidacionSectorPecuario#WSLSPv1.7) de AFIP
-- Julio 2017: cambios por nueva especificación técnica [WSLSPv1.4.1](wiki:LiquidacionSectorPecuario#WSLSPv1.4.1) de AFIP
-- Marzo 2017: Ajustes Liquidación, especificación técnica [WSLSPv1.3](wiki:LiquidacionSectorPecuario#WSLSPv1.2) de AFIP
-- Febrero 2017: cambios por nueva especificación técnica [WSLSPv1.2](wiki:LiquidacionSectorPecuario#WSLSPv1.2) de AFIP
+- Mayo 2018: Inclusión de liquidaciones para especies porcinas, especificación técnica [WSLSPv1.7](#wslspv17) de AFIP
+- Julio 2017: cambios por nueva especificación técnica [WSLSPv1.4.1](#wslspv141) de AFIP
+- Marzo 2017: Ajustes Liquidación, especificación técnica [WSLSPv1.3](#wslspv12) de AFIP
+- Febrero 2017: cambios por nueva especificación técnica [WSLSPv1.2](#wslspv12) de AFIP
 - Diciembre 2016 (actualización 01): versión inicial
 
 Se recuerda que esta disponible el 
-[grupo de noticias](http://www.pyafipws.com.ar) (http://groups.google.com.ar/group/pyafipws) donde
+[grupo de noticias](http://groups.google.com.ar/group/pyafipws) donde
 se publicarán futuras novedades sobre PyAfipWS: servicios web de
 factura electrónica y sus interfases (se recomienda suscribirse)
 
@@ -914,5 +915,3 @@ factura electrónica y sus interfases (se recomienda suscribirse)
 Debido a la complejidad de este servicio, su fecha de aplicación y las modificaciones que pudieran surgir, los clientes que asi lo requieran pueden adquirir horas de soporte técnico comercial (ver [Condiciones del Soporte Comercial](../documentacion_herramientas/pyafipws.md#costos-y-condiciones)).
 
 A su vez, se libera el código fuente bajo licencia GPL (software libre), al igual que se hizo con el restos de los servicios web. Para más detalles ver página FacturaElectronica.
-
-MarianoReingart

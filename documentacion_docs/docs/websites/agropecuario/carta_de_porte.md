@@ -1,10 +1,6 @@
-﻿= Carta de Porte Electrónica - RG 5017/2021 =
+﻿# Carta de Porte Electrónica - RG 5017/2021
 
 Interfaz para Servicio Web de AFIP para la emisión de Carta de Porte Electrónica para transporte ferroviario y automotor.
-
-
-
-
 
 ## Descripción General
 
@@ -64,7 +60,7 @@ Fecha entrada en vigencia: 01/09/2021
 
 ## Instalación
 
-Está disponible el instalador para evaluación (ver [Descargas](wiki:CartadePorte#Descargas)), simplemente descargar, ejecutar seguir los pasos:
+Está disponible el instalador para evaluación (ver [Descargas](#descargas)), simplemente descargar, ejecutar seguir los pasos:
 
 - Aceptar la licencia
 - Seleccionar carpeta, por ej `C:\WSCPE`
@@ -402,12 +398,10 @@ Evento:
 
 La interfaz permite obtener el archivo que devuelve AFIP mediante este webservice:
  
-- [attachment:ej_cpe_automotor.pdf]: Constancia CPE en documento PDF
- 
 AFIP devuelve el archivo binario ya generado, por lo que se debe especificar una ruta completa para almacenarlo.
 Necesita Acrobat Reader, Microsoft Office / Libre Office o similares para poder abrir los documentos.
 
-[[Image(cpe.jpg,25%)]]
+![image](../../media/cpe.jpg)
 
 ## Formato
 
@@ -415,7 +409,7 @@ Archivos de intercambio de texto (TXT de ancho fijo cobol)
 
 ### encabezado
 | Campo | Posición | Longitud | Tipo | Dec. | Valor |
-
+| ----- | ----- | ----- | ----- | ----- | ----- |
 | tipo_reg | 1 | 1 | Alfanumerico |  | 0 |
 | tipo_cpe | 2 | 2 | Numerico |  |  |
 | sucursal | 4 | 5 | Numerico |  |  |
@@ -430,17 +424,19 @@ Archivos de intercambio de texto (TXT de ancho fijo cobol)
 | fecha_inicio_estado | 96 | 10 | Numerico |  |  |
 | estado | 106 | 15 | Numerico |  |  |
 | fecha_vencimiento | 121 | 10 | Alfanumerico |  |  |
+
 ### datos_carga
 | Campo | Posición | Longitud | Tipo | Dec. | Valor |
-
+| ----- | ----- | ----- | ----- | ----- | ----- |
 | tipo_reg | 1 | 1 | Alfanumerico |  | C |
 | cod_grano | 2 | 2 | Numerico |  |  |
 | cosecha | 4 | 4 | Numerico |  |  |
 | peso_bruto | 8 | 10 | Numerico |  |  |
 | peso_tara | 18 | 10 | Numerico |  |  |
+
 ### destino
 | Campo | Posición | Longitud | Tipo | Dec. | Valor |
-
+| ----- | ----- | ----- | ----- | ----- | ----- |
 | tipo_reg | 1 | 1 | Alfanumerico |  | D |
 | cuit_destino | 2 | 11 | Numerico |  |  |
 | es_destino_campo | 13 | 5 | Alfanumerico |  |  |
@@ -448,15 +444,17 @@ Archivos de intercambio de texto (TXT de ancho fijo cobol)
 | cod_localidad | 20 | 6 | Numerico |  |  |
 | planta | 26 | 5 | Numerico |  |  |
 | cuit_destinatario | 31 | 11 | Numerico |  |  |
+
 ### errores
 | Campo | Posición | Longitud | Tipo | Dec. | Valor |
-
+| ----- | ----- | ----- | ----- | ----- | ----- |
 | tipo_reg | 1 | 1 | Alfanumerico |  | E |
 | codigo | 2 | 4 | Alfanumerico |  |  |
 | descripcion | 6 | 250 | Alfanumerico |  |  |
+
 ### intervinientes
 | Campo | Posición | Longitud | Tipo | Dec. | Valor |
-
+| ----- | ----- | ----- | ----- | ----- | ----- |
 | tipo_reg | 1 | 1 | Alfanumerico |  | I |
 | cuit_intermediario | 2 | 11 | Numerico |  |  |
 | cuit_remitente_comercial_venta_primaria | 13 | 11 | Numerico |  |  |
@@ -466,26 +464,29 @@ Archivos de intercambio de texto (TXT de ancho fijo cobol)
 | cuit_corredor_venta_secundaria | 57 | 11 | Numerico |  |  |
 | cuit_representante_entregador | 68 | 11 | Numerico |  |  |
 | cuit_representante_recibidor | 79 | 11 | Numerico |  |  |
+
 ### origen
 | Campo | Posición | Longitud | Tipo | Dec. | Valor |
-
+| ----- | ----- | ----- | ----- | ----- | ----- |
 | tipo_reg | 1 | 1 | Alfanumerico |  | O |
 | cod_provincia_operador | 2 | 2 | Numerico |  |  |
 | cod_localidad_operador | 4 | 6 | Numerico |  |  |
 | planta | 10 | 5 | Numerico |  |  |
 | cod_provincia_productor | 15 | 2 | Numerico |  |  |
 | cod_localidad_productor | 17 | 6 | Numerico |  |  |
+
 ### retiro_productor
 | Campo | Posición | Longitud | Tipo | Dec. | Valor |
-
+| ----- | ----- | ----- | ----- | ----- | ----- |
 | tipo_reg | 1 | 1 | Alfanumerico |  | R |
 | corresponde_retiro_productor | 2 | 5 | Alfanumerico |  |  |
 | es_solicitante_campo | 7 | 5 | Alfanumerico |  |  |
 | certificado_coe | 12 | 12 | Numerico |  |  |
 | cuit_remitente_comercial_productor | 24 | 11 | Numerico |  |  |
+
 ### transporte
 | Campo | Posición | Longitud | Tipo | Dec. | Valor |
-
+| ----- | ----- | ----- | ----- | ----- | ----- |
 | tipo_reg | 1 | 1 | Alfanumerico |  | T |
 | cuit_transportista | 2 | 11 | Numerico |  |  |
 | dominio | 13 | 10 | Alfanumerico |  |  |
@@ -500,16 +501,17 @@ Archivos de intercambio de texto (TXT de ancho fijo cobol)
 
 ### contingencia
 | Campo | Posición | Longitud | Tipo | Dec. | Valor |
-
+| ----- | ----- | ----- | ----- | ----- | ----- |
 | tipo_reg | 1 | 1 | Alfanumerico |  | N |
 | concepto | 2 | 2 | Alfanumerico |  |  |
 | cuit_transportista | 4 | 11 | Numerico |  |  |
 | nro_operativo | 15 | 11 | Numerico |  |  |
 | concepto_desactivacion | 26 | 2 | Alfanumerico |  |  |
 | descripcion | 28 | 140 | Alfanumerico |  |  |
+
 ### eventos
 | Campo | Posición | Longitud | Tipo | Dec. | Valor |
-
+| ----- | ----- | ----- | ----- | ----- | ----- |
 | tipo_reg | 1 | 1 | Alfanumerico |  | V |
 | codigo | 2 | 4 | Alfanumerico |  |  |
 | descripcion | 6 | 250 | Alfanumerico |  |  |
@@ -611,6 +613,7 @@ Archivos de intercambio de texto (TXT de ancho fijo cobol)
 | 48 | Poroto Blanco Seleccionado Oval y Alubia |
 | 49 | Otras Legumbres |
 | 50 | Otros Granos |
+
 ### Localidades por provincia
 
 
@@ -2757,19 +2760,16 @@ Si, se pueden realizar traslados entre campos de un mismo productor. En estos ca
 deberá realizar el circuito completo de confirmación para que no afecte la cuenta corriente
 granaria.
 
-
-
-
-
 ## Novedades
 
 Se recuerda que esta disponible el 
-[grupo de noticias](http://www.pyafipws.com.ar) (http://groups.google.com.ar/group/pyafipws) donde
+[grupo de noticias](http://groups.google.com.ar/group/pyafipws) donde
 se publicarán futuras novedades sobre PyAfipWS: servicios web de
 factura electrónica y sus interfases (se recomienda suscribirse)
 
+## Costos y Condiciones
 
+Ver [Condiciones del Soporte Comercial](../documentacion_herramientas/pyafipws.md#costos-y-condiciones).
 
-
-
+A su vez, se libera el código fuente bajo licencia GPL (software libre), al igual que se hizo con el restos de los servicios web. Para más detalles ver página FacturaElectronica.
 

@@ -1,6 +1,4 @@
-﻿= Liquidación Electrónica Única Mensual de Lechería  =
-
-
+﻿# Liquidación Electrónica Única Mensual de Lechería
 
 Web Services – (Servicios Web)  Liquidación Mensual Única de Lechería. Generación de una liquidación mensual única y obtención del CAE (Código de Autorización Electrónico). 
 
@@ -359,7 +357,7 @@ La interfaz permite obtener los diversos códigos de parámetros a utilizar. A c
 ### Bonificaciones Penalizaciones
 
 | Código | Tipo | Subtipo | Código | Valor | Signo |
-
+| ------ | ---- | ------- | ------ | ----- | ----- |
 | BC | Bonificación Calidad | Resultado Recuento Células Somáticas (RCS/ml/miles) | 1 | N3 | + |
 | BC | Bonificación Calidad | Resultado Recuento Unidades Formadoras de Colonias (UFC/ml/miles) | 2 | N3 | + |
 | BC | Bonificación Calidad | Resultado BRUCELOSIS | 3 | LIBRE | + |
@@ -406,7 +404,7 @@ Historial de Cambios:
 - Noviembre 2016 (actualización 01): versión inicial
 
 Se recuerda que esta disponible el 
-[grupo de noticias](http://www.pyafipws.com.ar) (http://groups.google.com.ar/group/pyafipws) donde
+[grupo de noticias](http://groups.google.com.ar/group/pyafipws) donde
 se publicarán futuras novedades sobre PyAfipWS: servicios web de
 factura electrónica y sus interfases (se recomienda suscribirse)
 
@@ -415,5 +413,3 @@ factura electrónica y sus interfases (se recomienda suscribirse)
 Debido a la complejidad de este servicio, su fecha de aplicación y las modificaciones que pudieran surgir, los clientes que asi lo requieran pueden adquirir horas de soporte técnico comercial (ver [Condiciones del Soporte Comercial](../documentacion_herramientas/pyafipws.md#costos-y-condiciones)).
 
 A su vez, se libera el código fuente bajo licencia GPL (software libre), al igual que se hizo con el restos de los servicios web. Para más detalles ver página FacturaElectronica.
-
-MarianoReingart

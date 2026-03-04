@@ -1,4 +1,4 @@
-﻿= Remito Electrónico Azúcar y Derivados - RG 4519/19 =
+﻿# Remito Electrónico Azúcar y Derivados - RG 4519/19
 
 Interfaz para Servicio Web de AFIP para la emisión de Remito de Azúcar y derivados, Resolución General 4519/19
 
@@ -116,3 +116,16 @@ Métodos principales específicos para Remito Electrónico Azúcar (REC):
 |---|---|
 | 1 | Kg |
 | 2 | Lt |
+
+## Novedades
+
+Se recuerda que esta disponible el 
+[grupo de noticias](http://groups.google.com.ar/group/pyafipws) donde
+se publicarán futuras novedades sobre PyAfipWS: servicios web de
+factura electrónica y sus interfases (se recomienda suscribirse)
+
+## Costos y Condiciones
+
+Ver [Condiciones del Soporte Comercial](../documentacion_herramientas/pyafipws.md#costos-y-condiciones).
+
+A su vez, se libera el código fuente bajo licencia GPL (software libre), al igual que se hizo con el restos de los servicios web. Para más detalles ver página FacturaElectronica.

@@ -1,4 +1,4 @@
-﻿= Liquidación y Certificación de Granos (RG3419/2012, RG3690/2014, RG3691/2014) =
+﻿# Liquidación y Certificación de Granos (RG3419/2012, RG3690/2014, RG3691/2014)
 
 
 Interfaz para Servicio Web correspondiente a la Resolución General 3419/2012 AFIP: régimen especial obligatorio para la emisión electrónica de la “Liquidación Primaria de Granos” para respaldar las operaciones de compraventa y de consignación de granos no destinados a la siembra y legumbres secas que realicen, a productores agrícolas, los adquirentes, adquirentes-exportadores, acopiadores, cooperativas, consignatarios, acopiadores-consignatarios, demás intermediarios y los mercados de cereales a término. 
@@ -13,7 +13,7 @@ RG 3691/2014 AFIP: "Certificación Primaria de Depósito, Retiro y/o Transferenc
 
 EL WSLPG (Web Service de Liquidación Primaria de Granos) es un nuevo Servicio Web de la AFIP para operaciones de compra/venta de granos, correspondiente a la [Resolución General 3419/12](http://biblioteca.afip.gob.ar/gateway.dll/Normas/ResolucionesGenerales/reag01003419_2012_12_20.xml): *Operaciones de compraventa de granos no destinados a la siembra. Régimen de emisión de comprobantes. Norma conjunta Resolución General Nº 1.593 (AFIP) y Resolución Nº 456 (ex SAGPyA), Resoluciones Generales Nº 1.415, Nº 2.205 y Nº 2.485, sus respectivas modificatorias y complementarias. Norma complementaria y modificatoria.*
 
-**Nuevo**: Generación electrónica del formulario de liquidación de granos en formato PDF. Ver [Generación F1116B en PDF](wiki:LiquidacionPrimariaGranos#GeneraciónFormC1116BenPDF). Basado en el anexo *RG.3419-12 - MODELO - Liquidación Primaria de Granos* (similar al obtenido del aplicativo SIAP F1116_v2r0).
+**Nuevo**: Generación electrónica del formulario de liquidación de granos en formato PDF. Ver [Generación F1116B en PDF](#generacion-de-pdf). Basado en el anexo *RG.3419-12 - MODELO - Liquidación Primaria de Granos* (similar al obtenido del aplicativo SIAP F1116_v2r0).
 
 **Importante**: este webservice utiliza un *número de orden* (similar al número de comprobante en factura electrónica), por lo que la primer liquidación debe comenzar por 1, y debe informarse secuencialmente el próximo número (sin saltear números, incrementando el valor siempre que la liquidación sea autorizada correctamente). Ver *Tratamiento del No de Orden* en la documentación de AFIP, ya que es necesario para recuperar los datos de una liquidación en caso de perdida de conexión (método `ConsultarLiquidacion`). También se puede consultar el último número registrado (método `ConsultarUltNroOrden`, aunque en producción se recomienda almacenar el numero internamente).
 
@@ -50,7 +50,7 @@ Al 29-07-2013, ya se encuentra disponible los metodos de ajustes tentativos seg�
    ''En una segunda etapa se habilitará el sistema para cerrar VARIAS PARCIALES  en una
    FINAL por CONTRATO REGISTRADO ANTE AFIP.''
 
-A partir de la actualización 1.12 de la interfaz, se incluyen los métodos necesarios para utilizar esta nueva funcionalidad ver abajo sección [Métodos](wiki:LiquidacionPrimariaGranos#Metodos).
+A partir de la actualización 1.12 de la interfaz, se incluyen los métodos necesarios para utilizar esta nueva funcionalidad ver abajo sección [Métodos](#metodos).
 
 La información también aplica a WSLPG versión 1.5 ya que hubo solo cambios menores.
 
@@ -64,7 +64,7 @@ El 22/10/2014 AFIP ha publicado las siguientes resoluciones generales:
 Según AFIP, al 14/11/2014 todos los métodos son preliminares , solo se encuentra disponible la documentación técnica tentativa ["WEB SERVICE LpgService Versión 1.6 Manual para el Desarrollador"](http://www.afip.gob.ar/ws/WSLiquiGranos/ManualDelDesarrolladorWSLPGV16.pdf). 
 Todavía no estan disponible los cambios en el webservice, ni hay ejemplos como para poder probar el servicio. 
 
-A partir de la actualización 1.17 de la interfaz, se están incorporando los métodos necesarios para utilizar estas nueva funcionalidades ver abajo secciones [Versión 1.6](wiki:LiquidacionPrimariaGranos#Version1.6) con [Métodos](wiki:LiquidacionPrimariaGranos#Metodos), [Formato de Intercambio](wiki:LiquidacionPrimariaGranos##FormatodeIntercambio) y ejemplos ([Autorizar Liquidación Secundaria](wiki:LiquidacionPrimariaGranos#AutorizarLiquidaciónSecundaria), [Autorizar Certificación](wiki:LiquidacionPrimariaGranos#AutorizarCertificación)).
+A partir de la actualización 1.17 de la interfaz, se están incorporando los métodos necesarios para utilizar estas nueva funcionalidades ver abajo secciones [Versión 1.6](#version-16) con [Métodos](#metodos), [Formato de Intercambio](#formato-de-intercambioo) y ejemplos ([Autorizar Liquidación Secundaria](#autorizar-liquidacion-secundaria), [Autorizar Certificación](#autorizar-certificacion)).
 
 
 ### Versión 1.1
@@ -132,8 +132,8 @@ Entre las validaciones más importantes que se modificaron en AFIP se encuentra 
 
 El 10/11/2014, AFIP publicó una nueva versión del webservices denominanda *"Certificación y Liquidación de Granos  WEB SERVICE LpgService Versión 1.6*, contemplando nuevos métodos
 
-- Para [Liquidación Secundaria de Granos](wiki:LiquidacionPrimariaGranos#LiquidaciónSecundariadeGranos) (RG3690/14) se agregaron los métodos `CrearLiqSecundariaBase` (estructura interna) y `AutorizarLiquidacionSecundaria` (llamada remota). Se utiliza los campos generales del tipo de registro [Encabezado](wiki:LiquidacionPrimariaGranos#Encabezado) (Liquidación), sumados a `cantidad_tn`, `nro_act_vendedor`, `detalle_deducciones`, `importe_deducciones`
-- Para [Certificación de Depósitos Retiros y Transferencias de Granos](wiki:LiquidacionPrimariaGranos#CertificacióndeDepósitosRetirosyTransferenciasdeGranos) (RG3691/14): se agregaron métodos: `CrearCertificacion`, `AgregarDetalleMuestraAnalisis`, `AgregarCTG` (estructuras internas);  `AutorizarDeposito`, `AutorizarRetiroTransferencia`, `AutorizarPreexistente` (llamadas remotas). Al archivo de intercambio se agregan los tipos de registro [Certificación](wiki:LiquidacionPrimariaGranos#Certificacion), [CTG](wiki:LiquidacionPrimariaGranos#CTG) y [Detalle Muestra Analisis](wiki:LiquidacionPrimariaGranos#Det.MuestraAnalisis).
+- Para [Liquidación Secundaria de Granos](#liquidacion-secundaria-de-granos) (RG3690/14) se agregaron los métodos `CrearLiqSecundariaBase` (estructura interna) y `AutorizarLiquidacionSecundaria` (llamada remota). Se utiliza los campos generales del tipo de registro [Encabezado](#encabezado) (Liquidación), sumados a `cantidad_tn`, `nro_act_vendedor`, `detalle_deducciones`, `importe_deducciones`
+- Para [Certificación de Depósitos Retiros y Transferencias de Granos](#certificacion-de-depositos-retiros-y-transferencias-de-granos) (RG3691/14): se agregaron métodos: `CrearCertificacion`, `AgregarDetalleMuestraAnalisis`, `AgregarCTG` (estructuras internas);  `AutorizarDeposito`, `AutorizarRetiroTransferencia`, `AutorizarPreexistente` (llamadas remotas). Al archivo de intercambio se agregan los tipos de registro [Certificación](#certificacion), [CTG](#ctg) y [Detalle Muestra Analisis](#det-muestra-analisis).
 
 ### Version 1.7
 
@@ -144,7 +144,7 @@ AFIP publicó una nueva versión del webservices denominanda *"Certificación y 
 - 25-11-2014: los métodos documentados `cgAutorizarDeposito`, `cgAutorizarRetiroTransferencia`, `cgAutorizarPreexistente` han sido reemplazados por cgAutorizar  en el WSDL (juntando las estructuras de datos)
 - 28-11-2014: se eliminó `peso_neto_a_certificar` y se agregó `nro_carta_porte` en la estructura CTG (para autorizar certificaciones de depósito)
 
-Próximamente se agregarán el resto de los métodos, estructuras de datos y ejemplos ([Autorizar Liquidación Secundaria](wiki:LiquidacionPrimariaGranos#AutorizarLiquidaciónSecundaria), [Autorizar Certificación](wiki:LiquidacionPrimariaGranos#AutorizarCertificación)).
+Próximamente se agregarán el resto de los métodos, estructuras de datos y ejemplos ([Autorizar Liquidación Secundaria](#autorizar-liquidacion-secundaria), [Autorizar Certificación](#autorizar-certificacion)).
 
 ### Version 1.8
 
@@ -187,7 +187,7 @@ Ya esta disponible la nueva actualización 1.25a de nuestra herramienta para WSL
 
 También AFIP ha modificado algunas validaciones de negocio.
 
-Próximamente se agregarán el resto de los métodos, estructuras de datos y ejemplos ([Autorizar Liquidación Secundaria](wiki:LiquidacionPrimariaGranos#AutorizarLiquidaciónSecundaria), [Autorizar Certificación](wiki:LiquidacionPrimariaGranos#AutorizarCertificación)).
+Próximamente se agregarán el resto de los métodos, estructuras de datos y ejemplos ([Autorizar Liquidación Secundaria](#autorizar-liquidacion-secundaria), [Autorizar Certificación](#autorizar-certificacion)).
 
 ### Version 1.15
 
@@ -228,7 +228,7 @@ De la percepción solo se usa detalle_aclaratoria e importe_final (por ahora seg
 
 AFIP publicó una nueva versión del webservices denominanda *"Certificación y Liquidación de Granos  WEB SERVICE LpgService Versión 1.17*, contemplando algunas modificaciones menores (con fecha del 16/06/2017) con los siguientes cambios:
 
-Ya esta disponible la nueva [actualización 1.30a](wiki:LiquidacionPrimariaGranos#Descargas) de nuestro componente que básicamente modifica los métodos para soportar peso_ajustado:
+Ya esta disponible la nueva [actualización 1.30a](#descargas) de nuestro componente que básicamente modifica los métodos para soportar peso_ajustado:
 
 - `AgregarCertificado(..., peso_neto, ..., coe_certificado_deposito, ...)` ahora puede ser llamado luego de `CrearAjusteCredito` / `CrearAjusteDebito`
 - Idem en archivo de intercambio (lectura/escritura), tipo de registro 1 luego de tipo_reg 4/5
@@ -356,7 +356,7 @@ Metodos comunes para establecer comunicación con el webservice y realizar prueb
 Métodos para autorizar, consultar y anular LPG según RG3419 (incluyendo anticipos y su cancelación):
 
 - **`CrearLiquidacion(nro_orden, cuit_comprador, nro_act_comprador, nro_ing_bruto_comprador, cod_tipo_operacion, es_liquidacion_propia, es_canje, cod_puerto, des_puerto_localidad, cod_grano, cuit_vendedor, nro_ing_bruto_vendedor, actua_corredor, liquida_corredor, cuit_corredor, comision_corredor, nro_ing_bruto_corredor, fecha_precio_operacion, precio_ref_tn, cod_grado_ref, cod_grado_ent, factor_ent, precio_flete_tn, cont_proteico, alic_iva_operacion, campania_ppal, cod_localidad_procedencia, datos_adicionales, pto_emision, cod_prov_procedencia, peso_neto_sin_certificado, val_grado_ent, cod_localidad_procedencia_sin_certificado, cod_prov_procedencia_sin_certificado, nro_contrato)`**: crea una liquidación  a autorizar. Parámetros `pto_emision` y `cod_prov_procedencia` agregados para WSLPGv1.1; `peso_neto_sin_certificado`, `val_grado_ent`, `cod_localidad_procedencia_sin_certificado`, `cod_prov_procedencia_sin_certificado` agregados para WSLPGv1.2 y WSLPGv1.3; `nro_contrato` agregado en actualización 1.12d (WSLPGv1.4)
-- **`AgregarCertificado(tipo_certificado_deposito, nro_certificado_deposito, peso_neto, cod_localidad_procedencia, cod_prov_procedencia, campania, fecha_cierre, peso_neto_total_certificado, coe_certificado_deposito)`**: agerga un certificado de depósito (F1116A o F1116RT). `peso_neto_total_certificado` es obligatorio para ajustes unificado (WSLPGv1.4) ajustado en actualizacion 1.12d; peso_neto y coe_certificado_deposito requeridos para ajustes de crédito / débito agregado en actualización 1.30a ([WSLPGv1.17](wiki:LiquidacionPrimariaGranos#Version1.17))
+- **`AgregarCertificado(tipo_certificado_deposito, nro_certificado_deposito, peso_neto, cod_localidad_procedencia, cod_prov_procedencia, campania, fecha_cierre, peso_neto_total_certificado, coe_certificado_deposito)`**: agerga un certificado de depósito (F1116A o F1116RT). `peso_neto_total_certificado` es obligatorio para ajustes unificado (WSLPGv1.4) ajustado en actualizacion 1.12d; peso_neto y coe_certificado_deposito requeridos para ajustes de crédito / débito agregado en actualización 1.30a ([WSLPGv1.17](#version-117))
 - **`AgregarRetencion(codigo_concepto, detalle_aclaratorio, base_calculo, alicuota, nro_certificado_retencion, fecha_certificado_retencion, importe_certificado_retencion)`**: agerga una retención (IVA, Ganancias, etc.). Número, fecha e importe de certificado de retención son opcionales. Si se envían, alicuota debe ser 0 (ver validación 1856) *ajustado en actualizacion 1.11a*
 - **`AgregarDeduccion(codigo_concepto, detalle_aclaratorio, dias_almacenaje, precio_pkg_diario, comision_gastos_adm, base_calculo, alicuota)`**: agerga una deducción (gastos, fletes, almacenaje, etc.)
 - **`AutorizarLiquidacion()`**: arma la liquidación, envía los datos a AFIP y devuelve `COE`, estableciendo los atributos con los campos de la respuesta.
@@ -371,7 +371,7 @@ Métodos para autorizar, consultar y anular LPG según RG3419 (incluyendo antici
 
 Métodos para Ajuste "Único" / Final WSLPG version 1.4 (*agregado en actualizacion 1.12a*):
 
-- **`CrearAjusteBase(pto_emision, nro_orden, coe_ajustado, nro_contrato, tipo_formulario, nro_formulario, nro_act_comprador, cod_grano, cuit_vendedor, cuit_comprador, cuit_corredor, nro_ing_bruto_vendedor, nro_ing_bruto_comprador, nro_ing_bruto_corredor, cod_tipo_operacion, precio_ref_tn, cod_grado_ent, val_grado_ent, precio_flete_tn, cod_puerto, des_puerto_localidad, cod_provincia, cod_localidad, comision_corredor)`**: Inicializa internamente los datos de una liquidación para ajustar. Luego debe llamar a `AgregarCertificado` para completar el contenido de `AjusteBase`, `AjusteCredito` y `AjusteDebito` (en estos últimos casos, con coe y peso_neto a ajustar, ver [WSLPGv1.17](wiki:LiquidacionPrimariaGranos#Version1.17)).
+- **`CrearAjusteBase(pto_emision, nro_orden, coe_ajustado, nro_contrato, tipo_formulario, nro_formulario, nro_act_comprador, cod_grano, cuit_vendedor, cuit_comprador, cuit_corredor, nro_ing_bruto_vendedor, nro_ing_bruto_comprador, nro_ing_bruto_corredor, cod_tipo_operacion, precio_ref_tn, cod_grado_ent, val_grado_ent, precio_flete_tn, cod_puerto, des_puerto_localidad, cod_provincia, cod_localidad, comision_corredor)`**: Inicializa internamente los datos de una liquidación para ajustar. Luego debe llamar a `AgregarCertificado` para completar el contenido de `AjusteBase`, `AjusteCredito` y `AjusteDebito` (en estos últimos casos, con coe y peso_neto a ajustar, ver [WSLPGv1.17](#version-117)).
 - **`CrearAjusteCredito(datos_adicionales, concepto_importe_iva_0, importe_ajustar_iva_0, concepto_importe_iva_105, importe_ajustar_iva_105, concepto_importe_iva_21, importe_ajustar_iva_21, diferencia_peso_neto, diferencia_precio_operacion, cod_grado, val_grado, factor diferencia_precio_flete_tn)`**: Inicializa internamente los datos del crédito del ajuste. Luego llamar a **`AgregarDeduccion(...)`** y **`AgregarRetencion(...)`** para completar el contenido de `AjusteCredito`.
 - **`CrearAjusteDebito(datos_adicionales, concepto_importe_iva_0, importe_ajustar_iva_0, concepto_importe_iva_105, importe_ajustar_iva_105, concepto_importe_iva_21, importe_ajustar_iva_21, diferencia_peso_neto, diferencia_precio_operacion, cod_grado, val_grado, factor diferencia_precio_flete_tn)`**: Inicializa internamente los datos del crédito del ajuste. Luego llamar a **`AgregarDeduccion(...)`** y **`AgregarRetencion(...)`** para completar el contenido de `AjusteDebito`.
 - **`AjustarLiquidacionUnificado()`**: permite ajustar una liquidación por COE (operatoria similar a `AutorizarLiquidacion`). 
@@ -395,7 +395,7 @@ Métodos incorporados según RG3690/14 WSLPG version 1.6 (*agregado en actualiza
 - **`ConsultarLiquidacionSecundaria(pto_emision, nro_orden, coe, pdf):`**: Consulta una liquidación secundaria por No de orden o COE (establece el resto de los atributos, similar a `AutorizarLiquidacion`).  *actualizacion 1.21a* *pdf (indicar nombre de archivo para descargarlo de AFIP) agregado en actualizacion 1.25a*
 - **`ConsultarLiquidacionSecundariaUltNroOrden(pto_emision)`**: devuelve el último No de orden registrado por AFIP (atributo `NroOrden`) *agregado en actualizacion 1.22a*
 - **`AgregarFacturaPapel(nro_cai, nro_factura_papel, fecha_factura, tipo_comprobante):`** permite agregar los datos de una factura en papel a una LSG (WSLPGv1.15) *agregado en actualizacion 1.26a*
-- **`AjustarLiquidacionUnificado():`** permite ajustar una liquidación secundaria. El procedimiento es similar que para las primaria (llamar a los métodos `CrearAjusteBase`, `AgregarAjusteCredito`, `AgregarPercepcion`, etc., ver pseudocodigo [ejemplo](wiki:LiquidacionPrimariaGranos)) *agregado en actualización 1.26a*
+- **`AjustarLiquidacionUnificado():`** permite ajustar una liquidación secundaria. El procedimiento es similar que para las primaria (llamar a los métodos `CrearAjusteBase`, `AgregarAjusteCredito`, `AgregarPercepcion`, etc., ver pseudocodigo [ejemplo](#liquidacion-primaria-de-granos)) *agregado en actualización 1.26a*
 - **`AsociarLiquidacionSecundariaAContrato(coe, nro_contrato, cuit_comprador, cuit_vendedor, cuit_corredor, cod_grano):`** permite asociar una liquidación secundaria a un contrato. El procedimiento es similar que para las primaria (ver métodos `AsociarLiquidacionAContrato`) *agregado en actualización 1.27a*
 - **`ConsultarLiquidacionesSecundariasPorContrato(nro_contrato, cuit_comprador, cuit_vendedor, cuit_corredor, cod_grano):`** permite consultar las liquidaciones secundarias por contrato. El procedimiento es similar que para las primaria (ver método `ConsultarLiquidacionesPorContrato`) *agregado en actualización 1.27a*
 
@@ -488,7 +488,7 @@ Métodos para elaboración de documentos PDF de Liquidación/Ajustes (*agregado 
 El programa puede operar independientemente por linea de comandos "MSDOS", consola de órdenes o terminal, invocando el ejecutable principal (`WSLPG_CLI.EXE` o `WSLPG.EXE` dependiendo del instalador, `wslpg.py` desde el código fuente), como se describe a continuación.
 
 Este modo de operación es multiplataforma (compatible con Windows, GNU/Linux, MacOS X y posiblemente otros entornos). 
-También puede ser usado desde lenguajes modernos como VB o VFP, ver [ejemplo](wiki:LiquidacionPrimariaGranos#Ejemplopseudocodigo) y [descargas](wiki:LiquidacionPrimariaGranos#Descargas).
+También puede ser usado desde lenguajes modernos como VB o VFP, ver [ejemplo](#ejemplo-pseudocodigo) y [descargas](#descargas).
 
 NOTA: Al usar archivos de configuración e intercambio de datos, no requiere interactividad con el usuario, por lo que puede ser ejecutado en segundo plano.
 ### Parámetros por línea de comando
@@ -1194,7 +1194,7 @@ Tablas DBF de ejemplo para descargar:
 
 El siguiente es un fragmento de código para ejemplificar la autorización de una liquidación.
 
-Ver [Descargas](wiki:LiquidacionPrimariaGranos#Descargas) para obtener ejemplos completos en varios lenguages de programación como VB y VFP (donde debe utilizarse la función !CreateObject para crear el objeto C.O.M. y operar directamente con los métodos y propiedades del objeto, similar a los controles OCX visuales).
+Ver [Descargas](#descargas) para obtener ejemplos completos en varios lenguages de programación como VB y VFP (donde debe utilizarse la función !CreateObject para crear el objeto C.O.M. y operar directamente con los métodos y propiedades del objeto, similar a los controles OCX visuales).
 
 ### Autorizar Liquidación
 
@@ -1901,11 +1901,11 @@ También se pueden agregar campos adicionales fijos para leyendas y aclaraciones
 - `forma_pago`: ej.  "Forma de Pago: 1234 pesos ..."
 - `constancia`: ej. "Por la presente dejo constancia..."
 
-Los campos adicionales se especifican por el nuevo tipo de registro 9 [DATO](wiki:LiquidacionPrimariaGranos#Dato) en el archivo de texto de intercambio, en la sección [PDF] de la configuración o llamando al método !AgregarDatoPDF
+Los campos adicionales se especifican por el nuevo tipo de registro 9 [DATO](#dato) en el archivo de texto de intercambio, en la sección [PDF] de la configuración o llamando al método !AgregarDatoPDF
 
 El diseño esta guardado en una plantilla csv (`liquidacion_form_c1116b_wslpg.csv`), esta se puede editar con un editor de texto, hoja de cálculo o usando nuestro [Diseñador Visual](../documentacion_herramientas/manualpyafipws.md#DiseñadorVisualPyFEPDF)
 
-Ver [ métodos](wiki:LiquidacionPrimariaGranos#Metodos) y [ejemplos](wiki:LiquidacionPrimariaGranos#Descargas) o [opción `--pdf`](wiki:LiquidacionPrimariaGranos#Parámetrosporlíneadecomando) para generar el archivo, mostrarlo e imprimirlo.
+Ver [ métodos](#metodos) y [ejemplos](#descargas) o [opción `--pdf`](#parametros-por-linea-de-comando) para generar el archivo, mostrarlo e imprimirlo.
 
 **NOTA**: dato que utiliza valores devueltos por AFIP, usar el archivo de SALIDA para generar el PDF, o desde lenguajes modernos, llamar a !AutorizarLiquidacion o !ConsultarLiquidacion antes de generar el PDF
 
@@ -2011,6 +2011,7 @@ Ejemplo para Soja (cod_grano=23):
 | 1 | F1116/RT |
 | 5 | F1116/A |
 | 332 | Certificado Electrónico de Depósito |
+
 ### Tipo Deducción
 
 !ConsultarTipoDeduccion() permite consultar cuales son los tipos de deducciones posibles de informar en el array de
@@ -3434,7 +3435,7 @@ Las localidades dependen de la provincia, por ej. algunas localidades al 22 de F
 ### Problemas frecuentes
 
 Los siguientes errores que han surgido desde el servidor de AFIP y en ciertos casos hemos consultado a la Mesa de Ayuda para ver como se pueden solucionar. 
-Hasta el momento, ninguno es un problema de la interfaz, la mayoría es causada por validaciones (ver [Datos de Prueba](wiki:LiquidacionPrimariaGranos#DatosdePrueba) abajo) y otros han sido producidos por cuestiones internas de los servicios web de AFIP que en general han sido corregidos por el organismo:
+Hasta el momento, ninguno es un problema de la interfaz, la mayoría es causada por validaciones (ver [Datos de Prueba](#datos-de-prueba) abajo) y otros han sido producidos por cuestiones internas de los servicios web de AFIP que en general han sido corregidos por el organismo:
 
 - Error `1646: Informar procedencia (codProvProcedenciaSinCertificado/codLocalidadProcedenciaSinCertificado) o Certificados, no ambos.`: **WSLPGv1.3** aparentemente hay que completar dos nuevos campos `cod_prov_procedencia_sin_certificado / cod_localidad_procedencia_sin_certificado` (soportado a partir de la actualización 1.10a)
 - Error `1524: El importe neto a pagar no puede ser negativo`: Aparentemente no estaba validando el importe total, pero el error no figura en la documentación oficial y no es un dato enviado hacia la AFIP del que se tenga control (es una campo de la respuesta aparentemente calculado por AFIP). Sucede tanto cuando se envía certificado de depósito o cuando se utiliza el campo `peso_neto_sin_certificado`. **Solución:** originalmente sucedia con cualquier combinación de datos, pero ahora el cálculo parece estar solucionado en AFIP. Revisar peso neto, precio de referencia, retenciones y deducciones (el importe con deducciones y retenciones debe ser mayor a 0).
@@ -3546,13 +3547,9 @@ A su vez, se libera el código fuente bajo licencia GPL (software libre), al igu
 
 ### Contacto
 
-Para mayor información, consultar por mail a  info@sistemasagiles.com.ar o telefónicamente al (011) 15-3048-9211
+Para mayor información, consultar por mail a  info@sistemasagiles.com.ar, in.reingart@gmail.com (personal) o r.castrogiovani@gmail.com (personal)
 
 Se recuerda que esta disponible el 
-[grupo de noticias](http://www.pyafipws.com.ar) (http://groups.google.com.ar/group/pyafipws) donde
+[grupo de noticias](http://groups.google.com.ar/group/pyafipws) donde
 se publicarán futuras novedades sobre PyAfipWS: servicios web de
 factura electrónica y sus interfases (se recomienda suscribirse)
-
-
-MarianoReingart
-MarianoReingart

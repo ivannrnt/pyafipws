@@ -1,4 +1,4 @@
-﻿= Código Trazabilidad de Granos (RG2806/2010, RG3113/11, RG3593/14) =
+﻿# Código Trazabilidad de Granos (RG2806/2010, RG3113/11, RG3593/14)
 
 
 Interfaz para Servicio Web correspondiente a Boletín Oficial 05/04/2010 - Resolución General 2806/2010 - TRANSPORTE DE GRANOS - Procedimiento. Decreto Nº 34/09. Norma Conjunta RG 2595 (AFIP), Resolución 3253 (ONCCA) y Disposición 6 (SSTA), su modificatoria y complementaria. Sistema de emisión, seguimiento y control de Carta de Porte. Transporte automotor y ferroviario de carga de granos. Resolución General AFIP Nº 3113/2011 V.1. Resolución General AFIP 3593/14: registro sistémico de movimientos y existencias de granos
@@ -90,7 +90,7 @@ El 12/08/2020 AFIP publica nuevo ajuste:
 
 ## Metodos
 
-**Importante**: actualizado según [WSCTGv4](wiki:CodigoTrazabilidadGranos#WSCTGv4):
+**Importante**: actualizado según [WSCTGv4](#wsctgv4):
 
 - **`Conectar(cache=None, url="", proxy="")`**: en homologación no hace falta pasarle ningùn paràmetro. En producciòn, el segudo parametro es la WSDL.
 - **`Dummy()`**: devuelve estado de servidores
@@ -113,7 +113,7 @@ El 12/08/2020 AFIP publica nuevo ajuste:
 
 ## Atributos
 
-**Importante**: actualizado según [WSCTGv4](wiki:CodigoTrazabilidadGranos#WSCTGv4):
+**Importante**: actualizado según [WSCTGv4](#wsctgv4):
 
 - **`NumeroCTG`**
 - **`CartaPorte`**
@@ -237,7 +237,7 @@ Formato de los campos del archivo de texto es el siguiente (el nombre de los cam
 
 ### Encabezado
 
-**Importante**: actualizado según [WSCTGv2](wiki:CodigoTrazabilidadGranos#WSCTGv2) y [WSCTGv3](wiki:CodigoTrazabilidadGranos#WSCTGv3):
+**Importante**: actualizado según [WSCTGv2](#wsctgv2) y [WSCTGv3](#wsctgv3):
 
 - Campo: tipo_reg             Posición:   1 Longitud:    1 Tipo: Alfanumerico 
 - Campo: numero_carta_de_porte Posición:   2 Longitud:   13 Tipo: Numerico 
@@ -442,9 +442,9 @@ Las localidades dependen de la provincia, por ej. algunas localidades para Tierr
 
 Historial de Cambios:
 
-- Junio 2016 (actualizacion 1.14): ajuste por [WSCTGv4](wiki:CodigoTrazabilidadGranos#WSCTGv4)
-- Diciembre 2014 (actualización 1.13): ajuste por [WSCTGv3](wiki:CodigoTrazabilidadGranos#WSCTGv3)
-- Marzo 2014 (actualización 1.11): ajustes por [WSCTGv2](wiki:CodigoTrazabilidadGranos#WSCTGv2) RG3593/14
+- Junio 2016 (actualizacion 1.14): ajuste por [WSCTGv4](#wsctgv4)
+- Diciembre 2014 (actualización 1.13): ajuste por [WSCTGv3](#wsctgv3)
+- Marzo 2014 (actualización 1.11): ajustes por [WSCTGv2](#wsctgv2) RG3593/14
 - Mayo 2013 (actualización 1.09): se agrega soporte para constancia en PDF, planilla en Excel y archivos de intercambio (texto, json, dbf)
 - Abril 2013  (actualización 1.08): ajustes menores en consultar detalle
 - Marzo 2013  (actualización 1.07): ajustes en leer dato ctg
@@ -452,7 +452,7 @@ Historial de Cambios:
 - Abril 2012  (actualización 1.04 - 1.06): ajustes iniciales para Version 1.1 (solicitar CTG inicial)
 
 Se recuerda que esta disponible el 
-[grupo de noticias](http://www.pyafipws.com.ar) (http://groups.google.com.ar/group/pyafipws) donde
+[grupo de noticias](http://groups.google.com.ar/group/pyafipws) donde
 se publicarán futuras novedades sobre PyAfipWS: servicios web de
 factura electrónica y sus interfases (se recomienda suscribirse)
 
