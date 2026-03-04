@@ -1,6 +1,5 @@
 ﻿= Liquidación Electrónica Sector Pecuario  =
 
-[[TracNav(noreorder|FacturaElectronica)]]
 
 
 Web Services – (Servicios Web)  Liquidación Única Sector Pecuario. Generación de una liquidación mensual única (hacienda/compra directa/carne) y obtención del CAE (Código de Autorización Electrónico). 
@@ -9,9 +8,7 @@ Resolución General AFIP N° 3964/2016. Registro Fiscal de Operadores de la Cade
 
 Resolución General AFIP N° 3873/2016. Impuesto al Valor Agregado. "Sistema Registral". "Registro Fiscal de Operadores de la Cadena de Producción y Comercialización de Haciendas y Carnes Bovinas y Bubalinas". "RFOCB". Regímenes de percepción, pagos a cuenta y retención. Resolución General Nº 4.059 (DGI), sus modificatorias y complementarias. 
 
-## Índice
-[[Image(htdocs:logo-pyafipws.png, align=right)]]
-[[TOC(noheading,inline,depth=2)]]
+
 ## Descripción General
 
 EL WSLSP (Web Service de Liquidación única Sector Pecuario) es un nuevo Servicio Web de la AFIP según [WSLSPv1.4.1](wiki:LiquidacionSectorPecuario#WSLSPv1.4.1)
@@ -28,7 +25,7 @@ El webservice permite:
 - Operaciones permitidas, carácter emisor/receptor, categorías, motivos, razas, cortes, gastos y tributos.
 - Gastos y tributos.
 
-Para mayor información, se puede consultar la documentación orignal en [Micrositio Webservices - AFIP](http://www.afip.gov.ar/ws) o el [manual](wiki:ManualPyAfipWs) de la presente interfaz. 
+Para mayor información, se puede consultar la documentación orignal en [Micrositio Webservices - AFIP](http://www.afip.gov.ar/ws) o el [manual](../documentacion_herramientas/manualpyafipws.md) de la presente interfaz. 
 
 URL:
 
@@ -78,7 +75,7 @@ Según documentación de AFIP:
   efectuadas en el ambiente de testing/homologación.''
 
 | **CUIT** | **Denominación** | **Carácter ** | **Impuesto** | **CUIT Autorizado** |
-|---|---|---|---|---|
+
 | 20160000024 | Productor/criador | 1 | IVA |  |
 | 20160000032 | Productor/criador | 1 | EXENTO |  |
 | 20160000067 | Productor/criador | 1 | MONOTRIBUTO |  |
@@ -134,7 +131,7 @@ Números de Planta Frigorífico:
 ## Descargas
 
 - Instalador: [PyAfipWs-2.7.1982-32bit+wsaa_2.11c+wslsp_1.06a-homo.exe](https://www.sistemasagiles.com.ar/soft/pyafipws/PyAfipWs-2.7.1982-32bit+wsaa_2.11c+wslsp_1.06a-homo.exe) (versión actualizada para WSLSPv1.4.1)
-- Documentación: [Documento Oficial WSLSPv1.4.1](http://www.afip.gov.ar/ws/WSLSP/manual_wslsp_1.4.1.pdf) (AFIP), [Manual de Uso General](wiki:ManualPyAfipWs) ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf))
+- Documentación: [Documento Oficial WSLSPv1.4.1](http://www.afip.gov.ar/ws/WSLSP/manual_wslsp_1.4.1.pdf) (AFIP), [Manual de Uso General](../documentacion_herramientas/manualpyafipws.md) ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf))
 - Ejemplo en VB: [wslsp.bas](https://github.com/reingart/pyafipws/blob/master/ejemplos/wslsp/wslsp.bas) *(actualizado)*
 - Archivos de intercambio (muestras): 
 - Liquidación (texto plano JSON): [[attachment:wslsp_salida.json](attachment:wslsp_entrada.json])
@@ -267,7 +264,7 @@ hecho.
 
 ### Archivo de Configuración
 
-Para utilizar este webservice, debe tramitarse un certificado. Ver [Instructivo](wiki:ManualPyAfipWs#Certificados)
+Para utilizar este webservice, debe tramitarse un certificado. Ver [Instructivo](../documentacion_herramientas/manualpyafipws.md#Certificados)
 
 Luego, se debe configurar el Certificado, clave privada y URL en el archivo de configuración WSLSP.INI:
 
@@ -914,7 +911,7 @@ factura electrónica y sus interfases (se recomienda suscribirse)
 
 ## Costos y Condiciones
 
-Debido a la complejidad de este servicio, su fecha de aplicación y las modificaciones que pudieran surgir, los clientes que asi lo requieran pueden adquirir horas de soporte técnico comercial (ver [Condiciones del Soporte Comercial](wiki:PyAfipWs#CostosyCondiciones)).
+Debido a la complejidad de este servicio, su fecha de aplicación y las modificaciones que pudieran surgir, los clientes que asi lo requieran pueden adquirir horas de soporte técnico comercial (ver [Condiciones del Soporte Comercial](../documentacion_herramientas/pyafipws.md#costos-y-condiciones)).
 
 A su vez, se libera el código fuente bajo licencia GPL (software libre), al igual que se hizo con el restos de los servicios web. Para más detalles ver página FacturaElectronica.
 

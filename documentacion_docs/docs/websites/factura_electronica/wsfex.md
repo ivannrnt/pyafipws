@@ -1,11 +1,8 @@
 ﻿# Factura Electrónica de Exportación (RG2758/2010 y RG3689/14 -> RG4401/19)
-[[TracNav(noreorder|FacturaElectronica)]]
 
 Interfaz para Servicio Web correspondiente a Factura Electrónica de Exportación para *los exportadores responsables inscriptos en el IVA y en los "Registros Especiales Aduaneros" previstos en el Título II de la RG 2570/09* (Resolución General 2758/2010). Régimen especial de emisión y almacenamiento electrónico de comprobantes originales que respalden operaciones de exportación de servicios (Resolución General 3689/2014 y su sustitución por Resolución General 4401/2019)
 
-## Índice
-[[Image(htdocs:logo-pyafipws.png, align=right)]]
-[[TOC(noheading,inline,depth=3)]]
+
 ## Descripción General
 
 ### RG2758/10
@@ -42,7 +39,7 @@ Sustitución RG3689/14 y modificaciones.
 
 Nuevos métodos y parámetros WSFEX version 1.5.0:
 
-- Se agrega método [WSFEXv1.GetParamMonConCotizacion](wiki:ManualPyAfipWs#M%C3%A9todos3) y ejemplo [RECEX1 /monctz](wiki:ManualPyAfipWs#EjemploRECEX1consultamonedasconcotización) para consultar cotización moneda ADUANA por fecha
+- Se agrega método [WSFEXv1.GetParamMonConCotizacion](../documentacion_herramientas/manualpyafipws.md#M%C3%A9todos3) y ejemplo [RECEX1 /monctz](../documentacion_herramientas/manualpyafipws.md#EjemploRECEX1consultamonedasconcotización) para consultar cotización moneda ADUANA por fecha
 
 Errores frecuentes:
 
@@ -55,7 +52,7 @@ AFIP publicó una nueva [Especificación Técnica "FEXv2.0.0"](https://www.afip.
 Se incorpora método para la consulta de Actividades vigentes (GetParamActividades) y una estructura de actividades vinculadas al comprobante tanto en la
 emisión de CAE, como en la consulta de los comprobantes ya autorizados.
 
-ver: [Métodos WSFEXv1](wiki:ManualPyAfipWs#M%C3%A9todos3) 
+ver: [Métodos WSFEXv1](../documentacion_herramientas/manualpyafipws.md#M%C3%A9todos3) 
 
 Aplicación:
 
@@ -135,7 +132,7 @@ https://www.sistemasagiles.com.ar/soft/pyafipws/final/PyAfipWS-Cache-UPDATE-2025
 - Instalador: [instalador-PyAfipWs-2.7.3290-homo.exe](https://www.sistemasagiles.com.ar/soft/pyafipws/PyAfipWs-2.7.3290-32bit+wsaa_2.13a+wsfexv1_1.12a-homo.exe)
 - Ejemplo en VB: [https://github.com/reingart/pyafipws/blob/master/ejemplos/wsfexv1/wsfexv1.bas]
 - Ejemplo en MS Acess/VBA: [pyafipws.mdb](http://pyafipws.googlecode.com/files/pyafipws.mdb): WSFEv1 y WSFEX (base de datos MS Access 97 o sup.) 
-- [Manual de Uso](wiki:ManualPyAfipWs): Documentación ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf))
+- [Manual de Uso](../documentacion_herramientas/manualpyafipws.md): Documentación ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf))
 - Código Fuente (Python): ver archivos publicados en [GitHub](https://github.com/reingart/pyafipws/blob/master/wsfexv1.py) 
 
 ## Cambios respecto a WSFE
@@ -169,7 +166,7 @@ La operatoria es bastante similar al método de autorización del WSFE (con un I
 
 A su vez, el WSFEX devuelve mensajes de eventos (mantenimiento programado, advertencias, etc.), los que deben ser capturados e informados al usuario.
 
-Para mayor información, se puede consultar la documentación orignal en [Manual del WSFEXv1 - AFIP](http://www.afip.gov.ar/fe/documentos/WSFEX-Manualparaeldesarrollador_V1.pdf) o el [manual](wiki:ManualPyAfipWs) manual de la presente interfaz. 
+Para mayor información, se puede consultar la documentación orignal en [Manual del WSFEXv1 - AFIP](http://www.afip.gov.ar/fe/documentos/WSFEX-Manualparaeldesarrollador_V1.pdf) o el [manual](../documentacion_herramientas/manualpyafipws.md) manual de la presente interfaz. 
 
 ## Cambios WSFEXv1 respecto a WSFEXv0
 
@@ -1421,7 +1418,7 @@ factura electrónica y sus interfases (se recomienda suscribirse)
 
 ## Costos y Condiciones
 
-(ver [Condiciones del Soporte Comercial](wiki:PyAfipWs#CostosyCondiciones)).
+(ver [Condiciones del Soporte Comercial](../documentacion_herramientas/pyafipws.md#costos-y-condiciones)).
 
 **Importante**: WSFEXv1 es un **nuevo webservice** y AFIP ha agregado campos (bonificación), ha cambiado varios tipos de datos (en importes, cantidad de decimales), ha agregado códigos de tablas de parámetros (unidades de medida) y comprobantes asociados (remitos de tabaco) y además realiza nuevas validaciones, por lo que recomendamos probar exhaustivamente la interfaz con el desarrollo para exportación.
 

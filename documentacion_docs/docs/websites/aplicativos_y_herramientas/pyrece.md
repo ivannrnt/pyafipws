@@ -1,5 +1,5 @@
 ﻿= PyRece: Aplicativo Autorizador y Generador de Facturas Electrónicas =
-[[TracNav(FacturaElectronica|noreorder|nocollapse)]]
+
 
 ## Índice
 [[TOC(noheading,inline,depth=2)]]
@@ -14,13 +14,13 @@ Es similar al aplicativo *Régimen de Emisión de Comprobantes Electrónicos* (R
 
 - Permite leer y grabar las facturas desde [Múltiples Formatos de Archivos de Intercambio](wiki:PyRece#Caracterísiticas) (planillas CSV o XLSX -editables por planilla de cálculo / MS Excel-, archivos de texto de longitud fija TXT similar a RECE, archivos XML similares al Facturador Plus, tablas DBF y archivos JSON)
 - Autoriza las facturas en linea (usando webservice), simplificando el proceso (no requiere ventanilla electrónica ni ningún otro servicio de clave fiscal o página web)
-- Genera las facturas en un formato PDF gráfico adaptable mediante un [Diseñador Visual](wiki:ManualPyAfipWs#DiseñadorVisualPyFEPDF), pudiendo incluir imágenes (logos) e información adicional, incluyendo el código de barras para ser impreso (opcional).
+- Genera las facturas en un formato PDF gráfico adaptable mediante un [Diseñador Visual](../documentacion_herramientas/manualpyafipws.md#DiseñadorVisualPyFEPDF), pudiendo incluir imágenes (logos) e información adicional, incluyendo el código de barras para ser impreso (opcional).
 - Permite múltiples hojas de orientación apaisada (landscape) o retrato (portrait), descripciones de múltiples líneas (con corte y transporte automático)  y control arbitrario de la impresión de decimales.
 - Envía mensajes de correo electrónico conteniendo la factura en PDF y un mensaje configurable (tanto en texto plano como en texto estilizado con HTML)
 
 [[Image(PyFactura:aplicativo_factura_electronica_06a_w8.png,align=right,width=223,height=218,link=PyFactura)]]
 
-Actualmente implementa Factura Electrónica según RG 1956/05, RG 1956/05, 1345/02, 2265/07, 2289/07, y 2485/08 ([Factura Electrónica Mercado Interno - WSFEv1](wiki:ProyectoWSFEv1)) pudiendose adaptar a la resolución general 2557/09 ([BonosFiscales - Bienes de Capital - WSBFE](wiki:BonosFiscales)) o 2758/10 ([Factura de Exportación - WSFEX](wiki:FacturaElectronicaExportacion)) y 2904/10 ([Factura electrónica con detalle - WSMTXCA](wiki:FacturaElectronicaMTXCAService))
+Actualmente implementa Factura Electrónica según RG 1956/05, RG 1956/05, 1345/02, 2265/07, 2289/07, y 2485/08 ([Factura Electrónica Mercado Interno - WSFEv1](../factura_electronica/wsfev1.md)) pudiendose adaptar a la resolución general 2557/09 ([BonosFiscales - Bienes de Capital - WSBFE](wiki:BonosFiscales)) o 2758/10 ([Factura de Exportación - WSFEX](wiki:FacturaElectronicaExportacion)) y 2904/10 ([Factura electrónica con detalle - WSMTXCA](wiki:FacturaElectronicaMTXCAService))
 
 Se distribuye sin cargo (gratis, es software libre bajo licencia GPLv3), y se ofrece [Soporte Técnico](wiki:PyRece#SoporteTécnico) comunitario gratuito o comercial pago opcional (ver [Costos y Condiciones](wiki:PyRece#CostosyCondiciones)). 
 
@@ -41,8 +41,8 @@ Los datos se ingresan por archivos de varios formatos:
 - XLSX compatible con MS Excel / !LibreOffice Calc. Ver [Planilla de Ejemplo (XLSX)](https://github.com/reingart/pyafipws/blob/master/datos/facturas.xlsx)
 - CSV compatible con Planilla de Calculo. Ver [Planilla de Ejemplo (CSV)](attachment:facturas.csv)
 - XML similar al [Facturador Plus](wiki:PyRece#FormatoXMLsimilFacturador-Plus) [Archivo de Ejemplo (XML)](attachment:facturas.xml)
-- TXT similar al [SIAP RECE](wiki:ManualPyAfipWs#Archivodetextodeinterfambio) [Archivo de Ejemplo (TXT)](attachment:facturas.txt)
-- DBF compatible con tablas [Tablas dBase/FoxPro](wiki:ManualPyAfipWs#TablasenDBFparaPyFEPDF) [Carpeta Comprimida (DBF)](attachment:tablas-dbf.zip)
+- TXT similar al [SIAP RECE](../documentacion_herramientas/manualpyafipws.md#Archivodetextodeinterfambio) [Archivo de Ejemplo (TXT)](attachment:facturas.txt)
+- DBF compatible con tablas [Tablas dBase/FoxPro](../documentacion_herramientas/manualpyafipws.md#TablasenDBFparaPyFEPDF) [Carpeta Comprimida (DBF)](attachment:tablas-dbf.zip)
 - JSON (javascript object notation) para lenguajes modernos e hiperactividad con páginas web.
 
 Consultar por adaptación lectura de facturas a autorizar desde bases de datos u otro método (no incluido en el programa básico)
@@ -314,7 +314,7 @@ Internamente el aplicativo utiliza un formato simple, compatible con los lenguaj
 
 ### Configuración
 
-Para utilizar este programa, debe habilitar por clave fiscal el Régimen RECE y [generar los certificados](wiki:ManualPyAfipWs#Certificados).
+Para utilizar este programa, debe habilitar por clave fiscal el Régimen RECE y [generar los certificados](../documentacion_herramientas/manualpyafipws.md#Certificados).
 
 El archivo de configuración permite establecer los parámetros para conectarse al Web Service, generar PDF y envio de email:
 ```
@@ -380,7 +380,7 @@ Ver [Muestra (PDF)](attachment:factura-0004-00000001.pdf) y [Formato de ejemplo 
 
 La herramienta incluye el progama `designer.exe` para modificar visualmente los diseños de factura.
 
-A modo de ejemplo se muestra un pantallazo del [Diseñador Visual](wiki:ManualPyAfipWs#DiseñadorVisualPyFEPDF), con el elemento logo seleccionado, editando sus propiedades:
+A modo de ejemplo se muestra un pantallazo del [Diseñador Visual](../documentacion_herramientas/manualpyafipws.md#DiseñadorVisualPyFEPDF), con el elemento logo seleccionado, editando sus propiedades:
 [[Image(ManualPyAfipWs:designer.png)]]
 ### Mensaje de Correo Electrónico
 

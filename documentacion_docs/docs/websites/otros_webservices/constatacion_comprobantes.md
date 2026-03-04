@@ -1,17 +1,14 @@
 ﻿= Constatación de Comprobantes emitidos (CAI, CAE, CAEA) por Web Service AFIP =
-[[TracNav(noreorder|FacturaElectronica)]]
 
 Interfaz para los Servicios Web para verificar en forma dinámica si los comprobantes recibidos se encuentran autorizados por la AFIP.
 [Ley de Procedimiento Tributario N°11683](http://infoleg.mecon.gov.ar/infolegInternet/anexos/15000-19999/18771/texact.htm) (Artículo 33) modificado por [Ley N° 25795](http://infoleg.mecon.gov.ar/scripts1/busquedas/cnsnorma.asp?tipo=Ley&nro=25795) y reglamentado por [Decreto 477/2007](http://biblioteca.afip.gob.ar/dcp/DEC_C_000477_2007_05_02) 
-## Índice
-[[Image(htdocs:logo-pyafipws.png, align=right)]]
-[[TOC(noheading,inline,depth=3)]]
+
 
 ## Descripción General
 
 Este servicio permite verificar la validez en los comprobantes respaldatorios de las operaciones, tanto con Código de Autorización de Impresión (CAI), el Código de Autorización Electrónico, y CAE Anticipado "CAEA". La modalidad CAE y CAEA es soportada por dos webservices:
 
-- [WSFEv1](wiki:ProyectoWSFEv1)(Web Service de Factura Electrónica Versión 1) correspondiente a la  RG 2485 y modificatorias
+- [WSFEv1](../factura_electronica/wsfev1.md)(Web Service de Factura Electrónica Versión 1) correspondiente a la  RG 2485 y modificatorias
 - [WSMTXCA](wiki:FacturaElectronicaMTXCAService) (Web Service de Factura Electrónica con detalle) correspondiente a la  RG 2904 
 
 Actualmente los comprobantes se pueden validar también por el servicio interactivo de AFIP:
@@ -39,7 +36,7 @@ Ver archivos y últimas actualizaciones para descargas en [GitHub](https://githu
 - Visual Basic .NET: [wscdc.vb](https://github.com/reingart/pyafipws/blob/master/ejemplos/wscdc/wscdc.vb)
 - Muestra de archivo de intercambio:
 - [salida_wscdc.txt](attachment:salida_wscdc.txt) texto plano, universal (con campos de ancho fijo, simil COBOL)  
-- [Manual de Uso](wiki:ManualPyAfipWs): Documentación General ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf)) y [Manual del Desarrollador WSCDCv1 (AFIP)](http://www.afip.gob.ar/ws/WSCDCV1/ManualDelDesarrolladorWSCDCV1.pdf)
+- [Manual de Uso](../documentacion_herramientas/manualpyafipws.md): Documentación General ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf)) y [Manual del Desarrollador WSCDCv1 (AFIP)](http://www.afip.gob.ar/ws/WSCDCV1/ManualDelDesarrolladorWSCDCV1.pdf)
 - Código Fuente (Python): ver [wscdc.py](https://code.google.com/p/pyafipws/source/browse/wscdc.py) y [unit test](https://code.google.com/p/pyafipws/source/browse/tests/wscdc.py)
 
 ## Métodos
@@ -170,7 +167,7 @@ CUIT=20267565393
 
 #### Encabezado
 | **Campo** | **Posición** | **Longitud** | **Tipo** | **Descripción** |
-|---|---|---|---|---|
+
 | tipo_reg | 1 | 1 | Alfanumerico | 0: encabezado |
 | cbte_modo | 2 | 4 | Alfanumerico | Modalidad de autorización (CAI, CAE, CAEA) |
 | cuit_emisor | 6 | 11 | Alfanumerico | CUIT del emisor del comprobante |
@@ -186,19 +183,19 @@ CUIT=20267565393
 | fch_proceso | 92 | 14 | Alfanumerico | Fecha y hora de procesamiento |
 #### Observacion
 | **Campo** | **Posición** | **Longitud** | **Tipo** | **Descripción** |
-|---|---|---|---|---|
+
 | tipo_reg | 1 | 1 | Alfanumerico | O: observaciones devueltas por AFIP |
 | code | 2 | 5 | Numerico | Código de Observación / Error / Evento |
 | msg | 7 | 255 | Alfanumerico | Mensaje |
 #### Evento
 | **Campo** | **Posición** | **Longitud** | **Tipo** | **Descripción** |
-|---|---|---|---|---|
+
 | tipo_reg | 1 | 1 | Alfanumerico | O: observaciones devueltas por AFIP |
 | code | 2 | 5 | Numerico | Código de Observación / Error / Evento |
 | msg | 7 | 255 | Alfanumerico | Mensaje |
 #### Error
 | **Campo** | **Posición** | **Longitud** | **Tipo** | **Descripción** |
-|---|---|---|---|---|
+
 | tipo_reg | 1 | 1 | Alfanumerico | O: observaciones devueltas por AFIP |
 | code | 2 | 5 | Numerico | Código de Observación / Error / Evento |
 | msg | 7 | 255 | Alfanumerico | Mensaje |
@@ -318,7 +315,7 @@ Ofrecemos soporte técnico comercial (pago), independiente a la AFIP, desarrollo
 
 Debido a la complejidad de este servicio, su fecha de aplicación y las modificaciones que pudieran surgir, los clientes que así lo requieran pueden adquirir horas de soporte técnico adicional.
 
-Ver [Condiciones del Soporte Comercial](wiki:PyAfipWs#CostosyCondiciones)
+Ver [Condiciones del Soporte Comercial](../documentacion_herramientas/pyafipws.md#costos-y-condiciones)
 
 Obtenga mas información enviando un mail a info@pyafipws.com.ar o (011) 15-3048-9211 (asesoramiento sin cargo)
 

@@ -61,7 +61,7 @@ Si bien la interfaz ya contempla la especificación “RG 2485 Diseño de Regist
  c. Código de Identificación “6.2” - Dato a informar: Número de documento.
  d. Código de Identificación “7” - Dato 01 (Titular), Dato 02 (Director/Presidente), Dato 03 (Apoderado), Dato 04 (Empleado). La codificación de los datos formará parte de las tablas del sistema.
 
-*Importante*: La codificación de los datos  habilitada en las [tablas de parametros](#tablas-de-parametros) del webservice de AFIP, debiendo utilizar el nuevo tipo de registro: "Dato Opcional", correspondiente a nuevo método `AgregarDatoOpcional(id, valor)`. Para más información y ejemplos ver [Datos Opcionales AFIP WSFEv1](../documentacion_herramientas/manualpyafipws.md#datos-opcionales-afip-wsfev1).
+*Importante*: La codificación de los datos  habilitada en las [tablas de parametros](#tablas-de-parametros) del webservice de AFIP, debiendo utilizar el nuevo tipo de registro: "Dato Opcional", correspondiente a nuevo método `AgregarDatoOpcional(id, valor)`. Para más información y ejemplos ver [Datos Opcionales AFIP WSFEv1](../documentacion_herramientas/manualpyafipws.md#datos-opcionales-afip-wsfev1)(../documentacion_herramientas/manualpyafipws.md#datos-opcionales-afip-wsfev1).
 
 En caso de optar por emitir comprobantes electrónicos originales, no sería necesario utilizar el nuevo Régimen Informativo de Comprobantes clase "A".
 

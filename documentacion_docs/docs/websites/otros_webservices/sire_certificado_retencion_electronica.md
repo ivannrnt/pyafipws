@@ -1,14 +1,11 @@
 ﻿
 # WSSIRE - SISTEMA INTEGRAL DE RETENCIONES ELECTRONICAS, Certificado de retención electrónica
-[[TracNav(noreorder|FacturaElectronica)]]
 
 
 Interfaz para Servicio Web correspondiente a la emisión de un certificado C2005 en AFIP por parte de los sistemas del agente de retención. [RG4523/2019](http://servicios.infoleg.gob.ar/infolegInternet/anexos/325000-329999/325072/texact.htm) [RG3726/2015](http://biblioteca.afip.gob.ar/dcp/REAG01003726_2015_01_23)
 
 
-## Índice
-[[Image(htdocs:logo-pyafipws.png, align=right)]]
-[[TOC(noheading,inline,depth=3)]]
+
 
 ## Descripción General
 
@@ -59,13 +56,13 @@ Está disponible el instalador, simplemente seguir los pasos:
 - Seleccionar carpeta, por ej `C:\WSSIRE`
 - Instalación y registración automática
 
-Para más información ver el [Manual de Uso](wiki:ManualPyAfipWs#Instalación)
+Para más información ver el [Manual de Uso](../documentacion_herramientas/manualpyafipws.md#Instalación)
 
 
 ## Costos y Condiciones
 
 
-(ver [Condiciones del Soporte Comercial](wiki:PyAfipWs#CostosyCondiciones)).
+(ver [Condiciones del Soporte Comercial](../documentacion_herramientas/pyafipws.md#costos-y-condiciones)).
 
 Ofrecemos soporte técnico comercial (pago), independiente a la AFIP, desarrollos especiales, interfaces web, etc. 
 Obtenga mas información enviando un mail a info@pyafipws.com.ar (011) 15-3048-9211 (asesoramiento sin cargo)

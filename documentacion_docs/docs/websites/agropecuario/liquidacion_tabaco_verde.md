@@ -1,12 +1,9 @@
 ﻿= Liquidación Electrónica de Tabaco Verde  =
 
-[[TracNav(noreorder|FacturaElectronica)]]
 
 Web Services – (Servicios Web) Liquidación de Tabaco Verde. Generación de una liquidación de tabaco comprado a productores y obtención del CAE (Código de Autorización Electrónico).
 
-## Índice
-[[Image(htdocs:logo-pyafipws.png, align=right)]]
-[[TOC(noheading,inline,depth=2)]]
+
 ## Descripción General
 
 EL WSLTV (Web Service de Liquidación de Tabaco Verde) es un nuevo Servicio Web de la AFIP según [Especificación Técnica 1.1](http://www.afip.gob.ar/ws/tabaco/manual_wsltv_1.1.pdf)
@@ -24,7 +21,7 @@ El webservice permite:
 - Listado de retenciones tabacaleras y tributos.
 - Consulta de totales liquidados para un conjunto de CAEs.
 
-Para mayor información, se puede consultar la documentación orignal en [Micrositio Webservices - AFIP](http://www.afip.gov.ar/ws/paso4.asp) o el [manual](wiki:ManualPyAfipWs) de la presente interfaz. 
+Para mayor información, se puede consultar la documentación orignal en [Micrositio Webservices - AFIP](http://www.afip.gov.ar/ws/paso4.asp) o el [manual](../documentacion_herramientas/manualpyafipws.md) de la presente interfaz. 
 
 URL:
 
@@ -34,7 +31,7 @@ URL:
 ## Descargas
 
 - Instalador: [PyAfipWs-2.7.1945-32bit+wsaa_2.11c+wsltv_1.06b-homo.exe](https://www.sistemasagiles.com.ar/soft/pyafipws/PyAfipWs-2.7.1945-32bit+wsaa_2.11c+wsltv_1.06b-homo.exe) (versión preliminar WSLTVv1.3)
-- Documentación: [Documento Oficial WSLTVv1.0 http://www.afip.gob.ar/ws/tabaco/manual_wsltv_1.0.pdf] (AFIP), [Manual de Uso General](wiki:ManualPyAfipWs) ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf))
+- Documentación: [Documento Oficial WSLTVv1.0 http://www.afip.gob.ar/ws/tabaco/manual_wsltv_1.0.pdf] (AFIP), [Manual de Uso General](../documentacion_herramientas/manualpyafipws.md) ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf))
 - Ejemplo en VB: [wsltv.bas](https://github.com/reingart/pyafipws/blob/master/ejemplos/wsltv/wsltv.bas) *(actualizado)*
 - Archivos de intercambio (muestras): *proximamente*
 - Código Fuente (Python): [wsltv.py](hhttps://github.com/reingart/pyafipws/blob/master/wsltv.py)
@@ -131,7 +128,7 @@ hecho.
 
 ### Archivo de Configuración
 
-Para utilizar este webservice, debe tramitarse un certificado. Ver [Instructivo](wiki:ManualPyAfipWs#Certificados)
+Para utilizar este webservice, debe tramitarse un certificado. Ver [Instructivo](../documentacion_herramientas/manualpyafipws.md#Certificados)
 
 Luego, se debe configurar el Certificado, clave privada y URL en el archivo de configuración WSLTV.INI:
 
@@ -501,7 +498,7 @@ factura electrónica y sus interfases (se recomienda suscribirse)
 
 ## Costos y Condiciones
 
-Debido a la complejidad de este servicio, su fecha de aplicación y las modificaciones que pudieran surgir, los clientes que asi lo requieran pueden adquirir horas de soporte técnico comercial (ver [Condiciones del Soporte Comercial](wiki:PyAfipWs#CostosyCondiciones)).
+Debido a la complejidad de este servicio, su fecha de aplicación y las modificaciones que pudieran surgir, los clientes que asi lo requieran pueden adquirir horas de soporte técnico comercial (ver [Condiciones del Soporte Comercial](../documentacion_herramientas/pyafipws.md#costos-y-condiciones)).
 
 A su vez, se libera el código fuente bajo licencia GPL (software libre), al igual que se hizo con el restos de los servicios web. Para más detalles ver página FacturaElectronica.
 

@@ -1,11 +1,8 @@
 ﻿# Código de Autorización Electrónica Anticipado (RG2926/RG2904)
-[[TracNav(noreorder|FacturaElectronica)]]
 
 Interfaz para los Servicios Web correspondientes a Factura Electrónica de Mercado Interno para el *Régimen especial de emisión y almacenamiento electrónico de comprobantes originales. Factura electrónica. Res. Gral. A.F.I.P. 2.485/08. Código de Autorización Electrónico Anticipado CAEA.* previstos en RG 2926/2010 y en la RG 2904/2010.
 
-## Índice
-[[Image(htdocs:logo-pyafipws.png, align=right)]]
-[[TOC(noheading,inline,depth=3)]]
+
 
 ## Descripción General
 
@@ -19,7 +16,7 @@ Los sujetos comprendidos deben reunir las siguientes condiciones:
 
 La modalidad CAEA es soportada por dos webservices:
 
-- [WSFEv1](wiki:ProyectoWSFEv1)(Web Service de Factura Electrónica Versión 1) (RG2485), correspondiente a la  Resolución [Resolución General 2904/2010](http://www.afip.gov.ar/fe/#rg) Art.4 Opción B, 
+- [WSFEv1](../factura_electronica/wsfev1.md)(Web Service de Factura Electrónica Versión 1) (RG2485), correspondiente a la  Resolución [Resolución General 2904/2010](http://www.afip.gov.ar/fe/#rg) Art.4 Opción B, 
 - [WSMTXCA](wiki:FacturaElectronicaMTXCAService) (Web Service de Factura Electrónica con detalle) (RG2904), correspondiente a la  Resolución [Resolución General 2904/2010](http://www.afip.gov.ar/fe/#rg) Art.4 Opción A, 
 
 La operatoria es similar a la modalidad CAE, con la salvedad que se debe solicitar un único código CAEA para todas las facturas de la quincena, informando posteriormente cada factura emitida de manera individual con el CAEA.
@@ -41,7 +38,7 @@ Entrada en vigencia:
 
 Ver la información respectiva a cada webservice:
 
-- [WSFEv1](wiki:ProyectoWSFEv1)
+- [WSFEv1](../factura_electronica/wsfev1.md)
 - [WSMTXCA](wiki:FacturaElectronicaMTXCAService)
 
 ## Ejemplo Intefase COM en VB (5/6)
@@ -49,7 +46,7 @@ Ver la información respectiva a cada webservice:
 ### CAEA sin detalle (WSFEv1)
 
 Ver ejemplos completos en [wsfev1_caea.bas](https://github.com/reingart/pyafipws/blob/master/ejemplos/wsfev1/wsfev1_caea.bas)
-Para más información ver [Documentación](wiki:ManualPyAfipWs#ServicioWebdeFacturaElectrónicaMercadoInternoVersión1WSFEv1) y [WSFEv1](wiki:ProyectoWSFEv1)
+Para más información ver [Documentación](../documentacion_herramientas/manualpyafipws.md#ServicioWebdeFacturaElectrónicaMercadoInternoVersión1WSFEv1) y [WSFEv1](../factura_electronica/wsfev1.md)
 
 #### Conexión inicial (ver autenticación con WSAA)
 ```
@@ -164,7 +161,7 @@ MsgBox "Resultado:" & WSFEv1.Resultado & _
 ### CAEA con detalle (WSMTXCA)
 
 Ver ejemplos completos en [wsmtx_caea.bas](https://github.com/reingart/pyafipws/blob/master/ejemplos/wsmtxca/wsmtx_caea.bas).
-Para más información ver [Documentación](wiki:ManualPyAfipWs#ServicioWebdeFacturaElectrónicaMercadoInternoProgramaMatrixWSMTXCA) y [WSMTXCA](wiki:FacturaElectronicaMTXCAService)
+Para más información ver [Documentación](../documentacion_herramientas/manualpyafipws.md#ServicioWebdeFacturaElectrónicaMercadoInternoProgramaMatrixWSMTXCA) y [WSMTXCA](wiki:FacturaElectronicaMTXCAService)
 #### Conexión inicial (ver autenticación con WSAA)
 ```
 #!vb
@@ -299,7 +296,7 @@ factura electrónica y sus interfases (se recomienda suscribirse)
 ## Costos y Condiciones
 
 
-Debido a la complejidad de este servicio, su fecha de aplicación y las modificaciones que pudieran surgir, los clientes que asi lo requieran pueden adquirir horas de soporte técnico adicional, se recomienda consultar previamente (ver [Condiciones del Soporte Comercial](wiki:PyAfipWs#CostosyCondiciones)).
+Debido a la complejidad de este servicio, su fecha de aplicación y las modificaciones que pudieran surgir, los clientes que asi lo requieran pueden adquirir horas de soporte técnico adicional, se recomienda consultar previamente (ver [Condiciones del Soporte Comercial](../documentacion_herramientas/pyafipws.md#costos-y-condiciones)).
 
 Ofrecemos soporte técnico comercial (pago), independiente a la AFIP, desarrollos especiales, interfaces web, etc. 
 Obtenga mas información enviando un mail a info@pyafipws.com.ar o (011) 4450-0716 / (011) 15-3048-9211 (asesoramiento sin cargo)

@@ -1,6 +1,5 @@
 ﻿= Ingresos Brutos - WS ARBA DFE =
 
-[[TracNav(noreorder|FacturaElectronica)]]
 
 Interfaz para Servicio web para obtención de Alícuotas "RÉGIMEN DE RECAUDACIÓN POR SUJETO" correspondiente a la Resolución Normativa N° 64/10, N° 55/12, N° 02/13, N° 13/13, N° 28/14 ARBA (Rentas Provincia de Buenos Aires).
 
@@ -10,9 +9,7 @@ Permite consultar en forma on-line directamente desde su aplicación cliente, si
 
 Internamente genera y envía el archivo DFERespuesta_codigohash.xml con el algorítmo MD5 y analizando la respuesta en formato XML.
 
-## Índice
-[[Image(htdocs:logo-pyafipws.png, align=right)]]
-[[TOC(noheading,inline,depth=2)]]
+
 
 ## Descargas
 
@@ -158,6 +155,6 @@ factura electrónica y sus interfases (se recomienda suscribirse)
 
 Por soporte comercial consultar al (011) 15-3048-9211 o por mail a info@sistemasagiles.com.ar
 
-Más información en PyAfipWs (ver [Costos y Condiciones del Soporte Comercial](wiki:PyAfipWs#CostosyCondiciones))
+Más información en PyAfipWs (ver [Costos y Condiciones del Soporte Comercial](../documentacion_herramientas/pyafipws.md#costos-y-condiciones))
 
 MarianoReingart

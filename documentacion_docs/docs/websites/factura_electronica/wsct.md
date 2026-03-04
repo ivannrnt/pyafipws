@@ -1,12 +1,9 @@
 ﻿# Factura Electrónica Comprobantes Turismo (RG3971, 566)
-[[TracNav(noreorder|FacturaElectronica)]]
 
 Interfaz para Servicio Web correspondiente a Comprobantes de Turismo (Factura Electrónica T).
 Régimen de reintegro del impuesto al valor agregado (TurIVA), facturado por los servicios de alojamiento prestados a turistas del extranjero.
 Operaciones "alcanzadas por el beneficio de Reintegro del IVA Decreto 1043/2016"
-## Índice
-[[Image(htdocs:logo-pyafipws.png, align=right)]]
-[[TOC(noheading,inline,depth=3)]]
+
 
 ## Descripción General
 
@@ -14,7 +11,7 @@ EL WSCT es un nuevo Servicio Web de la AFIP para el
 *Régimen especial para el reintegro de IVA a turistas extranjeros por los servicios de alojamiento.*, correspondiente a la 
 [Resolución Conjunta General 3971 y Resolución 566/2016](http://servicios.infoleg.gob.ar/infolegInternet/anexos/270000-274999/270043/norma.htm) 
 
-**NOTA**: Ver [WSFEv1](wiki:ProyectoWSFEv1) para el Régimen General de Factura Electrónica
+**NOTA**: Ver [WSFEv1](../factura_electronica/wsfev1.md) para el Régimen General de Factura Electrónica
 
 ### Sujetos alcanzados
 
@@ -127,7 +124,7 @@ https://www.sistemasagiles.com.ar/soft/pyafipws/final/PyAfipWS-Cache-UPDATE-2025
 Ver archivos y últimas actualizaciones para descargas en [GitHub](https://github.com/reingart/pyafipws/releases) (actualizado):
 
 - Instalador:  [PyAfipWs-2.7.1976-32bit+wsaa_2.11c+wsct_1.02c-homo.exe](https://www.sistemasagiles.com.ar/soft/pyafipws/PyAfipWs-2.7.1976-32bit+wsaa_2.11c+wsct_1.02c-homo.exe)
-- [Manual de Uso](wiki:ManualPyAfipWs): Documentación ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf)) [Documentación Oficial PDF AFIP](http://www.afip.gov.ar/ws/wsct/Manual_Desarrollador_WSCT_v01.pdf)
+- [Manual de Uso](../documentacion_herramientas/manualpyafipws.md): Documentación ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf)) [Documentación Oficial PDF AFIP](http://www.afip.gov.ar/ws/wsct/Manual_Desarrollador_WSCT_v01.pdf)
 - Código Fuente (Python): [wsct.py](https://github.com/reingart/pyafipws/blob/master/wsct.py)
  
 ### Ejemplos
@@ -152,7 +149,7 @@ Está disponible el instalador (ver [Descargas](wiki:FacturaElectronicaComproban
 - Seleccionar carpeta, por ej `C:\WSCT`
 - Instalación y registración automática
 
-Para más información ver el [Manual de Uso](wiki:ManualPyAfipWs#Instalación)
+Para más información ver el [Manual de Uso](../documentacion_herramientas/manualpyafipws.md#Instalación)
 
 ## Componente
 
@@ -322,7 +319,7 @@ Otras Secciones:
 - [DBF]: configura los nombres de archivos con las tablas requeridas
 - [PROXY]: configura el servidor intermedio de salida a internet (firewall, antivirus, proxy, etc.), ej:
 
-Para Más información ver [Manual Configuración](wiki:ManualPyAfipWs#Configuración)
+Para Más información ver [Manual Configuración](../documentacion_herramientas/manualpyafipws.md#Configuración)
 
 Ejemplo:
 ```
@@ -378,7 +375,7 @@ RECET.EXE rece-empresax.ini ....
 
 Si no se especifica accion, por defecto se envía la información del archivo de intercambio para autorizar la emisión de factura electrónica, devuelve el Código de Autorización Electrónico (CAE) y demás datos que responde AFIP.
 
-Para más información ver [Manual](wiki:ManualPyAfipWs#Parámetros)
+Para más información ver [Manual](../documentacion_herramientas/manualpyafipws.md#Parámetros)
 ## Formato archivos de Intercambio
 
 Estructura para archivos de texto (ancho fijo simil COBOL) o tablas DBF (dBase, Clipper, Fox Pro, etc.)
@@ -386,7 +383,7 @@ Para muestras ver [Descargas](wiki:FacturaElectronicaComprobantesTurismo#Descarg
 
 ### Encabezado
 | **Campo** | **Pos.** | **Long.** | **Tipo** | **Decimales** |  |
-|---|---|---|---|---|---|
+
 | tipo_reg | 1 | 1 | Numerico |  |  |
 | fecha_cbte | 2 | 10 | Alfanumerico |  |  |
 | tipo_cbte | 12 | 3 | Numerico |  |  |
@@ -419,7 +416,7 @@ Para muestras ver [Descargas](wiki:FacturaElectronicaComprobantesTurismo#Descarg
 | observaciones | 2511 | 1000 | Alfanumerico |  |  |
 ### Tributo
 | **Campo** | **Pos.** | **Long.** | **Tipo** | **Decimales** |  |
-|---|---|---|---|---|---|
+
 | tipo_reg | 1 | 1 | Numerico |  |  |
 | tributo_id | 2 | 3 | Alfanumerico |  |  |
 | desc | 5 | 100 | Alfanumerico |  |  |
@@ -428,14 +425,14 @@ Para muestras ver [Descargas](wiki:FacturaElectronicaComprobantesTurismo#Descarg
 | importe | 135 | 15 | Importe | 2 |  |
 ### Iva
 | **Campo** | **Pos.** | **Long.** | **Tipo** | **Decimales** |  |
-|---|---|---|---|---|---|
+
 | tipo_reg | 1 | 1 | Numerico |  |  |
 | iva_id | 2 | 3 | Alfanumerico |  |  |
 | base_imp | 5 | 15 | Importe | 2 |  |
 | importe | 20 | 15 | Importe | 2 |  |
 ### Comprobante Asociado
 | **Campo** | **Pos.** | **Long.** | **Tipo** | **Decimales** |  |
-|---|---|---|---|---|---|
+
 | tipo_reg | 1 | 1 | Numerico |  |  |
 | tipo | 2 | 3 | Numerico |  |  |
 | pto_vta | 5 | 4 | Numerico |  |  |
@@ -444,7 +441,7 @@ Para muestras ver [Descargas](wiki:FacturaElectronicaComprobantesTurismo#Descarg
 | cuit | 28 | 11 | Numerico |  |  |
 ### Detalle
 | **Campo** | **Pos.** | **Long.** | **Tipo** | **Decimales** |  |
-|---|---|---|---|---|---|
+
 | tipo_reg | 1 | 1 | Numerico |  |  |
 | tipo | 2 | 3 | Numerico |  |  |
 | cod_tur | 5 | 30 | Alfanumerico |  |  |
@@ -455,7 +452,7 @@ Para muestras ver [Descargas](wiki:FacturaElectronicaComprobantesTurismo#Descarg
 | ds | 98 | 4000 | Alfanumerico |  |  |
 ### Forma Pago
 | **Campo** | **Pos.** | **Long.** | **Tipo** | **Decimales** |  |
-|---|---|---|---|---|---|
+
 | tipo_reg | 1 | 1 | Numerico |  |  |
 | codigo | 2 | 3 | Numerico |  |  |
 | tipo_tarjeta | 5 | 2 | Numerico |  |  |

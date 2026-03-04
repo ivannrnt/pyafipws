@@ -1,6 +1,5 @@
 ﻿= Trazabilidad de Productos Agroquímicos Fitosanitarios/Veterinarios - WS !TrazaAgr !TrazaVet SENASA PAMI SNT =
 
-[[TracNav(noreorder|FacturaElectronica)]]
 
 Interfaz para Servicio Web Código de Trazabilidad de Productos Fitosanitarios / Veterinarios (SOAP) correspondiente a la [Resolución 369/2013](http://www.senasa.gov.ar/contenido.php?to=n&in=1592&io=24640) del Servicio Nacional de Sanidad y Calidad Agroalimentaria (SENASA) que contemplan en su composición en principio los Principios Activos incluidos en el Anexo I. Sistema Nacional de Trazabilidad.
 
@@ -100,7 +99,7 @@ HayError None
 CantPaginas 1
 HayError None
 | id_transaccion_global | id_transaccion | f_transaccion | f_operacion | f_vencimiento | f_elaboracion | d_evento | n_cantidad | id_unidad | d_unidad | cod_producto | .... |
-|---|---|---|---|---|---|---|---|---|---|---|---|
+
 | 14904794 | 33681508 | 2014-05-16 00:00:00 | 2014-05-10 00:00:00 |  |  | Venta/Envío |  |  |  | 88900000000001 | ... |
 | 14904796 | 33681509 | 2014-05-16 00:00:00 | 2014-05-10 00:00:00 |  |  | Venta/Envío |  |  |  | 88900000000001 | ... |
 ...
@@ -136,7 +135,7 @@ Formato:
 
 ### TransaccionDTO
 | **Nombre** | **Tipo** | **Long.** | **Pos(txt)** | **Campo(dbf)** |
-|---|---|---|---|---|
+
 | gln_origen | Alfanumerico | 13 | 1 | glnorigen |
 | gln_destino | Alfanumerico | 13 | 14 | glndestino |
 | f_operacion | Alfanumerico | 10 | 27 | foperacion |
@@ -166,7 +165,7 @@ Formato:
 | codigo_transaccion | Alfanumerico | 14 | 1877 | codigotran |
 ### Transacciones
 | **'Nombre** | **Tipo** | **Long.** | **Pos(txt)** | **Campo(dbf)** |
-|---|---|---|---|---|
+
 | id_transaccion_global | Numerico | 15 | 1 | idtransacc |
 | id_transaccion | Numerico | 15 | 16 | idtransac1 |
 | f_transaccion | Alfanumerico | 10 | 31 | ftransacci |
@@ -205,7 +204,7 @@ Formato:
 | d_tipo_transaccion | Alfanumerico | 30 | 3781 | dtipotrans |
 ### Errores
 | **Nombre** | **Tipo** | **Long.** | **Pos(txt)** | **Campo(dbf)** |
-|---|---|---|---|---|
+
 | _c_error | Alfanumerico | 4 | 1 | cerror |
 | _d_error | Alfanumerico | 250 | 5 | derror |
 
@@ -393,7 +392,7 @@ Codificación:
 A modo de ejemplo, se copia a continuación la tabla que devuelve la consulta de transacciones no confirmadas al 17 de mayo de 2014 en el ambiente de pruebas (resumida y simplificada por cuestiones de espacio):
 
 | **id_transaccion_global** | **id_transaccion** | **f_transaccion** | **f_operacion** | **d_evento** | **cod_producto** | **n_serie** | **n_lote** | **en_transporte** | **n_remito** | **d_agente_informador** | **d_agente_origen** | **d_agente_destino** | **d_producto** | **d_estado_transaccion** | **d_tipo_transaccion** |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+
 | 14904791 | 33681506 | 2014-05-16 | 2014-05-10 | Venta/Envío | 88900000000001 |  | 234 | N | 12345 | 9876543210982 - 1234567891019 | 9876543210982 - 1234567891019 | 9876543210982 - 1234567891019 | ABAMECTINA | Informada | Informe |
 | 14904792 | 33681507 | 2014-05-16 | 2014-05-10 | Venta/Envío | 88900000000001 |  | 234 | N | 12345 | 9876543210982 - 1234567891019 | 9876543210982 - 1234567891019 | 9876543210982 - 1234567891019 | ABAMECTINA | Informada | Informe |
 | 14904794 | 33681508 | 2014-05-16 | 2014-05-10 | Venta/Envío | 88900000000001 |  | 234 | N | 12345 | 9876543210982 - 1234567891019 | 9876543210982 - 1234567891019 | 9876543210982 - 1234567891019 | ABAMECTINA | Informada | Informe |

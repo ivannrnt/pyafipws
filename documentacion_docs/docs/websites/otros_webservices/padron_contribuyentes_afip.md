@@ -1,5 +1,4 @@
 ﻿= Padron Contribuyentes AFIP =
-[[TracNav(noreorder|FacturaElectronica)]]
 
 Herramienta para consultar el archivo completo de la condición tributaria de los contribuyentes y responsables de la [Resolución General N° 1817](http://infoleg.mecon.gov.ar/infolegInternet/anexos/100000-104999/103117/texact.htm) (Constancia de Inscripción / Opción - Monotributo)
 
@@ -8,9 +7,7 @@ Herramienta para consultar el archivo completo de la condición tributaria de lo
 | La administración Federal de Ingresos Públicos informa que, en el corto plazo las solicitudes de emisión de comprobantes electrónicos de Clase "A" emitidas para CUITs que resultan inválidos, inexistentes o no corresponden a responsables inscriptos en el Impuesto al Valor Agregado, serán rechazadas. En caso que la solicitud se esté efectuando por lote, se deberán reprocesar los registros de los comprobantes siguientes al rechazado en virtud de que se verá alterada la correlatividad y consecutividad de la numeración de los mismos. |
 |---|
 
-## Índice
-[[Image(htdocs:logo-pyafipws.png, align=right)]]
-[[TOC(noheading,inline,depth=3)]]
+
 
 ## Descripción General
 
@@ -84,7 +81,7 @@ Consultar con [mailto:padron@sistemasagiles.com.ar] para mayor información.
 - Visual Basic (VB 5/6): [ws_sr_padron.bas](https://github.com/reingart/pyafipws/blob/master/ejemplos/padron/ws_sr_padron.bas) (via webservice) 
 - Visual Fox Pro (VFP): [https://github.com/reingart/pyafipws/commit/594355a21c7debde0b0992e24f25e75e791047dc] (via webservice) 
 - Visual Basic 5/6: [padron.bas](https://github.com/reingart/pyafipws/blob/master/ejemplos/padron/padron.bas) (histórico, discontinuado por AFIP)
-- [Manual de Uso](wiki:ManualPyAfipWs): Documentación General ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf)) y [Sitio AFIP](http://www.afip.gob.ar/genericos/cInscripcion/archivoCompleto.asp)
+- [Manual de Uso](../documentacion_herramientas/manualpyafipws.md): Documentación General ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf)) y [Sitio AFIP](http://www.afip.gob.ar/genericos/cInscripcion/archivoCompleto.asp)
 - Manual de desarrollo AFIP: [V 3.4](https://www.afip.gob.ar/ws/WSCI/manual-ws-sr-ws-constancia-inscripcion-v3.4.pdf) 08/05/2023
 - Código Fuente (Python): ver
 - [padron.py](https://github.com/reingart/pyafipws/blob/master/padron.py) (histórico, discontinuado por AFIP)
@@ -4701,7 +4698,7 @@ También esta disponible el sitio http://www.pyafipws.com.ar con noticias, anunc
 ## Costos y Condiciones
 
 
-Los clientes que asi lo requieran pueden adquirir horas de soporte técnico adicional (ver [Condiciones del Soporte Comercial](wiki:PyAfipWs#CostosyCondiciones)), se estima conveniente los siguientes planes:
+Los clientes que asi lo requieran pueden adquirir horas de soporte técnico adicional (ver [Condiciones del Soporte Comercial](../documentacion_herramientas/pyafipws.md#costos-y-condiciones)), se estima conveniente los siguientes planes:
 
 - Soporte Mínimo: por 1 semana de cobertura hasta 1 hs en total (solo instalador para clientes actuales -por tiempo limitado- consulta local)
 

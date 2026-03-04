@@ -1,11 +1,8 @@
 ﻿= Carta de Porte Electrónica Derivados Granarios - RG 5235/2022 =
-[[TracNav(noreorder|FacturaElectronica)]]
 
 Interfaz para Servicio Web de AFIP para la emisión de Carta de Porte Electrónica Derivados Granarios para transporte automotor.
 
-## Índice
-[[Image(htdocs:logo-pyafipws.png, align=right)]]
-[[TOC(noheading,inline,depth=2)]]
+
 
 ## Descripción General
 
@@ -44,7 +41,7 @@ Fecha entrada en vigencia: 01/03/2023
  
                   
 
-- [Manual de Uso General](wiki:ManualPyAfipWs) ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf))
+- [Manual de Uso General](../documentacion_herramientas/manualpyafipws.md) ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf))
 
 
 - Código Fuente (Python): [wscpedg.py](https://github.com/reingart/pyafipws/blob/main/wscpedg.py)
@@ -58,7 +55,7 @@ Está disponible el instalador para evaluación (ver [Descargas](wiki:CartadePor
 - Seleccionar carpeta, por ej `C:\WSCPEDG`
 - Instalación y registración automática
 
-Para más información ver el [Manual de Uso](wiki:ManualPyAfipWs#Instalación)
+Para más información ver el [Manual de Uso](../documentacion_herramientas/manualpyafipws.md#Instalación)
 
 ## Metodos
 

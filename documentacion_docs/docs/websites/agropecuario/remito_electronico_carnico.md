@@ -1,11 +1,8 @@
 ﻿= Remito Electrónico Cárnico - RG4256/18 RG4303 =
-[[TracNav(noreorder|FacturaElectronica)]]
 
 Interfaz para Servicio Web de AFIP para la emisión de Remito de carnes y subproductos derivados de la faena de bovinos y porcinos, Resolución General 4256/18 y Resolución General 4303/18.
 
-## Índice
-[[Image(htdocs:logo-pyafipws.png, align=right)]]
-[[TOC(noheading,inline,depth=2)]]
+
 ## Descripción General
 
 WSRemCarne (Web Service Remito Electrónico Cárnico) es un nuevo Servicio Web de la AFIP para la emisión de Remito de carnes y subproductos derivados de la faena de bovinos y porcinos. El REC se emitirá para amparar el traslado desde su origen hasta el lugar de destino, siendo un ejemplar para entregar al destinatario / receptor y uno suscripto por el destinatario/receptor como constancia documental de la entrega.
@@ -169,7 +166,7 @@ hecho.
 
 ### Archivo de Configuración
 
-Para utilizar este webservice, debe tramitarse un certificado. Ver [Instructivo](wiki:ManualPyAfipWs#Certificados)
+Para utilizar este webservice, debe tramitarse un certificado. Ver [Instructivo](../documentacion_herramientas/manualpyafipws.md#Certificados)
 
 Luego, se debe configurar el Certificado, clave privada y URL en el archivo de configuración WSREMCARNE.INI:
 
@@ -746,7 +743,7 @@ Impacto la interfaz con otros sistemas (en negrita):
 
 ## Costos y Condiciones
 
-Ver [Condiciones del Soporte Comercial](wiki:PyAfipWs#CostosyCondiciones).
+Ver [Condiciones del Soporte Comercial](../documentacion_herramientas/pyafipws.md#costos-y-condiciones).
 
 A su vez, se libera el código fuente bajo licencia GPL (software libre), al igual que se hizo con el restos de los servicios web. Para más detalles ver página FacturaElectronica.
 

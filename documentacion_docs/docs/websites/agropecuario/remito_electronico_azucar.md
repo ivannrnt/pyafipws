@@ -1,11 +1,8 @@
 ﻿= Remito Electrónico Azúcar y Derivados - RG 4519/19 =
-[[TracNav(noreorder|FacturaElectronica)]]
 
 Interfaz para Servicio Web de AFIP para la emisión de Remito de Azúcar y derivados, Resolución General 4519/19
 
-## Índice
-[[Image(htdocs:logo-pyafipws.png, align=right)]]
-[[TOC(noheading,inline,depth=2)]]
+
 ## Descripción General
 
 La Resolución General N° 4519/2019 establece para el Sector Azucarero el uso obligatorio de los Remitos Electrónicos como únicos documentos válidos para las remisiones de los productos obtenidos de la industrialización de la caña de azúcar (azúcar, alcohol, bagazo y melaza) efectuadas por los ingenios azucareros.
@@ -24,7 +21,7 @@ Próxima a entrar en vigencia (Septiembre 2019): Las disposiciones establecidas 
 ## Descargas
 
 - Instalador: [PyAfipWs-2.7.2433-32bit+wsaa_2.12c+wsremazucar_1.04a-homo.exe](https://www.sistemasagiles.com.ar/soft/pyafipws/PyAfipWs-2.7.2433-32bit+wsaa_2.12c+wsremazucar_1.04a-homo.exe)
-- Documentación:[Documento Oficial WSRemAzucar v2.0.3](https://www.afip.gob.ar/ws/remitoElecAzucar/Manual-Desarrollador-WSREMAZUCAR-2.0.3.pdf) (AFIP) [Manual de Uso General](wiki:ManualPyAfipWs) ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf))
+- Documentación:[Documento Oficial WSRemAzucar v2.0.3](https://www.afip.gob.ar/ws/remitoElecAzucar/Manual-Desarrollador-WSREMAZUCAR-2.0.3.pdf) (AFIP) [Manual de Uso General](../documentacion_herramientas/manualpyafipws.md) ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf))
 - Archivos de intercambio (muestras): 
 - Generación (texto plano JSON): [attachment:wsremazucar.json]
 - Código Fuente (Python): [wsremazucar.py](https://github.com/reingart/pyafipws/blob/develop/wsremazucar.py)
@@ -61,7 +58,7 @@ Métodos principales específicos para Remito Electrónico Azúcar (REC):
 ### Tipos de Paises
 
 | **Código** | **CUIT pais receptor/destino** | **Nombre** | **Tipo Sujeto** |
-|---|---|---|---|
+
 | 200 | 50000002000 | ARGENTINA | Físico |
 | 200 | 55000002002 | ARGENTINA | Jurídico |
 | 200 | 51600002000 | ARGENTINA | Otro tipo de entidad |

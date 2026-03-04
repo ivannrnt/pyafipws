@@ -524,7 +524,7 @@ Se utiliza una librería de transporte distinta (pycurl) y posiblemente sea reem
 A continuación se presenta un resumen de webservices, herramientas, atributos y métodos soportados:
 
 | ** Característica ** | ** WSFE v0** | ** WSFE v1, v1.1, v2, v2.6** | ** WSBFE v0 y v1** | ** WSFEX v0 y v1** | ** WSMTXCA ** |
-|---|---|---|---|---|---|
+
 | Normativa AFIP | RG2485 | RG2485, RG2926, RG2959, RG2975, RG3067, RG3571, RG3668, RG3749, RG3779 | RG2557 | RG2758, RG3066, RG3689 | RG2904, RG2926, RG3536 |
 | Régimen | Mercado Interno original | Mercado interno (sin informar detalle) | Bono Fiscal - Bienes de Capital | Exportación | Mercado Interno (informar detalle: codificación de artículos) |
 | Clases de Facturas | A, B, *C*, *M* | A, B, C, M | A, B | E | A, B |
@@ -4115,7 +4115,7 @@ A continuación se detalla el formato de cada registro y una breve descripción:
 #### Encabezado PDF
 
 | **Nombre** | **Tipo** | **Long.** | **Pos.** | **DBF** | **Descripción** |
-|---|---|---|---|---|---|
+
 | tipo_reg | Numerico | 1 | 1 | tiporeg N(1,0) | valor: 0 (encabezado) |
 | webservice | Alfanumerico | 6 | 2 | webservice C(6) | "wsfe", "wsbfe", "wsfex", etc. |
 | fecha_cbte | Alfanumerico | 8 | 8 | fechacbte C(8) | ej. "20100308" |
@@ -4176,7 +4176,7 @@ A continuación se detalla el formato de cada registro y una breve descripción:
 Campos extra (por compatibilidad con otras herramientas y formatos):
 
 | **Nombre** | **Tipo** | **Long.** | **Pos.** | **DBF** | **Descripción** |
-|---|---|---|---|---|---|
+
 | descuento | Importe | 15.3 | 5405 | descuento N(15,3) | importe general de descuento (no recomendado, usar descuento por item/detalle) |
 | cbt_desde | Numerico | 8 | 5420 | cbtdesde N(8,0) | número de comprobante inicial del lote (usar cbte_nro) |
 | cbt_hasta | Numerico | 8 | 5428 | cbthasta N(8,0) | número de comprobante final del lote (usar cbte_nro) |
@@ -4191,7 +4191,7 @@ NOTA: estos campos pueden no utilizarse, o tener el mismo valor que los campos o
 #### Detalle Item PDF
 
 | **Nombre** | **Tipo** | **Long.** | **Pos.** | **DBF** | **Descripción** |
-|---|---|---|---|---|---|
+
 | id | Numerico |  |  | id N(15,0) | identificador secuencial de la factura (*clave foránea*) - usar 0, no presente en el TXT - |
 | tipo_reg | Numerico | 1 | 1 | tiporeg N(1,0) | valor 1 |
 | codigo | Alfanumerico | 30 | 2 | codigo C(30) | código del artículo |
@@ -4220,7 +4220,7 @@ NOTA: estos campos pueden no utilizarse, o tener el mismo valor que los campos o
 #### IVA PDF
 
 | **Nombre** | **Tipo** | **Long.** | **Pos.** | **DBF** | **Descripción** |
-|---|---|---|---|---|---|
+
 | id | Numerico |  |  | id N(15,0) | identificador secuencial de la factura (*clave foránea*) - usar 0, no presente en el TXT - |
 | tipo_reg | Numerico | 1 | 1 | tiporeg N(1,0) | valor 4 |
 | iva_id | Numerico | 5 | 2 | ivaid N(5,0) | tipo de alícuota (ver tablas de parámetros de [WSFEv1](../factura_electronica/wsfev1.md#alicuotas-de-iva), por ej. 5 para 21%) |
@@ -4229,7 +4229,7 @@ NOTA: estos campos pueden no utilizarse, o tener el mismo valor que los campos o
 #### Tributo PDF
 
 | **Nombre** | **Tipo** | **Long.** | **Pos.** | **DBF** | **Descripción** |
-|---|---|---|---|---|---|
+
 | id | Numerico |  |  | id N(15,0) | identificador secuencial de la factura (*clave foránea*) - usar 0, no presente en el TXT - |
 | tipo_reg | Numerico | 1 | 1 | tiporeg N(1,0) | valor 5 |
 | tributo_id | Numerico | 5 | 2 | tributoid N(5,0) | tipo de tributo (ver tablas de parámetros de [WSFEv1](../factura_electronica/wsfev1.md#tipos-de-tributo), por ej. 2 para impuestos provinciales) |
@@ -4240,7 +4240,7 @@ NOTA: estos campos pueden no utilizarse, o tener el mismo valor que los campos o
 #### Comprobante Asociado PDF
 
 | **Nombre** | **Tipo** | **Long.** | **Pos.** | **DBF** | **Descripción** |
-|---|---|---|---|---|---|
+
 | id | Numerico |  |  | id N(15,0) | identificador secuencial de la factura (*clave foránea*) - usar 0, no presente en el TXT - |
 | tipo_reg | Numerico | 1 | 1 | tiporeg N(1,0) | valor 3 |
 | cbte_tipo | Numerico | 3 | 2 | cbtetipo N(3,0) | tipo de comprobante asociado (ídem encabezado) |
@@ -4249,7 +4249,7 @@ NOTA: estos campos pueden no utilizarse, o tener el mismo valor que los campos o
 #### Permisos PDF
 
 | **Nombre** | **Tipo** | **Long.** | **Pos.** | **DBF** | **Descripción** |
-|---|---|---|---|---|---|
+
 | id | Numerico |  |  | id N(15,0) | identificador secuencial de la factura (*clave foránea*) - usar 0, no presente en el TXT - |
 | tipo_reg | Numerico | 1 | 1 | tiporeg N(1,0) | valor 2 |
 | id_permiso | Alfanumerico | 16 | 2 | idpermiso C(16) | identificador del permiso de exportación, ej: '99999AAXX999999A' |
@@ -4257,7 +4257,7 @@ NOTA: estos campos pueden no utilizarse, o tener el mismo valor que los campos o
 #### Datos PDF
 
 | **Nombre** | **Tipo** | **Long.** | **Pos.** | **DBF** | **Descripción** |
-|---|---|---|---|---|---|
+
 | tipo_reg | Numerico | 1 | 16 | tiporeg N(1,0) | valor 9 |
 | campo | Alfanumerico | 30 | 17 | campo C(30) | nombre del campo en la plantilla PDF |
 | valor | Alfanumerico | 1000 | 47 | valor M | contenido para el campo en la plantilla PDF |

@@ -1,11 +1,8 @@
 ﻿= Código Trazabilidad de Granos (RG2806/2010, RG3113/11, RG3593/14) =
 
-[[TracNav(noreorder|FacturaElectronica)]]
 
 Interfaz para Servicio Web correspondiente a Boletín Oficial 05/04/2010 - Resolución General 2806/2010 - TRANSPORTE DE GRANOS - Procedimiento. Decreto Nº 34/09. Norma Conjunta RG 2595 (AFIP), Resolución 3253 (ONCCA) y Disposición 6 (SSTA), su modificatoria y complementaria. Sistema de emisión, seguimiento y control de Carta de Porte. Transporte automotor y ferroviario de carga de granos. Resolución General AFIP Nº 3113/2011 V.1. Resolución General AFIP 3593/14: registro sistémico de movimientos y existencias de granos
-## Índice
-[[Image(htdocs:logo-pyafipws.png, align=right)]]
-[[TOC(noheading,inline,depth=2)]]
+
 ## Descripción General
 
 EL WSCTG (Web Service de Código de Trazabilidad Electrónica) es un nuevo Servicio Web de la AFIP para 
@@ -15,7 +12,7 @@ El servicio WSCTG ya esta en etapa Producción. El webservice permite la Solicit
 
 La nueva versión WSCTGv1.1 incluye soporte para WEB SERVICE DE CODIGO DE TRAZABILIDAD DE GRANOS (wsctg)  **Versión 1.1** (modificada el 29-03-2012)
 
-Para mayor información, se puede consultar la documentación orignal en [Micrositio Granos - AFIP](http://www.afip.gob.ar/granos/) o el [manual](wiki:ManualPyAfipWs) de la presente interfaz. 
+Para mayor información, se puede consultar la documentación orignal en [Micrositio Granos - AFIP](http://www.afip.gob.ar/granos/) o el [manual](../documentacion_herramientas/manualpyafipws.md) de la presente interfaz. 
 
 Recordar verificar la correcta obtención del CTG para la Carta de Porte y Vehiculo en [Consulta Validez CTG](http://www.afip.gov.ar/genericos/granos/consultaCTG/WebForm1.aspx)
 
@@ -86,7 +83,7 @@ El 12/08/2020 AFIP publica nuevo ajuste:
 ## Descargas
 
 - Instalador: [instalador-PyAfipWs-2.7.2246-32bit+wsaa_2.12c+wsctgv4_1.15e-homo.exe](https://www.sistemasagiles.com.ar/soft/pyafipws/PyAfipWs-2.7.2246-32bit+wsaa_2.12c+wsctgv4_1.15e-homo.exe) (versión WSCTGv4)
-- Documentación: [Documento Oficial WSCTGv1.1](http://www.afip.gov.ar/cartaDePorte/documentos/Web%20Service%20CTGv1.1.pdf) [WSCTGv2.0](http://www.afip.gov.ar/cartaDePorte/documentos/WebServiceCTGv2.0.pdf)  [WSCTGv3.0](http://www.afip.gov.ar/ws/WSCTG/WebServiceCTG_v3.0.pdf)  [WSCTGv4.0](http://www.afip.gov.ar/ws/WSCTG/WebServiceCTG_v4.0.pdf) (AFIP), [Manual de Uso General](wiki:ManualPyAfipWs) ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf))
+- Documentación: [Documento Oficial WSCTGv1.1](http://www.afip.gov.ar/cartaDePorte/documentos/Web%20Service%20CTGv1.1.pdf) [WSCTGv2.0](http://www.afip.gov.ar/cartaDePorte/documentos/WebServiceCTGv2.0.pdf)  [WSCTGv3.0](http://www.afip.gov.ar/ws/WSCTG/WebServiceCTG_v3.0.pdf)  [WSCTGv4.0](http://www.afip.gov.ar/ws/WSCTG/WebServiceCTG_v4.0.pdf) (AFIP), [Manual de Uso General](../documentacion_herramientas/manualpyafipws.md) ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf))
 - Ejemplo en VB: [wsctg.bas](https://github.com/reingart/pyafipws/blob/master/ejemplos/wsctgv2/wsctg.bas) *(actualizado)* [ejemplo_wstg.zip](http://code.google.com/p/pyafipws/downloads/detail?name=ejemplo_wsctg.zip&can=2&q=)
 - Archivos de intercambio (muestras): [wsctg_dbf.zip](attachment:wsctg_dbf.zip), [entrada_wsctg.txt](attachment:entrada_wsctg.txt), [salida_wsctg.txt](attachment:salida_wsctg.txt), [entrada_wsctg.csv](attachment:entrada_wsctg.csv), [salida_wsctg.csv](attachment:salida_wsctg.csv), [wsctg.json](attachment:salida_wsctg.json)
 - Código Fuente (Python): [wsctg.py](http://code.google.com/p/pyafipws/source/browse/wsctg.py) y [wsctg11.py](http://code.google.com/p/pyafipws/source/browse/wsctg11.py) *(actualizado)*
@@ -207,7 +204,7 @@ hecho.
 
 ### Archivo de Configuración
 
-Para utilizar este webservice, debe tramitarse un certificado. Ver [Instructivo](wiki:ManualPyAfipWs#Certificados)
+Para utilizar este webservice, debe tramitarse un certificado. Ver [Instructivo](../documentacion_herramientas/manualpyafipws.md#Certificados)
 
 Luego, se debe configurar el Certificado, clave privada y URL en el archivo de configuración WSCTG.INI:
 
@@ -461,7 +458,7 @@ factura electrónica y sus interfases (se recomienda suscribirse)
 
 ## Costos y Condiciones
 
-(ver [Condiciones del Soporte Comercial](wiki:PyAfipWs#CostosyCondiciones)).
+(ver [Condiciones del Soporte Comercial](../documentacion_herramientas/pyafipws.md#costos-y-condiciones)).
 
 Para WSCTGv3, como en otros casos, dado que es un nuevo webservice, ofrecemos soporte comercial por la actualización (desde $5.540 + IVA por hasta 2 hs en un mes de cobertura) para los clientes previos que hayan contratado soporte para WSCTGv2 o WSCTGv1.1.
 

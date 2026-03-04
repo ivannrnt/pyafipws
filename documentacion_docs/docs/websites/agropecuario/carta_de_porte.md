@@ -1,12 +1,9 @@
 ﻿= Carta de Porte Electrónica - RG 5017/2021 =
-[[TracNav(noreorder|FacturaElectronica)]]
 
 Interfaz para Servicio Web de AFIP para la emisión de Carta de Porte Electrónica para transporte ferroviario y automotor.
 
 
-## Índice
-[[Image(htdocs:logo-pyafipws.png, align=right)]]
-[[TOC(noheading,inline,depth=2)]]
+
 
 
 ## Descripción General
@@ -60,7 +57,7 @@ Fecha entrada en vigencia: 01/09/2021
 
                  [Documento Oficial, Actualización WSCPE v1.6 del 29/10/21](https://www.afip.gob.ar/ws/documentos/manual_wscpe_1.6.pdf) 
 
-- [Manual de Uso General](wiki:ManualPyAfipWs) ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf))
+- [Manual de Uso General](../documentacion_herramientas/manualpyafipws.md) ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf))
 
 
 - Código Fuente (Python): [wscpe.py](https://github.com/reingart/pyafipws/blob/main/wscpe.py)
@@ -73,7 +70,7 @@ Está disponible el instalador para evaluación (ver [Descargas](wiki:CartadePor
 - Seleccionar carpeta, por ej `C:\WSCPE`
 - Instalación y registración automática
 
-Para más información ver el [Manual de Uso](wiki:ManualPyAfipWs#Instalación)
+Para más información ver el [Manual de Uso](../documentacion_herramientas/manualpyafipws.md#Instalación)
 ## Metodos
 
 - **`Conectar(cache=None, url="", proxy="")`**: en homologación no hace falta pasarle ningún parámetro. En producción, el segundo parámetro es la WSDL.
@@ -418,7 +415,7 @@ Archivos de intercambio de texto (TXT de ancho fijo cobol)
 
 ### encabezado
 | Campo | Posición | Longitud | Tipo | Dec. | Valor |
-|---|---|---|---|---|---|
+
 | tipo_reg | 1 | 1 | Alfanumerico |  | 0 |
 | tipo_cpe | 2 | 2 | Numerico |  |  |
 | sucursal | 4 | 5 | Numerico |  |  |
@@ -435,7 +432,7 @@ Archivos de intercambio de texto (TXT de ancho fijo cobol)
 | fecha_vencimiento | 121 | 10 | Alfanumerico |  |  |
 ### datos_carga
 | Campo | Posición | Longitud | Tipo | Dec. | Valor |
-|---|---|---|---|---|---|
+
 | tipo_reg | 1 | 1 | Alfanumerico |  | C |
 | cod_grano | 2 | 2 | Numerico |  |  |
 | cosecha | 4 | 4 | Numerico |  |  |
@@ -443,7 +440,7 @@ Archivos de intercambio de texto (TXT de ancho fijo cobol)
 | peso_tara | 18 | 10 | Numerico |  |  |
 ### destino
 | Campo | Posición | Longitud | Tipo | Dec. | Valor |
-|---|---|---|---|---|---|
+
 | tipo_reg | 1 | 1 | Alfanumerico |  | D |
 | cuit_destino | 2 | 11 | Numerico |  |  |
 | es_destino_campo | 13 | 5 | Alfanumerico |  |  |
@@ -453,13 +450,13 @@ Archivos de intercambio de texto (TXT de ancho fijo cobol)
 | cuit_destinatario | 31 | 11 | Numerico |  |  |
 ### errores
 | Campo | Posición | Longitud | Tipo | Dec. | Valor |
-|---|---|---|---|---|---|
+
 | tipo_reg | 1 | 1 | Alfanumerico |  | E |
 | codigo | 2 | 4 | Alfanumerico |  |  |
 | descripcion | 6 | 250 | Alfanumerico |  |  |
 ### intervinientes
 | Campo | Posición | Longitud | Tipo | Dec. | Valor |
-|---|---|---|---|---|---|
+
 | tipo_reg | 1 | 1 | Alfanumerico |  | I |
 | cuit_intermediario | 2 | 11 | Numerico |  |  |
 | cuit_remitente_comercial_venta_primaria | 13 | 11 | Numerico |  |  |
@@ -471,7 +468,7 @@ Archivos de intercambio de texto (TXT de ancho fijo cobol)
 | cuit_representante_recibidor | 79 | 11 | Numerico |  |  |
 ### origen
 | Campo | Posición | Longitud | Tipo | Dec. | Valor |
-|---|---|---|---|---|---|
+
 | tipo_reg | 1 | 1 | Alfanumerico |  | O |
 | cod_provincia_operador | 2 | 2 | Numerico |  |  |
 | cod_localidad_operador | 4 | 6 | Numerico |  |  |
@@ -480,7 +477,7 @@ Archivos de intercambio de texto (TXT de ancho fijo cobol)
 | cod_localidad_productor | 17 | 6 | Numerico |  |  |
 ### retiro_productor
 | Campo | Posición | Longitud | Tipo | Dec. | Valor |
-|---|---|---|---|---|---|
+
 | tipo_reg | 1 | 1 | Alfanumerico |  | R |
 | corresponde_retiro_productor | 2 | 5 | Alfanumerico |  |  |
 | es_solicitante_campo | 7 | 5 | Alfanumerico |  |  |
@@ -488,7 +485,7 @@ Archivos de intercambio de texto (TXT de ancho fijo cobol)
 | cuit_remitente_comercial_productor | 24 | 11 | Numerico |  |  |
 ### transporte
 | Campo | Posición | Longitud | Tipo | Dec. | Valor |
-|---|---|---|---|---|---|
+
 | tipo_reg | 1 | 1 | Alfanumerico |  | T |
 | cuit_transportista | 2 | 11 | Numerico |  |  |
 | dominio | 13 | 10 | Alfanumerico |  |  |
@@ -503,7 +500,7 @@ Archivos de intercambio de texto (TXT de ancho fijo cobol)
 
 ### contingencia
 | Campo | Posición | Longitud | Tipo | Dec. | Valor |
-|---|---|---|---|---|---|
+
 | tipo_reg | 1 | 1 | Alfanumerico |  | N |
 | concepto | 2 | 2 | Alfanumerico |  |  |
 | cuit_transportista | 4 | 11 | Numerico |  |  |
@@ -512,7 +509,7 @@ Archivos de intercambio de texto (TXT de ancho fijo cobol)
 | descripcion | 28 | 140 | Alfanumerico |  |  |
 ### eventos
 | Campo | Posición | Longitud | Tipo | Dec. | Valor |
-|---|---|---|---|---|---|
+
 | tipo_reg | 1 | 1 | Alfanumerico |  | V |
 | codigo | 2 | 4 | Alfanumerico |  |  |
 | descripcion | 6 | 250 | Alfanumerico |  |  |

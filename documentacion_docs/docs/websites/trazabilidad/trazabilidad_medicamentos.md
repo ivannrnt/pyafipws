@@ -1,6 +1,5 @@
 ﻿= Trazabilidad de Medicamentos - WS !TrazaMed ANMAT/PAMI SNT =
 
-[[TracNav(noreorder|FacturaElectronica)]]
 
 Interfaz para Servicio Web Código de Trazabilidad de Medicamentos (SOAP) correspondiente a la [Resolución 435/2011](http://www.anmat.gov.ar/webanmat/Legislacion/Medicamentos/Resolucion_435-2011.pdf) del Ministerio de Salud y [Disposición 3683/2011](http://www.anmat.gov.ar/webanmat/Legislacion/Medicamentos/Disposicion_3683-2011.pdfp) de A.N.M.A.T.: Sistema Nacional de Trazabilidad de Medicamentos que deberán implementar las personas físicas o jurídicas que intervengan en la cadena de comercialización, distribución y  dispensación de especialidades medicinales incluidas en el Registro de Especialidades Medicinales. SNT Especificación Técnica V2.
 
@@ -238,7 +237,7 @@ C:\PYANMAT>trazamed.exe --alertadas --consulta "pruebasws" "pruebasws"
 CantPaginas None
 HayError None
 | _id_transaccion | _id_transaccion_global | _f_evento | _f_transaccion | _gtin | _lote | _numero_serial | _d_evento | _gln_origen | _gln_destino | _n_remito | _n_factura | _vencimiento |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|
+
 | 2224635 | 842235 | 14/06/2012 | 15/06/2012 15:14 | 000000000GTIN2 | 9999 | 998 | RECEPCION DE PRODUCTO DESDE UN ESLABON ANTERIOR | 9999999999918 | glnws | 4433 | A000100000001 | 15/12/2012 |
 | 10493358 | 12479556 | 06/03/2013 | 23/04/2013 09:54 | 000000000GTIN4 | 1 | 77777565 | ENVIO DE PRODUCTO EN CARACTER DEVOLUCION | 9991106600007 | glnws | 1 | 1 | 31/12/2015 |
 | 10493357 | 12479556 | 06/03/2013 | 23/04/2013 09:54 | 000000000GTIN4 | 1 | 77777564 | ENVIO DE PRODUCTO EN CARACTER DEVOLUCION | 9991106600007 | glnws | 1 | 1 | 31/12/2015 |

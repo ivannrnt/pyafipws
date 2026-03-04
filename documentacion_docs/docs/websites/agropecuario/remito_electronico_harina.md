@@ -1,12 +1,9 @@
 ﻿= Remito Electrónico Harinero - RG 4519/19 =
-[[TracNav(noreorder|FacturaElectronica)]]
 
 
 Interfaz para Servicio Web de AFIP para la emisión de Remito de harinas de trigo y los subproductos derivados de la molienda de trigo , Resolución General Conjunta 4514/2019
 
-## Índice
-[[Image(htdocs:logo-pyafipws.png, align=right)]]
-[[TOC(noheading,inline,depth=2)]]
+
 ## Descripción General
 
 La Resolución General N° 4519/2019 establece para el Sector Harinero el uso obligatorio de los Remitos Electrónicos como únicos documentos válidos para las remisiones de los productos obtenidos de la industrialización respecto del traslado de productos y/o derivados de la molienda de trigo.
@@ -67,7 +64,7 @@ Al 01/10/2019, AFIP publica una nueva versión del servicio (v2.1)
 ## Descargas
 
 - Instalador: [PyAfipWs-2.7.2189-32bit+wsaa_2.11c+wsremharina_1.05b-homo.exe](https://www.sistemasagiles.com.ar/soft/pyafipws/PyAfipWs-2.7.2189-32bit+wsaa_2.11c+wsremharina_1.05b-homo.exe)
-- Documentación:[Documento Oficial WSRemHarina v2.1](http://www.afip.gob.ar/ws/remitoHTSDMT/Manual-Desarrollador-WSREMHARINA-v-2-1.pdf) (AFIP) [Manual de Uso General](wiki:ManualPyAfipWs) ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf))
+- Documentación:[Documento Oficial WSRemHarina v2.1](http://www.afip.gob.ar/ws/remitoHTSDMT/Manual-Desarrollador-WSREMHARINA-v-2-1.pdf) (AFIP) [Manual de Uso General](../documentacion_herramientas/manualpyafipws.md) ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf))
 - Ejemplos:
     - VB: [remito_electronico_harina.bas](https://drive.google.com/file/d/14IbphOpsCXZVlDxoPJUmgyzL8Uip5C_V/view?usp=sharing)
 - Archivos de intercambio (muestras): 

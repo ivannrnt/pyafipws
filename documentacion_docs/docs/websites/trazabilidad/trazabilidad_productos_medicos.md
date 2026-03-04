@@ -1,6 +1,5 @@
 ﻿= Trazabilidad de Productos Médicos - WS !TrazaProdMed ANMAT/PAMI SNT =
 
-[[TracNav(noreorder|FacturaElectronica)]]
 
 Interfaz para Servicio Web Código de Trazabilidad de Productos Médicos (SOAP) correspondiente a la [Disposición Nº 2303/2014](http://www.anmat.gov.ar/boletin_anmat/BO/Disposicion_2303-2014.pdf) y [Disposición Nº 2175/14](http://www.anmat.gov.ar/webanmat/Legislacion/ProductosMedicos/Disposicion_2175-2013.pdf) del A.N.M.A.T. que deberán implementar las personas físicas o jurídicas que intervengan en la cadena de distribución, dispensación y aplicación de productos médicos registrados ante la Administración Nacional de Medicamentos, en los términos establecidos en el artículo 1º y siguientes de la Resolución del Ministerio de Salud Nº 2175/2013. B.O. 23 de abril de 2014.. SNT Especificación Técnica.
 

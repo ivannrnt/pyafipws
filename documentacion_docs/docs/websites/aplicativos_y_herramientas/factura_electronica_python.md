@@ -1,13 +1,10 @@
 ﻿= Factura Electrónica con Python =
-[[TracNav(noreorder|FacturaElectronica)]]
 
 Interfaz Python de software libre para Emisión y almacenamiento electrónico de comprobantes originales AFIP - Argentina. 
 
 RG 1956/05, 1361/02, 1345/02, 2265/07, 2289/07 y 2557/09
 
-## Índice
-[[Image(htdocs:logo-pyafipws.png, align=right)]]
-[[TOC(noheading,inline,depth=2)]]
+
 
 ## Descripción General
 

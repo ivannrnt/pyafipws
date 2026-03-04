@@ -1,5 +1,4 @@
 ﻿= FE.py: herramienta ad-hoc para Factura Electrónica =
-[[TracNav(noreorder|FacturaElectronica)]]
 
 
 Herramienta para la solicitud de CAE, generación y envío de Factura Electrónica (AFIP -Argentina), configurable y parametrizable, utilizando la interfaz PyAfipWs (software libre, código abierto - open source):
@@ -303,7 +302,7 @@ Ver FacturaElectronicaExportacion para más información
 
 Tablas dinámicas de parámetros para los códigos de comprobante, tipos de conceptos, moneda, paises, alicuotas de iva, tributos, opcionales. 
 
-Ver [wiki:ProyectoWSFEv1] para más información
+Ver [../factura_electronica/wsfev1.md] para más información
 
 ### Tablas accesorias:
 

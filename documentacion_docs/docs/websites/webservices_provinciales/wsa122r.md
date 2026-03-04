@@ -1,13 +1,10 @@
 # Servicios A122R - Ingreso de Comprobantes de Retenciones ARBA (Autenticación al servidor IDP de ARBA vía WSIDP)
-[[TracNav(noreorder|FacturaElectronica)]]
 
 Interfaz para Servicio web para el ingreso de comprobantes de retención A-122R correspondiente a la [Resolución Normativa N° 22/25](https://www.arba.gov.ar/Intranet/Legislacion/Normas/Resoluciones/2025/Res022-25.pdf) ARBA (Agencia de Recaudación Provincia de Buenos Aires).
 
 Esta interfaz requiere un nuevo webservice de autenticación al servidor de ARBA de IDP, WSIDP.
 
-## Índice
-[[Image(htdocs:logo-pyafipws.png, align=right)]]
-[[TOC(noheading,inline,depth=2)]]
+
 
 ## Descargas
 
@@ -334,4 +331,4 @@ factura electrónica y sus interfases (se recomienda suscribirse)
 
 Por soporte comercial consultar por mail a info@sistemasagiles.com.ar, r.castrogiovani@gmail.com (directo) o in.reingart@gmail.com (directo).
 
-Más información en PyAfipWs (ver [Costos y Condiciones del Soporte Comercial](wiki:PyAfipWs#CostosyCondiciones))
+Más información en PyAfipWs (ver [Costos y Condiciones del Soporte Comercial](../documentacion_herramientas/pyafipws.md#costos-y-condiciones))

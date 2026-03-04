@@ -1,19 +1,14 @@
 ﻿# Factura Electrónica MTXCAService (RG2904, RG3536)
-[[TracNav(noreorder|FacturaElectronica)]]
 
-Interfaz para Servicio Web correspondiente a Factura Electrónica de Mercado Interno con detalle -Régimen CAE codificación de productos- ([Matrix](http://www.afip.gob.ar/matrix/): Codificación de las operaciones efectuadas [WSMTXCA Service](http://www.afip.gov.ar/fe/documentos/manualdesarrolladormtx_v0_1.pdf)) para el régimen especial *los Sujetos notificados de su incorporación al Régimen de emisión y almacenamiento electrónico de comprobantes originales* previstos originalmente en la RG 2757/2010, modificada por [RG 2904/2010](http://www.infoleg.gov.ar/infolegInternet/anexos/170000-174999/171723/norma.htm) -(Artículo 4 opción *"a) Factura con el detalle previsto en el Artículo 5º, inciso c)"*) y [RG 3536/2013](http://www.infojus.gov.ar/legislacion/resolucion-nacional-afip-3536-2013.htm): [RG4540/2019](https://www.boletinoficial.gob.ar/detalleAviso/primera/212546/20190801) Condiciones de Emisión de notas de crédito y/o débito.
+Interfaz para Servicio Web correspondiente a Factura Electrónica de Mercado Interno con detalle -Régimen CAE codificación de productos- [Matrix](http://www.afip.gob.ar/matrix/): Codificación de las operaciones efectuadas [WSMTXCA Service](http://www.afip.gov.ar/fe/documentos/manualdesarrolladormtx_v0_1.pdf) para el régimen especial *los Sujetos notificados de su incorporación al Régimen de emisión y almacenamiento electrónico de comprobantes originales* previstos originalmente en la RG 2757/2010, modificada por [RG 2904/2010](http://www.infoleg.gov.ar/infolegInternet/anexos/170000-174999/171723/norma.htm) -Artículo 4 opción *"a Factura con el detalle previsto en el Artículo 5º, inciso *"c y [RG 3536/2013](http://www.infojus.gov.ar/legislacion/resolucion-nacional-afip-3536-2013.htm): [RG4540/2019](https://www.boletinoficial.gob.ar/detalleAviso/primera/212546/20190801) Condiciones de Emisión de notas de crédito y/o débito.
 
-
-## Índice
-[[Image(htdocs:logo-pyafipws.png, align=right)]]
-[[TOC(noheading,inline,depth=3)]]
 ## Descripción General
 
 EL WSMTXCA es un nuevo Servicio Web de la AFIP para el 
 *Régimen especial para la emisión y almacenamiento electrónico de comprobantes originales que respalden las operaciones de compraventa de cosas muebles, locaciones y prestaciones de servicios, locaciones de cosas y de obras y de las señas o anticipos que congelen precios, efectuadas en el mercado interno.*, correspondiente a la 
 Resolución [Resolución General 2904/2010](http://www.afip.gov.ar/fe/#rg) Art.4 Opción A- 
 
-**NOTA**: Ver [WSFEv1](wiki:ProyectoWSFEv1) (Proyecto Factura Electrónica v1, Opción B)
+**NOTA**: Ver [WSFEv1](../factura_electronica/wsfev1.md) (Proyecto Factura Electrónica v1, Opción B)
 
 
 Este nuevo webservice contempla las operaciones de mercado interno (Facturas A y B) y CAE Anticipado.
@@ -34,14 +29,14 @@ AFIP publicó una nueva [Especificación Técnica "Release v0.5"](http://www.afi
 - 88 – Remito de Tabaco Acondicionado 
 - 991 – Remito de Tabaco en Hebras
 
-Los ajustes ya han sido realizados al componente, disponibles por actualización a partir de `WSMTX.Version >= 1.13a` (revisión 1941 o superior del instalador), igualmente recomendamos probarlo y evaluarlo en homologación (Ver [Descargas](wiki:FacturaElectronicaMTXCAService#Descargas)), para ver como evoluciona desde AFIP.
+Los ajustes ya han sido realizados al componente, disponibles por actualización a partir de `WSMTX.Version >= 1.13a` (revisión 1941 o superior del instalador), igualmente recomendamos probarlo y evaluarlo en homologación (Ver [Descargas](../factura_electronica/wsmtxca.md#descargas)), para ver como evoluciona desde AFIP.
 
 Lamentablemente al 16 de Marzo de 2017 todavía no estaría disponible el WSDL de AFIP para homologación.
 
 Recordamos que si no son necesarias las nuevas características, no es obligatorio actualizar y re-instalar el componente. 
 Provisoriamente puede limpiarse la carpeta cache de archivos temporales, para que se regeneren y pueda continuar operando.
 
-Para más información ver [Service Pack 2](wiki:ActualizacionesFacturaElectronica#ServicePack2) y documentación [método WSMTX AgregarCmpAsoc](wiki:ManualPyAfipWs#Métodos5) en el manual
+Para más información ver [Service Pack 2](../documentacion_herramientas/actualizaciones_factura_electronica.md#service-pack-2) y documentación [método WSMTX AgregarCmpAsoc](../documentacion_herramientas/manualpyafipws.md#metodos-5) en el manual
 
 
 ### Importante: Release v0.10 Factura de Crédito Electrónica
@@ -61,7 +56,7 @@ AFIP publicó una nueva  Especificación Técnica "Emisión FCE WSMTXCA v0.10" (
    
 - En comprobanteAsociado se agrega campo <fecha emisión>
 
-- Nuevos datos a informar: CBU, alias o código de anulación. Ver [Datos Adicionales AFIP WSMTXCA](wiki:FacturaElectronicaMTXCAService#DatosAdicionales) 
+- Nuevos datos a informar: CBU, alias o código de anulación. Ver [Datos Adicionales AFIP WSMTXCA](../factura_electronica/wsmtxca.md#datos-adicionales) 
  
   Para esto se agrega método !AgregarOpcional
 
@@ -114,7 +109,7 @@ Nuevas validaciones de AFIP:
 
 Se incorpora método AgregarPeriodoComprobantesAsociados como opcional al método Comprobante Asociado, para cumplimentar con lo establecido por la [RG4540/19 Procedimiento, Facturación. Emisión de notas de crédito y/o débito](https://www.boletinoficial.gob.ar/detalleAviso/primera/212546/20190801)
 
-ver: [Métodos WSMTXCA](wiki:ManualPyAfipWs#Métodos5)
+ver: [Métodos WSMTXCA](../documentacion_herramientas/manualpyafipws.md#metodos-5)
 
 
 ### Importante: RG5259/2022 y RG5264/2022
@@ -125,7 +120,7 @@ Se incorpora método para la consulta de Actividades vigentes (ConsultarActivida
 emisión de CAE, en el régimen de información de CAEA.
 Se modifica el método de ConsultaComprobante para que en caso de tener actividades asociadas al comprobante las retorne.
 
-ver: [Métodos WSMTXCA](wiki:/ManualPyAfipWs#M%C3%A9todos5) 
+ver: [Métodos WSMTXCA](../documentacion_herramientas/manualpyafipws.md#metodos-5)
 
 
 Aplicación: Resultará de aplicación **optativa** a partir del 15 de noviembre de 2022 y **obligatoria** desde el 15 de diciembre de 2022, posterior a esta fecha, los comprobantes serán rechazados si la actividad es Cárnico.
@@ -236,19 +231,19 @@ Ver archivos y últimas actualizaciones para descargas en [GitHub](https://githu
 - Ejemplo en VB: [wsmtx.bas](https://github.com/reingart/pyafipws/blob/master/ejemplos/wsmtxca/wsmtx.bas)
 - Ejemplo en VFP: [wsmtxca.prg](https://github.com/reingart/pyafipws/blob/master/ejemplos/wsmtxca/wsmtxca.prg)
 - Tablas DBF ejemplo: [RECEM_dbf.zip](attachment:recem_dbf.zip) (para dBase, Clipper, !FoxPro, Harbour, etc.) Ver [ManualPyAfipWs#InterfaseporarchivosdetextosímilSIAP-RECE RECEM]
-- [Manual de Uso](wiki:ManualPyAfipWs): Documentación ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf)) [Documentación Oficial PDF AFIP](http://www.afip.gov.ar/fe/documentos/manualdesarrolladormtx_v0_1.pdf)
+- [Manual de Uso](../documentacion_herramientas/manualpyafipws.md): Documentación ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf)) [Documentación Oficial PDF AFIP](http://www.afip.gov.ar/fe/documentos/manualdesarrolladormtx_v0_1.pdf)
 - Código Fuente (Python): ver archivos publicados en [Google Code](http://code.google.com/p/pyafipws/source/checkout) 
 
 ## Instalación
 
-Está disponible el instalador (ver [Descargas](wiki:FacturaElectronicaMTXCAService#Descargas)), simplemente descargar, ejecutar seguir los pasos:
+Está disponible el instalador (ver [Descargas](../factura_electronica/wsmtxca.md#descargas)), simplemente descargar, ejecutar seguir los pasos:
 
 - Aceptar la licencia
 - Seleccionar carpeta, por ej `C:\WSMTXCA`
 - Instalación y registración automática
 
 Adicionalmente, si no se utilizó el instalador unificado con todos los webservices, es necesario instalar el instalador [instalador-WSAA-2.02c-homo.exe](http://pyafipws.googlecode.com/files/instalador-WSAA-2.02c-homo.exe) para WSAA (autenticación).
-Para más información ver el [Manual de Uso](wiki:ManualPyAfipWs#Instalación)
+Para más información ver el [Manual de Uso](../documentacion_herramientas/manualpyafipws.md#Instalación)
 
 ## Cambios respecto a WSFE, WSFEX, WSBFE
 
@@ -278,7 +273,7 @@ La operatoria es bastante similar al método de autorización del WSFE, teniendo
 
 A su vez, el WSMTXCA devuelve mensajes de eventos (mantenimiento programado, advertencias, etc.), los que deben ser capturados e informados al usuario.
 
-Para mayor información, se puede consultar la documentación orignal en [Manual del WSMTXv0 - AFIP](http://www.afip.gov.ar/fe/documentos/manualdesarrolladormtxv0.pdf) o el [manual](wiki:ManualPyAfipWs) manual de la presente interfaz. 
+Para mayor información, se puede consultar la documentación orignal en [Manual del WSMTXv0 - AFIP](http://www.afip.gov.ar/fe/documentos/manualdesarrolladormtxv0.pdf) o el [manual](../documentacion_herramientas/manualpyafipws.md) manual de la presente interfaz. 
 
 ## Ejemplo Intefase COM en VB (5/6)
 
@@ -645,7 +640,7 @@ factura electrónica y sus interfases (se recomienda suscribirse)
 
 Como este servicio web tiene varias modalidades (CAE normal y CAE anticipado), entre otros cambios, se recomienda consultar previamente.
 
-(ver [Condiciones del Soporte Comercial](wiki:PyAfipWs#CostosyCondiciones)).
+(ver [Condiciones del Soporte Comercial](../documentacion_herramientas/pyafipws.md#costos-y-condiciones)).
 
 Ofrecemos soporte técnico comercial (pago), independiente a la AFIP, desarrollos especiales, interfaces web, etc. 
 Obtenga mas información enviando un mail a info@pyafipws.com.ar o (011) 4450-0716 / (011) 15-3048-9211 (asesoramiento sin cargo)

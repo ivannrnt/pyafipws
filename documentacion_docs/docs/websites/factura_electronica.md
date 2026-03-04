@@ -1,20 +1,18 @@
 # Factura Electrónica
-[[TracNav(noreorder|FacturaElectronica)]]
 
 Aquí encontrará novedades y actualizaciones sobre los temas de emisión y almacenamiento electrónico de comprobantes originales:
 Servicios Web de AFIP (wsaa, wsfe, wsbfe web services);
 Factura electrónica en Argentina (segun RG 1956/05, RG 1361/02, RG 1345/02, RG 2265/07, RG 2289/07, RG 2177/06, RG 2485/08, 2557/09, 2758/10, RG2757/10, RG2904/10, RG2975/10, RG2959/10, RG2853/10, RG2926/10, RG3067/11, RG3536/13, RG3571/13, RG3668/14, RG3689/14, etc.);
 Interfase con otros lenguajes y miscelaneas (PyAfipWs, PyRece)
 
-[[Image(htdocs:logo-pyafipws.png)]] 
 ## Menú
 - Documentación Componentes y Herramientas Generales: 
-- [PyAfipWs](wiki:PyAfipWs): Interfase simil [OCX](wiki:OcxFacturaElectronica) con otros lenguajes (VB, VFP, Cobol ...) [Costos y Condiciones](wiki:PyAfipWs#CostosyCondiciones)
-- [Manual](wiki:ManualPyAfipWs): Documentación,  [Información Importante](wiki:ManualPyAfipWs#Importante:leerprimeroantesdecomenzar), [Certificados](wiki:ManualPyAfipWs#Certificados), [Errores Frecuentes](wiki:ManualPyAfipWs#ErroresFrecuentes)
-- [Herramienta "universal"](wiki:ManualPyAfipWs#InterfaseporarchivosdetextosímilSIAP-RECE): archivos de intercambio TXT Cobol, DBF dBase/!FoxPro, JSON PHP/Java
-- [PyFEPDF](wiki:ManualPyAfipWs#PyFEPDF:generadordePDFdefacturaselectrónicas): Generador de [Factura Electrónica](wiki:FacturaElectronica) en formato PDF
+- [PyAfipWs](wiki:PyAfipWs): Interfase simil [OCX](wiki:OcxFacturaElectronica) con otros lenguajes (VB, VFP, Cobol ...) [Costos y Condiciones](../documentacion_herramientas/pyafipws.md#costos-y-condiciones)
+- [Manual](../documentacion_herramientas/manualpyafipws.md): Documentación,  [Información Importante](../documentacion_herramientas/manualpyafipws.md#Importante:leerprimeroantesdecomenzar), [Certificados](../documentacion_herramientas/manualpyafipws.md#Certificados), [Errores Frecuentes](../documentacion_herramientas/manualpyafipws.md#ErroresFrecuentes)
+- [Herramienta "universal"](../documentacion_herramientas/manualpyafipws.md#InterfaseporarchivosdetextosímilSIAP-RECE): archivos de intercambio TXT Cobol, DBF dBase/!FoxPro, JSON PHP/Java
+- [PyFEPDF](../documentacion_herramientas/manualpyafipws.md#PyFEPDF:generadordePDFdefacturaselectrónicas): Generador de [Factura Electrónica](wiki:FacturaElectronica) en formato PDF
 - Factura Electrónica - Servicios Web AFIP:
-- [Mercado Interno](wiki:ProyectoWSFEv1): Factura Electrónica A/B/C/M WSFEv1+ (RG2485/2757/3067/3571/3668/3749/4004)
+- [Mercado Interno](../factura_electronica/wsfev1.md): Factura Electrónica A/B/C/M WSFEv1+ (RG2485/2757/3067/3571/3668/3749/4004)
 - [Matrix (codificación productos)](wiki:FacturaElectronicaMTXCAService): Factura Electrónica A/B con detalle (RG2904/3536)
 - [Bienes de Capital](wiki:BonosFiscales): Bonos Fiscales Electrónicos - Factura Electrónica A (RG2557)
 - [Exportación](wiki:FacturaElectronicaExportacion): Factura Electrónica E Exportadores (RG2758 RG3689)
@@ -96,7 +94,7 @@ interfaz PyAfipWs para poder comunicarse con este nuevo servicio web
 Por favor consultar via email (info@pyafipws.com.ar) para mayor información y
 coordinación de pruebas (homologación).
 
-Ver [Proyecto Factura Electrónica Versión 1](wiki:ProyectoWSFEv1) para estado y ejemplos.
+Ver [Proyecto Factura Electrónica Versión 1](../factura_electronica/wsfev1.md) para estado y ejemplos.
 ### Código de Trazabilidad de Granos
 Disponemos de la implementación para el servicio web código de trazabilidad de granos (transporte de granos) para solicitar y confirmar el CTG, según la Resolución General 2806/2010. Ver CodigoTrazabilidadGranos 
 ### Facturas de Exportación
@@ -153,7 +151,7 @@ En homologación no es necesario activar el servicio de factura electrónica (r�
 Las facturas autorizadas en homologación no tienen validez fiscal (los CAE obtenidos no pueden utilizarse).
 Para cambiar de un servidor a otro se debe modificar la URL, el resto de la operatoria es idéntico.
 ### ¿Como genero un certificado electrónico para firma digital?
-Ver [Manual PyAfipWs, Certificados](wiki:ManualPyAfipWs#Certificados):
+Ver [Manual PyAfipWs, Certificados](../documentacion_herramientas/manualpyafipws.md#Certificados):
  1. para homologación, enviar el pedido por email a webservices en afip.gov.ar
  1. para producción, subir el pedido por clave fiscal y bajarse el certificado
 

@@ -1,6 +1,5 @@
 ﻿= Consulta de Operaciones Cambiarias - Compra de Divisas (RG3210/2011) =
 
-[[TracNav(noreorder|FacturaElectronica)]]
 
 Interfaz para Servicio Web Código de Operaciones Cambiarias (WSCOC) correspondiente a la [Resolución General N° 3210](http://www.afip.gov.ar/genericos/novedades/rg3210.asp), donde AFIP implementó el Programa de Consulta de Operaciones Cambiarias, a fin de controlar en tiempo real la situación fiscal y económico-financiera de quien realiza compras de moneda extranjera (dólar, euro, real, etc.)
 
@@ -13,9 +12,7 @@ Las entidades autorizadas a operar en cambios por el Banco Central de la Repúbl
 Se encuentran alcanzadas las operaciones de venta de moneda extranjera -divisas o billetes- en todas sus modalidades, cualquiera sea su finalidad o destino.
 
 
-## Índice
-[[Image(htdocs:logo-pyafipws.png, align=right)]]
-[[TOC(noheading,inline,depth=2)]]
+
 
 ## Introducción
 

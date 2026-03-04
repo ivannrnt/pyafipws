@@ -1,6 +1,5 @@
 ﻿= Codigo de Operacion de Translado - COT ARBA - Remito Electrónico =
 
-[[TracNav(noreorder|FacturaElectronica)]]
 
 Interfaz para Servicio Web Código de Operaciones de Traslado (COT) "Remito Electronico" correspondiente al  articulo 41 del Código Fiscal que establece la obligación de amparar el traslado o transporte de bienes en el territorio de la provincia de Bs. As (T.O. 2011) incorporado por la Ley 13.405, prorrogada al 19/9/2011 según normativas 34/2011 y 45/2011 [ARBA (Rentas Proincia de Buenos Aires")](http://www.arba.gov.ar/Apartados/Agentes/AgenteCot.asp).  [Resolución General 0038/2014 API (Provincia de Santa Fe)](http://www.santafe.gov.ar/index.php/content/view/full/191149/). [Resolución N° 176 / 2017 AGIP (Ciudad Autónoma de Buenos Aires)](http://www.agip.gob.ar/normativa/resoluciones/2017/agip/resolucion-n-176--agip--2017). 
 
@@ -29,9 +28,7 @@ Especificaciones y formato actualizado a Agosto 2011 (última actualización de 
 **IMPORTANTE: ARBA ANUNCIÓ UNA PRORROGA HASTA EL 5 de AGOSTO de 2019**
 
 
-## Índice
-[[Image(htdocs:logo-pyafipws.png, align=right)]]
-[[TOC(noheading,inline,depth=2)]]
+
 
 ## Descargas
 
@@ -484,7 +481,7 @@ La interfase de usuario es gráfica de escritorio (GUI), funciona en Windows o L
 
 Por soporte comercial consultar al (011) 15-3048-9211 o por mail a info@sistemasagiles.com.ar
 
-Más información en PyAfipWs (ver [Costos y Condiciones del Soporte Comercial](wiki:PyAfipWs#CostosyCondiciones))
+Más información en PyAfipWs (ver [Costos y Condiciones del Soporte Comercial](../documentacion_herramientas/pyafipws.md#costos-y-condiciones))
 
 MarianoReingart
 MarianoReingart

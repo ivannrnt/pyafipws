@@ -1,11 +1,10 @@
 ﻿= PyFactura: Aplicativo para Facturación Electrónica =
-[[TracNav(FacturaElectronica|noreorder|nocollapse)]]
+
 PyFactura es una aplicación libre y gratuita para generar Facturas Electrónicas de manera simple y ágil totalmente ad-hoc (independiente) sin necesidad de poseer o tener que modificar un programa de facturación, base de datos o servidor intermedio. AFIP Resolución General RG2485/08, RG2904/10, RG2757/10, RG3067/11, RG3571/13 (factura electrónica mercado interno y nuevos sujetos obligados al régimen)
 
 Utiliza la interfase PyAfipWs para conectarse a los servicios web de manera online. Esta interfase ha sido basada en los ejemplos de la AFIP y ha sido probada con éxito por varias empresas. También puede ser usada para adaptar programas ya existentes.
 
-Índice:
-[[TOC(noheading,inline,depth=2)]]
+
 ## Descripción General
 
 
@@ -28,12 +27,12 @@ Es similar al aplicativo *Régimen de Emisión de Comprobantes Electrónicos* (R
 
 - Pantalla para carga de datos de clientes y artículos a facturar (utilizando PadronContribuyentesAFIP RG1817 y almacenamiento según RG1361), contemplando las normativas de AFIP aplicables para facturación electrónica y permitiendo almacenar datos de clientes y facturación para no tener que escribirlos por cada factura.
 - Autoriza las facturas en linea (usando webservice), simplificando el proceso (no requiere ventanilla electrónica ni ningún otro servicio de clave fiscal o página web), sin limite de facturas ni textos a incluir
-- Genera las facturas en un formato PDF gráfico adaptable mediante un [Diseñador Visual](wiki:ManualPyAfipWs#DiseñadorVisualPyFEPDF), pudiendo incluir imágenes (logos) e información adicional, incluyendo el código de barras para ser impreso (opcional).
+- Genera las facturas en un formato PDF gráfico adaptable mediante un [Diseñador Visual](../documentacion_herramientas/manualpyafipws.md#DiseñadorVisualPyFEPDF), pudiendo incluir imágenes (logos) e información adicional, incluyendo el código de barras para ser impreso (opcional).
 - Permite múltiples hojas de orientación apaisada (landscape) o retrato (portrait), descripciones de múltiples líneas (con corte y transporte automático)  y control arbitrario de la impresión de decimales.
 - Envía mensajes de correo electrónico conteniendo la factura en PDF y un mensaje configurable (tanto en texto plano como en texto estilizado con HTML)
 - Importación / exportación desde [Múltiples Formatos de Archivos de Intercambio](wiki:PyRece#Caracterísiticas) (planillas CSV -editables por planilla de cálculo-, archivos de texto de longitud fija TXT similar a RECE, archivos XML similares al Facturador Plus, tablas DBF y archivos JSON) *Próximamente*
 
-Actualmente implementa Factura Electrónica según RG 1956/05, RG 1956/05, 1345/02, 2265/07, 2289/07, y 2485/08 ([Factura Electrónica Mercado Interno - WSFEv1](wiki:ProyectoWSFEv1)) pudiendose adaptar a la resolución general 2557/09 ([BonosFiscales - Bienes de Capital - WSBFE](wiki:BonosFiscales)) o 2758/10 ([Factura de Exportación - WSFEX](wiki:FacturaElectronicaExportacion)) y 2904/10 ([Factura electrónica con detalle - WSMTXCA](wiki:FacturaElectronicaMTXCAService))
+Actualmente implementa Factura Electrónica según RG 1956/05, RG 1956/05, 1345/02, 2265/07, 2289/07, y 2485/08 ([Factura Electrónica Mercado Interno - WSFEv1](../factura_electronica/wsfev1.md)) pudiendose adaptar a la resolución general 2557/09 ([BonosFiscales - Bienes de Capital - WSBFE](wiki:BonosFiscales)) o 2758/10 ([Factura de Exportación - WSFEX](wiki:FacturaElectronicaExportacion)) y 2904/10 ([Factura electrónica con detalle - WSMTXCA](wiki:FacturaElectronicaMTXCAService))
 
 Se distribuye sin cargo (gratis, es software libre bajo licencia GPLv3), y se ofrece [Soporte Técnico](wiki:PyFactura#SoporteTécnico) comunitario gratuito o comercial pago opcional (ver [Costos y Condiciones](wiki:PyFactura#CostosyCondiciones)). 
 
@@ -58,16 +57,16 @@ Adicionalmente, como no se informa el detalle de los artículos, solo se muestra
 - Enviar por email con el PDF adjuntado, pudiendo agregar un motivo y cuerpo (texto) configurable.
 - Base de datos interna de facturación y clientes (sqlite incorporada, conectable a otros motores como PostgreSQL, MySQL u ODBC -MSSQL Server y MS Access-)
 
-Los datos podrían importarse por archivos de varios formatos (Ver [CSV compatible con Planilla de Calculo, XML similar al [wiki:PyRece#FormatoXMLsimilFacturador-Plus Facturador Plus](wiki:PyRece]):), TXT similar al [SIAP RECE](wiki:ManualPyAfipWs#Archivodetextodeinterfambio), DBF compatible con tablas [Tablas dBase/FoxPro](wiki:ManualPyAfipWs#TablasenDBFparaPyFEPDF), JSON (javascript object notation) para lenguajes modernos con páginas web.
+Los datos podrían importarse por archivos de varios formatos (Ver [CSV compatible con Planilla de Calculo, XML similar al [wiki:PyRece#FormatoXMLsimilFacturador-Plus Facturador Plus](wiki:PyRece]):), TXT similar al [SIAP RECE](../documentacion_herramientas/manualpyafipws.md#Archivodetextodeinterfambio), DBF compatible con tablas [Tablas dBase/FoxPro](../documentacion_herramientas/manualpyafipws.md#TablasenDBFparaPyFEPDF), JSON (javascript object notation) para lenguajes modernos con páginas web.
 
 Consultar por adaptación lectura de facturas a autorizar desde bases de datos u otro método (no incluido en el programa básico)
 
 ## Configuración
 
-**Importante**: Para utilizar este programa, debe habilitar por clave fiscal (AFIP) el Régimen RECE y [generar los certificados](wiki:ManualPyAfipWs#Certificados). 
+**Importante**: Para utilizar este programa, debe habilitar por clave fiscal (AFIP) el Régimen RECE y [generar los certificados](../documentacion_herramientas/manualpyafipws.md#Certificados). 
 Para homologación (evaluación), si no dispone de certificados podemos enviarles unos de prueba ya generados (solicitarlo por mail a pyfactura@sistemasagiles.com.ar)
 
-El archivo de configuración `rece.ini` permite establecer los parámetros para conectarse al Web Service, generar PDF y envio de email (ver [Manual de Configuración](wiki:ManualPyAfipWs#Configuración)):
+El archivo de configuración `rece.ini` permite establecer los parámetros para conectarse al Web Service, generar PDF y envio de email (ver [Manual de Configuración](../documentacion_herramientas/manualpyafipws.md#Configuración)):
 ```
 [WSAA]
 CERT=homo.crt
@@ -146,7 +145,7 @@ Ver [Muestra Factura (PDF)](attachment:factura.pdf) y [Muestra Recibo (PDF)](att
 
 La herramienta incluye el progama `designer.exe` para modificar visualmente los diseños de factura.
 
-A modo de ejemplo se muestra un pantallazo del [Diseñador Visual](wiki:ManualPyAfipWs#DiseñadorVisualPyFEPDF), con el elemento logo seleccionado, editando sus propiedades.
+A modo de ejemplo se muestra un pantallazo del [Diseñador Visual](../documentacion_herramientas/manualpyafipws.md#DiseñadorVisualPyFEPDF), con el elemento logo seleccionado, editando sus propiedades.
 
 ### Mensaje de Correo Electrónico
 
@@ -188,7 +187,7 @@ Opcionalmente ofrecemos soporte técnico comercial via email (asesoramiento, aju
 
 Si necesita capacitación, consultoría o soporte técnico no dude en consultarnos a [mailto:pyfactura@sistemasagiles.com.ar] o telefónicamente al 15-3048-9211
 
-Para más información Ver [Costos y Condiciones Generales](wiki:PyAfipWs#CostosyCondiciones)
+Para más información Ver [Costos y Condiciones Generales](../documentacion_herramientas/pyafipws.md#costos-y-condiciones)
 ### Licencia
 
 El código fuente puede ser descargado y utilizado sin cargo respentando la licencia [GPLv3](http://www.spanish-translator-services.com/espanol/t/gnu/gpl-ar.html) de software libre: sin garantias, sin soporte tecnico dedicado y/o obligatorio, informar copyright, no incorporarlo ni distribuirlo junto con software propietario, mantener derivados como software libre y contribuir modificaciones, etc. 

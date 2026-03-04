@@ -1,6 +1,5 @@
 ﻿= Trazabilidad de Precursores Químicos - !TrazaMed SDRN RENPRE SEDRONAR SNT =
 
-[[TracNav(noreorder|FacturaElectronica)]]
 
 Interfaz para Servicio Web Trazabilidad de Precursores Químicos !TrazaMed.SDRN (SOAP) para informar movimientos de [Sustancias Químicas Controladas](http://renpre.servicios.pami.org.ar/portal_traza_renpre/pdfs/precursores_quimicos.pdf) –[Decreto 1095/96](http://www.renpre.gov.ar/pdfs/decretos/decreto_nacional_1168_96_comit_trabajo_conjunto.pdf), modificado por [Decreto 1161/00](http://www.renpre.gov.ar/pdfs/decretos/decreto_nacional_1095_96_actualizado_por_1161_00.pdf): Sistema Nacional de Trazabilidad modulo de Precursores Químicos (RENPRE SEDRONAR PAMI INSSJP) que deberán implementar el operador de precursores químicos obtención de número de CUFE (Código de Ubicación Física de Establecimiento). Entrenamiento y Alineación de Datos. [Resolución 900/12 RENPRE](http://www.renpre.gov.ar/pdfs/reso_y_dispo/2012_resolucion_900_12.pdf)
 

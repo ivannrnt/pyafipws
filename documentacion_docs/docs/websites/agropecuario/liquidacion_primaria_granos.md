@@ -1,6 +1,5 @@
 ﻿= Liquidación y Certificación de Granos (RG3419/2012, RG3690/2014, RG3691/2014) =
 
-[[TracNav(noreorder|FacturaElectronica)]]
 
 Interfaz para Servicio Web correspondiente a la Resolución General 3419/2012 AFIP: régimen especial obligatorio para la emisión electrónica de la “Liquidación Primaria de Granos” para respaldar las operaciones de compraventa y de consignación de granos no destinados a la siembra y legumbres secas que realicen, a productores agrícolas, los adquirentes, adquirentes-exportadores, acopiadores, cooperativas, consignatarios, acopiadores-consignatarios, demás intermediarios y los mercados de cereales a término. 
 
@@ -9,9 +8,7 @@ Aplicativo Formularios C 1116 B o C - Registración de las operaciones de compra
 RG 3690/2014 AFIP: Operaciones De Compraventa De Granos No Destinados A La Siembra. "Liquidación Secundaria de Granos"
 
 RG 3691/2014 AFIP: "Certificación Primaria de Depósito, Retiro y/o Transferencia de Granos" no destinados a la siembra.
-## Índice
-[[Image(htdocs:logo-pyafipws.png, align=right)]]
-[[TOC(noheading,inline,depth=2)]]
+
 ## Descripción General
 
 EL WSLPG (Web Service de Liquidación Primaria de Granos) es un nuevo Servicio Web de la AFIP para operaciones de compra/venta de granos, correspondiente a la [Resolución General 3419/12](http://biblioteca.afip.gob.ar/gateway.dll/Normas/ResolucionesGenerales/reag01003419_2012_12_20.xml): *Operaciones de compraventa de granos no destinados a la siembra. Régimen de emisión de comprobantes. Norma conjunta Resolución General Nº 1.593 (AFIP) y Resolución Nº 456 (ex SAGPyA), Resoluciones Generales Nº 1.415, Nº 2.205 y Nº 2.485, sus respectivas modificatorias y complementarias. Norma complementaria y modificatoria.*
@@ -305,7 +302,7 @@ Se pueden utilizar las siguientes CUIT genéricas para los diferentes roles (exc
 #### Numero de Contrato
 
 | nro_contrato | Vendedor | Comprador | Corredor | Grano | Peso |
-|---|---|---|---|---|---|
+
 | 26 | 23000000019 | 20400000000 | 20267565393 | 31 | 1000000 |
 | 27 | 23000000019 | 20400000000 | 20267565393 | 31 | 1000000 |
 | 28 | 23000000019 | 20400000000 | 20267565393 | 31 | 1000000 |
@@ -319,7 +316,7 @@ Se pueden utilizar las siguientes CUIT genéricas para los diferentes roles (exc
 - Documentación: 
 - Especificación técnica oficial AFIP: [WSLPG original](http://www.afip.gov.ar/ws/WSLiquiGranos/ManualDelDesarrolladorWSLPGV1.pdf), [WSLPGv1.1](http://www.afip.gov.ar/ws/WSLiquiGranos/ManualDelDesarrolladorWSLPGV11.pdf),  [WSLPGv1.2](http://www.afip.gov.ar/ws/WSLiquiGranos/ManualDelDesarrolladoWSLPGV12.pdf), [WSLPGv1.3](http://www.afip.gov.ar/ws/WSLiquiGranos/ManualDelDesarrolladoWSLPGV13.pdf), [WSLPGv1.4](http://www.afip.gov.ar/ws/WSLiquiGranos/ManualDelDesarrolladorWSLPGV14.pdf), [WSLPGv1.5](http://www.afip.gov.ar/ws/WSLiquiGranos/ManualDelDesarrolladorWSLPGV15.pdf), [WSLPGv1.6](http://www.afip.gov.ar/ws/WSLiquiGranos/ManualDelDesarrolladorWSLPGV16.pdf), [WSLPGv1.7](http://www.afip.gov.ar/ws/WSLiquiGranos/ManualDelDesarrolladorWSLPGV17.pdf), [WSLPGv1.8](http://www.afip.gov.ar/ws/WSLiquiGranos/ManualDelDesarrolladorWSLPGV18.pdf), [WSLPGv1.9](http://www.afip.gov.ar/ws/WSLiquiGranos/ManualDelDesarrolladorWSLPGV19.pdf), [WSLPGv1.10](http://www.afip.gov.ar/ws/WSLiquiGranos/ManualDelDesarrolladorWSLPGV110.pdf), [WSLPGv1.11](http://www.afip.gov.ar/ws/WSLiquiGranos/ManualDelDesarrolladorWSLPGV111.pdf), [WSLPGv1.15](http://www.afip.gob.ar/ws/WSLiquiGranos/manual_wslpg_1.15.pdf), [WSLPGv1.16](http://www.afip.gob.ar/ws/WSLiquiGranos/manual_wslpg_1.16.pdf), [WSLPGv1.17](http://www.afip.gob.ar/ws/WSLiquiGranos/manual_wslpg_1.17.pdf), [WSLPGv1.18](http://www.afip.gob.ar/ws/WSLiquiGranos/manual_wslpg_1.18.pdf), [WSLPGv1.19](http://www.afip.gob.ar/ws/WSLiquiGranos/manual_wslpg_1.19.pdf), [WSLPGv1.22](https://www.afip.gob.ar/ws/WSLiquiGranos/manual_wslpg_1.22.pdf), [WSLPGv1.23](https://www.afip.gob.ar/ws/WSLiquiGranos/manual_wslpg_1.23.pdf),
 
-- [Manual de Uso](wiki:ManualPyAfipWs): Documentación genérica de la interfaz ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf))
+- [Manual de Uso](../documentacion_herramientas/manualpyafipws.md): Documentación genérica de la interfaz ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf))
 - Ejemplos: *consultar por otros lenguajes*
 - [wslpg.bas](https://github.com/reingart/pyafipws/blob/master/ejemplos/wslpg/wslpg.bas) Liquidación Primaria de Granos (Visual Basic)
 - [wslpg_ajuste_unif.bas](https://github.com/reingart/pyafipws/blob/master/ejemplos/wslpg/wslpg_ajuste_unif.bas) Ajuste Unificado (Visual Basic)
@@ -705,7 +702,7 @@ hecho.
 ```
 ### Archivo de Configuración
 
-Para utilizar este webservice, debe tramitarse un certificado. Ver [Instructivo](wiki:ManualPyAfipWs#Certificados)
+Para utilizar este webservice, debe tramitarse un certificado. Ver [Instructivo](../documentacion_herramientas/manualpyafipws.md#Certificados)
 
 Luego, se debe configurar el Certificado, clave privada y URL en el archivo de configuración WSLPG.INI:
 
@@ -1906,7 +1903,7 @@ También se pueden agregar campos adicionales fijos para leyendas y aclaraciones
 
 Los campos adicionales se especifican por el nuevo tipo de registro 9 [DATO](wiki:LiquidacionPrimariaGranos#Dato) en el archivo de texto de intercambio, en la sección [PDF] de la configuración o llamando al método !AgregarDatoPDF
 
-El diseño esta guardado en una plantilla csv (`liquidacion_form_c1116b_wslpg.csv`), esta se puede editar con un editor de texto, hoja de cálculo o usando nuestro [Diseñador Visual](wiki:ManualPyAfipWs#DiseñadorVisualPyFEPDF)
+El diseño esta guardado en una plantilla csv (`liquidacion_form_c1116b_wslpg.csv`), esta se puede editar con un editor de texto, hoja de cálculo o usando nuestro [Diseñador Visual](../documentacion_herramientas/manualpyafipws.md#DiseñadorVisualPyFEPDF)
 
 Ver [ métodos](wiki:LiquidacionPrimariaGranos#Metodos) y [ejemplos](wiki:LiquidacionPrimariaGranos#Descargas) o [opción `--pdf`](wiki:LiquidacionPrimariaGranos#Parámetrosporlíneadecomando) para generar el archivo, mostrarlo e imprimirlo.
 
@@ -3533,7 +3530,7 @@ Validaciones y errores **WSLPGv1.20** (se incorporan validaciones por SISA)
 
 ## Costos y Condiciones
 
-(ver [Condiciones del Soporte Comercial](wiki:PyAfipWs#CostosyCondiciones))
+(ver [Condiciones del Soporte Comercial](../documentacion_herramientas/pyafipws.md#costos-y-condiciones))
 
 
 

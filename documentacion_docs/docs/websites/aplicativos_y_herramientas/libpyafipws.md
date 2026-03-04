@@ -1,5 +1,5 @@
 ﻿= [LibPyAfipWs](http://www.pyafipws.com.ar/): Biblioteca DLL/.so para acceder a Servicios Web de la AFIP/ANMAT/etc =
-[[TracNav(FacturaElectronica|noreorder|nocollapse)]]
+
 
 Biblioteca compartida multiplataforma para Emisión y almacenamiento electrónico de comprobantes originales AFIP - Argentina. 
 AFIP RG 1956/05, 1361/02, 1345/02, 2265/07, 2289/07, 2485/08, 2557/09, 2668/09, 2758/10, 2853/10, 2904/10, 2959/10, 2974/10, 3066/11, 3067/11, 3210/11, 3419/12 (servicios web de Factura Electrónica, Trazabilidad y Liquidación de Granos, Consultas de Operaciones cambiarías y otros)

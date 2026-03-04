@@ -1,5 +1,4 @@
 ﻿= Factura Libre: aplicación web para Factura Electrónica =
-[[TracNav(noreorder|FacturaElectronica)]]
 
 
 Aplicación web para la solicitud de CAE, generación y envío de Factura Electrónica (AFIP -Argentina), configurable y parametrizable, utilizando la interfaz PyAfipWs (software libre, código abierto - open source).
