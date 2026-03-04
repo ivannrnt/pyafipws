@@ -1,7 +1,4 @@
-﻿= PyRece: Aplicativo Autorizador y Generador de Facturas Electrónicas =
-
-
-
+﻿# PyRece: Aplicativo Autorizador y Generador de Facturas Electrónicas
 
 ## Descripción General
 
@@ -11,7 +8,7 @@ Utiliza la interfase PyAfipWs para conectarse a los servicios web de manera onli
 
 Es similar al aplicativo *Régimen de Emisión de Comprobantes Electrónicos* (R.E.C.E.) del SIAp AFIP, con las siguientes ventajas:
 
-- Permite leer y grabar las facturas desde [Múltiples Formatos de Archivos de Intercambio](wiki:PyRece#Caracterísiticas) (planillas CSV o XLSX -editables por planilla de cálculo / MS Excel-, archivos de texto de longitud fija TXT similar a RECE, archivos XML similares al Facturador Plus, tablas DBF y archivos JSON)
+- Permite leer y grabar las facturas desde [Múltiples Formatos de Archivos de Intercambio](#caracterisiticas) (planillas CSV o XLSX -editables por planilla de cálculo / MS Excel-, archivos de texto de longitud fija TXT similar a RECE, archivos XML similares al Facturador Plus, tablas DBF y archivos JSON)
 - Autoriza las facturas en linea (usando webservice), simplificando el proceso (no requiere ventanilla electrónica ni ningún otro servicio de clave fiscal o página web)
 - Genera las facturas en un formato PDF gráfico adaptable mediante un [Diseñador Visual](../documentacion_herramientas/manualpyafipws.md#DiseñadorVisualPyFEPDF), pudiendo incluir imágenes (logos) e información adicional, incluyendo el código de barras para ser impreso (opcional).
 - Permite múltiples hojas de orientación apaisada (landscape) o retrato (portrait), descripciones de múltiples líneas (con corte y transporte automático)  y control arbitrario de la impresión de decimales.
@@ -19,9 +16,9 @@ Es similar al aplicativo *Régimen de Emisión de Comprobantes Electrónicos* (R
 
 [[Image(PyFactura:aplicativo_factura_electronica_06a_w8.png,align=right,width=223,height=218,link=PyFactura)]]
 
-Actualmente implementa Factura Electrónica según RG 1956/05, RG 1956/05, 1345/02, 2265/07, 2289/07, y 2485/08 ([Factura Electrónica Mercado Interno - WSFEv1](../factura_electronica/wsfev1.md)) pudiendose adaptar a la resolución general 2557/09 ([BonosFiscales - Bienes de Capital - WSBFE](wiki:BonosFiscales)) o 2758/10 ([Factura de Exportación - WSFEX](wiki:FacturaElectronicaExportacion)) y 2904/10 ([Factura electrónica con detalle - WSMTXCA](../factura_electronica/wsmtxca.md))
+Actualmente implementa Factura Electrónica según RG 1956/05, RG 1956/05, 1345/02, 2265/07, 2289/07, y 2485/08 ([Factura Electrónica Mercado Interno - WSFEv1](../factura_electronica/wsfev1.md)) pudiendose adaptar a la resolución general 2557/09 ([BonosFiscales - Bienes de Capital - WSBFE](../factura_electronica/wsbfe.md)) o 2758/10 ([Factura de Exportación - WSFEX](../factura_electronica/wsfex.md)) y 2904/10 ([Factura electrónica con detalle - WSMTXCA](../factura_electronica/wsmtxca.md))
 
-Se distribuye sin cargo (gratis, es software libre bajo licencia GPLv3), y se ofrece [Soporte Técnico](wiki:PyRece#SoporteTécnico) comunitario gratuito o comercial pago opcional (ver [Costos y Condiciones](wiki:PyRece#CostosyCondiciones)). 
+Se distribuye sin cargo (gratis, es software libre bajo licencia GPLv3), y se ofrece [Soporte Técnico](#soporte-tecnico) comunitario gratuito o comercial pago opcional (ver [Costos y Condiciones](#costos-y-condiciones)). 
 
 Consultar por desarrollos especiales, interfaces web, etc.
 
@@ -39,7 +36,7 @@ Los datos se ingresan por archivos de varios formatos:
 
 - XLSX compatible con MS Excel / !LibreOffice Calc. Ver [Planilla de Ejemplo (XLSX)](https://github.com/reingart/pyafipws/blob/master/datos/facturas.xlsx)
 - CSV compatible con Planilla de Calculo. Ver [Planilla de Ejemplo (CSV)](attachment:facturas.csv)
-- XML similar al [Facturador Plus](wiki:PyRece#FormatoXMLsimilFacturador-Plus) [Archivo de Ejemplo (XML)](attachment:facturas.xml)
+- XML similar al [Facturador Plus](#formato-xml-simil-facturador-plus) [Archivo de Ejemplo (XML)](attachment:facturas.xml)
 - TXT similar al [SIAP RECE](../documentacion_herramientas/manualpyafipws.md#Archivodetextodeinterfambio) [Archivo de Ejemplo (TXT)](attachment:facturas.txt)
 - DBF compatible con tablas [Tablas dBase/FoxPro](../documentacion_herramientas/manualpyafipws.md#TablasenDBFparaPyFEPDF) [Carpeta Comprimida (DBF)](attachment:tablas-dbf.zip)
 - JSON (javascript object notation) para lenguajes modernos e hiperactividad con páginas web.
@@ -313,7 +310,7 @@ Internamente el aplicativo utiliza un formato simple, compatible con los lenguaj
 
 ### Configuración
 
-Para utilizar este programa, debe habilitar por clave fiscal el Régimen RECE y [generar los certificados](../documentacion_herramientas/manualpyafipws.md#Certificados).
+Para utilizar este programa, debe habilitar por clave fiscal el Régimen RECE y [generar los certificados](../documentacion_herramientas/manualpyafipws.md#certificados).
 
 El archivo de configuración permite establecer los parámetros para conectarse al Web Service, generar PDF y envio de email:
 ```
@@ -380,7 +377,7 @@ Ver [Muestra (PDF)](attachment:factura-0004-00000001.pdf) y [Formato de ejemplo 
 La herramienta incluye el progama `designer.exe` para modificar visualmente los diseños de factura.
 
 A modo de ejemplo se muestra un pantallazo del [Diseñador Visual](../documentacion_herramientas/manualpyafipws.md#DiseñadorVisualPyFEPDF), con el elemento logo seleccionado, editando sus propiedades:
-[[Image(ManualPyAfipWs:designer.png)]]
+![image](../../media/designer.png)
 ### Mensaje de Correo Electrónico
 
 El mensaje de correo es configurable su motivo, cuerpo y remitente. El destinatario es tomado del la planilla de datos.
@@ -404,7 +401,7 @@ El código fuente puede ser descargado y utilizado sin cargo respentando la lice
 
 ## Soporte Técnico
 
-Ofrecemos Soporte Comercial Opcional Pago (ver [abajo](wiki:PyRece#CostosyCondiciones)), incluyendo garantía limitada (corrección de eventuales errores o ajustes) y respuestas rápidas prioritarias.
+Ofrecemos Soporte Comercial Opcional Pago (ver [abajo](#costos-y-condiciones)), incluyendo garantía limitada (corrección de eventuales errores o ajustes) y respuestas rápidas prioritarias.
 
 Por consultas gratuitas sobre el lenguaje python y demás, dirigirse a [PyAr](http://www.python.org.ar/). 
 
@@ -412,7 +409,7 @@ Para soporte de la comunidad, revisar la [lista de temas](http://code.google.com
 
 ## Costos y Condiciones
 
-- Al ser software libre ([GPLv3](wiki:PyRece#Licencia)), puede usar este programa sin costo de licencias.
+- Al ser software libre ([GPLv3](#licencia)), puede usar este programa sin costo de licencias.
 - "Garantía Limitada" y Soporte Técnico: opcional soporte técnico via email a partir de fecha de factura; el costo varía según el webservice a utilizar:
 - Consultar planes vigentes según webservice y tipo de archivo a implementar.
    
@@ -456,7 +453,7 @@ Deberá revisar la configuración del archivo `rece.ini` (ver arriba) y generar 
 
 El programa es software libre y se entrega como está, sin garantías explícitas ni implicitas de ningún tipo.
 Uselo bajo su propia responsabilidad, conociendo la normativa y reglamentaciones existentes.
-Si necesita capacitación, consultoría o soporte técnico no dude en consultarnos a [mailto:pyrece@sistemasagiles.com.ar] o telefónicamente al 15-3048-9211
+Si necesita capacitación, consultoría o soporte técnico no dude en consultarnos a info@sistemasagiles.com.ar, in.reingart@gmail.com (personal) o r.castrogiovani@gmail.com (personal) o telefónicamente al 15-3048-9211
 
 ## Enlaces
 Más información en:
@@ -465,7 +462,4 @@ Más información en:
 - PyAfipWs: Interfase para programas de terceros 
 - SiaPy: Proyecto SIAP Libre
 
-MarianoReingart
-
 **[Colaboraciones](https://link.mercadopago.com.ar/colaboracionespyafip)**
-MarianoReingart

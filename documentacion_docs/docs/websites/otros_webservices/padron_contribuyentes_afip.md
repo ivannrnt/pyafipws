@@ -69,7 +69,7 @@ Resultado (compatible con el formato de la API pública discontinuada de AFIP):
 {"success": true, "data": {"fechaInscripcion": "", "tipoClave": "CUIT", "numeroDocumento": "51", "estadoClave": "ACTIVO", "impuestos": [366], "idDependencia": 0, "tipoPersona": "FISICA", "tipoDocumento": "LE", "actividades": [410011], "domicilioFiscal": {"localidad": "", "codPostal": "1425", "idProvincia": 0, "direccion": "ARAOZ 1901"}, "idPersona": "20000000516", "mesCierre": 0, "nombre": "ERNESTO DANIEL, MARCELO NICOLAS"}}
 ```
 
-Consultar con [mailto:padron@sistemasagiles.com.ar] para mayor información.
+Consultar con info@sistemasagiles.com.ar, in.reingart@gmail.com (personal) o r.castrogiovani@gmail.com (personal) para mayor información.
 ## Descargas e Instalación
 
 - Instaladores:

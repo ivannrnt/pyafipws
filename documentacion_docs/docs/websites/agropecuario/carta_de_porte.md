@@ -66,7 +66,7 @@ Está disponible el instalador para evaluación (ver [Descargas](#descargas)), s
 - Seleccionar carpeta, por ej `C:\WSCPE`
 - Instalación y registración automática
 
-Para más información ver el [Manual de Uso](../documentacion_herramientas/manualpyafipws.md#Instalacion)
+Para más información ver el [Manual de Uso](../documentacion_herramientas/manualpyafipws.md#instalacion)
 ## Metodos
 
 - **`Conectar(cache=None, url="", proxy="")`**: en homologación no hace falta pasarle ningún parámetro. En producción, el segundo parámetro es la WSDL.
@@ -330,7 +330,7 @@ Configurar cuit, certificado y clave privada:
 # DEBE CAMBIAR Certificado (CERT) y Clave Privada (PRIVATEKEY)
 # Para producción debe descomentar las URL (sacar ##)
 # Más información:
-# http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs#Configuración
+# http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs#configuracion
 [WSAA]
 CERT=reingart.crt
 PRIVATEKEY=reingart.key

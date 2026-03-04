@@ -1,4 +1,4 @@
-﻿= PyFactura: Aplicativo para Facturación Electrónica =
+﻿# PyFactura: Aplicativo para Facturación Electrónica
 
 PyFactura es una aplicación libre y gratuita para generar Facturas Electrónicas de manera simple y ágil totalmente ad-hoc (independiente) sin necesidad de poseer o tener que modificar un programa de facturación, base de datos o servidor intermedio. AFIP Resolución General RG2485/08, RG2904/10, RG2757/10, RG3067/11, RG3571/13 (factura electrónica mercado interno y nuevos sujetos obligados al régimen)
 
@@ -12,7 +12,7 @@ Utiliza la interfase PyAfipWs para conectarse a los servicios web de manera onli
 
 La interfase de usuario es gráfica de escritorio (GUI), funciona en Windows o Linux:
 
-[[Image(aplicativo_factura_electronica_06a_w8.png)]]
+![image](../../media/aplicativo_factura_electronica_06a_w8.png)
 
 - Cargar: lee los datos de la factura a procesar
 - Guardar: almacena los datos de la factura a procesar
@@ -32,7 +32,7 @@ Es similar al aplicativo *Régimen de Emisión de Comprobantes Electrónicos* (R
 - Envía mensajes de correo electrónico conteniendo la factura en PDF y un mensaje configurable (tanto en texto plano como en texto estilizado con HTML)
 - Importación / exportación desde [Múltiples Formatos de Archivos de Intercambio](wiki:PyRece#Caracterísiticas) (planillas CSV -editables por planilla de cálculo-, archivos de texto de longitud fija TXT similar a RECE, archivos XML similares al Facturador Plus, tablas DBF y archivos JSON) *Próximamente*
 
-Actualmente implementa Factura Electrónica según RG 1956/05, RG 1956/05, 1345/02, 2265/07, 2289/07, y 2485/08 ([Factura Electrónica Mercado Interno - WSFEv1](../factura_electronica/wsfev1.md)) pudiendose adaptar a la resolución general 2557/09 ([BonosFiscales - Bienes de Capital - WSBFE](wiki:BonosFiscales)) o 2758/10 ([Factura de Exportación - WSFEX](wiki:FacturaElectronicaExportacion)) y 2904/10 ([Factura electrónica con detalle - WSMTXCA](../factura_electronica/wsmtxca.md))
+Actualmente implementa Factura Electrónica según RG 1956/05, RG 1956/05, 1345/02, 2265/07, 2289/07, y 2485/08 ([Factura Electrónica Mercado Interno - WSFEv1](../factura_electronica/wsfev1.md)) pudiendose adaptar a la resolución general 2557/09 ([BonosFiscales - Bienes de Capital - WSBFE](../factura_electronica/wsbfe.md)) o 2758/10 ([Factura de Exportación - WSFEX](../factura_electronica/wsfex.md)) y 2904/10 ([Factura electrónica con detalle - WSMTXCA](../factura_electronica/wsmtxca.md))
 
 Se distribuye sin cargo (gratis, es software libre bajo licencia GPLv3), y se ofrece [Soporte Técnico](wiki:PyFactura#SoporteTécnico) comunitario gratuito o comercial pago opcional (ver [Costos y Condiciones](wiki:PyFactura#CostosyCondiciones)). 
 
@@ -42,7 +42,7 @@ Consultar por desarrollos especiales, interfaces web, etc.
 
 Desde la revisión 0.9g se puede utilizar la pantalla de consultas y recuperación de comprobantes registrados en AFIP (Menú Consulta):
 
-[[Image(pyfactura_recupero.png)]]
+![image](../../media/pyfactura_recupero.png)
 
 Para consultar comprobantes almacenados en la base de datos, se deben completar los campos para establecer el criterio del filtro.
 
@@ -57,16 +57,16 @@ Adicionalmente, como no se informa el detalle de los artículos, solo se muestra
 - Enviar por email con el PDF adjuntado, pudiendo agregar un motivo y cuerpo (texto) configurable.
 - Base de datos interna de facturación y clientes (sqlite incorporada, conectable a otros motores como PostgreSQL, MySQL u ODBC -MSSQL Server y MS Access-)
 
-Los datos podrían importarse por archivos de varios formatos (Ver [CSV compatible con Planilla de Calculo, XML similar al [wiki:PyRece#FormatoXMLsimilFacturador-Plus Facturador Plus](wiki:PyRece]):), TXT similar al [SIAP RECE](../documentacion_herramientas/manualpyafipws.md#Archivodetextodeinterfambio), DBF compatible con tablas [Tablas dBase/FoxPro](../documentacion_herramientas/manualpyafipws.md#TablasenDBFparaPyFEPDF), JSON (javascript object notation) para lenguajes modernos con páginas web.
+Los datos podrían importarse por archivos de varios formatos (Ver [CSV compatible con Planilla de Calculo, XML similar al [Facturador Plus](pyrece.md]):), TXT similar al [SIAP RECE](../documentacion_herramientas/manualpyafipws.md#interfase-por-archivos-de-texto-simil-siap---rece), DBF compatible con tablas [Tablas dBase/FoxPro](../documentacion_herramientas/manualpyafipws.md#formato-tablas-xbase-dbf-dbase-iii--fox--clipper), JSON (javascript object notation) para lenguajes modernos con páginas web.
 
 Consultar por adaptación lectura de facturas a autorizar desde bases de datos u otro método (no incluido en el programa básico)
 
 ## Configuración
 
-**Importante**: Para utilizar este programa, debe habilitar por clave fiscal (AFIP) el Régimen RECE y [generar los certificados](../documentacion_herramientas/manualpyafipws.md#Certificados). 
+**Importante**: Para utilizar este programa, debe habilitar por clave fiscal (AFIP) el Régimen RECE y [generar los certificados](../documentacion_herramientas/manualpyafipws.md#certificados). 
 Para homologación (evaluación), si no dispone de certificados podemos enviarles unos de prueba ya generados (solicitarlo por mail a pyfactura@sistemasagiles.com.ar)
 
-El archivo de configuración `rece.ini` permite establecer los parámetros para conectarse al Web Service, generar PDF y envio de email (ver [Manual de Configuración](../documentacion_herramientas/manualpyafipws.md#Configuración)):
+El archivo de configuración `rece.ini` permite establecer los parámetros para conectarse al Web Service, generar PDF y envio de email (ver [Manual de Configuración](../documentacion_herramientas/manualpyafipws.md#configuracion)):
 ```
 [WSAA]
 CERT=homo.crt
@@ -145,7 +145,7 @@ Ver [Muestra Factura (PDF)](attachment:factura.pdf) y [Muestra Recibo (PDF)](att
 
 La herramienta incluye el progama `designer.exe` para modificar visualmente los diseños de factura.
 
-A modo de ejemplo se muestra un pantallazo del [Diseñador Visual](../documentacion_herramientas/manualpyafipws.md#DiseñadorVisualPyFEPDF), con el elemento logo seleccionado, editando sus propiedades.
+A modo de ejemplo se muestra un pantallazo del [Diseñador Visual](../documentacion_herramientas/manualpyafipws.md#diseñador-visual-pyfepdf), con el elemento logo seleccionado, editando sus propiedades.
 
 ### Mensaje de Correo Electrónico
 
@@ -162,7 +162,7 @@ El programa puede adaptarse para generar los archivos requeridos por el aplicati
 
 ## Soporte Técnico
 
-Al ser software libre ([GPLv3](wiki:PyFactura#Licencia)), puede descargar y usar este programa sin costo de licencias (gratis).
+Al ser software libre ([GPLv3](#licencia)), puede descargar y usar este programa sin costo de licencias (gratis).
 
 Por consultas gratuitas sobre el lenguaje python y demás, dirigirse a [PyAr](http://www.python.org.ar/) (comunidad Python en Argentina). 
 
@@ -185,7 +185,7 @@ Opcionalmente ofrecemos soporte técnico comercial via email (asesoramiento, aju
 - Se envía Factura Electrónica C (los precios son finales)
 - Consultar por desarrollos a medida o ajustes menores. 
 
-Si necesita capacitación, consultoría o soporte técnico no dude en consultarnos a [mailto:pyfactura@sistemasagiles.com.ar] o telefónicamente al 15-3048-9211
+Si necesita capacitación, consultoría o soporte técnico no dude en consultarnos a info@sistemasagiles.com.ar, in.reingart@gmail.com (personal) o r.castrogiovani@gmail.com (personal) o telefónicamente al 15-3048-9211
 
 Para más información Ver [Costos y Condiciones Generales](../documentacion_herramientas/pyafipws.md#costos-y-condiciones)
 ### Licencia
@@ -208,7 +208,7 @@ El instalador para Windows es un archivo ejecutable autoextraible generado con N
 
 Para ejecutarlo desde el código fuente (en Linux y Windows), ver dependencias en FacturaElectronicaPython, [gui2py](http://gui2py.googlecode.com) y PyFpdf, y ejecutar `pyrece.py` (más info en instructivo [Instalación Código Fuente](https://code.google.com/p/pyafipws/wiki/InstalacionCodigoFuente))
 
-Deberá revisar la configuración del archivo `rece.ini` (ver [arriba](wiki:PyFactura#Configuración)) y generar los certificados que correspondan.
+Deberá revisar la configuración del archivo `rece.ini` (ver [arriba](#configuracion)) y generar los certificados que correspondan.
 
 
 ### Enlaces
@@ -226,7 +226,4 @@ Más información en:
 - PyAfipWs: interfaz COM o por archivo de texto embebible para otros lenguajes 
 - HerramientaFacturaElectronica: solución automatizada por base de datos
 
-MarianoReingart
-
 **[Colaboraciones](https://link.mercadopago.com.ar/colaboracionespyafip)**
-MarianoReingart

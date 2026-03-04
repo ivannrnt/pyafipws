@@ -1,17 +1,10 @@
-﻿= FE.py: herramienta ad-hoc para Factura Electrónica =
-
+﻿# FE.py: herramienta ad-hoc para Factura Electrónica
 
 Herramienta para la solicitud de CAE, generación y envío de Factura Electrónica (AFIP -Argentina), configurable y parametrizable, utilizando la interfaz PyAfipWs (software libre, código abierto - open source):
 
 - Universal: multiplataforma y compatible con bases de datos ODBC, sqlite, PostgreSQL o archivos de texto (independiente del lenguaje de programación y plataforma del sistema operativo)
 - Unificada: contempla los servicios web de factura electrónica nacional (WSFE RG2177/06 y RG2485/08), mercado interno versión 1 (WSFEv1 RG2485/08 y RG2904/10), bienes de capital (WSBFE RG2557/2009) y exportación (WSFEX RG2758/2010)
 - Integrada: incluye funcionalidad de autenticación, autorización (CAE), generación de PDF, envío de email/FTP y almacenamiento según RG1361
-
-2010 - 2015 © Mariano Reingart – Versión 1.48b
-[[Image(htdocs:logo-pyafipws.png, align=right)]]
-
-## Índice
-[[TOC(noheading,inline,depth=4)]]
 
 ## Características principales:
 
@@ -1228,7 +1221,4 @@ Consultar la documentación de los respectivos webservices para el listado compl
 ## Soporte Comercial
 
 Si necesita asesoramiento, demostración, capacitación, consultoría técnica, ofrecemos Soporte Comercial Pago y abonos de mantenimiento mensuales (opcional).
-Comunicarse a [mailto:facturaelectronica@sistemasagiles.com.ar] o telefónicamente al 15-3048-9211
-
-MarianoReingart
-MarianoReingart
+Comunicarse a info@sistemasagiles.com.ar, in.reingart@gmail.com (personal) o r.castrogiovani@gmail.com (personal) o telefónicamente al 15-3048-9211

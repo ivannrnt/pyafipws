@@ -128,7 +128,7 @@ hecho.
 
 ### Archivo de Configuración
 
-Para utilizar este webservice, debe tramitarse un certificado. Ver [Instructivo](../documentacion_herramientas/manualpyafipws.md#Certificados)
+Para utilizar este webservice, debe tramitarse un certificado. Ver [Instructivo](../documentacion_herramientas/manualpyafipws.md#certificados)
 
 Luego, se debe configurar el Certificado, clave privada y URL en el archivo de configuración WSLTV.INI:
 

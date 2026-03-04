@@ -693,7 +693,7 @@ Ciertos instaladores (-typelib) incluyen una librería de tipos que es posible r
 
 - Soporte Comercial (asesoramiento inicial sin cargo de cortesía -limitado y sin compromisos-):  
 - Web: http://www.sistemasagiles.com.ar/trac/wiki/PyAfipWs
-- Por email: [mailto:facturaelectronica@sistemasagiles.com.ar]
+- Por email: info@sistemasagiles.com.ar, in.reingart@gmail.com (personal) o r.castrogiovani@gmail.com (personal)
 - Telefónicamente: (011) 15-3048-921
 - Soporte comunitario (gratuito):
 - Sitio del proyecto: http://www.pyafipws.com.ar/

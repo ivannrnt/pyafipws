@@ -8,14 +8,14 @@ Interfase con otros lenguajes y miscelaneas (PyAfipWs, PyRece)
 ## Menú
 - Documentación Componentes y Herramientas Generales: 
 - [PyAfipWs](../documentacion_herramientas/pyafipws.md): Interfase simil [OCX](wiki:OcxFacturaElectronica) con otros lenguajes (VB, VFP, Cobol ...) [Costos y Condiciones](../documentacion_herramientas/pyafipws.md#costos-y-condiciones)
-- [Manual](../documentacion_herramientas/manualpyafipws.md): Documentación,  [Información Importante](../documentacion_herramientas/manualpyafipws.md#Importante:leerprimeroantesdecomenzar), [Certificados](../documentacion_herramientas/manualpyafipws.md#Certificados), [Errores Frecuentes](../documentacion_herramientas/manualpyafipws.md#ErroresFrecuentes)
+- [Manual](../documentacion_herramientas/manualpyafipws.md): Documentación,  [Información Importante](../documentacion_herramientas/manualpyafipws.md#Importante:leerprimeroantesdecomenzar), [Certificados](../documentacion_herramientas/manualpyafipws.md#certificados), [Errores Frecuentes](../documentacion_herramientas/manualpyafipws.md#ErroresFrecuentes)
 - [Herramienta "universal"](../documentacion_herramientas/manualpyafipws.md#InterfaseporarchivosdetextosímilSIAP-RECE): archivos de intercambio TXT Cobol, DBF dBase/!FoxPro, JSON PHP/Java
 - [PyFEPDF](../documentacion_herramientas/manualpyafipws.md#PyFEPDF:generadordePDFdefacturaselectrónicas): Generador de [Factura Electrónica](wiki:FacturaElectronica) en formato PDF
 - Factura Electrónica - Servicios Web AFIP:
 - [Mercado Interno](../factura_electronica/wsfev1.md): Factura Electrónica A/B/C/M WSFEv1+ (RG2485/2757/3067/3571/3668/3749/4004)
 - [Matrix (codificación productos)](../factura_electronica/wsmtxca.md): Factura Electrónica A/B con detalle (RG2904/3536)
-- [Bienes de Capital](wiki:BonosFiscales): Bonos Fiscales Electrónicos - Factura Electrónica A (RG2557)
-- [Exportación](wiki:FacturaElectronicaExportacion): Factura Electrónica E Exportadores (RG2758 RG3689)
+- [Bienes de Capital](../factura_electronica/wsbfe.md): Bonos Fiscales Electrónicos - Factura Electrónica A (RG2557)
+- [Exportación](../factura_electronica/wsfex.md): Factura Electrónica E Exportadores (RG2758 RG3689)
 - [Turismo](wiki:FacturaElectronicaComprobantesTurismo): Comprobantes Factura Electrónica T WSCT CAE/CAEA (RG3971) ** Nuevo! **
 - Código de Autorización Electrónico Anticipado [CAEA](wiki:FacturaElectronicaCAEAnticipado)
 - Agropecuario - Servicios web AFIP:
@@ -101,10 +101,10 @@ Disponemos de la implementación para el servicio web código de trazabilidad de
 Tenemos desarrollada la implementación para el servicio web para facturas de exportación (comercio exterior) según la Resolución General 2758/2010. Ver FacturaElectronicaExportacion 
 ### Seguros de caución (pólizas)
 Estamos desarrollando la interfaz para *Operaciones por servicios de otorgamiento de pólizas de seguros de caución (RG 2668)*.
-Interesados por favor comunicarse a [mailto:facturaelectronica@sistemasagiles.com.ar]
+Interesados por favor comunicarse a info@sistemasagiles.com.ar, in.reingart@gmail.com (personal) o r.castrogiovani@gmail.com (personal)
 
 Para mantenerse informados, recomendamos inscribirse al [Grupo de Noticias](http://groups.google.com.ar/group/pyafipws)
-Interesados por favor comunicarse a [mailto:facturaelectronica@sistemasagiles.com.ar]
+Interesados por favor comunicarse a info@sistemasagiles.com.ar, in.reingart@gmail.com (personal) o r.castrogiovani@gmail.com (personal)
 ## Capacitación
 Participamos en conferencias y eventos de software libre:
 
@@ -151,7 +151,7 @@ En homologación no es necesario activar el servicio de factura electrónica (r�
 Las facturas autorizadas en homologación no tienen validez fiscal (los CAE obtenidos no pueden utilizarse).
 Para cambiar de un servidor a otro se debe modificar la URL, el resto de la operatoria es idéntico.
 ### ¿Como genero un certificado electrónico para firma digital?
-Ver [Manual PyAfipWs, Certificados](../documentacion_herramientas/manualpyafipws.md#Certificados):
+Ver [Manual PyAfipWs, Certificados](../documentacion_herramientas/manualpyafipws.md#certificados):
  1. para homologación, enviar el pedido por email a webservices en afip.gov.ar
  1. para producción, subir el pedido por clave fiscal y bajarse el certificado
 

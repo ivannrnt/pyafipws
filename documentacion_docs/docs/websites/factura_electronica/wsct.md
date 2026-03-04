@@ -149,7 +149,7 @@ Está disponible el instalador (ver [Descargas](#descargas)), simplemente descar
 - Seleccionar carpeta, por ej `C:\WSCT`
 - Instalación y registración automática
 
-Para más información ver el [Manual de Uso](../documentacion_herramientas/manualpyafipws.md#Instalacion)
+Para más información ver el [Manual de Uso](../documentacion_herramientas/manualpyafipws.md#instalacion)
 
 ## Componente
 
@@ -319,7 +319,7 @@ Otras Secciones:
 - [DBF]: configura los nombres de archivos con las tablas requeridas
 - [PROXY]: configura el servidor intermedio de salida a internet (firewall, antivirus, proxy, etc.), ej:
 
-Para Más información ver [Manual Configuración](../documentacion_herramientas/manualpyafipws.md#Configuración)
+Para Más información ver [Manual Configuración](../documentacion_herramientas/manualpyafipws.md#configuracion)
 
 Ejemplo:
 ```
@@ -375,7 +375,7 @@ RECET.EXE rece-empresax.ini ....
 
 Si no se especifica accion, por defecto se envía la información del archivo de intercambio para autorizar la emisión de factura electrónica, devuelve el Código de Autorización Electrónico (CAE) y demás datos que responde AFIP.
 
-Para más información ver [Manual](../documentacion_herramientas/manualpyafipws.md#Parámetros)
+Para más información ver [Manual](../documentacion_herramientas/manualpyafipws.md#parametros)
 ## Formato archivos de Intercambio
 
 Estructura para archivos de texto (ancho fijo simil COBOL) o tablas DBF (dBase, Clipper, Fox Pro, etc.)

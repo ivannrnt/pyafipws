@@ -50,7 +50,7 @@ Ver archivos y últimas actualizaciones para descargas en [GitHub](https://githu
 - [Manual de Uso](../documentacion_herramientas/manualpyafipws.md): Documentación ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf))
 - Código Fuente (Python): ver archivos publicados en [GitHub](https://github.com/reingart/pyafipws/blob/master/wsfecred.py) 
 
-Para más información ver el [Manual de Uso](../documentacion_herramientas/manualpyafipws.md#Instalacion)
+Para más información ver el [Manual de Uso](../documentacion_herramientas/manualpyafipws.md#instalacion)
 
 
 

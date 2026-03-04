@@ -1,4 +1,4 @@
-﻿= Factura Electrónica con Python =
+﻿# Factura Electrónica con Python
 
 Interfaz Python de software libre para Emisión y almacenamiento electrónico de comprobantes originales AFIP - Argentina. 
 
@@ -48,7 +48,7 @@ Al usar SimpleXmlELement, realiza la serialización simple convirtiendo a string
 ### Varios
 
 #### Textos de Ancho Fijo
-Para la interfaz de texto por línea de comando (consola), se desarrollaron funciones para facilitar el manejo de archivos de texto con campos de ancho fijo (formatos utilizados por ej. por COBOL y los aplicativos SIAP de la AFIP). Ver [[source:pyafip/ws/receb.py](source:pyafip/ws/rece.py],)
+Para la interfaz de texto por línea de comando (consola), se desarrollaron funciones para facilitar el manejo de archivos de texto con campos de ancho fijo (formatos utilizados por ej. por COBOL y los aplicativos SIAP de la AFIP). Ver [source:pyafip/ws/receb.py](source:pyafip/ws/rece.py],)
 
 #### Interfaz por base de datos
 Estamos desarrollando una herramienta generica para autorización y generación de facturas electrónicas mediante bases de datos, unificando los servicios web (WSFE, WSBFE y WSFEX). 
@@ -91,7 +91,7 @@ apt-get install python-httplib2 python-m2crypto
 - Instalar [M2Crypto 0.18.2](http://chandlerproject.org/pub/Projects/MeTooCrypto/M2Crypto-0.18.2.win32-py2.5.exe) (0.19 no funciona)
 - Instalar [httplib2](http://httplib2.googlecode.com/files/httplib2-0.4.0.zip). Descomprimir y ejecutar por línea de comando: ```c:\python25\python.exe setup.py install```
 - Instalar [Extensiones Win32](http://starship.python.net/crew/mhammond/win32/) para interfase COM. Ejecutar ```c:\python25\python.exe pyafipws.py --register``` para registrar el Servidor COM y poder acceder desde otros lenguajes.
-- Crear certificados con OpenSSL (ver PyAfipWs#Certificados)
+- Crear certificados con OpenSSL (ver PyAfipWs#certificados)
 
 ## Interfase con otros Lenguajes
 
@@ -114,13 +114,10 @@ Más información en PyRece
 - Ver [Curso en la ACP](http://www.clubdeprogramadores.com/cursos/CursoMuestra.php?Id=485)
 
 
-Se ofrece soporte técnico comercial (pago), consultar por desarrollos especiales, interfaces web, etc. a [mailto:pyrece@sistemasagiles.com.ar] o telefónicamente al 15-3048-9211
+Se ofrece soporte técnico comercial (pago), consultar por desarrollos especiales, interfaces web, etc. a info@sistemasagiles.com.ar, in.reingart@gmail.com (personal) o r.castrogiovani@gmail.com (personal) o telefónicamente al 15-3048-9211
 
 Por consultas gratuitas sobre el lenguaje python y demás, dirigirse a [PyAr](http://www.python.org.ar/). 
 
 Para soporte sin cargo de la comunidad, revisar la [lista de temas](https://github.com/reingart/pyafipws/issues) y/o [crear uno nuevo](https://github.com/reingart/pyafipws/issues/new). 
 Por novedades y consultas genereales, puede usar el  [Google Groups](https://groups.google.com/forum/#!forum/pyafipws) (Foro Público).
 Código fuente en [GitHub](https://github.com/reingart/pyafipws/).
-
-
-MarianoReingart

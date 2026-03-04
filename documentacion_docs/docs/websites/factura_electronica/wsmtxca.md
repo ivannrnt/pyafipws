@@ -243,7 +243,7 @@ Está disponible el instalador (ver [Descargas](../factura_electronica/wsmtxca.m
 - Instalación y registración automática
 
 Adicionalmente, si no se utilizó el instalador unificado con todos los webservices, es necesario instalar el instalador [instalador-WSAA-2.02c-homo.exe](http://pyafipws.googlecode.com/files/instalador-WSAA-2.02c-homo.exe) para WSAA (autenticación).
-Para más información ver el [Manual de Uso](../documentacion_herramientas/manualpyafipws.md#Instalacion)
+Para más información ver el [Manual de Uso](../documentacion_herramientas/manualpyafipws.md#instalacion)
 
 ## Cambios respecto a WSFE, WSFEX, WSBFE
 

@@ -1,19 +1,13 @@
-﻿= Factura Libre: aplicación web para Factura Electrónica =
+﻿# Factura Libre: aplicación web para Factura Electrónica
 
 
 Aplicación web para la solicitud de CAE, generación y envío de Factura Electrónica (AFIP -Argentina), configurable y parametrizable, utilizando la interfaz PyAfipWs (software libre, código abierto - open source).
-
-2010 © Mariano Reingart – Versión 1.25 – Julio 2010
-[[Image(htdocs:logo-pyafipws.png, align=right)]]
-
-## Índice
-[[TOC(noheading,inline,depth=4)]]
 
 ## DEMO Online
 
 "FacturaLibre" es una aplicación web (en web2py) para factura electrónica, utilizando la interfaz PyAfipWs y PyRECE (simil aplicativo SIAP), para brindar una alternativa libre a los servicios por clave fiscal de AFIP ("Comprobantes en Linea"), agregando nuevas funcionalidades, personalizaciones y mejoras requeridas por muchos clientes, que no están contempladas en la aplicación oficial (sobre todo para los nuevos webservices WSFE versión 1, RG2904 con y sin detalle). 
 
-[[Image(PyFactura:aplicativo_factura_electronica_06a_w8.png,align=right,width=223,height=218,link=PyFactura)]]
+![image](../../media/aplicativo_factura_electronica_06a_w8.png)
 
 Está disponible un sitio experimental de desarrollo para demostraciones preliminares:
 
@@ -51,7 +45,4 @@ Todos los comprobantes pueden especificarse en moneda nacional (Peso) o moneda e
 ## Soporte Comercial
 
 Si necesita asesoramiento, demostración, capacitación, consultoría técnica, ofrecemos Soporte Comercial Pago y abonos de mantenimiento mensuales (opcional).
-Comunicarse a [mailto:facturalibre@sistemasagiles.com.ar] o telefónicamente al 15-3048-9211
-
-MarianoReingart
-MarianoReingart
+Comunicarse a info@sistemasagiles.com.ar, in.reingart@gmail.com (personal) o r.castrogiovani@gmail.com (personal) o telefónicamente al 15-3048-9211

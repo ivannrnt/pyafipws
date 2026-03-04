@@ -1,4 +1,4 @@
-﻿= [LibPyAfipWs](http://www.pyafipws.com.ar/): Biblioteca DLL/.so para acceder a Servicios Web de la AFIP/ANMAT/etc =
+﻿# [LibPyAfipWs](http://www.pyafipws.com.ar/): Biblioteca DLL/.so para acceder a Servicios Web de la AFIP/ANMAT/etc
 
 
 Biblioteca compartida multiplataforma para Emisión y almacenamiento electrónico de comprobantes originales AFIP - Argentina. 
@@ -12,9 +12,6 @@ Para otros productos (herramientas, aplicativos, generación de PDF, etc.) ver e
 - PyRece: **Aplicativo independiente** (simil SIAP/RECE) por planilla de cálculo
 - HerramientaFacturaElectronica (FE.py): **Herramienta integrada** por **bases de datos**
 - [pyafipws2k.mdb](http://pyafipws.googlecode.com/files/pyafipws2k.mdb), [pyafipws97.mdb](http://pyafipws.googlecode.com/files/pyafipws.mdb): Ejemplos en MS Access 2000 (o sup.) y MS Access 97
-
-
-[[Image(htdocs:logo-pyafipws.png,align=right)]]
 
 ## Introducción
 LibPyAfipWs es una biblioteca de software libre a los Servicios Web de la AFIP, desarrollado en Python compatible con C, C++, C#, Visual Basic, Visual Fox Pro, Cobol, Delphi, .Net, Java, etc. y cualquier lenguaje/aplicación que pueda crear utilizar bibliotecas compartidas de enlace dinámico  [DLL](http://es.wikipedia.org/wiki/DLL) en Windows o .SO en linux.
@@ -57,6 +54,7 @@ Para una descripción completa de los métodos y su funcionamiento, ver ManualPy
 - Los strings son [BSTR (OleAutomation)](http://msdn.microsoft.com/en-us/library/cc237580.aspx) para soportar temas de encodings y compatibilidad con lenguajes como VB, VFP, etc.. En C, C++, C#, también pueden ser tratados como char * (Ansi).
 
 Recordar liberar la memoria alojada para los string que devuelve con `PYAFIPWS_Free`.
+
 ## Ejemplos
 
 Ejemplo básico en C:
@@ -158,13 +156,13 @@ Consultar por desarrollos especiales, interfaces web, etc.
 - Sin dependencias ni librerias o runtimes externas (Php, .Net o Java)
 - Sin licencia de uso propietarias ni límites por cada usuario final
 - Código abierto: archivos fuentes publicados, revisados y modificables (Software Libre)
-- Sin problemas de instalación de OCX ni ActiveX (ver [comparativa](wiki:OcxFacturaElectronica))
+- Sin problemas de instalación de OCX ni ActiveX (ver [comparativa](../documentacion_herramientas/ocx_factura_electronica.md))
 - No requiere formularios visuales
 
 
 ## Contacto
 
-Para mayor información, consultar por mail a [mailto:facturaelectronica@sistemasagiles.com.ar] o telefónicamente al 15-3048-9211
+Para mayor información, consultar por mail a info@sistemasagiles.com.ar, in.reingart@gmail.com (personal) o r.castrogiovani@gmail.com (personal) o telefónicamente al 15-3048-9211
 
 Para soporte sin cargo de la comunidad, revisar la [lista de temas](https://github.com/reingart/pyafipws/issues) y/o [crear uno nuevo](https://github.com/reingart/pyafipws/issues/new). 
 Por novedades y consultas genereales, puede usar el  [Google Groups](https://groups.google.com/forum/#!forum/pyafipws) (Foro Público).

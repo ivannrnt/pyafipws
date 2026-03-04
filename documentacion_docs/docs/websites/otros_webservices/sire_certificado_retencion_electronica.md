@@ -52,7 +52,7 @@ Está disponible el instalador, simplemente seguir los pasos:
 - Seleccionar carpeta, por ej `C:\WSSIRE`
 - Instalación y registración automática
 
-Para más información ver el [Manual de Uso](../documentacion_herramientas/manualpyafipws.md#Instalacion)
+Para más información ver el [Manual de Uso](../documentacion_herramientas/manualpyafipws.md#instalacion)
 
 
 ## Costos y Condiciones
