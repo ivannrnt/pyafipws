@@ -9,7 +9,7 @@ Interfaz para los Servicios Web para verificar en forma dinámica si los comprob
 Este servicio permite verificar la validez en los comprobantes respaldatorios de las operaciones, tanto con Código de Autorización de Impresión (CAI), el Código de Autorización Electrónico, y CAE Anticipado "CAEA". La modalidad CAE y CAEA es soportada por dos webservices:
 
 - [WSFEv1](../factura_electronica/wsfev1.md)(Web Service de Factura Electrónica Versión 1) correspondiente a la  RG 2485 y modificatorias
-- [WSMTXCA](wiki:FacturaElectronicaMTXCAService) (Web Service de Factura Electrónica con detalle) correspondiente a la  RG 2904 
+- [WSMTXCA](../factura_electronica/wsmtxca.md) (Web Service de Factura Electrónica con detalle) correspondiente a la  RG 2904 
 
 Actualmente los comprobantes se pueden validar también por el servicio interactivo de AFIP:
 
@@ -323,9 +323,8 @@ A su vez, se liberará el código fuente bajo licencia GPLv3 (software libre), a
 
 La información de esta página es proporcionada a titulo informativo.
 
-2008-2015 © MarianoReingart
+
 
 .
-2008-2013 © MarianoReingart
-2008-2013 © MarianoReingart
-2008-2013 © MarianoReingart
+
+

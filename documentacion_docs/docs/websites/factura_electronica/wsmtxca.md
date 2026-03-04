@@ -243,7 +243,7 @@ Está disponible el instalador (ver [Descargas](../factura_electronica/wsmtxca.m
 - Instalación y registración automática
 
 Adicionalmente, si no se utilizó el instalador unificado con todos los webservices, es necesario instalar el instalador [instalador-WSAA-2.02c-homo.exe](http://pyafipws.googlecode.com/files/instalador-WSAA-2.02c-homo.exe) para WSAA (autenticación).
-Para más información ver el [Manual de Uso](../documentacion_herramientas/manualpyafipws.md#Instalación)
+Para más información ver el [Manual de Uso](../documentacion_herramientas/manualpyafipws.md#Instalacion)
 
 ## Cambios respecto a WSFE, WSFEX, WSBFE
 
@@ -385,6 +385,7 @@ Como ejemplo, a continuación se copian los resultados de invocar a los webservi
 | 206 | Factura de Crédito electrónica MiPyMEs (FCE) B |
 | 207 | Nota de Débito electrónica MiPyMEs (FCE) B |
 | 208 | Nota de Crédito electrónica MiPyMEs (FCE) B |
+
 ### Tipos de Documento
 | 80 | CUIT |
 |---|---|
@@ -423,12 +424,14 @@ Como ejemplo, a continuación se copian los resultados de invocar a los webservi
 | 23 | CI Santa Cruz |
 | 24 | CI Tierra del Fuego |
 | 99 | Doc. (Otro) |
+
 ### Alicuotas de IVA
 | 3 | 0% |
 |---|---|
 | 4 | 10.5% |
 | 5 | 21% |
 | 6 | 27% |
+
 ### Condiciones de IVA
 | 1 | No gravado |
 |---|---|
@@ -437,8 +440,8 @@ Como ejemplo, a continuación se copian los resultados de invocar a los webservi
 | 4 | 10.5% |
 | 5 | 21% |
 | 6 | 27% |
-### Concepto
 
+### Concepto
 | 1 | Productos |
 |---|---|
 | 2 | Servicios |
@@ -496,6 +499,7 @@ Como ejemplo, a continuación se copian los resultados de invocar a los webservi
 | 009 | Franco Suizo |
 | 041 | Derechos Especiales de Giro |
 | 049 | Gramos de Oro Fino |
+
 ### Unidades de Medida
 | 0 |  |
 |---|---|
@@ -546,6 +550,7 @@ Como ejemplo, a continuación se copian los resultados de invocar a los webservi
 | 97 | seña/anticipo |
 | 98 | otras unidades |
 | 99 | bonificación |
+
 ### Tipos de Tributo
 | 1 | Impuestos Nacionales |
 |---|---|
@@ -632,7 +637,7 @@ Mapeo de Campos (con documentación AFIP):
 ## Novedades
 
 Se recuerda que esta disponible el 
-[grupo de noticias](http://www.pyafipws.com.ar) (http://groups.google.com.ar/group/pyafipws) donde
+[grupo de noticias](http://groups.google.com.ar/group/pyafipws) donde
 se publicarán futuras novedades sobre PyAfipWS: servicios web de
 factura electrónica y sus interfases (se recomienda suscribirse)
 
@@ -643,15 +648,8 @@ Como este servicio web tiene varias modalidades (CAE normal y CAE anticipado), e
 (ver [Condiciones del Soporte Comercial](../documentacion_herramientas/pyafipws.md#costos-y-condiciones)).
 
 Ofrecemos soporte técnico comercial (pago), independiente a la AFIP, desarrollos especiales, interfaces web, etc. 
-Obtenga mas información enviando un mail a info@pyafipws.com.ar o (011) 4450-0716 / (011) 15-3048-9211 (asesoramiento sin cargo)
+Obtenga mas información enviando un mail a info@pyafipws.com.ar (asesoramiento sin cargo)
 
 A su vez, se liberará el código fuente bajo licencia GPLv3 (software libre), al igual que se hizo con el restos de los servicios web. Para más detalles ver página FacturaElectronica.
 
 La información de esta página es proporcionada a titulo informativo.
-
-2008-2010 © MarianoReingart
-MarianoReingart
-MarianoReingart
-MarianoReingart
-MarianoReingart
-MarianoReingart

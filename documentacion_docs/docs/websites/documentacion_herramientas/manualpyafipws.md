@@ -569,7 +569,6 @@ Se debe confirmar los temas de normativas/legislación con un Contador Público 
 
 Toda información es proporcionada a Titulo Informativo. El programa es software libre liberado bajo licencia GPLv3 y se entrega como está, sin garantías explícitas ni implicitas de ningún tipo, incluyendo sin limitación, pérdida de ganancias, interrupción de negocios, pérdida de programas u otros datos en sistemas de computación o cualquier otro reclamo. Al usarlo acepta hacerlo bajo su propia responsabilidad, conociendo la normativa y reglamentaciones existentes. 
 
-----
 ## Instalación
 
 ### Descargas

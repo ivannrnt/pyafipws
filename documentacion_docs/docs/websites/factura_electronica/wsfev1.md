@@ -610,6 +610,7 @@ Como ejemplo, a continuación se copian los resultados de invocar a los webservi
 |---|---|---|---|
 | 2 | Servicios | 20100917 | NULL |
 | 3 | Productos y Servicios | 20100917 | NULL |
+
 ### Tipos de Documento
 | 80 | CUIT | 20080725 | NULL |
 |---|---|---|---|
@@ -648,6 +649,7 @@ Como ejemplo, a continuación se copian los resultados de invocar a los webservi
 | 23 | CI Santa Cruz | 20080728 | NULL |
 | 24 | CI Tierra del Fuego | 20080728 | NULL |
 | 99 | Doc. (Otro) | 20080728 | NULL |
+
 ### Alicuotas de IVA
 | 3 | 0% | 20090220 | NULL |
 |---|---|---|---|
@@ -657,7 +659,8 @@ Como ejemplo, a continuación se copian los resultados de invocar a los webservi
 | 8 | 5% | 20141020 | NULL |
 | 9 | 2.5% | 20141020 | NULL |
 
-NOTA: Se incorporararon las alícuotas identificadas en la Ley 26982 (5% y 2.5%). 
+NOTA: Se incorporararon las alícuotas identificadas en la Ley 26982 (5% y 2.5%).
+
 ### Monedas
 | PES | Pesos Argentinos | 20090403 | NULL |
 |---|---|---|---|
@@ -710,6 +713,7 @@ NOTA: Se incorporararon las alícuotas identificadas en la Ley 26982 (5% y 2.5%)
 | 009 | Franco Suizo | 20091110 | NULL |
 | 041 | Derechos Especiales de Giro | 20100125 | NULL |
 | 049 | Gramos de Oro Fino | 20100125 | NULL |
+
 ### Tipos de datos opcionales
 | 2 | RG Empresas Promovidas - Indentificador de proyecto vinculado a Régimen de Promoción Industrial | 20100917 | NULL |
 |---|---|---|---|
@@ -1196,10 +1200,11 @@ NOTA: Se incorporararon las alícuotas identificadas en la Ley 26982 (5% y 2.5%)
 | 949990: | 157 SERVICIOS DE ASOCIACIONES N.C.P. |
 | 960300: | 158 POMPAS FÃ¿NEBRES Y SERVICIOS CONEXOS |
 | 960990: | 159 SERVICIOS PERSONALES N.C.P |
+
 ## Novedades
 
 Se recuerda que esta disponible el 
-[grupo de noticias](http://www.pyafipws.com.ar) (http://groups.google.com.ar/group/pyafipws) donde
+[grupo de noticias](http://groups.google.com.ar/group/pyafipws) donde
 se publicarán futuras novedades sobre PyAfipWS: servicios web de
 factura electrónica y sus interfases (se recomienda suscribirse)
 
@@ -1210,13 +1215,10 @@ Como este servicio web tiene varias modalidades (CAE normal y CAE anticipado), e
 (ver [Condiciones del Soporte Comercial](../documentacion_herramientas/pyafipws.md#costos-y-condiciones)).
 
 Ofrecemos soporte técnico comercial (pago), independiente a la AFIP, desarrollos especiales, interfaces web, etc. 
-Obtenga mas información enviando un mail a info@pyafipws.com.ar o (011) 4450-0716 / (011) 15-3048-9211 (asesoramiento sin cargo)
+Obtenga mas información enviando un mail a info@pyafipws.com.ar (asesoramiento sin cargo)
 
 A su vez, se liberará el código fuente bajo licencia GPLv3 (software libre), al igual que se hizo con el restos de los servicios web. Para más detalles ver página FacturaElectronica.
 
 La información de esta página es proporcionada a titulo informativo.
-
-2008-2022 © MarianoReingart
-
 
 **[Colaboraciones](https://link.mercadopago.com.ar/colaboracionespyafip)**

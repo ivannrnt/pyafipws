@@ -170,7 +170,3 @@ Para mayor información, consultar por mail a [mailto:facturaelectronica@sistema
 Para soporte sin cargo de la comunidad, revisar la [lista de temas](https://github.com/reingart/pyafipws/issues) y/o [crear uno nuevo](https://github.com/reingart/pyafipws/issues/new). 
 Por novedades y consultas genereales, puede usar el  [Google Groups](https://groups.google.com/forum/#!forum/pyafipws) (Foro Público).
 Código fuente en [GitHub](https://github.com/reingart/pyafipws/).
-
-
-PyAfipWs Copyright 2008, 2009, 2010, 2011, 2012, 2013 por MarianoReingart
-PyAfipWs Copyright 2008, 2009, 2010, 2011, 2012, 2013 por MarianoReingart

@@ -1,7 +1,7 @@
 ﻿# Bonos Fiscales Electrónicos - Bienes de Capital (RG2557)
 
 Interfaz paraServicio Web correspondiente a Factura Electrónica de la actividad: *Fabricación de bienes de capital, informática y telecomunicaciones en un establecimiento industrial radicado en el país por parte de sujetos que utilicen bonos fiscales en el pago de impuestos nacionales* (RG 2557)
-[RG4367/ 2018](http://www.afip.gov.ar/noticias/20181220-regimenFacturaCreditoElectronica.asp): [Factura de Crédito Electrónica MiPymes](wiki:BonosFiscales#Estado). [RG4540/2019](https://www.boletinoficial.gob.ar/detalleAviso/primera/212546/20190801) Condiciones de Emisión de notas de crédito y/o débito.
+[RG4367/ 2018](http://www.afip.gov.ar/noticias/20181220-regimenFacturaCreditoElectronica.asp): [Factura de Crédito Electrónica MiPymes](#estado). [RG4540/2019](https://www.boletinoficial.gob.ar/detalleAviso/primera/212546/20190801) Condiciones de Emisión de notas de crédito y/o débito.
 
 
 ## Descripción General
@@ -15,7 +15,7 @@ Resolución General 2557/2009, próxima a entrar en vigencia (Junio de 2009):
 > mencionado intercambio de información se realizará exclusivamente
 > incorporando el detalle de la mercadería comprendida en la operación.
 > A tal fin, las especificaciones técnicas respectivas serán publicadas
-> en el sitio “web” de este Organismo (http://www.afip.gob.ar)"
+> en el sitio “web” de este Organismo ([http://www.afip.gob.ar](http://www.afip.gob.ar))"
 
 ## Estado
 
@@ -112,7 +112,7 @@ https://www.sistemasagiles.com.ar/soft/pyafipws/final/PyAfipWS-Cache-UPDATE-2025
 - Instalador: 
 - [PyAfipWs-2.7.2171-32bit+wsaa_2.11c+wsbfev1_1.07a-homo.exe](https://www.sistemasagiles.com.ar/soft/pyafipws/PyAfipWs-2.7.2171-32bit+wsaa_2.11c+wsbfev1_1.07a-homo.exe) para evaluación (WSBFEv2.3 Mayo 2019, incluyendo FCE Facturas de Crédito Electrónicas MiPyMEs Ley 27.440))
 - [instalador-pyafipws-v17.exe](http://pyafipws.googlecode.com/files/instalador-pyafipws-v17.exe) (versión anterior)
-- [Manual de Uso](../documentacion_herramientas/manualpyafipws.md): Documentación ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf))
+- [Manual de Uso](../documentacion_herramientas/manualpyafipws.md): Documentación
 - Ejemplo en VB: [https://github.com/SistemasAgiles/pyafipws/blob/master/ejemplos/wsbfe/wsbfe.bas]
 - Código Fuente (Python): [Hithub de PyAfipWs](https://github.com/reingart/pyafipws/blob/develop/wsbfev1.py)
 
@@ -191,9 +191,8 @@ A continuación se detallan:
 | 54 | Recibo M |
 | 201 | Factura de Crédito electrónica MiPyMEs (FCE) A |
 | 202 | Nota de Débito electrónica MiPyMEs (FCE) A |
-||203||Nota de Crédito electrónica MiPyMEs (FCE) A|
+| 203 | Nota de Crédito electrónica MiPyMEs (FCE) A|
 | 206 | Factura de Crédito electrónica MiPyMEs (FCE) B |
-|---|---|
 | 207 | Nota de Débito electrónica MiPyMEs (FCE) B |
 | 208 | Nota de Crédito electrónica MiPyMEs (FCE) B |
 | 211 | Factura de Crédito electrónica MiPyMEs (FCE) C |
@@ -341,7 +340,7 @@ Por el momento no se utiliza. Usar constante 0.
 ## Novedades
 
 Se recuerda que esta disponible el 
-[grupo de noticias](http://www.pyafipws.com.ar) (http://groups.google.com.ar/group/pyafipws) donde
+[grupo de noticias](http://groups.google.com.ar/group/pyafipws) donde
 se publicarán futuras novedades sobre PyAfipWS: servicios web de
 factura electrónica y sus interfases (se recomienda suscribirse)
 

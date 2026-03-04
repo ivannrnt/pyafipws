@@ -70,7 +70,7 @@ Está disponible el instalador para evaluación (ver [Descargas](wiki:CartadePor
 - Seleccionar carpeta, por ej `C:\WSCPE`
 - Instalación y registración automática
 
-Para más información ver el [Manual de Uso](../documentacion_herramientas/manualpyafipws.md#Instalación)
+Para más información ver el [Manual de Uso](../documentacion_herramientas/manualpyafipws.md#Instalacion)
 ## Metodos
 
 - **`Conectar(cache=None, url="", proxy="")`**: en homologación no hace falta pasarle ningún parámetro. En producción, el segundo parámetro es la WSDL.

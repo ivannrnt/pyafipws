@@ -81,7 +81,7 @@ Consultar con [mailto:padron@sistemasagiles.com.ar] para mayor información.
 - Visual Basic (VB 5/6): [ws_sr_padron.bas](https://github.com/reingart/pyafipws/blob/master/ejemplos/padron/ws_sr_padron.bas) (via webservice) 
 - Visual Fox Pro (VFP): [https://github.com/reingart/pyafipws/commit/594355a21c7debde0b0992e24f25e75e791047dc] (via webservice) 
 - Visual Basic 5/6: [padron.bas](https://github.com/reingart/pyafipws/blob/master/ejemplos/padron/padron.bas) (histórico, discontinuado por AFIP)
-- [Manual de Uso](../documentacion_herramientas/manualpyafipws.md): Documentación General ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf)) y [Sitio AFIP](http://www.afip.gob.ar/genericos/cInscripcion/archivoCompleto.asp)
+- [Manual de Uso](../websites/documentacion_herramientas/manualpyafipws.md): Documentación General ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf)) y [Sitio AFIP](http://www.afip.gob.ar/genericos/cInscripcion/archivoCompleto.asp)
 - Manual de desarrollo AFIP: [V 3.4](https://www.afip.gob.ar/ws/WSCI/manual-ws-sr-ws-constancia-inscripcion-v3.4.pdf) 08/05/2023
 - Código Fuente (Python): ver
 - [padron.py](https://github.com/reingart/pyafipws/blob/master/padron.py) (histórico, discontinuado por AFIP)
@@ -4709,8 +4709,5 @@ A su vez, se liberará el código fuente bajo licencia GPLv3 (software libre), a
 
 La información de esta página es proporcionada a titulo informativo.
 
-2014 - 2024 © MarianoReingart
 
 **[Colaboraciones](https://link.mercadopago.com.ar/colaboracionespyafip)**
-
-2014 © MarianoReingart

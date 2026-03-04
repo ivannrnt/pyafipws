@@ -182,7 +182,7 @@ Recursos para desarrollo:
 - Instalador Preliminar: [instalador-WSFEXV1-1.00a-homo.exe](http://pyafipws.googlecode.com/files/instalador-WSFEXV1-1.00a-homo.exe)
 - Instalador Unificado Homologacion: [instalador-PyAfipWs-1.27d-homo.exe](http://pyafipws.googlecode.com/files/instalador-PyAfipWs-1.27d-homo.exe)
 
-Ver [y [wiki:FacturaElectronicaExportacion#TablasdeParámetros Tablas de Parámetros](wiki:FacturaElectronicaExportacion#CambiosRespectoaWSFE]) para mayor información
+Ver [Tablas de Parámetros](#tablas-de-parametros) para mayor información
 
 **Nota**: Por el momento solo soporta los metodos principales (con algunos cambios: bonificaciones y remitos de tabaco, entre otros). 
 
@@ -286,6 +286,7 @@ Como ejemplo, a continuación se copian los resultados de invocar a los webservi
 | 063 | Lempira Hondureña |
 | 064 | Yuan (Rep. Pop. China) |
 | 009 | Franco Suizo |
+
 ### Tipos Comprobante
 | 19 | Facturas de Exportación |
 |---|---|
@@ -293,16 +294,19 @@ Como ejemplo, a continuación se copian los resultados de invocar a los webservi
 | 21 | Nota de Crédito por Operaciones con el Exterior |
 | 88 | Remito Electrónico (solo para comprobantes asociados, *** Nuevo WSFEXv1! ***) |
 | 89 | Resumen de Datos (solo para comprobantes asociados, *** Nuevo WSFEXv1! ***) |
+
 ### Tipos Exportación
 | 1 | Exportación definitiva de Bienes |
 |---|---|
 | 2 | Servicios |
 | 4 | Otros |
+
 ### Idiomas
 | 1 | Español |
 |---|---|
 | 2 | Inglés |
 | 3 | Portugués |
+
 ### Unidades de medida
 | 41 | miligramos |
 |---|---|
@@ -356,6 +360,7 @@ Como ejemplo, a continuación se copian los resultados de invocar a los webservi
 | 97 | seña/anticipo (*** NUEVO WSFEXv1! *** para importes negativo) |
 | 98 | otras unidades |
 | 99 | bonificación (*** NUEVO WSFEXv1! *** para importes negativo) |
+
 ### INCOTERMs
 | EXW | EXW |
 |---|---|
@@ -373,6 +378,7 @@ Como ejemplo, a continuación se copian los resultados de invocar a los webservi
 | DDP | DDP |
 | DAP | DAP |
 | DAT | DAT |
+
 ### Pais Destino
 | 101 | BURKINA FASO |
 |---|---|
@@ -630,6 +636,7 @@ Como ejemplo, a continuación se copian los resultados de invocar a los webservi
 | 598 | INDET.(OCEANIA) |
 | 997 | RESTO CONTINENTE |
 | 998 | INDET.(CONTINENTE) |
+
 ### CUIT Pais Destino
 | 50000000016 | URUGUAY - Persona Física |
 |---|---|
@@ -1409,10 +1416,11 @@ Como ejemplo, a continuación se copian los resultados de invocar a los webservi
 | 55000007004 | ZONA LIBRE DE OSTRAVA (ciudad de la antigua Checoeslovaquia) - Persona Jurídica |
 | 55000009988 | PARA PERSONAS FISICAS DE INDETERMINADO (CONTINENTE) - Persona Jurídica |
 | 55000009996 | PARA PERSONAS FISICAS DE OTROS PAISES - Persona Jurídica |
+
 ## Novedades
 
 Se recuerda que esta disponible el 
-[grupo de noticias](http://www.pyafipws.com.ar) (http://groups.google.com.ar/group/pyafipws) donde
+[grupo de noticias](http://groups.google.com.ar/group/pyafipws) donde
 se publicarán futuras novedades sobre PyAfipWS: servicios web de
 factura electrónica y sus interfases (se recomienda suscribirse)
 
@@ -1423,5 +1431,3 @@ factura electrónica y sus interfases (se recomienda suscribirse)
 **Importante**: WSFEXv1 es un **nuevo webservice** y AFIP ha agregado campos (bonificación), ha cambiado varios tipos de datos (en importes, cantidad de decimales), ha agregado códigos de tablas de parámetros (unidades de medida) y comprobantes asociados (remitos de tabaco) y además realiza nuevas validaciones, por lo que recomendamos probar exhaustivamente la interfaz con el desarrollo para exportación.
 
 A su vez, se libera el código fuente bajo licencia GPL (software libre), al igual que se hizo con el restos de los servicios web. Para más detalles ver página FacturaElectronica.
-
-MarianoReingart

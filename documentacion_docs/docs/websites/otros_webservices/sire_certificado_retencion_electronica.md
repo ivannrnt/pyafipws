@@ -1,5 +1,4 @@
-﻿
-# WSSIRE - SISTEMA INTEGRAL DE RETENCIONES ELECTRONICAS, Certificado de retención electrónica
+﻿# WSSIRE - SISTEMA INTEGRAL DE RETENCIONES ELECTRONICAS, Certificado de retención electrónica
 
 
 Interfaz para Servicio Web correspondiente a la emisión de un certificado C2005 en AFIP por parte de los sistemas del agente de retención. [RG4523/2019](http://servicios.infoleg.gob.ar/infolegInternet/anexos/325000-329999/325072/texact.htm) [RG3726/2015](http://biblioteca.afip.gob.ar/dcp/REAG01003726_2015_01_23)
@@ -56,7 +55,7 @@ Está disponible el instalador, simplemente seguir los pasos:
 - Seleccionar carpeta, por ej `C:\WSSIRE`
 - Instalación y registración automática
 
-Para más información ver el [Manual de Uso](../documentacion_herramientas/manualpyafipws.md#Instalación)
+Para más información ver el [Manual de Uso](../documentacion_herramientas/manualpyafipws.md#Instalacion)
 
 
 ## Costos y Condiciones

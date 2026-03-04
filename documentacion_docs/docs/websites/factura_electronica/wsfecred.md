@@ -1,7 +1,7 @@
 # Factura Crédito Electrónica MiPyMEs (RG4367) 
 [[TracNav(noreorder|FacturaElectronica)]]
 
-Interfaz para Servicio Web correspondiente al régimen Factura de Crédito Electrónica [Ley N° 27440](http://biblioteca.afip.gob.ar/dcp/LEY_C_027440_2018_05_09), reglamentado en el [Decreto 471/17](http://biblioteca.afip.gob.ar/dcp/DEC_C_000471_2018_05_17), e instrumentado según [RG 4367/2018](http://biblioteca.afip.gob.ar/dcp/REAG01004367_2018_12_19), sus modificatorias y complementarias. [RG4367/ 2018](http://www.afip.gov.ar/noticias/20181220-regimenFacturaCreditoElectronica.asp): [Factura de Crédito Electrónica](wiki:ProyectoWSFEv1#Importante:RG43672018FEv2.13).
+Interfaz para Servicio Web correspondiente al régimen Factura de Crédito Electrónica [Ley N° 27440](http://biblioteca.afip.gob.ar/dcp/LEY_C_027440_2018_05_09), reglamentado en el [Decreto 471/17](http://biblioteca.afip.gob.ar/dcp/DEC_C_000471_2018_05_17), e instrumentado según [RG 4367/2018](http://biblioteca.afip.gob.ar/dcp/REAG01004367_2018_12_19), sus modificatorias y complementarias. [RG4367/ 2018](http://www.afip.gov.ar/noticias/20181220-regimenFacturaCreditoElectronica.asp): [Factura de Crédito Electrónica](../factura_electronica/wsfev1.md#importante-rg43672018-fev213).
 
 | *En todas las operaciones comerciales en las que una Micro, Pequeña o Mediana Empresa esté obligada a emitir comprobantes electrónicos originales (factura o recibo) a una empresa grande, conforme las reglamentaciones que dicte la Administración Federal de Ingresos Públicos, entidad autárquica en el ámbito del Ministerio de Hacienda, se deberá emitir “Facturas de Crédito Electrónicas MiPyMEs”* |
 |---|
@@ -25,10 +25,10 @@ La AFIP publicó la [información técnica](http://www.afip.gob.ar/facturadecred
 
 La [RG4367/ 2018](http://www.afip.gov.ar/noticias/20181220-regimenFacturaCreditoElectronica.asp) incorpora comprobantes *Factura de Crédito Electrónica*.
 
-Para Emisión de Factura de Crédito Electrónicas ver el webservice tradicional WSFEv1: [RG4367/18 Factura de Crédito Electrónica MiPyMEs FEv2.13 FCE](wiki:ProyectoWSFEv1#Importante:RG43672018FEv2.13), donde se agregan:
+Para Emisión de Factura de Crédito Electrónicas ver el webservice tradicional WSFEv1: [RG4367/18 Factura de Crédito Electrónica MiPyMEs FEv2.13 FCE](../factura_electronica/wsfev1.md#importante-rg43672018-fev2133), donde se agregan:
 
-- [WSFEv1.AgregarCmpAsoc](wiki:ManualPyAfipWs#M%C3%A9todosb%C3%A1sicosdeWSFEv1)
-- [datos opcionales CBU](wiki:ManualPyAfipWs#DatosOpcionalesAFIPWSFEv1) 
+- [WSFEv1.AgregarCmpAsoc](../documentacion_herramientas/manualpyafipws.md#metodos-basicos-de-wsfev1)
+- [datos opcionales CBU](../documentacion_herramientas/manualpyafipws.md#datos-opcionales-afip-wsfev1) 
 
 AFIP publicó la [Especificación Técnica "FEv2.13"](http://www.afip.gob.ar/facturadecreditoelectronica/documentos/manual-desarrollador-COMPG-v2-13-Beta2.pdf) (manual para desarrolladores) con fecha 16 de Enero de 2019 AFIP, con las siguientes nuevos comprobantes:
 
@@ -52,10 +52,10 @@ Ver archivos y últimas actualizaciones para descargas en [GitHub](https://githu
 
 - Instalador: 
 - [PyAfipWs-2.7.2171-32bit+wsaa_2.11c+wsfev1_1.23c+wsfecred_1.05e-homo.exe](https://www.sistemasagiles.com.ar/soft/pyafipws/PyAfipWs-2.7.2171-32bit+wsaa_2.11c+wsfev1_1.23c+wsfecred_1.05e-homo.exe) para evaluación (WSFECred v1.03 Octubre 2019, incluyendo RG 4367 FCE Facturas de Crédito Electrónicas MiPyMEs Ley 27.440)
-- [Manual de Uso](wiki:ManualPyAfipWs): Documentación ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf))
+- [Manual de Uso](../documentacion_herramientas/manualpyafipws.md): Documentación ([PDF](http://www.sistemasagiles.com.ar/trac/wiki/ManualPyAfipWs?format=pdf))
 - Código Fuente (Python): ver archivos publicados en [GitHub](https://github.com/reingart/pyafipws/blob/master/wsfecred.py) 
 
-Para más información ver el [Manual de Uso](wiki:ManualPyAfipWs#Instalación)
+Para más información ver el [Manual de Uso](../documentacion_herramientas/manualpyafipws.md#Instalacion)
 
 
 
@@ -482,21 +482,18 @@ Como ejemplo, a continuación se copian los resultados de invocar a los webservi
 ## Novedades
 
 Se recuerda que esta disponible el 
-[grupo de noticias](http://www.pyafipws.com.ar) (http://groups.google.com.ar/group/pyafipws) donde
+[grupo de noticias](http://groups.google.com.ar/group/pyafipws) donde
 se publicarán futuras novedades sobre PyAfipWS: servicios web de
 factura electrónica y sus interfases (se recomienda suscribirse)
 
 ## Costos y Condiciones
 
 
-Debido a la complejidad de este servicio, su fecha de aplicación y las modificaciones que pudieran surgir, ofrecemos horas de soporte técnico adicional (consultar) por 3 meses (ver [Condiciones del Soporte Comercial](wiki:PyAfipWs#CostosyCondiciones)).
+Debido a la complejidad de este servicio, su fecha de aplicación y las modificaciones que pudieran surgir, ofrecemos horas de soporte técnico adicional (consultar) por 3 meses (ver [Condiciones del Soporte Comercial](../documentacion_herramientas/pyafipws.md#CostosyCondiciones)).
 
 Ofrecemos soporte técnico comercial (pago), independiente a la AFIP, desarrollos especiales, interfaces web, etc. 
-Obtenga mas información enviando un mail a info@pyafipws.com.ar o (011) 4450-0716 / (011) 15-3048-9211 (asesoramiento sin cargo)
+Obtenga mas información enviando un mail a info@pyafipws.com.ar (asesoramiento sin cargo)
 
 A su vez, se liberará el código fuente bajo licencia GPLv3 (software libre), al igual que se hizo con el restos de los servicios web. Para más detalles ver página FacturaElectronica.
 
 La información de esta página es proporcionada a titulo informativo.
-
-2019 © MarianoReingart
-MarianoReingart

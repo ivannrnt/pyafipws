@@ -132,7 +132,7 @@ Ver archivos y últimas actualizaciones para descargas en [GitHub](https://githu
 - Visual Basic: [turismo.bas](https://github.com/reingart/pyafipws/blob/master/ejemplos/wsct/turismo.bas) (vb5, vb6)
 - Visual Fox Pro: [turismo.prg](https://github.com/reingart/pyafipws/blob/master/ejemplos/wsct/turismo.prg) (vfp5, vfp9.0)
 
-Para más ejemplos ver [(Delphi, Java, Power Builder, Clarion, Fujitsu Net Cobol, .NET), [repositorio](https://github.com/reingart/pyafipws/tree/master/ejemplos)(wiki:PyAfipWs]), o consultar [Soporte Comercial](wiki:FacturaElectronicaComprobantesTurismo#CostosyCondiciones).
+Para más ejemplos ver [(Delphi, Java, Power Builder, Clarion, Fujitsu Net Cobol, .NET), [repositorio](https://github.com/reingart/pyafipws/tree/master/ejemplos)[PyAfipWs](../documentacion_herramientas/pyafipws.md), o consultar [Soporte Comercial](#costos-y-condiciones).
 ### Archivos de Intercambio
 
 - [attachment:entrada.txt]: archivo de entrada (texto ancho fijo, estilo COBOL y similares)
@@ -140,16 +140,16 @@ Para más ejemplos ver [(Delphi, Java, Power Builder, Clarion, Fujitsu Net Cobol
 - [attachment:tablas-dbf-recet.zip]: archivos con tablas DBF (compatible con dBase, Fox Pro, Clipper y otros)
 - [attachment:factura_t.json]: archivos JSON (compatible con !JavaScript, Java, PHP y otros)
 
-Ver [Formato Archivos de Intercambio](wiki:FacturaElectronicaComprobantesTurismo#FormatoarchivosdeIntercambio) para más información 
+Ver [Formato Archivos de Intercambio](#formato-archivos-de-intercambio) para más información 
 ## Instalación
 
-Está disponible el instalador (ver [Descargas](wiki:FacturaElectronicaComprobantesTurismo#Descargas)), simplemente descargar, ejecutar seguir los pasos:
+Está disponible el instalador (ver [Descargas](#descargas)), simplemente descargar, ejecutar seguir los pasos:
 
 - Aceptar la licencia
 - Seleccionar carpeta, por ej `C:\WSCT`
 - Instalación y registración automática
 
-Para más información ver el [Manual de Uso](../documentacion_herramientas/manualpyafipws.md#Instalación)
+Para más información ver el [Manual de Uso](../documentacion_herramientas/manualpyafipws.md#Instalacion)
 
 ## Componente
 
@@ -172,7 +172,7 @@ Métodos principales:
 - **`AgregarFormaPago(codigo, tipo_tarjeta, numero_tarjeta, swift_code, tipo_cuenta, numero_cuenta)`**: agrega una forma de pago, solo código es obligatorio
 
 
-- **`AutorizarComprobante()`**: autoriza la emisión de factura electrónica, devuelve el Código de Autorización Electrónico (CAE). Ver [ejemplo](wiki:FacturaElectronicaComprobantesTurismo##EjemploPseudocodigo).
+- **`AutorizarComprobante()`**: autoriza la emisión de factura electrónica, devuelve el Código de Autorización Electrónico (CAE). Ver [ejemplo](#ejemplo-pseudocodigo).
 
 
 Métodos auxiliares:
@@ -185,7 +185,7 @@ Métodos secundarios:
 
 - **`ConsultarComprobante(tipo_cbte, punto_vta, cbte_nro)`**: recupera los datos de una factura autorizada, recibe tipo de comprobante, punto de venta y número de comprobante original, y devuelve el Código de Autorización Electrónico (CAE) obtenido en su momento. A su vez, establece los datos de la factura (Cae, !FechaCbte, !ImpTotal, !ImpNeto). Ver ejemplo para el detalle de los parámetros y valores devueltos.
 - **`CompUltimoAutorizado(tipo_cbte, punto_vta)`**: recupera el último número de factura autorizada, recibe tipo de comprobante y punto de venta. Ver WSFE.RecuperaLastCMP
-- **`ConsultarMonedas()`**, **`ConsultarTiposComprobante()`**, **`ConsultarTiposDocumento()`**, **`ConsultarAlicuotasIVA()`**, **`ConsultarCondicionesIVA()`**, **`ConsultarTiposItem()`**, **`ConsultarTiposTributo()`**, **`ConsultarCUITsPaises()`**, **`ConsultarPaises()`**, **`ConsultarTiposDatosAdicionales()`**, **`ConsultarFomasPago()`**, **`ConsultarTiposTarjeta(forma_pagoa)`**, **`ConsultarTiposCuenta()`**, **`ConsultarTiposTributo()`**: recupera valores referenciales de códigos de las tablas de parámetros, devuelve una lista de strings con el id/código, descripción del parámetro y vigencia -si corresponde- (ver ejemplos). Más información en [Tablas de Parámetros](wiki:FacturaElectronicaComprobantesTurismo#TablasdeParámetros)
+- **`ConsultarMonedas()`**, **`ConsultarTiposComprobante()`**, **`ConsultarTiposDocumento()`**, **`ConsultarAlicuotasIVA()`**, **`ConsultarCondicionesIVA()`**, **`ConsultarTiposItem()`**, **`ConsultarTiposTributo()`**, **`ConsultarCUITsPaises()`**, **`ConsultarPaises()`**, **`ConsultarTiposDatosAdicionales()`**, **`ConsultarFomasPago()`**, **`ConsultarTiposTarjeta(forma_pagoa)`**, **`ConsultarTiposCuenta()`**, **`ConsultarTiposTributo()`**: recupera valores referenciales de códigos de las tablas de parámetros, devuelve una lista de strings con el id/código, descripción del parámetro y vigencia -si corresponde- (ver ejemplos). Más información en [Tablas de Parámetros](#tablas-de-parametros)
 - **`ConsultarCotizacionMoneda(moneda_id)`**: devuelve cotización y fecha de la moneda indicada como parámetro
 - **`ConsultarPuntosVenta()`**: permite consultar los puntos de venta habilitados para CAE en este WS, devuelve una lista (array de strings) con los datos con numero_punto_venta, bloqueado, fecha_baja
   
@@ -211,7 +211,7 @@ Métodos secundarios:
 
 ## Ejemplo Pseudocodigo
 
-Para rutinas completas en VB, VFP, etc. ver [Ejemplos](wiki:FacturaElectronicaComprobantesTurismo#Ejemplos)
+Para rutinas completas en VB, VFP, etc. ver [Ejemplos](#ejemplos)
 
 Código de ejmplo en Python:
 
@@ -379,87 +379,92 @@ Para más información ver [Manual](../documentacion_herramientas/manualpyafipws
 ## Formato archivos de Intercambio
 
 Estructura para archivos de texto (ancho fijo simil COBOL) o tablas DBF (dBase, Clipper, Fox Pro, etc.)
-Para muestras ver [Descargas](wiki:FacturaElectronicaComprobantesTurismo#Descargas)
+Para muestras ver [Descargas](#descargas)
 
 ### Encabezado
-| **Campo** | **Pos.** | **Long.** | **Tipo** | **Decimales** |  |
-
-| tipo_reg | 1 | 1 | Numerico |  |  |
-| fecha_cbte | 2 | 10 | Alfanumerico |  |  |
-| tipo_cbte | 12 | 3 | Numerico |  |  |
-| punto_vta | 15 | 4 | Numerico |  |  |
-| cbte_nro | 19 | 8 | Numerico |  |  |
-| tipo_doc | 27 | 2 | Numerico |  |  |
-| nro_doc | 29 | 11 | Numerico |  |  |
-| imp_total | 40 | 15 | Importe | 2 |  |
+| **Campo** | **Pos.** | **Long.** | **Tipo** | **Decimales** |
+| --------- | -------- | --------- | -------- | ------------- |
+| tipo_reg | 1 | 1 | Numerico |  |
+| fecha_cbte | 2 | 10 | Alfanumerico |  |
+| tipo_cbte | 12 | 3 | Numerico |  |
+| punto_vta | 15 | 4 | Numerico |  |
+| cbte_nro | 19 | 8 | Numerico |  |
+| tipo_doc | 27 | 2 | Numerico |  |
+| nro_doc | 29 | 11 | Numerico |  |
+| imp_total | 40 | 15 | Importe | 2 |
 | imp_tot_conc | 55 | 15 | Importe | 2 |  |
-| imp_neto | 70 | 15 | Importe | 2 |  |
-| imp_subtotal | 85 | 15 | Importe | 2 |  |
-| imp_trib | 100 | 15 | Importe | 2 |  |
-| imp_op_ex | 115 | 15 | Importe | 2 |  |
-| imp_reintegro | 130 | 15 | Importe | 2 |  |
-| moneda_id | 145 | 3 | Alfanumerico |  |  |
-| moneda_ctz | 148 | 10 | Importe | 6 |  |
-| fecha_venc_pago | 158 | 10 | Alfanumerico |  |  |
-| id_impositivo | 168 | 2 | Numerico |  |  |
-| cod_relacion | 170 | 2 | Numerico |  |  |
-| cod_pais | 172 | 3 | Numerico |  |  |
-| domicilio | 175 | 300 | Alfanumerico |  |  |
-| cae | 475 | 14 | Alfanumerico |  |  |
-| fch_venc_cae | 489 | 10 | Alfanumerico |  |  |
-| resultado | 499 | 1 | Alfanumerico |  |  |
-| motivos_obs | 500 | 1000 | Alfanumerico |  |  |
-| err_code | 1500 | 6 | Alfanumerico |  |  |
-| err_msg | 1506 | 1000 | Alfanumerico |  |  |
-| reproceso | 2506 | 1 | Alfanumerico |  |  |
-| emision_tipo | 2507 | 4 | Alfanumerico |  |  |
-| observaciones | 2511 | 1000 | Alfanumerico |  |  |
+| imp_neto | 70 | 15 | Importe | 2 |
+| imp_subtotal | 85 | 15 | Importe | 2 |
+| imp_trib | 100 | 15 | Importe | 2 |
+| imp_op_ex | 115 | 15 | Importe | 2 |
+| imp_reintegro | 130 | 15 | Importe | 2 |
+| moneda_id | 145 | 3 | Alfanumerico |  |
+| moneda_ctz | 148 | 10 | Importe | 6 |
+| fecha_venc_pago | 158 | 10 | Alfanumerico |  |
+| id_impositivo | 168 | 2 | Numerico |  |
+| cod_relacion | 170 | 2 | Numerico |  |
+| cod_pais | 172 | 3 | Numerico |  |
+| domicilio | 175 | 300 | Alfanumerico |  |
+| cae | 475 | 14 | Alfanumerico |  |
+| fch_venc_cae | 489 | 10 | Alfanumerico |  |
+| resultado | 499 | 1 | Alfanumerico |  |
+| motivos_obs | 500 | 1000 | Alfanumerico |  |
+| err_code | 1500 | 6 | Alfanumerico |  |
+| err_msg | 1506 | 1000 | Alfanumerico |  |
+| reproceso | 2506 | 1 | Alfanumerico |  |
+| emision_tipo | 2507 | 4 | Alfanumerico |  |
+| observaciones | 2511 | 1000 | Alfanumerico |  |
+
 ### Tributo
-| **Campo** | **Pos.** | **Long.** | **Tipo** | **Decimales** |  |
+| **Campo** | **Pos.** | **Long.** | **Tipo** | **Decimales** |
+| --------- | -------- | --------- | -------- | ------------- |
+| tipo_reg | 1 | 1 | Numerico |  |
+| tributo_id | 2 | 3 | Alfanumerico |  |
+| desc | 5 | 100 | Alfanumerico |  |
+| base_imp | 105 | 15 | Importe | 2 |
+| alic | 120 | 15 | Importe | 2 |
+| importe | 135 | 15 | Importe | 2 |
 
-| tipo_reg | 1 | 1 | Numerico |  |  |
-| tributo_id | 2 | 3 | Alfanumerico |  |  |
-| desc | 5 | 100 | Alfanumerico |  |  |
-| base_imp | 105 | 15 | Importe | 2 |  |
-| alic | 120 | 15 | Importe | 2 |  |
-| importe | 135 | 15 | Importe | 2 |  |
 ### Iva
-| **Campo** | **Pos.** | **Long.** | **Tipo** | **Decimales** |  |
+| **Campo** | **Pos.** | **Long.** | **Tipo** | **Decimales** |
+| --------- | -------- | --------- | -------- | ------------- |
+| tipo_reg | 1 | 1 | Numerico |  |
+| iva_id | 2 | 3 | Alfanumerico |  |
+| base_imp | 5 | 15 | Importe | 2 |
+| importe | 20 | 15 | Importe | 2 |
 
-| tipo_reg | 1 | 1 | Numerico |  |  |
-| iva_id | 2 | 3 | Alfanumerico |  |  |
-| base_imp | 5 | 15 | Importe | 2 |  |
-| importe | 20 | 15 | Importe | 2 |  |
 ### Comprobante Asociado
-| **Campo** | **Pos.** | **Long.** | **Tipo** | **Decimales** |  |
+| **Campo** | **Pos.** | **Long.** | **Tipo** | **Decimales** |
+| --------- | -------- | --------- | -------- | ------------- |
+| tipo_reg | 1 | 1 | Numerico |  |
+| tipo | 2 | 3 | Numerico |  |
+| pto_vta | 5 | 4 | Numerico |  |
+| nro | 9 | 8 | Numerico |  |
+| cuit | 17 | 11 | Numerico |  |
+| cuit | 28 | 11 | Numerico |  |
 
-| tipo_reg | 1 | 1 | Numerico |  |  |
-| tipo | 2 | 3 | Numerico |  |  |
-| pto_vta | 5 | 4 | Numerico |  |  |
-| nro | 9 | 8 | Numerico |  |  |
-| cuit | 17 | 11 | Numerico |  |  |
-| cuit | 28 | 11 | Numerico |  |  |
 ### Detalle
-| **Campo** | **Pos.** | **Long.** | **Tipo** | **Decimales** |  |
+| **Campo** | **Pos.** | **Long.** | **Tipo** | **Decimales** |
+| --------- | -------- | --------- | -------- | ------------- |
+| tipo_reg | 1 | 1 | Numerico |  |
+| tipo | 2 | 3 | Numerico |  |
+| cod_tur | 5 | 30 | Alfanumerico |  |
+| codigo | 35 | 30 | Alfanumerico |  |
+| iva_id | 65 | 3 | Numerico |  |
+| imp_iva | 68 | 15 | Importe | 2 |
+| imp_subtotal | 83 | 15 | Importe | 2 |
+| ds | 98 | 4000 | Alfanumerico |  |
 
-| tipo_reg | 1 | 1 | Numerico |  |  |
-| tipo | 2 | 3 | Numerico |  |  |
-| cod_tur | 5 | 30 | Alfanumerico |  |  |
-| codigo | 35 | 30 | Alfanumerico |  |  |
-| iva_id | 65 | 3 | Numerico |  |  |
-| imp_iva | 68 | 15 | Importe | 2 |  |
-| imp_subtotal | 83 | 15 | Importe | 2 |  |
-| ds | 98 | 4000 | Alfanumerico |  |  |
 ### Forma Pago
-| **Campo** | **Pos.** | **Long.** | **Tipo** | **Decimales** |  |
-
-| tipo_reg | 1 | 1 | Numerico |  |  |
-| codigo | 2 | 3 | Numerico |  |  |
-| tipo_tarjeta | 5 | 2 | Numerico |  |  |
-| numero_tarjeta | 7 | 6 | Numerico |  |  |
-| swift_code | 13 | 11 | Numerico |  |  |
-| tipo_cuenta | 24 | 2 | Numerico |  |  |
-| numero_cuenta | 26 | 20 | Numerico |  |  |
+| **Campo** | **Pos.** | **Long.** | **Tipo** | **Decimales** |
+| --------- | -------- | --------- | -------- | ------------- |
+| tipo_reg | 1 | 1 | Numerico |  |
+| codigo | 2 | 3 | Numerico |  |
+| tipo_tarjeta | 5 | 2 | Numerico |  |
+| numero_tarjeta | 7 | 6 | Numerico |  |
+| swift_code | 13 | 11 | Numerico |  |
+| tipo_cuenta | 24 | 2 | Numerico |  |
+| numero_cuenta | 26 | 20 | Numerico |  |
 
 ## Cambios respecto a WSFEv1 / WSMTXCA / WSFEXv1
 
@@ -534,9 +539,10 @@ Wste nuevo servicio funciona con tablas dinámicas de parámetros para los códi
 Por el momento el webservice no está disponible, por lo que se muestran valores tentativos.
 ### Tipos de Comprobante
 | 195 | Factura T |
-|---|---|
+|--- | --- |
 | 196 | Nota de Débito T |
 | 197 | Nota de Crédito T |
+
 ### Tipos de Documento
 | 80 | CUIT |
 |---|---|
@@ -575,9 +581,11 @@ Por el momento el webservice no está disponible, por lo que se muestran valores
 | 23 | CI Santa Cruz |
 | 24 | CI Tierra del Fuego |
 | 99 | Doc. (Otro) |
+
 ### Alicuotas de IVA
 | 5 | 21% |
 |---|---|
+
 ### Condiciones de IVA
 | 1 | No gravado |
 |---|---|
@@ -1254,17 +1262,17 @@ Margen de error:
 ## Novedades
 
 Se recuerda que esta disponible el 
-[grupo de noticias](http://www.pyafipws.com.ar) (http://groups.google.com.ar/group/pyafipws) donde
+[grupo de noticias](http://groups.google.com.ar/group/pyafipws) donde
 se publicarán futuras novedades sobre PyAfipWS: servicios web de
 factura electrónica y sus interfases (se recomienda suscribirse)
 
 ## Costos y Condiciones
 
 Ofrecemos soporte técnico comercial (pago), independiente a la AFIP, desarrollos especiales, interfaces web, etc. 
-Obtenga mas información enviando un mail a info@pyafipws.com.ar o (011) 4450-0716 / (011) 15-3048-9211 (asesoramiento sin cargo)
+Obtenga mas información enviando un mail a info@pyafipws.com.ar (asesoramiento sin cargo)
 
 A su vez, se liberará el código fuente bajo licencia GPLv3 (software libre), al igual que se hizo con el restos de los servicios web. Para más detalles ver página FacturaElectronica.
 
 La información de esta página es proporcionada a titulo informativo.
 
-2017 © MarianoReingart
+

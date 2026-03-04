@@ -55,7 +55,7 @@ Está disponible el instalador para evaluación (ver [Descargas](wiki:CartadePor
 - Seleccionar carpeta, por ej `C:\WSCPEDG`
 - Instalación y registración automática
 
-Para más información ver el [Manual de Uso](../documentacion_herramientas/manualpyafipws.md#Instalación)
+Para más información ver el [Manual de Uso](../documentacion_herramientas/manualpyafipws.md#Instalacion)
 
 ## Metodos
 

@@ -7,13 +7,13 @@ Interfase con otros lenguajes y miscelaneas (PyAfipWs, PyRece)
 
 ## Menú
 - Documentación Componentes y Herramientas Generales: 
-- [PyAfipWs](wiki:PyAfipWs): Interfase simil [OCX](wiki:OcxFacturaElectronica) con otros lenguajes (VB, VFP, Cobol ...) [Costos y Condiciones](../documentacion_herramientas/pyafipws.md#costos-y-condiciones)
+- [PyAfipWs](../documentacion_herramientas/pyafipws.md): Interfase simil [OCX](wiki:OcxFacturaElectronica) con otros lenguajes (VB, VFP, Cobol ...) [Costos y Condiciones](../documentacion_herramientas/pyafipws.md#costos-y-condiciones)
 - [Manual](../documentacion_herramientas/manualpyafipws.md): Documentación,  [Información Importante](../documentacion_herramientas/manualpyafipws.md#Importante:leerprimeroantesdecomenzar), [Certificados](../documentacion_herramientas/manualpyafipws.md#Certificados), [Errores Frecuentes](../documentacion_herramientas/manualpyafipws.md#ErroresFrecuentes)
 - [Herramienta "universal"](../documentacion_herramientas/manualpyafipws.md#InterfaseporarchivosdetextosímilSIAP-RECE): archivos de intercambio TXT Cobol, DBF dBase/!FoxPro, JSON PHP/Java
 - [PyFEPDF](../documentacion_herramientas/manualpyafipws.md#PyFEPDF:generadordePDFdefacturaselectrónicas): Generador de [Factura Electrónica](wiki:FacturaElectronica) en formato PDF
 - Factura Electrónica - Servicios Web AFIP:
 - [Mercado Interno](../factura_electronica/wsfev1.md): Factura Electrónica A/B/C/M WSFEv1+ (RG2485/2757/3067/3571/3668/3749/4004)
-- [Matrix (codificación productos)](wiki:FacturaElectronicaMTXCAService): Factura Electrónica A/B con detalle (RG2904/3536)
+- [Matrix (codificación productos)](../factura_electronica/wsmtxca.md): Factura Electrónica A/B con detalle (RG2904/3536)
 - [Bienes de Capital](wiki:BonosFiscales): Bonos Fiscales Electrónicos - Factura Electrónica A (RG2557)
 - [Exportación](wiki:FacturaElectronicaExportacion): Factura Electrónica E Exportadores (RG2758 RG3689)
 - [Turismo](wiki:FacturaElectronicaComprobantesTurismo): Comprobantes Factura Electrónica T WSCT CAE/CAEA (RG3971) ** Nuevo! **
