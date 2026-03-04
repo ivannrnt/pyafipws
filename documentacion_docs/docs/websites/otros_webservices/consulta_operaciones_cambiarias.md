@@ -1,4 +1,4 @@
-﻿= Consulta de Operaciones Cambiarias - Compra de Divisas (RG3210/2011) =
+﻿# Consulta de Operaciones Cambiarias - Compra de Divisas (RG3210/2011)
 
 
 Interfaz para Servicio Web Código de Operaciones Cambiarias (WSCOC) correspondiente a la [Resolución General N° 3210](http://www.afip.gov.ar/genericos/novedades/rg3210.asp), donde AFIP implementó el Programa de Consulta de Operaciones Cambiarias, a fin de controlar en tiempo real la situación fiscal y económico-financiera de quien realiza compras de moneda extranjera (dólar, euro, real, etc.)
@@ -251,6 +251,7 @@ Para más información ver [ejemplo completo en Visual Basic](http://pyafipws.go
 | AN | Anulada |
 | CA | Cancelada |
 | RE | Rechazda |
+
 ### Monedas
 | **Código** | **Descripción** |
 |---|---|
@@ -316,6 +317,7 @@ Para más información ver [ejemplo completo en Visual Basic](http://pyafipws.go
 | 64 | YUAN (Rep. Popular de China) |
 | 80 | PESOS |
 | 100 | OTRAS MONEDAS |
+
 ### Tipos de Destinos de Compra
 
 | **Tipo** | **Descripción** |
@@ -484,6 +486,7 @@ Para más información ver [ejemplo completo en Visual Basic](http://pyafipws.go
 | OT | 984 | Operaciones de personas físicas por préstamos hipotecarios para la compra de vivienda (Comunicación "A" 5239 Punto 1c incorporado por la Comunicación "A" 5240 ) |
 | OT | 985 | Operaciones de cambio en concepto de turismo y viajes a no residentes (Comunicación "A" 5241) |
 | OT | 986 | Operaciones de personas físicas por fondos resultantes del cobro de jubilaciones y pensiones percibidas del exterior (Comunicación "A" 5239 Punto 1d incorporado por la Comunicación "A" 5242 ) |
+
 ### Tipos de Documento
 | **Código** | **Descripción** |
 |---|---|
@@ -539,6 +542,7 @@ Para más información ver [ejemplo completo en Visual Basic](http://pyafipws.go
 | 10 | Planta llave en mano aprobadas con anterioridad al 1 de febrero de 2012 |
 | 11 | Excepción Artículo 3° R.G. AFIP 3255 |
 | 99 | Otros Subregímenes de Importación no Alcanzados por RG 3255 |
+
 ### Destinos Compra DJAI
 | 153 | Pagos de deudas comerciales por importaciones de bienes sin registro de ingreso aduanero. |
 |---|---|
@@ -550,9 +554,11 @@ Para más información ver [ejemplo completo en Visual Basic](http://pyafipws.go
 | 171 | Cancelación de garantías comerciales de entidades financieras de importaciones de bienes sin registro de ingreso aduanero. |
 | 172 | Cancelación de garantías comerciales de entidades financieras de importaciones de bienes con registro de ingreso aduanero. |
 | 801 | Pagos de deudas financieras con el exterior originadas en importaciones de bienes |
+
 ### Motivos Excepcion DJAS
 | 1 | Operación No Alcanzada RG 3276 - Monto Mínimo |
 |---|---|
+
 ### Destinos Compra DJAS
 | 625 | Otros servicios de información e informática. |
 |---|---|
@@ -567,18 +573,14 @@ Para más información ver [ejemplo completo en Visual Basic](http://pyafipws.go
 | 660 | Servicios por transferencia de tecnología por Ley 22.426 (excepto patentes y marcas) |
 | 747 | Otras rentas pagadas al exterior |
 | 973 | Compra de activos no financieros no producidos |
+
 ## Novedades
 
 Se recuerda que esta disponible el 
-[grupo de noticias](http://www.pyafipws.com.ar) (http://groups.google.com.ar/group/pyafipws) donde
+[grupo de noticias](http://groups.google.com.ar/group/pyafipws) donde
 se publicarán futuras novedades sobre PyAfipWS: servicios web de
 factura electrónica y sus interfases (se recomienda suscribirse)
 
 ## Costos y Condiciones
 
 Por soporte comercial consultar al (011) 15-3048-9211 o por mail a info@sistemasagiles.com.ar
-
-Más información en PyAfipWs
-
-MarianoReingart
-MarianoReingart

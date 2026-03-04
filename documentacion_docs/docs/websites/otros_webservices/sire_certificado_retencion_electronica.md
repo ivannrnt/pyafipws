@@ -3,9 +3,6 @@
 
 Interfaz para Servicio Web correspondiente a la emisión de un certificado C2005 en AFIP por parte de los sistemas del agente de retención. [RG4523/2019](http://servicios.infoleg.gob.ar/infolegInternet/anexos/325000-329999/325072/texact.htm) [RG3726/2015](http://biblioteca.afip.gob.ar/dcp/REAG01003726_2015_01_23)
 
-
-
-
 ## Descripción General
 
 Este servicio permite únicamente la emisión de un certificado C2005 en AFIP por parte de los sistemas del agente de retención.
@@ -69,7 +66,3 @@ Obtenga mas información enviando un mail a info@pyafipws.com.ar (011) 15-3048-9
 A su vez, se liberará el código fuente bajo licencia GPLv3 (software libre), al igual que se hizo con el restos de los servicios web. Para más detalles ver página FacturaElectronica.
 
 La información de esta página es proporcionada a titulo informativo.
-
-2008-2020 © MarianoReingart
-MarianoReingart
-MarianoReingart

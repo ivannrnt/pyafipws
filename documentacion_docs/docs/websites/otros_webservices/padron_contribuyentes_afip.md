@@ -1,13 +1,10 @@
-﻿= Padron Contribuyentes AFIP =
+﻿# Padron Contribuyentes AFIP
 
 Herramienta para consultar el archivo completo de la condición tributaria de los contribuyentes y responsables de la [Resolución General N° 1817](http://infoleg.mecon.gov.ar/infolegInternet/anexos/100000-104999/103117/texact.htm) (Constancia de Inscripción / Opción - Monotributo)
 
-**[Constancia de Inscripción](wiki:PadronContribuyentesAFIP#ConstanciadeInscripci%C3%B3nWebserviceRG416217)** ([WebService SOAP](wiki:PadronContribuyentesAFIP#ServicioWeb)) para acceder al los datos públicos en el registro único contribuyente (`ws_sr_constancia_inscripcion` ex `ws_sr_padron_a5`)
+**[Constancia de Inscripción](#constancia-de-inscripcion-via-webservice)** ([WebService SOAP](#servicio-web)) para acceder al los datos públicos en el registro único contribuyente (`ws_sr_constancia_inscripcion` ex `ws_sr_padron_a5`)
 
-| La administración Federal de Ingresos Públicos informa que, en el corto plazo las solicitudes de emisión de comprobantes electrónicos de Clase "A" emitidas para CUITs que resultan inválidos, inexistentes o no corresponden a responsables inscriptos en el Impuesto al Valor Agregado, serán rechazadas. En caso que la solicitud se esté efectuando por lote, se deberán reprocesar los registros de los comprobantes siguientes al rechazado en virtud de que se verá alterada la correlatividad y consecutividad de la numeración de los mismos. |
-|---|
-
-
+ *La administración Federal de Ingresos Públicos informa que, en el corto plazo las solicitudes de emisión de comprobantes electrónicos de Clase "A" emitidas para CUITs que resultan inválidos, inexistentes o no corresponden a responsables inscriptos en el Impuesto al Valor Agregado, serán rechazadas. En caso que la solicitud se esté efectuando por lote, se deberán reprocesar los registros de los comprobantes siguientes al rechazado en virtud de que se verá alterada la correlatividad y consecutividad de la numeración de los mismos.*
 
 ## Descripción General
 
@@ -22,7 +19,7 @@ Sujetos obligados a consultar la situación fiscal (a efectuarse la primera tran
  1. los organismos que deban cumplir con la obligación de registrar la Clave Unica de Identificación Tributaria (C.U.I.T.), el Código Unico de Identificación Laboral (C.U.I.L.) o la Clave de Identificación (C.D.I.), conforme a las normas emitidas por los Estados Provinciales y el Gobierno de la Ciudad Autónoma de Buenos Aires.
 
 
-== Consulta a Padron via Servicios Web == **(SERVICIO DESCONTINUADO POR AFIP)**
+## Consulta a Padron via Servicios Web **(SERVICIO DESCONTINUADO POR AFIP)**
 
 **Importante**: a partir Oct-2017, la API rest (JSON) funciona intermitentemente (al ser experimental, podría ser discontinuado); es recomendable pasar a utilizar Web Service SOAP **WS-SR-PADRON**
 
@@ -32,11 +29,11 @@ Sujetos obligados a consultar la situación fiscal (a efectuarse la primera tran
 - `ws_sr_padron_a100`: Servicio de Consulta de Padrón Alcance 100. El servicio de Consulta de parámetros del Sistema Registral o Padrón, Alcance 100, permite obtener todos los registros de una tabla específica de parámetros de la AFIP.
 
 Nuestro componente ya soporta este nuevo webservice, y para compatibilidad hacia atrás se utilizan el nuevo objeto `WSSrPadronA4` / `WSSrPadronA5` (en reemplazo de `PadronAFIP`).
-Como se utiliza un webservice, se debe crear un Ticket de Acesso `WSAA` y llamar al método `Conectar` con la URL correcta. Para más info ver [Consultar CUIT online via Web Service (componente)](wiki:PadronContribuyentesAFIP#ConsultarCUITonlineviawebservice)
+Como se utiliza un webservice, se debe crear un Ticket de Acesso `WSAA` y llamar al método `Conectar` con la URL correcta. Para más info ver [Consultar CUIT online via Web Service (componente)](#consultar-cuit-online-via-webservice)
 
-Por linea de comandos, simplemente invocar al ejecutable `ws_sr_padron.exe` en vez de `padron.exe`. Para más información ver [Consultar CUIT online via Web Service (ejecutable)](wiki:PadronContribuyentesAFIP#ConsultarCUITonlineviawebservice1)
+Por linea de comandos, simplemente invocar al ejecutable `ws_sr_padron.exe` en vez de `padron.exe`. Para más información ver [Consultar CUIT online via Web Service (ejecutable)](#consultar-cuit-online-via-webservice-1)
 
-Para formato interno de datos y errores frecuentes, ver sección [Servicio Web](wiki:PadronContribuyentesAFIP#ServicioWeb)
+Para formato interno de datos y errores frecuentes, ver sección [Servicio Web](#servicio-web)
 
 Lista de CUITs publicados por AFIP para pruebas: [http://www.afip.gob.ar/ws/ws_sr_padron_a4/datos-prueba-padron-a4.txt]
 
@@ -44,7 +41,7 @@ Lista de CUITs publicados por AFIP para pruebas: [http://www.afip.gob.ar/ws/ws_s
 
 Según [Resolución General 4162/17](http://biblioteca.afip.gob.ar/dcp/REAG01004162_2017_11_23#articulo_0001) se habilitó la opción 
 
->  c) Intercambio de información mediante “Web Services”, denominado “CONSULTA CONSTANCIAS DE INSCRIPCIÓN”
+> Intercambio de información mediante “Web Services”, denominado “CONSULTA CONSTANCIAS DE INSCRIPCIÓN”
 
 Actualmente el nuevo servicio web se ha denominado `ws_sr_constancia_inscripcion` (también conocido como `WSSrPadronA5`).
 
@@ -54,10 +51,11 @@ Para simplificar el desarrollo, todos nuestros componentes se pueden utilizar co
 
 Para más información y ejemplos de uso ver:
 
-- [Componente Consulta Inscripción](wiki:PadronContribuyentesAFIP#ConsultarConstanciaInscripci%C3%B3nonlineviawebservice) (pseudo-código)
-- [Herramienta consulta de Inscripción](wiki:PadronContribuyentesAFIP#ConstanciadeInscripci%C3%B3nviawebservice) (línea de comandos)
+- [Componente Consulta Inscripción](#consultar-constancia-inscripcion-online-via-webservice) (pseudo-código)
+- [Herramienta consulta de Inscripción](#consultar-cuit-online-via-webservice) (línea de comandos)
 
-Ver [Errores Frecuentes](wiki:PadronContribuyentesAFIP#ErroresFrecuentes) para estos nuevos webservices.
+Ver [Errores Frecuentes](#errores-frecuentes) para estos nuevos webservices.
+
 ### API REST JSON
 
 De manera experimental, ofrecemos un servicio intermedio para facilitar la operatoria con el nuevo webservice, pudiendo ser consumida directamente desde JavaScript u otros lenguajes (sin necesidad de XML / SOAP)
@@ -142,7 +140,7 @@ Referencias:
 | 'NC' | No corresponde |
 |---|---|
 
-== Obtención de Campos adicionales == (consulta con método ObtenerTagXml)
+## Obtención de Campos adicionales (consulta con método ObtenerTagXml)
 
 **primera actividad**:
 
@@ -251,7 +249,7 @@ Referencias:
 
 ## Ejemplos
 
-Ver fragmentos de código para Visual Basic, Visual Fox Pro y VB.Net en [Descargas e Instalacion](wiki:PadronContribuyentesAFIP#DescargaseInstalación)
+Ver fragmentos de código para Visual Basic, Visual Fox Pro y VB.Net en [Descargas e Instalacion](#descargas-e-instalacion)
 
 ### Consultar CUIT localmente
 
@@ -313,7 +311,7 @@ print "Empleador", padron.empleador
 
 ### Consultar Constancia Inscripción online via webservice
 
-Pseudocódigo en Python para Consulta Constancia Inscripción [RG4162/17](wiki:PadronContribuyentesAFIP#ConstanciadeInscripci%C3%B3nWebserviceRG416217) por CUIT (búsqueda online en el servidor de AFIP):
+Pseudocódigo en Python para Consulta Constancia Inscripción [RG4162/17](#constancia-de-inscripcion-via-webservice) por CUIT (búsqueda online en el servidor de AFIP):
 
 ```
 #!python
@@ -348,7 +346,7 @@ print "Empleador", padron.empleador
 
 print "Errores", padron.errores
 ```
-=== Consultar CUIT online === **(En desuso por baja de AFIP)**
+### Consultar CUIT online **(En desuso por baja de AFIP)**
 
 **Importante**: servicio experimental, discontinuado por AFIP (Oct'2017) Solo sigue vigente la descarga de Constancia.
 
@@ -477,7 +475,7 @@ Luego se debería abrir de manera automática el PDF (opción `--mostrar`)
 
 ### Constancia de Inscripción via webservice
 
-Ejemplo para obtener los datos de la constancia de inscripción vía el nuevo Servicio Web según [RG4162/17](wiki:PadronContribuyentesAFIP#ConstanciadeInscripci%C3%B3nWebserviceRG416217) (sintaxis para windows, consulta online al servidor de AFIP):
+Ejemplo para obtener los datos de la constancia de inscripción vía el nuevo Servicio Web según [RG4162/17](#constancia-de-inscripcion-via-webservice) (sintaxis para windows, consulta online al servidor de AFIP):
 ```
 C:\PYAFIPWS> WS_SR_PADRON_cli.EXE 27255820422 --constancia
 Consultando AFIP online via webservice... ok 
@@ -498,23 +496,23 @@ Empleador N
 **Nota:** el ejecutable difiere, en este caso usar `WS_SR_PADRON_cli.exe`
 ## Servicio Web
 
-Para información general ver [Consultas Padron via Servicios Web](wiki:PadronContribuyentesAFIP#ConsultaaPadronviaServiciosWeb)
+Para información general ver [Consultas Padron via Servicios Web](#consulta-a-padron-via-servicios-web-servicio-descontinuado-por-afip)
 
 URL WSDL WS-SR-Padron-A4:
 
 - Homologación: https://awshomo.afip.gov.ar/sr-padron/webservices/personaServiceA4?wsdl (testing)
 - Producción: https://aws.afip.gov.ar/sr-padron/webservices/personaServiceA4?wsdl
 
-Descargar [Instalador](wiki:PadronContribuyentesAFIP#DescargaseInstalación)
+Descargar [Instalador](#descargas-e-instalacion)
 
 Para crear el componente, hacer `CreateObject("WSSrPadronA4")`, ver:
 
-- [Métodos](wiki:PadronContribuyentesAFIP#Métodos): sólo `Consultar` para `WSSrPadronA4`.
-- [Propiedades](wiki:PadronContribuyentesAFIP#Atributos): `cuit`, `dni`, `denominacion`, `imp_ganancias`, `imp_iva`, `monotributo`, `integrante_soc`, `empleador`, `actividad_monotributo`, `cat_iva`, `domicilios`, `tipo_doc`, `nro_doc`, `LanzarExcepciones`, `tipo_persona`, `estado`, `impuestos`, `actividades`, `direccion`, `localidad`, `provincia`, `cod_postal`
+- [Métodos](#metodos): sólo `Consultar` para `WSSrPadronA4`.
+- [Propiedades](#atributos): `cuit`, `dni`, `denominacion`, `imp_ganancias`, `imp_iva`, `monotributo`, `integrante_soc`, `empleador`, `actividad_monotributo`, `cat_iva`, `domicilios`, `tipo_doc`, `nro_doc`, `LanzarExcepciones`, `tipo_persona`, `estado`, `impuestos`, `actividades`, `direccion`, `localidad`, `provincia`, `cod_postal`
 
 ### Respuesta Alcance 4 (Padrón)
 
-El método `Consultar` (`GetPersona`) del nuevo webservice `WSSrPadronA4` devuelve la siguiente estructura XML (convertida a JSON para simplificar el análisis; como muestra ver [pseudo-código ejemplo](wiki:PadronContribuyentesAFIP#ConsultarCUITonlineviawebservice) concreto):
+El método `Consultar` (`GetPersona`) del nuevo webservice `WSSrPadronA4` devuelve la siguiente estructura XML (convertida a JSON para simplificar el análisis; como muestra ver [pseudo-código ejemplo](#consultar-cuit-online-via-webservice) concreto):
 
 ```
 #!python
@@ -620,7 +618,7 @@ Para compatibilidad hacia atrás, nuestro componente los procesa de forma simila
 
 ### Respuesta Constancia Inscripcion (Ex Alcance 5)
 
-El método `Consultar` (`GetPersona`) del nuevo webservice `ws_sr_constancia_inscripcion` (Constancia) devuelve la siguiente estructura XML (convertida a JSON para simplificar el análisis; como muestra ver [pseudo-código ejemplo](wiki:PadronContribuyentesAFIP#ConsultarCUITonlineviawebservice) concreto):
+El método `Consultar` (`GetPersona`) del nuevo webservice `ws_sr_constancia_inscripcion` (Constancia) devuelve la siguiente estructura XML (convertida a JSON para simplificar el análisis; como muestra ver [pseudo-código ejemplo](#consultar-cuit-online-via-webservice) concreto):
 
 ```
 #!python
@@ -740,6 +738,7 @@ Nuevos tipos de errores para el webservice constancia_inscripcionde (Ex Alcance 
 ## Tablas de Parámetros
 
 ### Impuestos
+
 | **id** | **desc** |
 |---|---|
 | 3 | INFORMACION NO TRIBUTARIA |
@@ -1921,6 +1920,7 @@ Nuevos tipos de errores para el webservice constancia_inscripcionde (Ex Alcance 
 | 997 | SITER ENTIDADES FINANCIERAS |
 | 998 | SITER COMISIONISTAS |
 | 999 | DONACIONES EN DINERO O EN ESPECIE - DONATARIOS |
+
 ### Actividades
 | **id** | **desc** |
 |---|---|
@@ -4259,7 +4259,9 @@ Nuevos tipos de errores para el webservice constancia_inscripcionde (Ex Alcance 
 | 960990 | SERVICIOS PERSONALES N.C.P. |
 | 970000 | SERVICIOS DE HOGARES PRIVADOS QUE CONTRATAN SERVICIO DOMÉSTICO |
 | 990000 | SERVICIOS DE ORGANIZACIONES Y ORGANOS EXTRATERRITORIALES |
+
 ### Caracterizaciones
+
 | **id** | **desc** |
 |---|---|
 | 1 | GRAN CONTRIBUYENTE |
@@ -4569,7 +4571,9 @@ Nuevos tipos de errores para el webservice constancia_inscripcionde (Ex Alcance 
 | 341 | SOLICITUD CASOS ESPECIALES |
 | 342 | COOP.EFECTORAS INACTIVADAS POR REQ.DEL MIN.DESARROLLO SOCIAL |
 | 343 | SOCIEDAD EN FORMACION - INACTIVADA POR INCUMPLIMIENTO |
+
 ### Categorias Monotributo
+
 | **id** | **desc** |
 |---|---|
 | 36 | B LOCACIONES DE SERVICIO |
@@ -4632,7 +4636,9 @@ Nuevos tipos de errores para el webservice constancia_inscripcionde (Ex Alcance 
 | 102 | D 2 SOCIOS PROY. PRODUCTIVO |
 | 103 | E 3 SOCIOS PROY. SERVICIOS |
 | 104 | E 3 SOCIOS PROY. PRODUCTIVO |
+
 ### Categorias Autonomos
+
 | **id** | **desc** |
 |---|---|
 | 103 | T1 CAT III INGRESOS HASTA $15.000 |
@@ -4684,8 +4690,6 @@ Nuevos tipos de errores para el webservice constancia_inscripcionde (Ex Alcance 
 | 501 | CAT I JUBILADO |
 | 511 | CAT I MENOR |
 
-
-
 ## Novedades
 
 Se recuerda que esta disponible el 
@@ -4696,7 +4700,6 @@ factura electrónica y sus interfases (se recomienda suscribirse)
 También esta disponible el sitio http://www.pyafipws.com.ar con noticias, anuncios e información técnica general
 
 ## Costos y Condiciones
-
 
 Los clientes que asi lo requieran pueden adquirir horas de soporte técnico adicional (ver [Condiciones del Soporte Comercial](../documentacion_herramientas/pyafipws.md#costos-y-condiciones)), se estima conveniente los siguientes planes:
 

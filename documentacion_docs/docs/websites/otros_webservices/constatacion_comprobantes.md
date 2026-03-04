@@ -1,4 +1,4 @@
-﻿= Constatación de Comprobantes emitidos (CAI, CAE, CAEA) por Web Service AFIP =
+﻿# Constatación de Comprobantes emitidos (CAI, CAE, CAEA) por Web Service AFIP
 
 Interfaz para los Servicios Web para verificar en forma dinámica si los comprobantes recibidos se encuentran autorizados por la AFIP.
 [Ley de Procedimiento Tributario N°11683](http://infoleg.mecon.gov.ar/infolegInternet/anexos/15000-19999/18771/texact.htm) (Artículo 33) modificado por [Ley N° 25795](http://infoleg.mecon.gov.ar/scripts1/busquedas/cnsnorma.asp?tipo=Ley&nro=25795) y reglamentado por [Decreto 477/2007](http://biblioteca.afip.gob.ar/dcp/DEC_C_000477_2007_05_02) 
@@ -166,8 +166,9 @@ CUIT=20267565393
 ### Formato de Intercambio
 
 #### Encabezado
-| **Campo** | **Posición** | **Longitud** | **Tipo** | **Descripción** |
 
+| **Campo** | **Posición** | **Longitud** | **Tipo** | **Descripción** |
+| --------- | --------- | --------- | --------- | --------- |
 | tipo_reg | 1 | 1 | Alfanumerico | 0: encabezado |
 | cbte_modo | 2 | 4 | Alfanumerico | Modalidad de autorización (CAI, CAE, CAEA) |
 | cuit_emisor | 6 | 11 | Alfanumerico | CUIT del emisor del comprobante |
@@ -181,24 +182,31 @@ CUIT=20267565393
 | doc_nro_receptor | 71 | 20 | Alfanumerico | N° de documento del receptor |
 | resultado | 91 | 1 | Alfanumerico | Resultado (A: Aprobado, O: Observado, R: rechazado) |
 | fch_proceso | 92 | 14 | Alfanumerico | Fecha y hora de procesamiento |
+
 #### Observacion
-| **Campo** | **Posición** | **Longitud** | **Tipo** | **Descripción** |
 
+| **Campo** | **Posición** | **Longitud** | **Tipo** | **Descripción** |
+| --------- | --------- | --------- | --------- | --------- |
 | tipo_reg | 1 | 1 | Alfanumerico | O: observaciones devueltas por AFIP |
 | code | 2 | 5 | Numerico | Código de Observación / Error / Evento |
 | msg | 7 | 255 | Alfanumerico | Mensaje |
+
 #### Evento
-| **Campo** | **Posición** | **Longitud** | **Tipo** | **Descripción** |
 
+| **Campo** | **Posición** | **Longitud** | **Tipo** | **Descripción** |
+| --------- | --------- | --------- | --------- | --------- |
 | tipo_reg | 1 | 1 | Alfanumerico | O: observaciones devueltas por AFIP |
 | code | 2 | 5 | Numerico | Código de Observación / Error / Evento |
 | msg | 7 | 255 | Alfanumerico | Mensaje |
+
 #### Error
-| **Campo** | **Posición** | **Longitud** | **Tipo** | **Descripción** |
 
+| **Campo** | **Posición** | **Longitud** | **Tipo** | **Descripción** |
+| --------- | --------- | --------- | --------- | --------- |
 | tipo_reg | 1 | 1 | Alfanumerico | O: observaciones devueltas por AFIP |
 | code | 2 | 5 | Numerico | Código de Observación / Error / Evento |
 | msg | 7 | 255 | Alfanumerico | Mensaje |
+
 ## Tablas de Parámetros
 
 ### Modalidad Comprobantes
@@ -209,6 +217,7 @@ CUIT=20267565393
 | CAI | Comprobantes - CAI |
 
 ### Tipo Comprobantes
+
 | 1 | Facturas A |
 |---|---|
 | 2 | Notas de Debito A |
@@ -256,6 +265,7 @@ CUIT=20267565393
 | 49 | Comprobante de Compra de Bienes Usados |
 
 ### Tipo Documentos
+
 | 80 | CUIT |
 |---|---|
 | 86 | CUIL |
@@ -303,7 +313,7 @@ Mensaje de Error: 503: Sin Resultados: - Metodo OpcionalesTipoConsultar
 ## Novedades
 
 Se recuerda que esta disponible el 
-[grupo de usuarios y desarrolladores] (http://groups.google.com.ar/group/pyafipws) donde
+[grupo de usuarios y desarrolladores](http://groups.google.com.ar/group/pyafipws) donde
 se publicarán futuras novedades sobre PyAfipWS: servicios web de
 factura electrónica y sus interfases (se recomienda suscribirse)
 
@@ -322,9 +332,3 @@ Obtenga mas información enviando un mail a info@pyafipws.com.ar o (011) 15-3048
 A su vez, se liberará el código fuente bajo licencia GPLv3 (software libre), al igual que se hizo con el restos de los servicios web. Para más detalles ver página FacturaElectronica.
 
 La información de esta página es proporcionada a titulo informativo.
-
-
-
-.
-
-
